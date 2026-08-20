@@ -1,0 +1,62 @@
+{
+  "schema_version": "saib-retf-s3.1-public-golden-vector/1",
+  "case_id": "price_no_match",
+  "public_test_only": true,
+  "not_a_private_experiment_input": true,
+  "ring_bits": 64,
+  "modulus": "18446744073709551616",
+  "field_order": [
+    "buy_price_ticks",
+    "buy_quantity_units",
+    "buy_credit",
+    "sell_price_ticks",
+    "sell_quantity_units",
+    "sell_credit"
+  ],
+  "clear_inputs": {
+    "buy_price_ticks": 99,
+    "buy_quantity_units": 7,
+    "buy_credit": 800,
+    "sell_price_ticks": 100,
+    "sell_quantity_units": 5,
+    "sell_credit": 700
+  },
+  "party_additive_shares_signed": {
+    "buy_price_ticks": [
+      -8489165145618059972,
+      -2755115997322070017,
+      -7202462930769421528
+    ],
+    "buy_quantity_units": [
+      -2039148885980131915,
+      -1233220213706376006,
+      3272369099686507928
+    ],
+    "buy_credit": [
+      -6475082640817237779,
+      -4092498502799914892,
+      -7879162930092398145
+    ],
+    "sell_price_ticks": [
+      -600846861867341113,
+      -5246092588102649114,
+      5846939449969990327
+    ],
+    "sell_quantity_units": [
+      -6046213827201642552,
+      6669541399348385780,
+      -623327572146743223
+    ],
+    "sell_credit": [
+      -3256017133830645819,
+      8107114501751912860,
+      -4851097367921266341
+    ]
+  },
+  "expected": {
+    "matched": 0,
+    "quantity": 0,
+    "settlement_ticks": 0
+  },
+  "seed_sha256": "e719dac0b9aed236f7ab2e7b327aea777f1482773a780dac4f4e2b50c855991c"
+}

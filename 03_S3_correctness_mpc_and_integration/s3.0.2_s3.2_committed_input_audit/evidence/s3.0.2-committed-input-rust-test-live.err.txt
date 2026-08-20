@@ -1,0 +1,64 @@
+   Compiling credx v0.2.1 (/mnt/g/paperexper/retf/saib-retf/prototype/anoncred-rust/vendor/credx-0.2.1-saib)
+warning: use of deprecated associated function `elliptic_curve::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> vendor/credx-0.2.1-saib/src/presentation/verifiable_encryption_decryption.rs:164:46
+    |
+164 |         let key = aes_gcm::Key::<Aes128Gcm>::from_slice(&okm[..16]);
+    |                                              ^^^^^^^^^^
+    |
+    = note: `#[warn(deprecated)]` on by default
+
+warning: use of deprecated associated function `elliptic_curve::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> vendor/credx-0.2.1-saib/src/presentation/verifiable_encryption_decryption.rs:235:28
+    |
+235 |         let nonce = Nonce::from_slice(&self.ciphertext[..12]);
+    |                            ^^^^^^^^^^
+
+warning: use of deprecated associated function `elliptic_curve::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> vendor/credx-0.2.1-saib/src/presentation/verifiable_encryption_decryption.rs:243:46
+    |
+243 |         let key = aes_gcm::Key::<Aes128Gcm>::from_slice(&okm[..16]);
+    |                                              ^^^^^^^^^^
+
+warning: `credx` (lib) generated 3 warnings
+   Compiling saib-anoncred v0.1.0 (/mnt/g/paperexper/retf/saib-retf/prototype/anoncred-rust)
+error[E0599]: no function or associated item named `identity` found for struct `G1Projective` in the current scope
+   --> src/s3_committed_input.rs:451:33
+    |
+451 |         .try_fold(G1Projective::identity(), |sum, encoded| {
+    |                                 ^^^^^^^^ function or associated item not found in `G1Projective`
+    |
+note: if you're trying to build a new `G1Projective` consider using one of the following associated functions:
+      G1Projective::from_raw_unchecked
+      G1Projective::sum_of_products
+      G1Projective::hash
+      G1Projective::encode
+   --> /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/blstrs_plus-0.8.18/src/g1.rs:770:5
+    |
+770 |       pub fn from_raw_unchecked(x: Fp, y: Fp, z: Fp) -> Self {
+    |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+...
+795 |       impl_pippenger_sum_of_products!();
+    |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+...
+799 | /     pub fn hash<X>(msg: &[u8], dst: &[u8]) -> Self
+800 | |     where
+801 | |         X: for<'a> ExpandMsg<'a>,
+    | |_________________________________^
+...
+811 | /     pub fn encode<X>(msg: &[u8], dst: &[u8]) -> Self
+812 | |     where
+813 | |         X: for<'a> ExpandMsg<'a>,
+    | |_________________________________^
+    = help: items from traits can only be used if the trait is in scope
+    = note: this error originates in the macro `impl_pippenger_sum_of_products` (in Nightly builds, run with -Z macro-backtrace for more info)
+help: trait `Group` which provides `identity` is implemented but not in scope; perhaps you want to import it
+    |
+9   + use elliptic_curve::Group;
+    |
+help: there is a method `is_identity` with a similar name
+    |
+451 |         .try_fold(G1Projective::is_identity(), |sum, encoded| {
+    |                                 ~~~~~~~~~~~
+
+For more information about this error, try `rustc --explain E0599`.
+error: could not compile `saib-anoncred` (lib) due to 1 previous error

@@ -1,0 +1,26 @@
+{
+  "schema_version": "saib-retf-s3.1.1-patched-backend-lock/1",
+  "upstream_repository": "https://github.com/data61/MP-SPDZ.git",
+  "upstream_tag": "v0.4.3",
+  "upstream_commit": "26a605368e40fed3a7e9cee78c9a3f4390b85eb5",
+  "upstream_source_archive_sha256": "386399a869fd53d99402614c0c39954c092cfac7b4e18fa453024664083a4ab7",
+  "local_fork_branch": "saib-retf-s3.1.1-patched",
+  "local_fork_commit": "1126007badb9b9f2cd4820fb8675d1fb5918c072",
+  "local_annotated_tag": "saib-retf-s3.1.1-patched-v0.4.3",
+  "patches": [
+    {
+      "path": "patches/0001-octetstream-null-safe-first-append.patch",
+      "sha256": "cdc999e5c75f6eff0923d4af7c0bfa85c9322b66b4f3df1f2cec58a971826db7"
+    },
+    {
+      "path": "patches/0002-avx-memcpy-use-unaligned-safe-byte-cursors.patch",
+      "sha256": "3932b330a30ff25718ca4e90d0d64371eb70d3c3232ade1dcc237283ccaee5dd"
+    }
+  ],
+  "fork_bundle_sha256": "8b19b0340120b7ddef8fa3e36a4f43d29e6ef3754297d703172e83541b8e4ffb",
+  "fork_diff_sha256": "bcc06760966f92084bf5658b25c2b78fa026a67568af4ca5b657fad8292766f6",
+  "fork_source_archive_sha256": "246cddee7f6fbe0c0603df88bf502ea0d2252e95c2facefb90e21aa31282b2a4",
+  "qualification_scope": "bounded malicious-rep-ring smoke vectors under the S3.1.1 sanitizer matrix",
+  "upstream_approved": false,
+  "production_backend_approved": false
+}

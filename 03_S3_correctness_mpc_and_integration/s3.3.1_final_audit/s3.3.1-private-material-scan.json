@@ -1,0 +1,620 @@
+{
+  "schema_version": "saib-retf-s2.2.2.1-recursive-private-material-scan/1",
+  "root": ".",
+  "files_inspected_including_nested": 8459,
+  "archives_expanded": 2,
+  "allowed_fixture_hits": [
+    {
+      "path": "s3.3.1-source.tar.gz::experiments/v2/statistics/test_validate_formal_input.py",
+      "inner_path": "experiments/v2/statistics/test_validate_formal_input.py",
+      "sha256": "73739a16006ece7272aaf40d0f4894ac44462a085c465e2030152a2491efbff4"
+    },
+    {
+      "path": "s3.3.1-source.tar.gz::experiments/v2/testdata/trace-attestor-s2-test-private.pem",
+      "inner_path": "experiments/v2/testdata/trace-attestor-s2-test-private.pem",
+      "sha256": "53b5b4e09a81feec8442b91a5d082d1069b10e35e453bb329dd9e94f96677684"
+    }
+  ],
+  "forbidden_private_material_hits": [],
+  "opaque_git_bundles": [],
+  "git_history_scans": [
+    {
+      "path": "s3.3.1-git.bundle",
+      "report": {
+        "schema_version": "saib-retf-s2.2.2.1-git-history-private-scan/1",
+        "bundle_path": "s3.3.1-git.bundle",
+        "bundle_sha256": "e6c284e6accb8d368c0ad1047488419d54c45416c8893ceb9411701496970bd0",
+        "bundle_verify_passed": true,
+        "bundle_verify_output": [
+          "<bundle> is okay",
+          "The bundle contains these 37 refs:",
+          "7c88fbbb71bf4a78d93b272d7380fc1becd82032 refs/heads/main",
+          "d2cac6f27d78681df7762d8830e3be9744955ca4 refs/heads/s2-anoncred-prototype",
+          "ed0fa2cd8030ece0858334492e8940a4ad0d2b00 refs/heads/s2.1-security-closure",
+          "6dba20ec35a86d395b1d8580e78736089d6db19e refs/heads/s2.2-production-integration",
+          "f0392814765270c57e0bfbb45c43385490c3391b refs/heads/s2.2.1-security-binding",
+          "6e4eb94c695632413820a5716ae76da05054ac79 refs/heads/s2.2.2-freshness-closure",
+          "ba21eab3814d9e39e427d3f0722794f96bd9be32 refs/heads/s2.2.2.1-audit-addendum",
+          "986c64a8f3acb49ee428a590f443b86242de56a9 refs/heads/s2.2.2.1-audit-addendum-v1.1",
+          "724095cc35da4dad5d73e7605891c60418c7be34 refs/heads/s2.2.2.1-audit-errata",
+          "b440622ecbe22d5faa1ea3dda6fb4cda37073ed3 refs/heads/s3-distributed-mpc-prototype",
+          "07301dd8e0037a2fb889ace957d30f50587974c5 refs/heads/s3-final-experiment",
+          "b8ec6876b5d4acdfd74a3cc21808f2bce57fe366 refs/heads/s3.0.1-s3.1.1-binding-qualification",
+          "a085a352e8404ed1140466fa201108a8f9f31cdb refs/heads/s3.0.2-s3.2-committed-input",
+          "2ecc21216f7e2b7b0877e90e47e683d6375394ca refs/heads/s3.0.3-s3.2.1-binding-closure",
+          "d4d4ccb3e59b181ac10466ed8bb842c2d461b0f3 refs/heads/s3.0.3.1-errata",
+          "4d84a0b1e014b2bef9f9b28cf46a1320fad3223d refs/heads/s3.3-fmatch-design-reference",
+          "6f18f396e63e354047384484e1bf9dd4688145df refs/heads/s3.3.1-fmatch-implementation",
+          "059fa182b848211ab81e2620702b6b148e0acd96 refs/tags/s1.1-audit",
+          "98561e3b6273d1b82463a912f10b9af9f4748a72 refs/tags/s2.1-audit",
+          "092a287949b6f3606a8cc28751af9e9e964c1efa refs/tags/s2.2.1-audit",
+          "2ba0c14cb8c25498da26c5dd27edfe6083a3ddb1 refs/tags/s2.2.2-audit",
+          "55343587a57c2f3d733e43d60b32d3113e8ef76a refs/tags/s2.2.2.1-audit",
+          "84cf67b767ccbb38b49cc051be7d1cd20b059ba2 refs/tags/s2.2.2.1-history-scan-addendum",
+          "017af954d64fa78add1537699fffb04477e52ab2 refs/tags/s2.2.2.1-history-scan-addendum-v1.1",
+          "04ed48a265f8e1a54a1995a16cc22ffae2c38f4c refs/tags/s3.0.2-s3.2-committed-input-audit",
+          "67c7f19b59952bebbf1e7f8dffb3b223471e6b22 refs/tags/s3.0.2-s3.2-committed-input-audit-v1.1",
+          "c6406d22a14c4c71a9382e644eb471694962be8e refs/tags/s3.0.3-s3.2.1-binding-closure-audit",
+          "edc3d2bb3be0b68bcf752aa27d222f7f1eb8341d refs/tags/s3.0.3.1-errata-audit",
+          "6ec0754c4b41d9a9758e634e24d39a20a7c7da32 refs/tags/s3.0.3.1-errata-audit-v1.1",
+          "a1f3ccc10cfa7063479972cc687a88bf5dd271ec refs/tags/s3.0.3.2-runtime-integrity-audit",
+          "b19ab4e52987353e44f3b7962cf1468a7dae0554 refs/tags/s3.1-prototype-audit",
+          "6d46e4817cff3685aab8cc9123be3ce453f7bdae refs/tags/s3.1.1-binding-qualification-audit",
+          "30962e1966ae687d4b8dbabbe5c794eb78fdd38d refs/tags/s3.3-fmatch-design-freeze",
+          "86a1555b9918f45790892d721b0a492194782d79 refs/tags/s3.3.1-fmatch-implementation-audit",
+          "470ae21fb36ad762e13247d71ca0640ef5bed144 refs/tags/s3.3.1-fmatch-implementation-audit-v1.1",
+          "7ba168cffc7300d0292d25d373a28362ecec87ba refs/tags/s3.3.1-fmatch-implementation-audit-v1.2",
+          "6f18f396e63e354047384484e1bf9dd4688145df HEAD",
+          "The bundle records a complete history.",
+          "The bundle uses this hash algorithm: sha1"
+        ],
+        "bundle_verify_repository": "temporary empty bare repository",
+        "source_repository_dependency": false,
+        "bundle_list_heads": [
+          {
+            "object_id": "7c88fbbb71bf4a78d93b272d7380fc1becd82032",
+            "ref": "refs/heads/main"
+          },
+          {
+            "object_id": "d2cac6f27d78681df7762d8830e3be9744955ca4",
+            "ref": "refs/heads/s2-anoncred-prototype"
+          },
+          {
+            "object_id": "ed0fa2cd8030ece0858334492e8940a4ad0d2b00",
+            "ref": "refs/heads/s2.1-security-closure"
+          },
+          {
+            "object_id": "6dba20ec35a86d395b1d8580e78736089d6db19e",
+            "ref": "refs/heads/s2.2-production-integration"
+          },
+          {
+            "object_id": "f0392814765270c57e0bfbb45c43385490c3391b",
+            "ref": "refs/heads/s2.2.1-security-binding"
+          },
+          {
+            "object_id": "6e4eb94c695632413820a5716ae76da05054ac79",
+            "ref": "refs/heads/s2.2.2-freshness-closure"
+          },
+          {
+            "object_id": "ba21eab3814d9e39e427d3f0722794f96bd9be32",
+            "ref": "refs/heads/s2.2.2.1-audit-addendum"
+          },
+          {
+            "object_id": "986c64a8f3acb49ee428a590f443b86242de56a9",
+            "ref": "refs/heads/s2.2.2.1-audit-addendum-v1.1"
+          },
+          {
+            "object_id": "724095cc35da4dad5d73e7605891c60418c7be34",
+            "ref": "refs/heads/s2.2.2.1-audit-errata"
+          },
+          {
+            "object_id": "b440622ecbe22d5faa1ea3dda6fb4cda37073ed3",
+            "ref": "refs/heads/s3-distributed-mpc-prototype"
+          },
+          {
+            "object_id": "07301dd8e0037a2fb889ace957d30f50587974c5",
+            "ref": "refs/heads/s3-final-experiment"
+          },
+          {
+            "object_id": "b8ec6876b5d4acdfd74a3cc21808f2bce57fe366",
+            "ref": "refs/heads/s3.0.1-s3.1.1-binding-qualification"
+          },
+          {
+            "object_id": "a085a352e8404ed1140466fa201108a8f9f31cdb",
+            "ref": "refs/heads/s3.0.2-s3.2-committed-input"
+          },
+          {
+            "object_id": "2ecc21216f7e2b7b0877e90e47e683d6375394ca",
+            "ref": "refs/heads/s3.0.3-s3.2.1-binding-closure"
+          },
+          {
+            "object_id": "d4d4ccb3e59b181ac10466ed8bb842c2d461b0f3",
+            "ref": "refs/heads/s3.0.3.1-errata"
+          },
+          {
+            "object_id": "4d84a0b1e014b2bef9f9b28cf46a1320fad3223d",
+            "ref": "refs/heads/s3.3-fmatch-design-reference"
+          },
+          {
+            "object_id": "6f18f396e63e354047384484e1bf9dd4688145df",
+            "ref": "refs/heads/s3.3.1-fmatch-implementation"
+          },
+          {
+            "object_id": "059fa182b848211ab81e2620702b6b148e0acd96",
+            "ref": "refs/tags/s1.1-audit"
+          },
+          {
+            "object_id": "98561e3b6273d1b82463a912f10b9af9f4748a72",
+            "ref": "refs/tags/s2.1-audit"
+          },
+          {
+            "object_id": "092a287949b6f3606a8cc28751af9e9e964c1efa",
+            "ref": "refs/tags/s2.2.1-audit"
+          },
+          {
+            "object_id": "2ba0c14cb8c25498da26c5dd27edfe6083a3ddb1",
+            "ref": "refs/tags/s2.2.2-audit"
+          },
+          {
+            "object_id": "55343587a57c2f3d733e43d60b32d3113e8ef76a",
+            "ref": "refs/tags/s2.2.2.1-audit"
+          },
+          {
+            "object_id": "84cf67b767ccbb38b49cc051be7d1cd20b059ba2",
+            "ref": "refs/tags/s2.2.2.1-history-scan-addendum"
+          },
+          {
+            "object_id": "017af954d64fa78add1537699fffb04477e52ab2",
+            "ref": "refs/tags/s2.2.2.1-history-scan-addendum-v1.1"
+          },
+          {
+            "object_id": "04ed48a265f8e1a54a1995a16cc22ffae2c38f4c",
+            "ref": "refs/tags/s3.0.2-s3.2-committed-input-audit"
+          },
+          {
+            "object_id": "67c7f19b59952bebbf1e7f8dffb3b223471e6b22",
+            "ref": "refs/tags/s3.0.2-s3.2-committed-input-audit-v1.1"
+          },
+          {
+            "object_id": "c6406d22a14c4c71a9382e644eb471694962be8e",
+            "ref": "refs/tags/s3.0.3-s3.2.1-binding-closure-audit"
+          },
+          {
+            "object_id": "edc3d2bb3be0b68bcf752aa27d222f7f1eb8341d",
+            "ref": "refs/tags/s3.0.3.1-errata-audit"
+          },
+          {
+            "object_id": "6ec0754c4b41d9a9758e634e24d39a20a7c7da32",
+            "ref": "refs/tags/s3.0.3.1-errata-audit-v1.1"
+          },
+          {
+            "object_id": "a1f3ccc10cfa7063479972cc687a88bf5dd271ec",
+            "ref": "refs/tags/s3.0.3.2-runtime-integrity-audit"
+          },
+          {
+            "object_id": "b19ab4e52987353e44f3b7962cf1468a7dae0554",
+            "ref": "refs/tags/s3.1-prototype-audit"
+          },
+          {
+            "object_id": "6d46e4817cff3685aab8cc9123be3ce453f7bdae",
+            "ref": "refs/tags/s3.1.1-binding-qualification-audit"
+          },
+          {
+            "object_id": "30962e1966ae687d4b8dbabbe5c794eb78fdd38d",
+            "ref": "refs/tags/s3.3-fmatch-design-freeze"
+          },
+          {
+            "object_id": "86a1555b9918f45790892d721b0a492194782d79",
+            "ref": "refs/tags/s3.3.1-fmatch-implementation-audit"
+          },
+          {
+            "object_id": "470ae21fb36ad762e13247d71ca0640ef5bed144",
+            "ref": "refs/tags/s3.3.1-fmatch-implementation-audit-v1.1"
+          },
+          {
+            "object_id": "7ba168cffc7300d0292d25d373a28362ecec87ba",
+            "ref": "refs/tags/s3.3.1-fmatch-implementation-audit-v1.2"
+          },
+          {
+            "object_id": "6f18f396e63e354047384484e1bf9dd4688145df",
+            "ref": "HEAD"
+          }
+        ],
+        "refs_count": 36,
+        "refs": [
+          {
+            "name": "refs/heads/main",
+            "object_id": "7c88fbbb71bf4a78d93b272d7380fc1becd82032",
+            "object_type": "commit"
+          },
+          {
+            "name": "refs/heads/s2-anoncred-prototype",
+            "object_id": "d2cac6f27d78681df7762d8830e3be9744955ca4",
+            "object_type": "commit"
+          },
+          {
+            "name": "refs/heads/s2.1-security-closure",
+            "object_id": "ed0fa2cd8030ece0858334492e8940a4ad0d2b00",
+            "object_type": "commit"
+          },
+          {
+            "name": "refs/heads/s2.2-production-integration",
+            "object_id": "6dba20ec35a86d395b1d8580e78736089d6db19e",
+            "object_type": "commit"
+          },
+          {
+            "name": "refs/heads/s2.2.1-security-binding",
+            "object_id": "f0392814765270c57e0bfbb45c43385490c3391b",
+            "object_type": "commit"
+          },
+          {
+            "name": "refs/heads/s2.2.2-freshness-closure",
+            "object_id": "6e4eb94c695632413820a5716ae76da05054ac79",
+            "object_type": "commit"
+          },
+          {
+            "name": "refs/heads/s2.2.2.1-audit-addendum",
+            "object_id": "ba21eab3814d9e39e427d3f0722794f96bd9be32",
+            "object_type": "commit"
+          },
+          {
+            "name": "refs/heads/s2.2.2.1-audit-addendum-v1.1",
+            "object_id": "986c64a8f3acb49ee428a590f443b86242de56a9",
+            "object_type": "commit"
+          },
+          {
+            "name": "refs/heads/s2.2.2.1-audit-errata",
+            "object_id": "724095cc35da4dad5d73e7605891c60418c7be34",
+            "object_type": "commit"
+          },
+          {
+            "name": "refs/heads/s3-distributed-mpc-prototype",
+            "object_id": "b440622ecbe22d5faa1ea3dda6fb4cda37073ed3",
+            "object_type": "commit"
+          },
+          {
+            "name": "refs/heads/s3-final-experiment",
+            "object_id": "07301dd8e0037a2fb889ace957d30f50587974c5",
+            "object_type": "commit"
+          },
+          {
+            "name": "refs/heads/s3.0.1-s3.1.1-binding-qualification",
+            "object_id": "b8ec6876b5d4acdfd74a3cc21808f2bce57fe366",
+            "object_type": "commit"
+          },
+          {
+            "name": "refs/heads/s3.0.2-s3.2-committed-input",
+            "object_id": "a085a352e8404ed1140466fa201108a8f9f31cdb",
+            "object_type": "commit"
+          },
+          {
+            "name": "refs/heads/s3.0.3-s3.2.1-binding-closure",
+            "object_id": "2ecc21216f7e2b7b0877e90e47e683d6375394ca",
+            "object_type": "commit"
+          },
+          {
+            "name": "refs/heads/s3.0.3.1-errata",
+            "object_id": "d4d4ccb3e59b181ac10466ed8bb842c2d461b0f3",
+            "object_type": "commit"
+          },
+          {
+            "name": "refs/heads/s3.3-fmatch-design-reference",
+            "object_id": "4d84a0b1e014b2bef9f9b28cf46a1320fad3223d",
+            "object_type": "commit"
+          },
+          {
+            "name": "refs/heads/s3.3.1-fmatch-implementation",
+            "object_id": "6f18f396e63e354047384484e1bf9dd4688145df",
+            "object_type": "commit"
+          },
+          {
+            "name": "refs/tags/s1.1-audit",
+            "object_id": "059fa182b848211ab81e2620702b6b148e0acd96",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s2.1-audit",
+            "object_id": "98561e3b6273d1b82463a912f10b9af9f4748a72",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s2.2.1-audit",
+            "object_id": "092a287949b6f3606a8cc28751af9e9e964c1efa",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s2.2.2-audit",
+            "object_id": "2ba0c14cb8c25498da26c5dd27edfe6083a3ddb1",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s2.2.2.1-audit",
+            "object_id": "55343587a57c2f3d733e43d60b32d3113e8ef76a",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s2.2.2.1-history-scan-addendum",
+            "object_id": "84cf67b767ccbb38b49cc051be7d1cd20b059ba2",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s2.2.2.1-history-scan-addendum-v1.1",
+            "object_id": "017af954d64fa78add1537699fffb04477e52ab2",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s3.0.2-s3.2-committed-input-audit",
+            "object_id": "04ed48a265f8e1a54a1995a16cc22ffae2c38f4c",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s3.0.2-s3.2-committed-input-audit-v1.1",
+            "object_id": "67c7f19b59952bebbf1e7f8dffb3b223471e6b22",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s3.0.3-s3.2.1-binding-closure-audit",
+            "object_id": "c6406d22a14c4c71a9382e644eb471694962be8e",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s3.0.3.1-errata-audit",
+            "object_id": "edc3d2bb3be0b68bcf752aa27d222f7f1eb8341d",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s3.0.3.1-errata-audit-v1.1",
+            "object_id": "6ec0754c4b41d9a9758e634e24d39a20a7c7da32",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s3.0.3.2-runtime-integrity-audit",
+            "object_id": "a1f3ccc10cfa7063479972cc687a88bf5dd271ec",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s3.1-prototype-audit",
+            "object_id": "b19ab4e52987353e44f3b7962cf1468a7dae0554",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s3.1.1-binding-qualification-audit",
+            "object_id": "6d46e4817cff3685aab8cc9123be3ce453f7bdae",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s3.3-fmatch-design-freeze",
+            "object_id": "30962e1966ae687d4b8dbabbe5c794eb78fdd38d",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s3.3.1-fmatch-implementation-audit",
+            "object_id": "86a1555b9918f45790892d721b0a492194782d79",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s3.3.1-fmatch-implementation-audit-v1.1",
+            "object_id": "470ae21fb36ad762e13247d71ca0640ef5bed144",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s3.3.1-fmatch-implementation-audit-v1.2",
+            "object_id": "7ba168cffc7300d0292d25d373a28362ecec87ba",
+            "object_type": "tag"
+          }
+        ],
+        "reachable_commits": 64,
+        "reachable_objects": 1371,
+        "object_type_counts": {
+          "blob": 732,
+          "commit": 64,
+          "tag": 19,
+          "tree": 556
+        },
+        "reachable_blobs": 732,
+        "scanned_unique_blobs": 732,
+        "scanned_blob_bytes": 5192844,
+        "private_key_blocks": 3,
+        "private_key_findings": [
+          {
+            "blob_oid": "0defe39c7762dfc3a7d74e077ec686f9b1faec39",
+            "blob_sha256": "73739a16006ece7272aaf40d0f4894ac44462a085c465e2030152a2491efbff4",
+            "blob_size": 15743,
+            "historical_paths": [
+              "experiments/v2/statistics/test_validate_formal_input.py"
+            ],
+            "key_public_spki_sha256": "44ca0cf355aa2087a6e328a63978b5aa873cff3079691b9f1f8e74bb2e80953c",
+            "approved_test_fixture": true,
+            "approvals": [
+              {
+                "path": "experiments/v2/statistics/test_validate_formal_input.py",
+                "purpose": "embedded deterministic formal-admission test fixture only; historical file hashes may differ"
+              }
+            ],
+            "parse_error": ""
+          },
+          {
+            "blob_oid": "27f45a2550ea9c5b0f5cf7d5c3321ef1fec522d8",
+            "blob_sha256": "1abb498ce237276390845ae9466fbe8216a515bec64c09f0ec732def79f36179",
+            "blob_size": 15531,
+            "historical_paths": [
+              "experiments/v2/statistics/test_validate_formal_input.py"
+            ],
+            "key_public_spki_sha256": "44ca0cf355aa2087a6e328a63978b5aa873cff3079691b9f1f8e74bb2e80953c",
+            "approved_test_fixture": true,
+            "approvals": [
+              {
+                "path": "experiments/v2/statistics/test_validate_formal_input.py",
+                "purpose": "embedded deterministic formal-admission test fixture only; historical file hashes may differ"
+              }
+            ],
+            "parse_error": ""
+          },
+          {
+            "blob_oid": "5a86a57d1b2a3ef1cfb609442ae9a9be945768ae",
+            "blob_sha256": "53b5b4e09a81feec8442b91a5d082d1069b10e35e453bb329dd9e94f96677684",
+            "blob_size": 119,
+            "historical_paths": [
+              "experiments/v2/testdata/trace-attestor-s2-test-private.pem"
+            ],
+            "key_public_spki_sha256": "44ca0cf355aa2087a6e328a63978b5aa873cff3079691b9f1f8e74bb2e80953c",
+            "approved_test_fixture": true,
+            "approvals": [
+              {
+                "path": "experiments/v2/testdata/trace-attestor-s2-test-private.pem",
+                "purpose": "formal-admission test fixture only; never a production attestor"
+              }
+            ],
+            "parse_error": ""
+          }
+        ],
+        "approved_test_fixture_key_blocks": 3,
+        "production_private_key_findings": 0,
+        "malformed_private_key_blocks": 0,
+        "certificate_blocks": 0,
+        "certificate_findings": [],
+        "sensitive_path_findings": [
+          {
+            "path": "prototype/anoncred-rust/vendor/credx-0.2.1-saib/src/blind/credential.rs",
+            "blob_oid": "17f2fed98539b04753e0c7ef20104937767965fe",
+            "blob_sha256": "618c4e449a9db9f2e039544895bd76bc9b6968574af12d17d612a71d88e33ab1",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "prototype/anoncred-rust/vendor/credx-0.2.1-saib/src/knox/ps/secret_key.rs",
+            "blob_oid": "2f1cf030bb1dd907cfd2c433c0fb01213f0ac17e",
+            "blob_sha256": "4b52d4e533c069d5ed0afa5adc7b60ce62a07bf8cab843d5f8c7133d78b63c0d",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "prototype/anoncred-rust/vendor/credx-0.2.1-saib/src/presentation/credential.rs",
+            "blob_oid": "4bd9c933cf3d603ed3b801fa5b89b724b000d0a5",
+            "blob_sha256": "e0cc46e40802b1e3218263792317ed771ad6bd761a042641165e3c141c5b866a",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "experiments/v2/testdata/trace-attestor-s2-test-private.pem",
+            "blob_oid": "5a86a57d1b2a3ef1cfb609442ae9a9be945768ae",
+            "blob_sha256": "53b5b4e09a81feec8442b91a5d082d1069b10e35e453bb329dd9e94f96677684",
+            "classification": "approved_test_private_fixture",
+            "contains_private_key": true
+          },
+          {
+            "path": "experiments/v2/statistics/recursive_private_material_scan.py",
+            "blob_oid": "68f819d50f7f2db027b495b624de16a4895fb729",
+            "blob_sha256": "1c578357e172dd91377e78464dd80ef9d5dd4c963e2c43ec597d3f525c5e9570",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "experiments/v2/statistics/git_history_private_scan.py",
+            "blob_oid": "6b0dfee95a3e757c320f76c8decce8741180c4b6",
+            "blob_sha256": "3a8ac3cc9adf6d3413ccf72f10b9e83584b650830a96dac0e4b42fec1cb65d05",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "docs/TRUSTED_CREDENTIAL_REGISTRY.md",
+            "blob_oid": "756ed6253f3525de188072e107ffe8cecea7ee0d",
+            "blob_sha256": "42e22101951b4009434e2ae1decdb4d19073676be9beee6210f638bd6e870fdb",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "experiments/v2/configs/s2.2.2.1-private-fixture-allowlist.json",
+            "blob_oid": "9606fdd217e84d9e300dbb2d7bc5f5d38b6ab2c8",
+            "blob_sha256": "282f0f05e1f34d712f5669c58a8abc8782ae6137a84aad93fb3e959701036026",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "experiments/v2/statistics/recursive_private_material_scan.py",
+            "blob_oid": "9d444879c3cd95b44bf4a0c6f7df0c617fb79176",
+            "blob_sha256": "0dde8456cfd4dbb047d69a379430e652778b07db21976d0e98cf6dacbc8c2b96",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "prototype/anoncred-rust/vendor/credx-0.2.1-saib/src/knox/bbs/secret_key.rs",
+            "blob_oid": "a9a82e0b1fccfc900e74b4dbadb33fb1383e028a",
+            "blob_sha256": "899a42b92290abbb832b60a370dee7ffd58ec1417b3f98be4aa3851651958a96",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "experiments/v2/configs/s2.2.2.1-private-fixture-allowlist.json",
+            "blob_oid": "aef1aa21d0af4f86a60debd76c693b00bb062cf9",
+            "blob_sha256": "faa393e6a043d40c744bd512a9573a1100b9b55158aad9ba89c04ce25c411451",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "experiments/v2/statistics/git_history_private_scan.py",
+            "blob_oid": "b595a576744525005dd756d0908784b32098e1e1",
+            "blob_sha256": "a443e49d1e8e417aa292645b87d360c726c6a24ac30951ac4be2db6e91c35a07",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "experiments/v2/statistics/git_history_private_scan.py",
+            "blob_oid": "c376a1ec85846920cb81384b971e4d5c8fdc86e0",
+            "blob_sha256": "d4fabfff42f0cb50b4c10fc5b8ec8f47bdf81b30ba5aa3d4ffd3311f9d18a453",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "experiments/v2/statistics/git_history_private_scan.py",
+            "blob_oid": "c401b35747b2c760aa9f1c77b85ead659d9a85b5",
+            "blob_sha256": "464da035895c0249e7d73a26d3ab55cc0e32f299a7b4116ffd4d962c9d024da3",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "experiments/v2/configs/s2.2.2.1-private-fixture-allowlist.json",
+            "blob_oid": "cad117ea58aa3512e6f6fbae0fc2deed3d93dc98",
+            "blob_sha256": "680e730c48848eb770fe05871afdd82427dea5bae904672d7eabbd35cc576125",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "prototype/anoncred-rust/vendor/credx-0.2.1-saib/src/mapping/map_credential.rs",
+            "blob_oid": "cb2813d4657d248d8ea6a772a7206c7e9c83b68d",
+            "blob_sha256": "1a56f4c3b22b17202fce931228c4ba460fa3981dbb503885e0aa92d9df336148",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "experiments/v2/statistics/recursive_private_material_scan.py",
+            "blob_oid": "d119fcd9cbaf756f91d5e67e4b91b8805b0d9b9f",
+            "blob_sha256": "3682991b9d99d769fbf85fe174f1aa11f2fab465314913d3f33111a51aef0a54",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "prototype/anoncred-rust/vendor/credx-0.2.1-saib/src/credential.rs",
+            "blob_oid": "ee04f6804eff6ee07befe55eef409fd0f6f1dddd",
+            "blob_sha256": "8389b0c420cbb7614a5f4b0d2db66abb4aeb2a7ff8e5309c9a2e21611cf91e92",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "experiments/v2/statistics/recursive_private_material_scan.py",
+            "blob_oid": "f60b84effb225219dbf8eb915f122aa6c4fc2141",
+            "blob_sha256": "56fc522acf263e237171cfa1712e5e3c41181fc6c681835b392cd257ca192e8c",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          }
+        ],
+        "unreviewed_sensitive_path_findings": [],
+        "fixture_admission": "historical path + public-key SPKI SHA-256 fingerprint + declared test purpose",
+        "all_reachable_blobs_scanned": true,
+        "passed": true
+      }
+    }
+  ],
+  "allowlist_mode": "working/archive files: exact path + file SHA-256; Git history keys: path + public-key SPKI SHA-256 + test purpose",
+  "passed": true
+}

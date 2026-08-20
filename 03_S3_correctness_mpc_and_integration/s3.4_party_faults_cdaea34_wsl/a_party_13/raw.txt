@@ -1,0 +1,124 @@
+attack_id=A-PARTY-13
+started_at_utc=2026-07-26T13:33:22.811084Z
+release_commit=cdaea345cc6ca012c37ace2d8f19e69d56c51fea
+oci_digest=sha256:532a8ccbe2aa5cc8d5d789fd51537f7e03d80aa07758509b75d4e14f13d76079
+single_physical_host=true
+real_mpc_image=true
+fixture_scope=fault-injection-only
+COMMAND ["docker", "create", "--name", "saib-s34-fault-13-p0", "--read-only", "--user", "65532:65532", "--cap-drop", "ALL", "--security-opt", "no-new-privileges:true", "--pids-limit", "128", "--memory", "536870912", "--cpus", "1.000", "--network", "saib-s34-mpc", "--ip", "172.31.34.10", "--workdir", "/sessions/P0", "--tmpfs", "/tmp:rw,noexec,nosuid,size=16777216", "--mount", "type=bind,src=/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s3.4-live-v2/runtime-secrets/mpc-tls/P0,dst=/sessions/P0/Player-Data,readonly", "--mount", "type=bind,src=/mnt/g/paperexper/retf/benchmarks/results/expand/s3.4-party-faults-audit-cdaea34-wsl/a_party_13/inputs/Input-P0-0,dst=/sessions/P0/Player-Data/Input-P0-0,readonly", "--mount", "type=bind,src=/mnt/g/paperexper/retf/benchmarks/results/expand/s3.4-party-faults-audit-cdaea34-wsl/a_party_13/P0/output,dst=/sessions/P0/output", "--mount", "type=bind,src=/mnt/g/paperexper/retf/benchmarks/results/expand/s3.4-party-faults-audit-cdaea34-wsl/a_party_13/P0/logs,dst=/sessions/P0/logs", "--mount", "type=bind,src=/mnt/g/paperexper/retf/benchmarks/results/expand/s3.4-party-faults-audit-cdaea34-wsl/a_party_13/P0/runtime-profile,dst=/sessions/P0/runtime-profile,readonly", "--label", "org.saib-retf.fault-case=a_party_13", "localhost:5500/saib-retf/fmatch-party@sha256:532a8ccbe2aa5cc8d5d789fd51537f7e03d80aa07758509b75d4e14f13d76079", "0", "saib_fmatch-16", "-pn", "24800", "-h", "172.31.34.10", "-P", "52435875175126190479447740508185965837690552500527637822603658699938581184513", "-OF", "."]
+START 2026-07-26T13:33:22.842592Z
+STDOUT
+21c1e40d5565b99e3fbbcfd2157e5a126ecbb036aa295755fd063643b1106729
+
+STDERR
+
+END 2026-07-26T13:33:22.990447Z
+EXIT_CODE 0
+COMMAND ["docker", "create", "--name", "saib-s34-fault-13-p1", "--read-only", "--user", "65532:65532", "--cap-drop", "ALL", "--security-opt", "no-new-privileges:true", "--pids-limit", "128", "--memory", "536870912", "--cpus", "1.000", "--network", "saib-s34-mpc", "--ip", "172.31.34.11", "--workdir", "/sessions/P1", "--tmpfs", "/tmp:rw,noexec,nosuid,size=16777216", "--mount", "type=bind,src=/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s3.4-live-v2/runtime-secrets/mpc-tls/P1,dst=/sessions/P1/Player-Data,readonly", "--mount", "type=bind,src=/mnt/g/paperexper/retf/benchmarks/results/expand/s3.4-party-faults-audit-cdaea34-wsl/a_party_13/inputs/Input-P1-0,dst=/sessions/P1/Player-Data/Input-P1-0,readonly", "--mount", "type=bind,src=/mnt/g/paperexper/retf/benchmarks/results/expand/s3.4-party-faults-audit-cdaea34-wsl/a_party_13/P1/output,dst=/sessions/P1/output", "--mount", "type=bind,src=/mnt/g/paperexper/retf/benchmarks/results/expand/s3.4-party-faults-audit-cdaea34-wsl/a_party_13/P1/logs,dst=/sessions/P1/logs", "--mount", "type=bind,src=/mnt/g/paperexper/retf/benchmarks/results/expand/s3.4-party-faults-audit-cdaea34-wsl/a_party_13/P1/runtime-profile,dst=/sessions/P1/runtime-profile,readonly", "--label", "org.saib-retf.fault-case=a_party_13", "localhost:5500/saib-retf/fmatch-party@sha256:532a8ccbe2aa5cc8d5d789fd51537f7e03d80aa07758509b75d4e14f13d76079", "1", "saib_fmatch-16", "-pn", "24800", "-h", "172.31.34.10", "-P", "52435875175126190479447740508185965837690552500527637822603658699938581184513", "-OF", "."]
+START 2026-07-26T13:33:22.998666Z
+STDOUT
+d801972148a498568f499b1ff2a79a477eec9b4b9138059b6f991f28279fd887
+
+STDERR
+
+END 2026-07-26T13:33:23.145524Z
+EXIT_CODE 0
+COMMAND ["docker", "create", "--name", "saib-s34-fault-13-p2", "--read-only", "--user", "65532:65532", "--cap-drop", "ALL", "--security-opt", "no-new-privileges:true", "--pids-limit", "128", "--memory", "536870912", "--cpus", "1.000", "--network", "saib-s34-mpc", "--ip", "172.31.34.12", "--workdir", "/sessions/P2", "--tmpfs", "/tmp:rw,noexec,nosuid,size=16777216", "--mount", "type=bind,src=/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s3.4-live-v2/runtime-secrets/mpc-tls/P2,dst=/sessions/P2/Player-Data,readonly", "--mount", "type=bind,src=/mnt/g/paperexper/retf/benchmarks/results/expand/s3.4-party-faults-audit-cdaea34-wsl/a_party_13/inputs/Input-P2-0,dst=/sessions/P2/Player-Data/Input-P2-0,readonly", "--mount", "type=bind,src=/mnt/g/paperexper/retf/benchmarks/results/expand/s3.4-party-faults-audit-cdaea34-wsl/a_party_13/P2/output,dst=/sessions/P2/output", "--mount", "type=bind,src=/mnt/g/paperexper/retf/benchmarks/results/expand/s3.4-party-faults-audit-cdaea34-wsl/a_party_13/P2/logs,dst=/sessions/P2/logs", "--mount", "type=bind,src=/mnt/g/paperexper/retf/benchmarks/results/expand/s3.4-party-faults-audit-cdaea34-wsl/a_party_13/P2/runtime-profile,dst=/sessions/P2/runtime-profile,readonly", "--label", "org.saib-retf.fault-case=a_party_13", "localhost:5500/saib-retf/fmatch-party@sha256:532a8ccbe2aa5cc8d5d789fd51537f7e03d80aa07758509b75d4e14f13d76079", "2", "saib_fmatch-16", "-pn", "24800", "-h", "172.31.34.10", "-P", "52435875175126190479447740508185965837690552500527637822603658699938581184513", "-OF", "."]
+START 2026-07-26T13:33:23.154498Z
+STDOUT
+5135ab2de66906738aac516d040bbca4d1d0edc6a084dec0b7ea4679d5dc2085
+
+STDERR
+
+END 2026-07-26T13:33:23.318956Z
+EXIT_CODE 0
+COMMAND ["docker", "stop", "--time", "1", "saib-s34-fault-13-p1"]
+START 2026-07-26T13:33:28.319926Z
+STDOUT
+Flag --time has been deprecated, use --timeout instead
+saib-s34-fault-13-p1
+
+STDERR
+
+END 2026-07-26T13:33:30.155061Z
+EXIT_CODE 0
+COMMAND ["docker", "start", "saib-s34-fault-13-p1"]
+START 2026-07-26T13:33:30.155113Z
+STDOUT
+saib-s34-fault-13-p1
+
+STDERR
+
+END 2026-07-26T13:33:30.639284Z
+EXIT_CODE 0
+party=0
+exit_code=1
+stdout_sha256=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+stderr_sha256=0159123f14b95c11adb50a0b56b88b5b2178674226db6c973ea3691fad2d18a4
+party=1
+exit_code=137
+stdout_sha256=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+stderr_sha256=dff785c9093c939f1c154dcf27daab6543dde72971f8f75bbd69471a6ed57e8b
+party=2
+exit_code=1
+stdout_sha256=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+stderr_sha256=6b600bf3956f81ca9048b2317c9a69f311a6df8c8f083f6f1046a2fc0b7873ff
+fault_action_ok=true
+expected_result=REJECT
+actual_result=REJECT
+ended_at_utc=2026-07-26T13:33:30.665344Z
+result=PASS
+COMMAND ["docker", "unpause", "saib-s34-fault-13-p0"]
+START 2026-07-26T13:33:30.665390Z
+STDOUT
+
+STDERR
+Error response from daemon: Container 21c1e40d5565b99e3fbbcfd2157e5a126ecbb036aa295755fd063643b1106729 is not paused
+
+END 2026-07-26T13:33:30.690312Z
+EXIT_CODE 1
+COMMAND ["docker", "rm", "--force", "saib-s34-fault-13-p0"]
+START 2026-07-26T13:33:30.690342Z
+STDOUT
+saib-s34-fault-13-p0
+
+STDERR
+
+END 2026-07-26T13:33:30.764411Z
+EXIT_CODE 0
+COMMAND ["docker", "unpause", "saib-s34-fault-13-p1"]
+START 2026-07-26T13:33:30.764453Z
+STDOUT
+
+STDERR
+Error response from daemon: Container d801972148a498568f499b1ff2a79a477eec9b4b9138059b6f991f28279fd887 is not paused
+
+END 2026-07-26T13:33:30.791132Z
+EXIT_CODE 1
+COMMAND ["docker", "rm", "--force", "saib-s34-fault-13-p1"]
+START 2026-07-26T13:33:30.791158Z
+STDOUT
+saib-s34-fault-13-p1
+
+STDERR
+
+END 2026-07-26T13:33:31.354923Z
+EXIT_CODE 0
+COMMAND ["docker", "unpause", "saib-s34-fault-13-p2"]
+START 2026-07-26T13:33:31.354957Z
+STDOUT
+
+STDERR
+Error response from daemon: Container 5135ab2de66906738aac516d040bbca4d1d0edc6a084dec0b7ea4679d5dc2085 is not paused
+
+END 2026-07-26T13:33:31.385846Z
+EXIT_CODE 1
+COMMAND ["docker", "rm", "--force", "saib-s34-fault-13-p2"]
+START 2026-07-26T13:33:31.385868Z
+STDOUT
+saib-s34-fault-13-p2
+
+STDERR
+
+END 2026-07-26T13:33:31.454207Z
+EXIT_CODE 0

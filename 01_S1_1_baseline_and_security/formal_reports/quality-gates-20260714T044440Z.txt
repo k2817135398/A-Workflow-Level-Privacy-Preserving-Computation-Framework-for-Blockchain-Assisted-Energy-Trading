@@ -1,0 +1,47 @@
+﻿SAIB-RETF v2 quality gates 20260714T044440Z
+
+=== production tests (mocks excluded) ===
+?   	github.com/retf/source/v2/chaincode/privacy-state	[no test files]
+?   	github.com/retf/source/v2/chaincode/private-finalization	[no test files]
+?   	github.com/retf/source/v2/chaincode/private-task	[no test files]
+?   	github.com/retf/source/v2/cmd/v2-static-check	[no test files]
+?   	github.com/retf/source/v2/crypto/anoncred	[no test files]
+?   	github.com/retf/source/v2/crypto/credit	[no test files]
+?   	github.com/retf/source/v2/crypto/endorsement	[no test files]
+?   	github.com/retf/source/v2/mpc/adapter	[no test files]
+?   	github.com/retf/source/v2/protocol/canonical	[no test files]
+?   	github.com/retf/source/v2/runtime/trace	[no test files]
+?   	github.com/retf/source/v2/protocol/messages	[no test files]
+ok  	github.com/retf/source/v2/protocol/binding	0.323s
+
+=== tagged S1 security tests ===
+?   	github.com/retf/source/v2/chaincode/privacy-state	[no test files]
+?   	github.com/retf/source/v2/chaincode/private-finalization	[no test files]
+?   	github.com/retf/source/v2/cmd/v2-static-check	[no test files]
+?   	github.com/retf/source/v2/crypto/anoncred	[no test files]
+?   	github.com/retf/source/v2/chaincode/private-task	[no test files]
+?   	github.com/retf/source/v2/crypto/credit	[no test files]
+?   	github.com/retf/source/v2/crypto/endorsement	[no test files]
+?   	github.com/retf/source/v2/mpc/adapter	[no test files]
+?   	github.com/retf/source/v2/protocol/canonical	[no test files]
+?   	github.com/retf/source/v2/runtime/trace	[no test files]
+?   	github.com/retf/source/v2/protocol/messages	[no test files]
+ok  	github.com/retf/source/v2/protocol/binding	0.348s
+ok  	github.com/retf/source/v2/securitytests	0.574s
+
+=== Go vet ===
+
+=== production static boundary ===
+v2 production static boundary: PASS
+
+=== binding fuzz 10 seconds ===
+fuzz: elapsed: 0s, gathering baseline coverage: 0/96 completed
+fuzz: elapsed: 0s, gathering baseline coverage: 96/96 completed, now fuzzing with 16 workers
+fuzz: elapsed: 3s, execs: 129784 (43146/sec), new interesting: 11 (total: 107)
+fuzz: elapsed: 6s, execs: 163190 (11116/sec), new interesting: 12 (total: 108)
+fuzz: elapsed: 9s, execs: 614104 (150930/sec), new interesting: 15 (total: 111)
+fuzz: elapsed: 11s, execs: 741361 (62861/sec), new interesting: 18 (total: 114)
+PASS
+ok  	github.com/retf/source/v2/protocol/binding	11.408s
+
+=== formal gate unit tests ===

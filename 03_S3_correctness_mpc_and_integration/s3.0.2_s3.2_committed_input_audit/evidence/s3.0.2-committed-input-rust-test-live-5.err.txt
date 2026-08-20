@@ -1,0 +1,30 @@
+warning: use of deprecated associated function `elliptic_curve::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> vendor/credx-0.2.1-saib/src/presentation/verifiable_encryption_decryption.rs:164:46
+    |
+164 |         let key = aes_gcm::Key::<Aes128Gcm>::from_slice(&okm[..16]);
+    |                                              ^^^^^^^^^^
+    |
+    = note: `#[warn(deprecated)]` on by default
+
+warning: use of deprecated associated function `elliptic_curve::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> vendor/credx-0.2.1-saib/src/presentation/verifiable_encryption_decryption.rs:235:28
+    |
+235 |         let nonce = Nonce::from_slice(&self.ciphertext[..12]);
+    |                            ^^^^^^^^^^
+
+warning: use of deprecated associated function `elliptic_curve::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> vendor/credx-0.2.1-saib/src/presentation/verifiable_encryption_decryption.rs:243:46
+    |
+243 |         let key = aes_gcm::Key::<Aes128Gcm>::from_slice(&okm[..16]);
+    |                                              ^^^^^^^^^^
+
+warning: `credx` (lib) generated 3 warnings
+   Compiling saib-anoncred v0.1.0 (/mnt/g/paperexper/retf/saib-retf/prototype/anoncred-rust)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1m 40s
+     Running tests/s3_committed_input.rs (target/debug/deps/s3_committed_input-fdb76c54bf75c80d)
+
+thread 'component_substitution_range_mutation_and_policy_substitution_fail' panicked at /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs:701:9:
+assertion `left == right` failed
+  left: 0
+ right: 1
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace

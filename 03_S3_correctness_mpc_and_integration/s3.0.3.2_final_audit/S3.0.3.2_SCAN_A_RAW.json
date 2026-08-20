@@ -1,0 +1,774 @@
+{
+  "schema_version": "saib-retf-s3.0.3.2-final-material-audit/1",
+  "root": ".",
+  "files_inspected_including_nested": 11589,
+  "archives_expanded": 18,
+  "classification_pass_files_inspected": 11589,
+  "classification_pass_archives_expanded": 16,
+  "forbidden_private_material": [],
+  "allowed_test_fixture": [
+    {
+      "path": "oci/layout/blobs/sha256/e69fddd253a4bbfa73a34dc352b3a423c18c9945aafe38413fa07283da2fa02f::usr/lib/x86_64-linux-gnu/libgnutls.so.30.34.3",
+      "inner_path": "usr/lib/x86_64-linux-gnu/libgnutls.so.30.34.3",
+      "sha256": "779b25d20249988bea2c1aa6bbeb218f5ae7ea8a9d30ce4f54ea37372965cc4b"
+    },
+    {
+      "path": "oci/s3.0.3.2-mpspdz-party-docker.tar::blobs/sha256/81f823b9617547261c907396f63f770deaa554748ff739bedfa650e3bb74595a::usr/lib/x86_64-linux-gnu/libgnutls.so.30.34.3",
+      "inner_path": "usr/lib/x86_64-linux-gnu/libgnutls.so.30.34.3",
+      "sha256": "779b25d20249988bea2c1aa6bbeb218f5ae7ea8a9d30ce4f54ea37372965cc4b"
+    },
+    {
+      "path": "oci/s3.0.3.2-mpspdz-party-oci.tar::blobs/sha256/e69fddd253a4bbfa73a34dc352b3a423c18c9945aafe38413fa07283da2fa02f::usr/lib/x86_64-linux-gnu/libgnutls.so.30.34.3",
+      "inner_path": "usr/lib/x86_64-linux-gnu/libgnutls.so.30.34.3",
+      "sha256": "779b25d20249988bea2c1aa6bbeb218f5ae7ea8a9d30ce4f54ea37372965cc4b"
+    },
+    {
+      "path": "s3.0.3.2-source.tar.gz::saib-retf/experiments/v2/statistics/test_validate_formal_input.py",
+      "inner_path": "experiments/v2/statistics/test_validate_formal_input.py",
+      "sha256": "73739a16006ece7272aaf40d0f4894ac44462a085c465e2030152a2491efbff4"
+    },
+    {
+      "path": "s3.0.3.2-source.tar.gz::saib-retf/experiments/v2/testdata/trace-attestor-s2-test-private.pem",
+      "inner_path": "experiments/v2/testdata/trace-attestor-s2-test-private.pem",
+      "sha256": "53b5b4e09a81feec8442b91a5d082d1069b10e35e453bb329dd9e94f96677684"
+    }
+  ],
+  "public_certificate": [
+    {
+      "path": "evidence/live/party-certificates-public/P0.pem",
+      "certificate_sha256": "7a19ca92e7dba02e050c53e52e00e5f932b51a2254defb8691ce56bdd4fe97cf",
+      "public_key_spki_sha256": "ecdbb997df07d6120f3d4e4209e33d23bedccbdc66fd17a6b5240d23580fbb41"
+    },
+    {
+      "path": "evidence/live/party-certificates-public/P1.pem",
+      "certificate_sha256": "bb64f2090e6bd0f59b3a5e31359c2254efc203071aaf626a6794378b0948c1b1",
+      "public_key_spki_sha256": "70d8a74f5e068ffaa9fc8561bd8df50ae43e4fc074c9380de1971df63b108fdf"
+    },
+    {
+      "path": "evidence/live/party-certificates-public/P2.pem",
+      "certificate_sha256": "c5a4eaa08a0bb2903ac711ac630f77a17332fa8f230d26cf372cfdf7da109301",
+      "public_key_spki_sha256": "3c1967930d948e32db0fb637d1a11d2d7b7b181b293bf35d9d0d6692aa197b17"
+    }
+  ],
+  "public_key": [
+    {
+      "path": "s3.0.3.2-source.tar.gz::saib-retf/experiments/v2/configs/keys/trace-attestor-s2-test-public.pem",
+      "public_key_spki_sha256": "44ca0cf355aa2087a6e328a63978b5aa873cff3079691b9f1f8e74bb2e80953c"
+    },
+    {
+      "path": "s3.0.3.2-source.tar.gz::saib-retf/experiments/v2/statistics/test_validate_formal_input.py",
+      "public_key_spki_sha256": "44ca0cf355aa2087a6e328a63978b5aa873cff3079691b9f1f8e74bb2e80953c"
+    }
+  ],
+  "opaque_archive": [],
+  "unreadable_archive": [],
+  "parse_error": [],
+  "suspected_token": [],
+  "key_container": [],
+  "git_history_scans": [
+    {
+      "path": "backend/MP-SPDZ-s3.0.3.2-patched.git.bundle",
+      "report": {
+        "schema_version": "saib-retf-s2.2.2.1-git-history-private-scan/1",
+        "bundle_path": "MP-SPDZ-s3.0.3.2-patched.git.bundle",
+        "bundle_sha256": "8552c71d029e90a2a6b6f6e2548eb648c28498ca7a7205b3c1e493897058490e",
+        "bundle_verify_passed": true,
+        "bundle_verify_output": [
+          "<bundle> is okay",
+          "The bundle contains this ref:",
+          "81761f5fc8f5a655b824e64980988c4d91c3db01 refs/tags/saib-retf-s3.0.3.2-runtime-patched-v0.4.5",
+          "The bundle records a complete history.",
+          "The bundle uses this hash algorithm: sha1"
+        ],
+        "bundle_verify_repository": "temporary empty bare repository",
+        "source_repository_dependency": false,
+        "bundle_list_heads": [
+          {
+            "object_id": "81761f5fc8f5a655b824e64980988c4d91c3db01",
+            "ref": "refs/tags/saib-retf-s3.0.3.2-runtime-patched-v0.4.5"
+          }
+        ],
+        "refs_count": 1,
+        "refs": [
+          {
+            "name": "refs/tags/saib-retf-s3.0.3.2-runtime-patched-v0.4.5",
+            "object_id": "81761f5fc8f5a655b824e64980988c4d91c3db01",
+            "object_type": "tag"
+          }
+        ],
+        "reachable_commits": 1002,
+        "reachable_objects": 21233,
+        "object_type_counts": {
+          "blob": 16120,
+          "commit": 1002,
+          "tag": 1,
+          "tree": 4110
+        },
+        "reachable_blobs": 16120,
+        "scanned_unique_blobs": 16120,
+        "scanned_blob_bytes": 208471996,
+        "private_key_blocks": 0,
+        "private_key_findings": [],
+        "approved_test_fixture_key_blocks": 0,
+        "production_private_key_findings": 0,
+        "malformed_private_key_blocks": 0,
+        "certificate_blocks": 0,
+        "certificate_findings": [],
+        "sensitive_path_findings": [
+          {
+            "path": "GC/Secret.h",
+            "blob_oid": "002a47321d07d69d83298c72ba7a4152b67d25f8",
+            "blob_sha256": "68978ba01cdee5b008c832eb0d0f8c64e72d9c6ff3c7567a0cc7499e3649db9b",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "GC/Secret.hpp",
+            "blob_oid": "01c70247c0389694c0a20b613acd2b9a3014d8c4",
+            "blob_sha256": "867d9db42859826192f54900557bad33ce07279febe879b35659ffcc4899c754",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "GC/Secret.h",
+            "blob_oid": "024ecbd9d7f90564b1b3e5020b210344178e1b78",
+            "blob_sha256": "c8d8303fb7a29087f4c0c2c7f046df519ddbcbaf5bec24d0aefa7bea4490b223",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "GC/Secret.h",
+            "blob_oid": "02def12dfd72cc54bd6775ce7fb1c8a7bddd9df6",
+            "blob_sha256": "a4a5b733dbd87675e1bf7152ffaddadd0fb5639593479a9059e276a40aad44e7",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "GC/Secret_inline.h",
+            "blob_oid": "075506c3393ea4b2a43c9f8c2cc8f76afee8c5f3",
+            "blob_sha256": "81e3fb937f03e2fa3b1b25762f6dc71da7368ed65bc6386c27a9f22cfee9c548",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "GC/Secret.h",
+            "blob_oid": "095275568b5319c30163581198e4f9667a136df0",
+            "blob_sha256": "59929251c1963f256472c8d126225441f75e3c35925d79103e2022d1d657aa77",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "GC/Secret.h",
+            "blob_oid": "14f6638af4e2dad542c50f96056578206ce68560",
+            "blob_sha256": "6118be3f21392360148280e87246b585a65e6a6a5232af5062f93dca2f3f6b0a",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "GC/Secret.hpp",
+            "blob_oid": "15fbd5977d42f0ec47f5ca7f2245afcba9bf8638",
+            "blob_sha256": "3c79aa16e844154382fd16e014fe32b4a8183b6d63b2eea9485b577ed7dc5cb4",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "GC/Secret.hpp",
+            "blob_oid": "1c83b5fdf5e7304a36dfe2573ca5d43c0c85dace",
+            "blob_sha256": "bd302ca1a81007f26433f6e4eb93f0155e342ec2209f781ee6fab0f75a03e0b4",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "GC/Secret_inline.h",
+            "blob_oid": "1d1d8ff7ee7a6a2b1f4b65de0cc3fb27a43eb23d",
+            "blob_sha256": "39856baab0c62bd7d9621dd57edb4fb47868b8cdbfd98bbf869b6cc3343e9d20",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "GC/Secret.h",
+            "blob_oid": "27e1a0006a9ab00e329886ba8973117411c4abec",
+            "blob_sha256": "3ace78075fa329b720153c68bcf9b5a50239a7ada9729f236d94e39602557f29",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "GC/Secret.h",
+            "blob_oid": "2d111d1eb5405c0e5b30ea3245b1cc715ee7df42",
+            "blob_sha256": "740837cafefd60eff60dfaab0d4eb2d59d6e17d0a1c8f1eb850500a96b37bd25",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "GC/Secret.h",
+            "blob_oid": "315b7c498fd514f9b44db0a9130da73169ffba58",
+            "blob_sha256": "26acf580a007c3cfcaf9d4faa2c1c59a1e354cc5c330c2c01144d24999c29b35",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "GC/Secret.hpp",
+            "blob_oid": "3ca22a4ab1f970f32632398f6f96415b6e195abf",
+            "blob_sha256": "064ce583151989fbbeaca5674c8083e3d814cd532f3770294bd237e3c3fa39fe",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "GC/Secret.h",
+            "blob_oid": "4e687d23d675f78f90a91c3b2ad65c338fe21ae9",
+            "blob_sha256": "bf7cdbc2517bfaabd037c22d95c6e74f45048528dca9dc241c3843a82d9c8923",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "GC/Secret.h",
+            "blob_oid": "51324d3ef5c8916447fef22a4c09adea9dd643b8",
+            "blob_sha256": "9b59cbb705b103afba0745226176a043b7545d2dec7c697636d5818060d0fdd5",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "GC/Secret.h",
+            "blob_oid": "54addd235664d4bddd0877c8fbf504b6bc2d99d1",
+            "blob_sha256": "b15d31d51bb67234955b7d1aa7a688a63f53adeb82766922b3637f742696a5d1",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "GC/Secret.h",
+            "blob_oid": "55dface2f81ef2ad744fcd32fbb62cf0235e5cd3",
+            "blob_sha256": "3043289a1570169fe96679ecb79876e874029ea73e06f96657f5aabe82df1a3c",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "GC/Secret.hpp",
+            "blob_oid": "562cc32ca1c386b014909f9fe57bdecc259b7335",
+            "blob_sha256": "3b6d582cd9f5de191cd2af60ca99fbd5b9017c39d3b55e661019a75f591b8a77",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "GC/Secret.hpp",
+            "blob_oid": "6782438f231c1efaf58f53242a0867fc71e19a42",
+            "blob_sha256": "56b7c06b2ff3772b145e517581ac28df3aded6e73b77489036b4b8d04b8ed28b",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "GC/Secret.hpp",
+            "blob_oid": "68d794cf58bcbb2a44b08130fae56bd121a07cf0",
+            "blob_sha256": "aeb88053cd4e4c527d1d6973e73ef6e5eb9701c0f5d74537973ee46dfce2e23b",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "GC/Secret_inline.h",
+            "blob_oid": "69f6c5dcfac0d2693b9774073f19d1cde380a39e",
+            "blob_sha256": "87cbc844ce825c8c22a1ab8f30f9984dcda284d6a9841917b98726523c97070e",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "GC/Secret.h",
+            "blob_oid": "6b37aa21ceb68d3073cfc7a1d06d39f1ddf0863d",
+            "blob_sha256": "abbbcf4fa9e84aca891d10cce9714787da49da49ffb56d1e6b5e7edda64e1241",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "GC/Secret.hpp",
+            "blob_oid": "6d5e8f60f6644166f6230433944d3450c17953b9",
+            "blob_sha256": "98036902b0edd77d5f39f85f1d7f11c46171c73a5942acd9fb76f2b444a20e70",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "GC/Secret.h",
+            "blob_oid": "713aea1f256972f5aad4a98e36bd8b8f023d2aa8",
+            "blob_sha256": "33f9d387bd4798a6e3417a1646b688707421b63f590ef91c7f3e4d9dac938db3",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "GC/Secret_inline.h",
+            "blob_oid": "7465ff732d5bde3b3f6a51c68331e3ef220e119c",
+            "blob_sha256": "79b8c68e6850fd79057394861291a02607b0355051cb9ac3823b50203fdd535e",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "GC/Secret_inline.h",
+            "blob_oid": "794d3858d52734b71cbd654166dd03868b93dc71",
+            "blob_sha256": "00efcc2ba04ce886dc766e8bfbaea0559bf52571c4607a04c0a7d1294a44896e",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "GC/Secret.h",
+            "blob_oid": "7ef1e939c8f10af3556783f4875a18d4aa0c4d48",
+            "blob_sha256": "772d3c14c6df85085f9b195115601aadda4455bc33c228d8840814e2f647308f",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "GC/Secret.hpp",
+            "blob_oid": "88f1926a65cef5d74fd3638fb124e74dd2d91f6f",
+            "blob_sha256": "2d74adf07f674f11389d5234a07bab7605f40b985919a1e522634e604a1c1a03",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "GC/Secret.hpp",
+            "blob_oid": "90ba1ddbe4ee7f9b70a673810cfd2aea5cb1bcba",
+            "blob_sha256": "680aedd92ed29ff2539e3c9dbf9ca30785909b3e6c679118a461ecd31422855b",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "GC/Secret.h",
+            "blob_oid": "928f5f900d259885f4de4cdc16bd17521a508f80",
+            "blob_sha256": "1bdf7944b15b845773d9ae9d13616911325d15e70fe2405640a23669fc2dcd6a",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "GC/Secret.cpp",
+            "blob_oid": "940ce97ec531d92109611341355a0239e69b084c",
+            "blob_sha256": "4b5272b78885b7d69afde96a5a600839908c2614bbf6b259e54a4fe896e95f75",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "GC/Secret.h",
+            "blob_oid": "97a2b371d2d438429fd90499d0126846596b00f9",
+            "blob_sha256": "4b29a4992fbe976068da229d6725656450808da38248713859c943de5f569a48",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "GC/Secret.hpp",
+            "blob_oid": "9e8c2df675154443fc8d3e4a405b4c87e1a9f421",
+            "blob_sha256": "d623eb4c47a1e1dd882b855022eb26a943c12396842fbcf42a0791c0ae1a4bcd",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "GC/Secret.h",
+            "blob_oid": "9ed15fa71f96170455f3ec770b5559c8b1c70c89",
+            "blob_sha256": "07350cd50f40595ef1cc301ff8256d0adf6d5ce1210def519e50f34f4de2269d",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "GC/Secret.h",
+            "blob_oid": "9fee3f2ff5478535e5ac9580804f82f173c55122",
+            "blob_sha256": "aed56c252ca6993874906cd4ca09272dd2f4bc8b388c28211853065280e39c93",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "GC/Secret.hpp",
+            "blob_oid": "a12266343836e33b52a8ede60557aecbdfba7e63",
+            "blob_sha256": "e7515687e5c03d3af7be0e60a7625b794de10adc699f4efbd11bda7c04f43cac",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "GC/Secret.h",
+            "blob_oid": "a45f40bf1cbe5555ce129218ef1f0b1ee7429d49",
+            "blob_sha256": "fcda464fce8a7a18f0592f48f0489402ebff60190bfb0f3319473549da63f5bb",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "GC/Secret.h",
+            "blob_oid": "ae581d99339ac8d20128d3d21ca68cb9705b7334",
+            "blob_sha256": "adaeb6b9d099564a5cce039ca8da252ef3b95792046a7b15ba879e3c87170d48",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "GC/Secret.h",
+            "blob_oid": "b4f9ac8e92cb02a5e721070e137d19caa7857411",
+            "blob_sha256": "6ad27c94bf2168c14374740cb0ec8952b6648a3bd69def5e81644f10ee5d27ec",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "GC/Secret.h",
+            "blob_oid": "b6c3b3f6562fb03c5934b03e19ce064f2f239511",
+            "blob_sha256": "e9e8b009ec93df54d457ad85410e4d06978c8b6e47baffaded7d9414e8b95b48",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "GC/Secret.hpp",
+            "blob_oid": "b8f5998f4130f2d33ef8142996ef9e3d5c81452c",
+            "blob_sha256": "f097a8a5eb4a9a66aa94da6f033de1a1ef494da0f85f88e7c00b416a3fb06d10",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "GC/Secret_inline.h",
+            "blob_oid": "ba7e3b1a4d90e45516681601a88bff3fe3519d3e",
+            "blob_sha256": "c0ee8c77f7583df40ab83f525505b5a2c4f94d075a512526f1d407aebbe913a5",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "GC/Secret.cpp",
+            "blob_oid": "c4111f12f65cca3bc70dc6fdf80d9c924ca39732",
+            "blob_sha256": "5d5f224a55db9c3967fdda7645e01c60ed344a8230b2df5e9fb7ff03104cd70c",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "GC/Secret.h",
+            "blob_oid": "c4b6e8eb10dcc42039b6bb31510caed75a92c4e6",
+            "blob_sha256": "dd32d2c8d28702e8fea872d92c51256b331d1fb63f27a56adb78b1b186fd0510",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "GC/Secret_inline.h",
+            "blob_oid": "ccc6939eb35e279e0a8a832dc4144107a442cf4e",
+            "blob_sha256": "3f365d7048c804b46b9517311e34360198fe2aee445e70ed4fd3db9a233fa6c8",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "GC/Secret.h",
+            "blob_oid": "d2596a10dc916b0f5c36531bb34bff9560ae3c46",
+            "blob_sha256": "ae4c24cee8161eb676ef56c7a565f332255b8eaecf7012f73c4e9b2721904b9f",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "GC/Secret.hpp",
+            "blob_oid": "d2b169017cfae484a7ba746c9cae411f6d62d808",
+            "blob_sha256": "2fb16d1c60c168a82f0d234aefb8755f009405e92c208836bcde2f00be8e9334",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "GC/Secret.hpp",
+            "blob_oid": "d71adede7c6a442a9ed173ed71d3ae04e67436fc",
+            "blob_sha256": "cc16fe8133d70ff02aec75b3a3e561ecb050963f5b0e0fbd7bb8f60e207dd181",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "GC/Secret.hpp",
+            "blob_oid": "e468ed1505454344bc13a1730af3c1c62eec39d1",
+            "blob_sha256": "ecb2a045f1770935bdb1f17fc97151e624db92dd5d1a1908712f2069795c53e3",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "GC/Secret.h",
+            "blob_oid": "e4877ed8e6666d3341c587ef524e03d27a65e889",
+            "blob_sha256": "7e12724631276e9ddb39eab45239ea14db2032f5fd3821c7dd35485f862b44ac",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "GC/Secret.h",
+            "blob_oid": "f4c2843bf70e9348e7a380b2d44eaa6b0b4efa6f",
+            "blob_sha256": "b9a09604fa9a2e3dea8e4cf0d8c0b76802461c605076ea5cc425f9ac0025b96b",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "GC/Secret.hpp",
+            "blob_oid": "f7362e990015992ccc0e14199320b29e97188053",
+            "blob_sha256": "9ec7e72efd0dd93a5ffcdaffce07bb1beeaf6b60ef0ba6117e6c545eb51b52da",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "GC/Secret.h",
+            "blob_oid": "f8a11b492ee41ba24c2a655f9cac0fb6af7df987",
+            "blob_sha256": "ed9df3ab1baed22fe6c2afe9556be9dad07d88508967910b15dbd13c68fb7074",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "GC/Secret.h",
+            "blob_oid": "f97ad7b3f1970069e5734a6eccd39701c5a02b5d",
+            "blob_sha256": "1ee292182d5e71bdbd6b92e1a1ff1b0117aa4c8f2e7d435ab035c89d003176ca",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          }
+        ],
+        "unreviewed_sensitive_path_findings": [],
+        "fixture_admission": "historical path + public-key SPKI SHA-256 fingerprint + declared test purpose",
+        "all_reachable_blobs_scanned": true,
+        "passed": true
+      }
+    },
+    {
+      "path": "s3.0.3.2-git.bundle",
+      "report": {
+        "schema_version": "saib-retf-s2.2.2.1-git-history-private-scan/1",
+        "bundle_path": "s3.0.3.2-git.bundle",
+        "bundle_sha256": "09e6ff35eb9d563c2a6d15a5fa934956af4a21b34e57733f1e2bd759f8addba5",
+        "bundle_verify_passed": true,
+        "bundle_verify_output": [
+          "<bundle> is okay",
+          "The bundle contains these 3 refs:",
+          "07301dd8e0037a2fb889ace957d30f50587974c5 refs/heads/s3-final-experiment",
+          "a1f3ccc10cfa7063479972cc687a88bf5dd271ec refs/tags/s3.0.3.2-runtime-integrity-audit",
+          "6ec0754c4b41d9a9758e634e24d39a20a7c7da32 refs/tags/s3.0.3.1-errata-audit-v1.1",
+          "The bundle records a complete history.",
+          "The bundle uses this hash algorithm: sha1"
+        ],
+        "bundle_verify_repository": "temporary empty bare repository",
+        "source_repository_dependency": false,
+        "bundle_list_heads": [
+          {
+            "object_id": "07301dd8e0037a2fb889ace957d30f50587974c5",
+            "ref": "refs/heads/s3-final-experiment"
+          },
+          {
+            "object_id": "a1f3ccc10cfa7063479972cc687a88bf5dd271ec",
+            "ref": "refs/tags/s3.0.3.2-runtime-integrity-audit"
+          },
+          {
+            "object_id": "6ec0754c4b41d9a9758e634e24d39a20a7c7da32",
+            "ref": "refs/tags/s3.0.3.1-errata-audit-v1.1"
+          }
+        ],
+        "refs_count": 3,
+        "refs": [
+          {
+            "name": "refs/heads/s3-final-experiment",
+            "object_id": "07301dd8e0037a2fb889ace957d30f50587974c5",
+            "object_type": "commit"
+          },
+          {
+            "name": "refs/tags/s3.0.3.1-errata-audit-v1.1",
+            "object_id": "6ec0754c4b41d9a9758e634e24d39a20a7c7da32",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s3.0.3.2-runtime-integrity-audit",
+            "object_id": "a1f3ccc10cfa7063479972cc687a88bf5dd271ec",
+            "object_type": "tag"
+          }
+        ],
+        "reachable_commits": 57,
+        "reachable_objects": 1254,
+        "object_type_counts": {
+          "blob": 691,
+          "commit": 57,
+          "tag": 2,
+          "tree": 504
+        },
+        "reachable_blobs": 691,
+        "scanned_unique_blobs": 691,
+        "scanned_blob_bytes": 4843183,
+        "private_key_blocks": 3,
+        "private_key_findings": [
+          {
+            "blob_oid": "0defe39c7762dfc3a7d74e077ec686f9b1faec39",
+            "blob_sha256": "73739a16006ece7272aaf40d0f4894ac44462a085c465e2030152a2491efbff4",
+            "blob_size": 15743,
+            "historical_paths": [
+              "experiments/v2/statistics/test_validate_formal_input.py"
+            ],
+            "key_public_spki_sha256": "44ca0cf355aa2087a6e328a63978b5aa873cff3079691b9f1f8e74bb2e80953c",
+            "approved_test_fixture": true,
+            "approvals": [
+              {
+                "path": "experiments/v2/statistics/test_validate_formal_input.py",
+                "purpose": "embedded deterministic formal-admission test fixture only; historical file hashes may differ"
+              }
+            ],
+            "parse_error": ""
+          },
+          {
+            "blob_oid": "27f45a2550ea9c5b0f5cf7d5c3321ef1fec522d8",
+            "blob_sha256": "1abb498ce237276390845ae9466fbe8216a515bec64c09f0ec732def79f36179",
+            "blob_size": 15531,
+            "historical_paths": [
+              "experiments/v2/statistics/test_validate_formal_input.py"
+            ],
+            "key_public_spki_sha256": "44ca0cf355aa2087a6e328a63978b5aa873cff3079691b9f1f8e74bb2e80953c",
+            "approved_test_fixture": true,
+            "approvals": [
+              {
+                "path": "experiments/v2/statistics/test_validate_formal_input.py",
+                "purpose": "embedded deterministic formal-admission test fixture only; historical file hashes may differ"
+              }
+            ],
+            "parse_error": ""
+          },
+          {
+            "blob_oid": "5a86a57d1b2a3ef1cfb609442ae9a9be945768ae",
+            "blob_sha256": "53b5b4e09a81feec8442b91a5d082d1069b10e35e453bb329dd9e94f96677684",
+            "blob_size": 119,
+            "historical_paths": [
+              "experiments/v2/testdata/trace-attestor-s2-test-private.pem"
+            ],
+            "key_public_spki_sha256": "44ca0cf355aa2087a6e328a63978b5aa873cff3079691b9f1f8e74bb2e80953c",
+            "approved_test_fixture": true,
+            "approvals": [
+              {
+                "path": "experiments/v2/testdata/trace-attestor-s2-test-private.pem",
+                "purpose": "formal-admission test fixture only; never a production attestor"
+              }
+            ],
+            "parse_error": ""
+          }
+        ],
+        "approved_test_fixture_key_blocks": 3,
+        "production_private_key_findings": 0,
+        "malformed_private_key_blocks": 0,
+        "certificate_blocks": 0,
+        "certificate_findings": [],
+        "sensitive_path_findings": [
+          {
+            "path": "prototype/anoncred-rust/vendor/credx-0.2.1-saib/src/blind/credential.rs",
+            "blob_oid": "17f2fed98539b04753e0c7ef20104937767965fe",
+            "blob_sha256": "618c4e449a9db9f2e039544895bd76bc9b6968574af12d17d612a71d88e33ab1",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "prototype/anoncred-rust/vendor/credx-0.2.1-saib/src/knox/ps/secret_key.rs",
+            "blob_oid": "2f1cf030bb1dd907cfd2c433c0fb01213f0ac17e",
+            "blob_sha256": "4b52d4e533c069d5ed0afa5adc7b60ce62a07bf8cab843d5f8c7133d78b63c0d",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "prototype/anoncred-rust/vendor/credx-0.2.1-saib/src/presentation/credential.rs",
+            "blob_oid": "4bd9c933cf3d603ed3b801fa5b89b724b000d0a5",
+            "blob_sha256": "e0cc46e40802b1e3218263792317ed771ad6bd761a042641165e3c141c5b866a",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "experiments/v2/testdata/trace-attestor-s2-test-private.pem",
+            "blob_oid": "5a86a57d1b2a3ef1cfb609442ae9a9be945768ae",
+            "blob_sha256": "53b5b4e09a81feec8442b91a5d082d1069b10e35e453bb329dd9e94f96677684",
+            "classification": "approved_test_private_fixture",
+            "contains_private_key": true
+          },
+          {
+            "path": "experiments/v2/statistics/recursive_private_material_scan.py",
+            "blob_oid": "68f819d50f7f2db027b495b624de16a4895fb729",
+            "blob_sha256": "1c578357e172dd91377e78464dd80ef9d5dd4c963e2c43ec597d3f525c5e9570",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "experiments/v2/statistics/git_history_private_scan.py",
+            "blob_oid": "6b0dfee95a3e757c320f76c8decce8741180c4b6",
+            "blob_sha256": "3a8ac3cc9adf6d3413ccf72f10b9e83584b650830a96dac0e4b42fec1cb65d05",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "docs/TRUSTED_CREDENTIAL_REGISTRY.md",
+            "blob_oid": "756ed6253f3525de188072e107ffe8cecea7ee0d",
+            "blob_sha256": "42e22101951b4009434e2ae1decdb4d19073676be9beee6210f638bd6e870fdb",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "experiments/v2/configs/s2.2.2.1-private-fixture-allowlist.json",
+            "blob_oid": "9606fdd217e84d9e300dbb2d7bc5f5d38b6ab2c8",
+            "blob_sha256": "282f0f05e1f34d712f5669c58a8abc8782ae6137a84aad93fb3e959701036026",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "experiments/v2/statistics/recursive_private_material_scan.py",
+            "blob_oid": "9d444879c3cd95b44bf4a0c6f7df0c617fb79176",
+            "blob_sha256": "0dde8456cfd4dbb047d69a379430e652778b07db21976d0e98cf6dacbc8c2b96",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "prototype/anoncred-rust/vendor/credx-0.2.1-saib/src/knox/bbs/secret_key.rs",
+            "blob_oid": "a9a82e0b1fccfc900e74b4dbadb33fb1383e028a",
+            "blob_sha256": "899a42b92290abbb832b60a370dee7ffd58ec1417b3f98be4aa3851651958a96",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "experiments/v2/configs/s2.2.2.1-private-fixture-allowlist.json",
+            "blob_oid": "aef1aa21d0af4f86a60debd76c693b00bb062cf9",
+            "blob_sha256": "faa393e6a043d40c744bd512a9573a1100b9b55158aad9ba89c04ce25c411451",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "experiments/v2/statistics/git_history_private_scan.py",
+            "blob_oid": "b595a576744525005dd756d0908784b32098e1e1",
+            "blob_sha256": "a443e49d1e8e417aa292645b87d360c726c6a24ac30951ac4be2db6e91c35a07",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "experiments/v2/statistics/git_history_private_scan.py",
+            "blob_oid": "c376a1ec85846920cb81384b971e4d5c8fdc86e0",
+            "blob_sha256": "d4fabfff42f0cb50b4c10fc5b8ec8f47bdf81b30ba5aa3d4ffd3311f9d18a453",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "experiments/v2/statistics/git_history_private_scan.py",
+            "blob_oid": "c401b35747b2c760aa9f1c77b85ead659d9a85b5",
+            "blob_sha256": "464da035895c0249e7d73a26d3ab55cc0e32f299a7b4116ffd4d962c9d024da3",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "experiments/v2/configs/s2.2.2.1-private-fixture-allowlist.json",
+            "blob_oid": "cad117ea58aa3512e6f6fbae0fc2deed3d93dc98",
+            "blob_sha256": "680e730c48848eb770fe05871afdd82427dea5bae904672d7eabbd35cc576125",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "prototype/anoncred-rust/vendor/credx-0.2.1-saib/src/mapping/map_credential.rs",
+            "blob_oid": "cb2813d4657d248d8ea6a772a7206c7e9c83b68d",
+            "blob_sha256": "1a56f4c3b22b17202fce931228c4ba460fa3981dbb503885e0aa92d9df336148",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "experiments/v2/statistics/recursive_private_material_scan.py",
+            "blob_oid": "d119fcd9cbaf756f91d5e67e4b91b8805b0d9b9f",
+            "blob_sha256": "3682991b9d99d769fbf85fe174f1aa11f2fab465314913d3f33111a51aef0a54",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "prototype/anoncred-rust/vendor/credx-0.2.1-saib/src/credential.rs",
+            "blob_oid": "ee04f6804eff6ee07befe55eef409fd0f6f1dddd",
+            "blob_sha256": "8389b0c420cbb7614a5f4b0d2db66abb4aeb2a7ff8e5309c9a2e21611cf91e92",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "experiments/v2/statistics/recursive_private_material_scan.py",
+            "blob_oid": "f60b84effb225219dbf8eb915f122aa6c4fc2141",
+            "blob_sha256": "56fc522acf263e237171cfa1712e5e3c41181fc6c681835b392cd257ca192e8c",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          }
+        ],
+        "unreviewed_sensitive_path_findings": [],
+        "fixture_admission": "historical path + public-key SPKI SHA-256 fingerprint + declared test purpose",
+        "all_reachable_blobs_scanned": true,
+        "passed": true
+      }
+    }
+  ],
+  "allowlist_mode": "working/archive: exact normalized path + SHA-256; Git history: historical path + SPKI SHA-256 + test purpose",
+  "passed": true
+}

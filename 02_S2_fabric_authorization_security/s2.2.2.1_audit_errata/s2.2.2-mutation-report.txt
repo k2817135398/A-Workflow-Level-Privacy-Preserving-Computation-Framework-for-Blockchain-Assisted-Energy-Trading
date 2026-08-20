@@ -1,0 +1,108 @@
+S2.2.2 explicitly selected compile-checked mutation testing
+scope=ledger authorization domain/signature/key/freshness boundary
+whole_program_mutation_score_claimed=false
+baseline=PASS
+started_at_utc=2026-07-16T04:21:31.216683Z
+
+mutant_1=allow_revoked_verifier_key
+result=VIABLE_KILLED
+compile_exit_code=0
+test_exit_code=1
+test_output_begin
+--- FAIL: TestFreshnessAndRevocation (0.00s)
+    --- FAIL: TestFreshnessAndRevocation/key_revoked (0.00s)
+        contract_test.go:144: freshness or revocation violation accepted
+FAIL
+FAIL	github.com/retf/source/v2/fabric/privacychaincode221	0.028s
+FAIL
+test_output_end
+
+mutant_2=redesigned_omit_canonical_domain_comparison
+result=VIABLE_KILLED
+compile_exit_code=0
+test_exit_code=1
+test_output_begin
+--- FAIL: TestStatementSubstitutionAndCrossDeploymentRejected (0.00s)
+    --- FAIL: TestStatementSubstitutionAndCrossDeploymentRejected/task_domain (0.00s)
+        contract_test.go:110: substitution accepted
+FAIL
+FAIL	github.com/retf/source/v2/fabric/privacychaincode221	0.025s
+FAIL
+test_output_end
+
+mutant_3=omit_policy_digest_binding
+result=VIABLE_KILLED
+compile_exit_code=0
+test_exit_code=1
+test_output_begin
+--- FAIL: TestStatementSubstitutionAndCrossDeploymentRejected (0.00s)
+    --- FAIL: TestStatementSubstitutionAndCrossDeploymentRejected/policy (0.00s)
+        contract_test.go:110: substitution accepted
+FAIL
+FAIL	github.com/retf/source/v2/fabric/privacychaincode221	0.025s
+FAIL
+test_output_end
+
+mutant_4=omit_credential_registry_digest_binding
+result=VIABLE_KILLED
+compile_exit_code=0
+test_exit_code=1
+test_output_begin
+--- FAIL: TestStatementSubstitutionAndCrossDeploymentRejected (0.00s)
+    --- FAIL: TestStatementSubstitutionAndCrossDeploymentRejected/registry (0.00s)
+        contract_test.go:110: substitution accepted
+FAIL
+FAIL	github.com/retf/source/v2/fabric/privacychaincode221	0.024s
+FAIL
+test_output_end
+
+mutant_5=allow_future_unix_attestation
+result=VIABLE_KILLED
+compile_exit_code=0
+test_exit_code=1
+test_output_begin
+--- FAIL: TestFreshnessAndRevocation (0.00s)
+    --- FAIL: TestFreshnessAndRevocation/future (0.00s)
+        contract_test.go:144: freshness or revocation violation accepted
+FAIL
+FAIL	github.com/retf/source/v2/fabric/privacychaincode221	0.026s
+FAIL
+test_output_end
+
+mutant_6=allow_expired_unix_attestation
+result=VIABLE_KILLED
+compile_exit_code=0
+test_exit_code=1
+test_output_begin
+--- FAIL: TestFreshnessAndRevocation (0.00s)
+    --- FAIL: TestFreshnessAndRevocation/expired (0.00s)
+        contract_test.go:144: freshness or revocation violation accepted
+FAIL
+FAIL	github.com/retf/source/v2/fabric/privacychaincode221	0.034s
+FAIL
+test_output_end
+
+mutant_7=redesigned_bypass_ed25519_signature_result
+result=VIABLE_KILLED
+compile_exit_code=0
+test_exit_code=1
+test_output_begin
+--- FAIL: TestSignatureCannotBeReusedAfterMutation (0.00s)
+    contract_test.go:156: signature reuse after proof digest mutation accepted
+--- FAIL: FuzzSignedStatementMutationFailsClosed (0.00s)
+    --- FAIL: FuzzSignedStatementMutationFailsClosed/seed#0 (0.00s)
+        contract_test.go:174: mutated signed statement accepted
+FAIL
+FAIL	github.com/retf/source/v2/fabric/privacychaincode221	0.029s
+FAIL
+test_output_end
+
+mutants_total=7
+mutants_viable=7
+mutants_non_viable=0
+viable_mutants_killed=7
+viable_mutants_survived=0
+redesigned_domain_mutant_viable=true
+redesigned_signature_mutant_viable=true
+summary=7 viable mutants, 7 killed; 0 non-viable
+ended_at_utc=2026-07-16T04:21:44.007988Z

@@ -1,0 +1,1457 @@
+{
+  "batch_extrema": {
+    "credit_max": 602,
+    "credit_min": 347,
+    "price_max": 883629,
+    "price_min": 154449
+  },
+  "capacity": 16,
+  "classification": "test-only-disclosed-opening",
+  "context": {
+    "capacity": 16,
+    "epoch": 7,
+    "protocol_version": "SAIB-RETF/F_MATCH/1",
+    "session_id": "session-mpc-random-c16-00020",
+    "task_id": "task-mpc-random-c16-00020"
+  },
+  "field_prime": "52435875175126190479447740508185965837690552500527637822603658699938581184513",
+  "input_files": [
+    {
+      "line_count": 458,
+      "party": 0,
+      "path": "Input-P0-0",
+      "sha256": "661cf019faf7dea7a7919596e1dcf1ad4cde85dcddf7e21dce48b7f57607c468"
+    },
+    {
+      "line_count": 458,
+      "party": 1,
+      "path": "Input-P1-0",
+      "sha256": "fe07439829931841b93445225b5a1eeb2f67584807a5a5621ad4962d911f7a6f"
+    },
+    {
+      "line_count": 458,
+      "party": 2,
+      "path": "Input-P2-0",
+      "sha256": "f67cec7889d09cf7d234c76068884ed871928ddb28431b39da6733fc4a0a1a30"
+    }
+  ],
+  "logical_input_count": 229,
+  "metadata": {
+    "context_scalar": "52385723486981045864907499181136235280382142197353903542293978429991873035190",
+    "input_commitment_root_scalar": "23484894402952952664426211374831128045463721051930318929249524516515589441328",
+    "mpc_program_digest_scalar": "31497515958722142372187287531496681451735824201526915869437048852614093567560",
+    "result_key": "52247242696803660852580019802660548034700958727673139023544009752647279806119",
+    "session_runtime_root_scalar": "25676154470785346977789081521548095845213724774834667388354419045542745784866"
+  },
+  "party_scalar_count": 458,
+  "ranked_orders": {
+    "buy": [
+      {
+        "ap_norm": 395126,
+        "cs_norm": 611764,
+        "dummy": false,
+        "order_handle": "0b3fae07e10da59cd0aa8fd4c13edd444970fad7fc704e12ce4091569a586895",
+        "rank": 0,
+        "task_pseudonym": "e02f3ef9fc01fc6631fb3d9a8486139a6d0b1104da9ddadccb7285a8c3e09253e03fe8abc1f0188addd4101f47f5d0f7"
+      },
+      {
+        "ap_norm": 468679,
+        "cs_norm": 0,
+        "dummy": false,
+        "order_handle": "783b4ff1c673e292c924becac74e9e71e4c0cf196ecd1ef94bbc1ac09c3f3752",
+        "rank": 1,
+        "task_pseudonym": "07c01ffeea8a8280f59cb9060af791bd5eb19e9e45ba46029e38cd20024007bf819447085a98405618e5d8f56a64d214"
+      },
+      {
+        "ap_norm": 924037,
+        "cs_norm": 670588,
+        "dummy": false,
+        "order_handle": "82449c0927c282dd09fe61e7cf1a38836ad370372423b45ac8e8e313a29e9d7f",
+        "rank": 2,
+        "task_pseudonym": "79602362bdcf1a4aa9cbd954b512968d5b358d5167b67d341af3bc8526be08deb9cbdd87faa73e948a573b03d30c28bf"
+      },
+      {
+        "ap_norm": 0,
+        "cs_norm": 913725,
+        "dummy": false,
+        "order_handle": "9dee7544946b9679da79f884be5066a050362e5af60cedc2c46adc36b024c596",
+        "rank": 3,
+        "task_pseudonym": "30219634252f4bf742475e33cc275abe4a5064cbfb0102cb76fff507f016fa4008ca442d852e252f3a1142f4fcb5d4d7"
+      },
+      {
+        "ap_norm": 918090,
+        "cs_norm": 666666,
+        "dummy": false,
+        "order_handle": "a93893d0e8dfdf784d55a880a56a2d9c2e5154aff7b54cccb040d7fc40ba5827",
+        "rank": 4,
+        "task_pseudonym": "41f0a99939226926204a28db6dcdb539bb03566ac0eb3363ad5d789bfec20b8ebf6e04cc08091bcdb91830010a1fd016"
+      },
+      {
+        "ap_norm": 569430,
+        "cs_norm": 470588,
+        "dummy": false,
+        "order_handle": "c3d74c7a438af58d00b5819601c05fe7c485583e139ad05cfe464febfa081eb2",
+        "rank": 5,
+        "task_pseudonym": "cb0202f450407346a0ab95cc0fb3b5bd25f937b55703953ccbb141010dba3b3e7e1ea610e9912dd9cf831127b5e50823"
+      },
+      {
+        "ap_norm": 71771,
+        "cs_norm": 1000000,
+        "dummy": false,
+        "order_handle": "e376ed7b5aa74d32a7ec4053d13c8b42f716282d7748c3d30e95e23c54cc1468",
+        "rank": 6,
+        "task_pseudonym": "2095a09c90ff9e8289f33e78c3b04886ada3d6b27a8eb4c4c0c0743b395912e2754b003a4a78d7c90161757b2e58521c"
+      },
+      {
+        "ap_norm": 0,
+        "cs_norm": 0,
+        "dummy": true,
+        "order_handle": "154d9aa26d0ef0113272657838867547064195336f428ab5715aaa8f733eb334",
+        "rank": 7,
+        "task_pseudonym": ""
+      },
+      {
+        "ap_norm": 0,
+        "cs_norm": 0,
+        "dummy": true,
+        "order_handle": "4c4faf08567d29c595c599498512da2f05e062518a53682a32dca5d129c30ecf",
+        "rank": 8,
+        "task_pseudonym": ""
+      },
+      {
+        "ap_norm": 0,
+        "cs_norm": 0,
+        "dummy": true,
+        "order_handle": "6795d9adaae85688ad90fd02aa9c49e1a51a54016e800006eb3ea156c2b827db",
+        "rank": 9,
+        "task_pseudonym": ""
+      },
+      {
+        "ap_norm": 0,
+        "cs_norm": 0,
+        "dummy": true,
+        "order_handle": "7b2f4ea7fc294dd7d5148374f7efe8010a28d16b00724d7885681690c7123f64",
+        "rank": 10,
+        "task_pseudonym": ""
+      },
+      {
+        "ap_norm": 0,
+        "cs_norm": 0,
+        "dummy": true,
+        "order_handle": "8cd75ac55c6ed08afdfe2efe985e42b3c73205cab6c0de519b127dd611a50b65",
+        "rank": 11,
+        "task_pseudonym": ""
+      },
+      {
+        "ap_norm": 0,
+        "cs_norm": 0,
+        "dummy": true,
+        "order_handle": "ae9f319d7c9d6670bac7f2aeeeea5eff3a34397c3e75d6fbb89078b895b691e7",
+        "rank": 12,
+        "task_pseudonym": ""
+      },
+      {
+        "ap_norm": 0,
+        "cs_norm": 0,
+        "dummy": true,
+        "order_handle": "b25f4f134063c24a46aac68d10c9ebd03b150ca3f1072df8f1f369a66aad231f",
+        "rank": 13,
+        "task_pseudonym": ""
+      },
+      {
+        "ap_norm": 0,
+        "cs_norm": 0,
+        "dummy": true,
+        "order_handle": "e349017fc03e83274fca93e656579af2d7c7f93ea98f64bb27fb53c84928f603",
+        "rank": 14,
+        "task_pseudonym": ""
+      },
+      {
+        "ap_norm": 0,
+        "cs_norm": 0,
+        "dummy": true,
+        "order_handle": "f8707e3fccbc62017a8ab958328609549f055a62f102b60cb617d10ab31df276",
+        "rank": 15,
+        "task_pseudonym": ""
+      }
+    ],
+    "sell": [
+      {
+        "ap_norm": 351387,
+        "cs_norm": 854901,
+        "dummy": false,
+        "order_handle": "1e2cf83730effb4ae41e843299aaabd7f034118819eedc72afd0591b5f7b76b6",
+        "rank": 0,
+        "task_pseudonym": "7f94a5263edc9c4250fc6cdb31b3a83504efeadaac257de15b230e60eb0771c4362420005226a26e6105ff485ae0e227"
+      },
+      {
+        "ap_norm": 1000000,
+        "cs_norm": 972549,
+        "dummy": false,
+        "order_handle": "4691dcb2d2dd8243fa39a29a6da047024adfbaf94a9180b53a6e7d4da109c362",
+        "rank": 1,
+        "task_pseudonym": "414b0d72810a65ce728ed75b686d39b8cf1491198229a1fdd923ff16a65ff9b298e4b88193b3ebb3fc741d4d80f10be5"
+      },
+      {
+        "ap_norm": 514579,
+        "cs_norm": 301960,
+        "dummy": false,
+        "order_handle": "b8b49f48a73cc8bb90c7da32d9c0e09ed1f1776c42977a65f04eb51db967fbd9",
+        "rank": 2,
+        "task_pseudonym": "5232ca60f32ffa7fc324a4d3ba44d0553921bd6911e93ebbbdf3e305f009c59bed7c8fbe6928d39ab266583a8bb56a24"
+      },
+      {
+        "ap_norm": 0,
+        "cs_norm": 0,
+        "dummy": true,
+        "order_handle": "004686a50a1b917a1b252f2c5f726e7bcbea9ab06fa87dc4183b15a7f6537ef6",
+        "rank": 3,
+        "task_pseudonym": ""
+      },
+      {
+        "ap_norm": 0,
+        "cs_norm": 0,
+        "dummy": true,
+        "order_handle": "0571a673c36fd2fb5cc165f9ab8e6447dd5434d34c4cc6137d2c137b42b90f63",
+        "rank": 4,
+        "task_pseudonym": ""
+      },
+      {
+        "ap_norm": 0,
+        "cs_norm": 0,
+        "dummy": true,
+        "order_handle": "0c400903299fa14dc8b4c1076e3651ca562e6d1c15e5ec563930a46645d660ee",
+        "rank": 5,
+        "task_pseudonym": ""
+      },
+      {
+        "ap_norm": 0,
+        "cs_norm": 0,
+        "dummy": true,
+        "order_handle": "210b66258f1036185a3f8eefd3d35de968e759ec50f5447c2de13ea743d509c2",
+        "rank": 6,
+        "task_pseudonym": ""
+      },
+      {
+        "ap_norm": 0,
+        "cs_norm": 0,
+        "dummy": true,
+        "order_handle": "2d4e752bdf38095cacdc659f921f1456508a451a9b84953a6a80181ad1832d9f",
+        "rank": 7,
+        "task_pseudonym": ""
+      },
+      {
+        "ap_norm": 0,
+        "cs_norm": 0,
+        "dummy": true,
+        "order_handle": "3043af8a4943051d6693c685ecdeddae2c4060e43e077e39b85d2d6ff9ef5983",
+        "rank": 8,
+        "task_pseudonym": ""
+      },
+      {
+        "ap_norm": 0,
+        "cs_norm": 0,
+        "dummy": true,
+        "order_handle": "3421033e595f8047dd3512501ad374c7da5f17174abe8625dd8f1d4c999f4069",
+        "rank": 9,
+        "task_pseudonym": ""
+      },
+      {
+        "ap_norm": 0,
+        "cs_norm": 0,
+        "dummy": true,
+        "order_handle": "625370cc4aa7b177426d5452b5836bd529fa4758671dc9de4bb0c0861edebb9f",
+        "rank": 10,
+        "task_pseudonym": ""
+      },
+      {
+        "ap_norm": 0,
+        "cs_norm": 0,
+        "dummy": true,
+        "order_handle": "7106622a07ed5b396ca74618a9542f40dc022923fd7c55762f02e0d3432f1343",
+        "rank": 11,
+        "task_pseudonym": ""
+      },
+      {
+        "ap_norm": 0,
+        "cs_norm": 0,
+        "dummy": true,
+        "order_handle": "b6f86dd214d61ca2974970ced3f02c64a8f23d8503c620c29eb784741f7be53c",
+        "rank": 12,
+        "task_pseudonym": ""
+      },
+      {
+        "ap_norm": 0,
+        "cs_norm": 0,
+        "dummy": true,
+        "order_handle": "ba469e87f7e47fed75cdc2157a73b5bd2aad2de45ab79af31aeec48483310fcd",
+        "rank": 13,
+        "task_pseudonym": ""
+      },
+      {
+        "ap_norm": 0,
+        "cs_norm": 0,
+        "dummy": true,
+        "order_handle": "bbc62571357229cc531b83ec16dff977fde4cb79ae3c3b6c0ef637bd9845ae5a",
+        "rank": 14,
+        "task_pseudonym": ""
+      },
+      {
+        "ap_norm": 0,
+        "cs_norm": 0,
+        "dummy": true,
+        "order_handle": "e17a2d895697b797dcd9cc0e64297ef4b1a036a7a68d76435de53c83c0aa9249",
+        "rank": 15,
+        "task_pseudonym": ""
+      }
+    ]
+  },
+  "schema_version": "SAIB-RETF/S3.3.1/test-input-manifest/1",
+  "share_commitments": [
+    {
+      "label": "metadata/result_key",
+      "replica_digest": "49ce5f3afa17ad28f38a04cbcf338b0d9f1ae24ca187bcb841311da63282a7e5",
+      "value_sha256": "f145dbfb46848490c4ad18a7076ffdd17b7e5077e85bd8bb384dd7d9a872954f"
+    },
+    {
+      "label": "metadata/context_scalar",
+      "replica_digest": "8a109a7c6ca823e7c144393d5abc14de1cd5272bd3035033e5cfa8f0bb3bb417",
+      "value_sha256": "bd6e65b92b04fb2d7ee4c9d73e9cb854721f883e24cb5f3a6173cc43cae33491"
+    },
+    {
+      "label": "metadata/input_commitment_root",
+      "replica_digest": "d71118bc1b6642fc2c59fb650d5de908b5da1975bd1598575fce3f96277bc511",
+      "value_sha256": "add512d32af49cc34eee69e5eea302bbbfa1ee723af8cdef9cab134a6729e118"
+    },
+    {
+      "label": "metadata/mpc_program_digest",
+      "replica_digest": "e30b5c799b64c0003a7f64babb3094c0967521fe9f51440bff7f44eed150d6c3",
+      "value_sha256": "29df3f4b000f67faf198b8a50313b23ad84178b975d7cac1535e8fda1dc3e6ea"
+    },
+    {
+      "label": "metadata/session_runtime_root",
+      "replica_digest": "aefe1db996c44111bbae24334a2c240356c6440bfddca1110c6816025a7706e7",
+      "value_sha256": "0eb97f3343aa942b78d376e484b05169bc8a013bd3dc0de20634a37932d26e06"
+    },
+    {
+      "label": "buy/0/real",
+      "replica_digest": "656bbf86effb678a7010fb209d7260d9b744be08e978cb2500665baf5b620bf3",
+      "value_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+    },
+    {
+      "label": "buy/0/price",
+      "replica_digest": "0d374b0afbf98d58e26a99c3c9ad2f0f65852288bb8db7e105e104e64defa76d",
+      "value_sha256": "1d0acb5f4d326fe07fbc0878a777fed239d0dbe8841532f33fb422f75179b36d"
+    },
+    {
+      "label": "buy/0/quantity",
+      "replica_digest": "509d1e3fc9b0673bbea898dea5d7bf035b07053b52af6d0a15d464801e920708",
+      "value_sha256": "1ed1105a305111fd1025c29b9061c41cc2273dddfb3f9efbaaaa294214ac4cb0"
+    },
+    {
+      "label": "buy/0/credit",
+      "replica_digest": "8d89a8798acc3303474e3f394ffd5accb3d9ec7d56b7e7d51f5de2339b99c8d4",
+      "value_sha256": "7182dd431b5c8833ed3c8a02c8615780df8dca7d83ed4166962b207f45a656b5"
+    },
+    {
+      "label": "buy/0/constraint",
+      "replica_digest": "5d071eea89ac6867739bf543b66fa45d8a31bcee1c57e32edd36473b71572628",
+      "value_sha256": "fed88b40aba63cac05eadd5db0088c036005ec235c7be6fd87d656946b733332"
+    },
+    {
+      "label": "buy/0/ap_norm",
+      "replica_digest": "ffdb21f0b93e8bac21f7d9b61d3f6f06a3871e431bde7161636d3a3e49cf2ee9",
+      "value_sha256": "faf41fbf4b57cded3a7631a35402c018501001672b8960b27a2cb6d4c63b08b2"
+    },
+    {
+      "label": "buy/0/cs_norm",
+      "replica_digest": "af2f92382728d02692de5a5fb6944c06942a986a43201a88b5bbea3c521297b7",
+      "value_sha256": "952ec2e35018a5fb1b0cb612bb6279e1bc3d0c4ae1c00bd2c42c3f347282b300"
+    },
+    {
+      "label": "buy/1/real",
+      "replica_digest": "a7086b58b8b3640f464c26e71cdb6f4c99872bbb02d472ed114b71ff91880959",
+      "value_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+    },
+    {
+      "label": "buy/1/price",
+      "replica_digest": "5ba041abab077645e849624b988ecbf4ae57b48b75e9545a0d9ea8cb37fc2422",
+      "value_sha256": "df5512f46a3113ed0ac5a1885dc521fdad33f02c5ec8108522a409b8a88ff4e9"
+    },
+    {
+      "label": "buy/1/quantity",
+      "replica_digest": "336d1fca7d390a8265bbbd9793e40bf9e81ef6e042c8f9deaed745fb83403255",
+      "value_sha256": "c52aea66ab2d75caa621d4c9fbdd19e4fd241f853dede9af46814f225733f277"
+    },
+    {
+      "label": "buy/1/credit",
+      "replica_digest": "90bf8ed6ca917f7d02009a0d0183303212ca832094186afbb7acaf5647adc1e5",
+      "value_sha256": "2289b221b39605c3494e7290856218e931c00af556cf7a07827108193b276511"
+    },
+    {
+      "label": "buy/1/constraint",
+      "replica_digest": "bced64a634a0658844aec5ad32739a197f519ec0e01979a2f9d9a10f363a722f",
+      "value_sha256": "2289b221b39605c3494e7290856218e931c00af556cf7a07827108193b276511"
+    },
+    {
+      "label": "buy/1/ap_norm",
+      "replica_digest": "ebec5e31dfa647927500f6c4970322a4a679c645b1bfbbba426f46aeebdf78d0",
+      "value_sha256": "9932e202f1a8b848918594dc8f8022e2c0eab861e5e08fc1e18fdfb1218f110e"
+    },
+    {
+      "label": "buy/1/cs_norm",
+      "replica_digest": "519853459e7ccda161c85e66d0e9e8d88c095dd475a155669b8a04d77fe9ef52",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/2/real",
+      "replica_digest": "d9feb5bd2cd1ce2f44419cfa4a8ec8fce22a22a95313cf2155036e07961c434a",
+      "value_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+    },
+    {
+      "label": "buy/2/price",
+      "replica_digest": "0d3f29818e5ddbcea291793516eafcebadc2477ef296e5d0c9a6d2fea6319210",
+      "value_sha256": "acec7ba228f3a34ff39b66ee6794a56cfc8c554c28f910cca24193e8f96af1ea"
+    },
+    {
+      "label": "buy/2/quantity",
+      "replica_digest": "f9f001ca00240268c6cb0916176e33a3ba00a7be829edc04f394892d9607f52f",
+      "value_sha256": "4e8f0b70441f66bcd93b076eb665e21919f43c09abd222a16f6034dd7ab2eb5f"
+    },
+    {
+      "label": "buy/2/credit",
+      "replica_digest": "5f67e99a006683211784f85d3f000bf38cbeb3035d1ab6a51caa83c7b4c44de7",
+      "value_sha256": "8952115444bab6de66aab97501f75fee64be3448203a91b47818e5e8943e0dfb"
+    },
+    {
+      "label": "buy/2/constraint",
+      "replica_digest": "4423cc7c8c8d9277edcfdc07e3c16cba7ed5bd7d6878b58b1da0ff77089eb920",
+      "value_sha256": "6d05621ab7cb7b4fb796ca2ffbe1a141e0d4319d3deb6a05322b9de85d69b923"
+    },
+    {
+      "label": "buy/2/ap_norm",
+      "replica_digest": "e382d3dbdbb0ebd7c433d3b50aa45081118d823ad6acc318353edfc9cc608052",
+      "value_sha256": "30273a4514c181ba3ca25fa0e689da2ff21105dde1e69069f83f7c4798f888f5"
+    },
+    {
+      "label": "buy/2/cs_norm",
+      "replica_digest": "8809bafed2165064f6fff444868c38fdbb7aeae0897c4a9c002597c7bbfbcd4b",
+      "value_sha256": "be06a457030825b07cd8c90f0db34db9fd436c8c9bb32283d492a811e05615e9"
+    },
+    {
+      "label": "buy/3/real",
+      "replica_digest": "39019d387bc6beee161059ecc6432f2f5a03720becb72e72256aa2b445148977",
+      "value_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+    },
+    {
+      "label": "buy/3/price",
+      "replica_digest": "97f5f9b10edd0c713442aaac032939ffb743cfffff28095f6142adad3dd73926",
+      "value_sha256": "f46e30b188b1a48b644a7d47ecbdbebab3b55acd829c3e030b7cd554f405af72"
+    },
+    {
+      "label": "buy/3/quantity",
+      "replica_digest": "4c9b7745d440e81588a185c93d6fccb971fdfcbdea43f5b71c9ca805cd0056c7",
+      "value_sha256": "4bdbbdd108b1803958eef6525338dbed09578947823cddb10514b04b51056a57"
+    },
+    {
+      "label": "buy/3/credit",
+      "replica_digest": "98d1f7f437eba89fcdd7e50c4891280eb791f65eff8a138a42978d17b8dd4ca5",
+      "value_sha256": "de0023e398111d43424845aaeee2e119249cc0567e7b585eaba5f44080b458c6"
+    },
+    {
+      "label": "buy/3/constraint",
+      "replica_digest": "5bc229707290f3228f236b9eba8e7a15187f816809888c3e8279d3460011c199",
+      "value_sha256": "ad21a2b810af49a8b9241e10dfce3a016987441cc93aa72feae47dd017ddf0bb"
+    },
+    {
+      "label": "buy/3/ap_norm",
+      "replica_digest": "9a8a7941df3c89cbbea47719a41f60a93b9a97899913d3b99aa7223cb8612891",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/3/cs_norm",
+      "replica_digest": "7c26fd3313c48d4ecbceb3798ef0046505a6b5f00a2ac1471621423140fc73f6",
+      "value_sha256": "6ab4c8508ffc4822282593cd69f87456766e18500312744bb234492fb0435995"
+    },
+    {
+      "label": "buy/4/real",
+      "replica_digest": "81635d27d500ef432d7cc4bbee4af83418db5243cfc84d8c2a132c400f1f9bd3",
+      "value_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+    },
+    {
+      "label": "buy/4/price",
+      "replica_digest": "a5e2266b6363435f3220261198c8889a6ebf116cd1cc89d71100313f97003985",
+      "value_sha256": "b01c04848a9ca57c814b0b8cd420fc9f64f369d6e97d21fe98d119c80fb06d40"
+    },
+    {
+      "label": "buy/4/quantity",
+      "replica_digest": "a8791918a1ff5afd3e489e220c477bfa81513c507bbca5a4591a7d1a851003f6",
+      "value_sha256": "a5feb7e47a16233c6e8b44cf0c2e26128dd5e4f55e0713efb0caee3f0adf2373"
+    },
+    {
+      "label": "buy/4/credit",
+      "replica_digest": "7150dd706c0977d4b04c5e0ed823b32b1bebc8fe28f67f2626316858cae6bec7",
+      "value_sha256": "5088c1bc42f5cc6a32cdb92d7524ea06febe006baac86a0fc8986a8ee00602bc"
+    },
+    {
+      "label": "buy/4/constraint",
+      "replica_digest": "9b95c6ad90c7b00560ea76ce695dfca097e5e69b7013214433cf33385cbc0720",
+      "value_sha256": "99a0b871c9047c4f5555fcf062e0623174bae38746fece6efdf032d80fb2221a"
+    },
+    {
+      "label": "buy/4/ap_norm",
+      "replica_digest": "aa8f7d06bb851c1bf4fcd9c8292ff5c12f43d8adc754c3c19a49529fb0d9bffd",
+      "value_sha256": "482b2a41180fab8bd01f4b7af27fb1f2dbe86bd0e369c49eb0fbf10f67ddcc1c"
+    },
+    {
+      "label": "buy/4/cs_norm",
+      "replica_digest": "76043307ace6a95ae51611fe9c971ed7345fd8adf578e42d4003b11c72549d68",
+      "value_sha256": "94edf28c6d6da38fd35d7ad53e485307f89fbeaf120485c8d17a43f323deee71"
+    },
+    {
+      "label": "buy/5/real",
+      "replica_digest": "9e272f1d25ee4714de45c83e62f6c78173932f1de7da0cd8e7ee57e8b964b91e",
+      "value_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+    },
+    {
+      "label": "buy/5/price",
+      "replica_digest": "49f0ed005563f03170d28828720bb011c24a8799c53cf148200342e6c47cce00",
+      "value_sha256": "21183a1287d4885cebad503ab8169c0fd1525209aa8ef032cb07eb8ad7aacfe2"
+    },
+    {
+      "label": "buy/5/quantity",
+      "replica_digest": "37f5ba4b3a916133c4279f670bbc2f3eabd975eab2d4ea36a2d4453062527055",
+      "value_sha256": "d5030099954e6e34ef80e832d697f121187195765bc6778ea76c32e9b2a932bb"
+    },
+    {
+      "label": "buy/5/credit",
+      "replica_digest": "272ac4877b44c854013d05f31d5a7dc2172827e5b3b610925a0d4de1b3d00dcb",
+      "value_sha256": "e078af3026edb42cc26b32784baa142a79970078f7ac58f8c7b74115f4f7fb60"
+    },
+    {
+      "label": "buy/5/constraint",
+      "replica_digest": "42dd928eec1e549805ee40c23806ce967fd268d36a730bb7a95d579fbf351fe0",
+      "value_sha256": "188c1fdca79d927f6e812133173fc41d3a4e57074de521020274caa9bb29af7d"
+    },
+    {
+      "label": "buy/5/ap_norm",
+      "replica_digest": "0cf7cef83535bf1f5328ae1570f9a067b82f0fd715b78a794420efcbae220f49",
+      "value_sha256": "07a1393ebc94f50d16709f14827791b1b443c96e4aeadb92885e1b0b45f80df8"
+    },
+    {
+      "label": "buy/5/cs_norm",
+      "replica_digest": "9c67c522d60f65907d3a6bc6d4a7a21e6b8721685a737bb4bf6c3794ba9d40d3",
+      "value_sha256": "82cb43af02c0554fc7941c958edd89edd9c77ad63179ca397d15bbec2abd37e8"
+    },
+    {
+      "label": "buy/6/real",
+      "replica_digest": "af961ddd19d0bdbdb95970107fc2daf96c7bc904edac04d8ad9686488e0bbf53",
+      "value_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+    },
+    {
+      "label": "buy/6/price",
+      "replica_digest": "a73480307862e399e497e2dee91a134d776ca4d5741e5f7a7705184ef721dcea",
+      "value_sha256": "73ef23672b8eab2c543f09e26a36469aa2a271fca869f16e652fbf3a9da9a8a7"
+    },
+    {
+      "label": "buy/6/quantity",
+      "replica_digest": "30406bb788848a071dc5beb8ca83d66f55117e9dc29aab11429ef17ac680d5f3",
+      "value_sha256": "8bd76d073fee63ff3f2382c8bdad3318e8551197238b1954e80071ce599a4719"
+    },
+    {
+      "label": "buy/6/credit",
+      "replica_digest": "981e4baa7be1a23373caa777b860ac66f2f803f0cf3efe14fc9ba44092db844b",
+      "value_sha256": "aee4848a8580f31102073d34012cb3700fee3e61f9fcfd725fcfe5fa4a220ec3"
+    },
+    {
+      "label": "buy/6/constraint",
+      "replica_digest": "bce7c8a649883c6be449ff0a63cd1df9efaf9ba1f6e7d38068034352b3d4fa1f",
+      "value_sha256": "a42e815c58f3977fe531a80ffd4659121c3b9f876a89869042816c369ed80776"
+    },
+    {
+      "label": "buy/6/ap_norm",
+      "replica_digest": "788848984a996aec67f00c0d09b7a4786f7f965bf86c9a89692493f03d195423",
+      "value_sha256": "4e6304322e25047eb7d04700bde7466a1300157f80f30024abe0e6a9d8043c0b"
+    },
+    {
+      "label": "buy/6/cs_norm",
+      "replica_digest": "1bcbf79aa104501b78d060ffdc945cac2ea12759c26c339b5fc9dc9c9f5e7bfb",
+      "value_sha256": "6cce36d9f8a9e151b100234af75cca89d55bcb94c153f51847debdf1f39cae45"
+    },
+    {
+      "label": "buy/7/real",
+      "replica_digest": "8038156e9121948ee71ce6ecb4bf06d0d620cfe519031a96d00dd1e7d67e7f5b",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/7/price",
+      "replica_digest": "272153509ad78e847ecb231ac9417b00ecda00d60e26687e3ad7492be578a949",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/7/quantity",
+      "replica_digest": "273edc4c143acc8882775f80c97cd6db489bc099dd0e8ab20b62abff963f09e0",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/7/credit",
+      "replica_digest": "f08e9ac36f38f432488495b683b92d4c211a7c63b38304ca2d5652d4c0f11d31",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/7/constraint",
+      "replica_digest": "9fcea0d6dc877a378aa434b6b7a27643337a03671e2219e44ccdafeb5733aea4",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/7/ap_norm",
+      "replica_digest": "a59308ecd1eecf8db38df40601d9c4f56cea1e7304c0066db9700942070bbbad",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/7/cs_norm",
+      "replica_digest": "3a9fe13ae1cae495f14206952f3c976375a11cbd5136b9c895e5cfeee85d1cec",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/8/real",
+      "replica_digest": "1c277fc6d3dc4c9012d844071b9fcef31113c92db20919246aa8eafc341093c0",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/8/price",
+      "replica_digest": "72862899064fafbfe43da6d01cbfbc9838710d5299c81e35f5c317e5e48099b7",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/8/quantity",
+      "replica_digest": "2a7d82099fde0850203815635710c79b3ea6ae5f2a46a80bed70fe2ad3285902",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/8/credit",
+      "replica_digest": "46442a6d78e1042bd12f9894f2c1ea117707fd6548d6698c31a4d5878e07e9e4",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/8/constraint",
+      "replica_digest": "3b1cec67df7ab41ebc974a4975a84729fc683d435f794f514cbd8e66fe72cd9d",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/8/ap_norm",
+      "replica_digest": "1a065edff1c16f0fa505527789fb593f3f083a927785c540953ba3fc4954d9a0",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/8/cs_norm",
+      "replica_digest": "e275362e7ea47a528608fca8aa3343e200311c89a0ee4213a6b277f1c6087b28",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/9/real",
+      "replica_digest": "0d1c6ff96bc1e5bda9c272b26deb13fd2ac78acb68aad027c10921a3e4e66df5",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/9/price",
+      "replica_digest": "590f8956481825d1e8a019ecb1d2fee5fca6ff94e54b04b333f761dc80008046",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/9/quantity",
+      "replica_digest": "bdf45216ec10d47ee584d6842017dbd4551801849665524354cf10e786b91a12",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/9/credit",
+      "replica_digest": "6d9874802d91d1f0550fbe36d43e9370a20cdf69f0cd991f4a1f6e9c329455d0",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/9/constraint",
+      "replica_digest": "1fd3764c25ea8ee7dd3331318b972adcdfe8a5e6be5342c91826a1e5fd2f9b81",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/9/ap_norm",
+      "replica_digest": "af3433c640991f9ce1f2f540bc6eba63eaa6b4ac381c2be8c2efb47c8ad61e64",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/9/cs_norm",
+      "replica_digest": "3c3fd802df0d9fce5a3fffad1800f026368e8b19291fde9f8d345f6b2eb77103",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/10/real",
+      "replica_digest": "74dc1618f72e76bea5f79f3de9b6ef2a7622ec60b895936195767b1b794a41df",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/10/price",
+      "replica_digest": "045f23dc24741251db180b6999ad37be71e917769b00389081112b6d0088be77",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/10/quantity",
+      "replica_digest": "d054b78242f7210a0c3f39dd8c2281ebee38d982dac3ee54bcbd890a4ab423e1",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/10/credit",
+      "replica_digest": "02d9bf3adc8cadc6285b4aea96b92b397963e503e19ef2ed493820186eca3c67",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/10/constraint",
+      "replica_digest": "9152e8bb47c7c252957b9ea2d86a1c714d8e75307e02597c1d9edc1f720bb191",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/10/ap_norm",
+      "replica_digest": "750571f140c90b465a78caaa73e1a67dd52b4336b554213a9638c1dd3d63be5d",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/10/cs_norm",
+      "replica_digest": "b03388815230eb9775fa81ebb79198a032767784c5f8631f09a51891a34a4e43",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/11/real",
+      "replica_digest": "bfe749386f30abca52c1657fa324c30ce5867f0e2a4d996cc124d24c15d4bd60",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/11/price",
+      "replica_digest": "f9f8eaef12f01ad6c3a8e834388fc7019cb693f92522cb5bd67561497ff611fb",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/11/quantity",
+      "replica_digest": "e7644d660b6c189904c6176225ecc010a1b0900abfefbfaac367ebc82422118a",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/11/credit",
+      "replica_digest": "b935dc2314365f077b022af19157d439d69c6b50f961cb13f7ca09cf4f1275a8",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/11/constraint",
+      "replica_digest": "ef24c0710f52d1d28223c1c3ab87a98a059d75eead66337c1c0ee0615433a2fd",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/11/ap_norm",
+      "replica_digest": "3071abffecf292965df5e59322cc3caacfd1d70056ac292f2f20222d719298b0",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/11/cs_norm",
+      "replica_digest": "61cadc7d30fdd91f355c638037d8e2814b2e244b0c4408b2b7bcc64ec6e58f64",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/12/real",
+      "replica_digest": "775cf68fe9c9712ad24699f30daad7b1fd685e86c940095377e0d1f1bf851541",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/12/price",
+      "replica_digest": "dd1559c684b5c7adcd9b332faaa3c3dbf0736a3fe76d2f0819e4f9b563c6fff2",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/12/quantity",
+      "replica_digest": "e6b8dfc346f4117703550e4580d3dec028aea29230086286176a412a8ef38293",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/12/credit",
+      "replica_digest": "a41c8fe893ff64865ea7a492c539c0842b229bfe384d11e6c061a8cf6a1ed174",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/12/constraint",
+      "replica_digest": "38470bc938df9911251ae002a9165f1ef03f82bd5567e239753c970de6aaad9d",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/12/ap_norm",
+      "replica_digest": "76feeb14a0c2de0e69d9d9b20edd45aea5b6a6976546c7ea49cea01e90c53da2",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/12/cs_norm",
+      "replica_digest": "6667927f90e37c2638af2750e494cd0140f38cb26ba61d15e18a7160aac7b69a",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/13/real",
+      "replica_digest": "fb62bca0a9cd90a4a70a845e877529bacd0912bef68b4cdcfc231b3fb1c6c1de",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/13/price",
+      "replica_digest": "0b62b49503f68d639474393721e72eece4e3e8d25cff17ab3c6efe31e4d9346a",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/13/quantity",
+      "replica_digest": "7199accf19e47e6f6bd6cfb9d1591cbe6072a428b6827054e5edf2ab14f7e6dc",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/13/credit",
+      "replica_digest": "64a2eb9529b768645a3e0e2614cc683b83555f1b77cf154ed8b9f03f93fdfd0d",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/13/constraint",
+      "replica_digest": "db50adf7a201baf014e5c29d809fd89c42e87ca24211ae83e6ba95d857f300c5",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/13/ap_norm",
+      "replica_digest": "a0fbfe5619576ab0b54eced06a3758b89a33465dbe944976a7c046d47bac19b1",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/13/cs_norm",
+      "replica_digest": "f3da1e3db77cc504625ea11ad859b3a5ba6e93464c660fad61145143bc3d3c7c",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/14/real",
+      "replica_digest": "af6319437bef50c19678eb8b1876c3b41227dc5d37cc8538fd3acbc57979ec67",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/14/price",
+      "replica_digest": "80b563885b6d71a32430975bb7e6970128c638fce3135561dfaa8bd2e7b2956b",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/14/quantity",
+      "replica_digest": "4e6dcbcb5f858b9fcae4c404b429ed423201af7c7f4147e984c44aabbb5ff5ee",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/14/credit",
+      "replica_digest": "e7bd88f763e1819a155c66d3cb71f750afed27a6ae74c82ff63be36c3407b47e",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/14/constraint",
+      "replica_digest": "b50895bd1714ada20b3f4b31115b851c849eb7b27515c8d7b436c14ba7c26fa7",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/14/ap_norm",
+      "replica_digest": "c456b282f20627f37dec5c9ad213dba0f2e99e1811b48b6d34cb7dbe44a6bfdf",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/14/cs_norm",
+      "replica_digest": "14c109d9fa9bd501bb89d5947ed9ca17c0a20f12f759a594b9a87cd0d71f7e70",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/15/real",
+      "replica_digest": "863b41b66f8534e753cbb18fe5e4afb3de10df63b1da6d3dd864b40c75d308b2",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/15/price",
+      "replica_digest": "a60077cba3f7262c5d0aab9b31fc7578269709bbaa791ff597f6dd46f755eeb2",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/15/quantity",
+      "replica_digest": "58e106cc74cc0f234a45def8cf58d15f41a108dbcba87fac96f12b07b28a56f1",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/15/credit",
+      "replica_digest": "bef1c4b2f20616012c60e483633429f9e77d36f758be08011d6a1a2b556c2dc5",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/15/constraint",
+      "replica_digest": "561da81ce4f733f7c66e139fd2c1937929ee456123f8b122ee59e6cca980001e",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/15/ap_norm",
+      "replica_digest": "ac077d664935a0352865b26697aec47ef511e3c724eba1a8243cc038e1f5c541",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "buy/15/cs_norm",
+      "replica_digest": "babc2cfc8c1fa8fe15acd0ef99d32ddc9f16556162aa3370c6b454497dc36424",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/0/real",
+      "replica_digest": "ebf050f97c07501bfb8c1bfea54b8c32706f302ae27390269e00f839d0683ee2",
+      "value_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+    },
+    {
+      "label": "sell/0/price",
+      "replica_digest": "f157fdb8083321438bdf566d39c4a1ece5526f70e947dcbda877f7515a3fb1f7",
+      "value_sha256": "12404563b59007a6e5df40b0bcdb6e0964e272fbbf13b10aa93e4afeb6db5ace"
+    },
+    {
+      "label": "sell/0/quantity",
+      "replica_digest": "a098a2fd2a7b7edec9495b201736e522d6f4785759543611b2ea147e41a2962a",
+      "value_sha256": "68055c4f88d92db8bfd53fa3fc92be028dc1cbb8cc24b534105f5f264bc38067"
+    },
+    {
+      "label": "sell/0/credit",
+      "replica_digest": "fdbb6aea75846f8ab1584dc0513a343060e18f6d4bdeee9ce50275a9447038d9",
+      "value_sha256": "236b565af6b512826fd89dbbde2e88b94465f780985c134e58b62dea6ee258b2"
+    },
+    {
+      "label": "sell/0/constraint",
+      "replica_digest": "72d16b8d196ac74a2f0c2c5eee6499c8d6ca6612d7b8a0ca995859d10b54019f",
+      "value_sha256": "a5abb1500bdeaef41e2edd598c015edfaa46793051b82d7da60a70efbf786da4"
+    },
+    {
+      "label": "sell/0/ap_norm",
+      "replica_digest": "782d749f4722bcf44f21a69bb77ab948dc3550ee83ba721864a44372ee2d4597",
+      "value_sha256": "93c6ba6779bbe1cab96bbc577c4a80ed1d67ed5648ec284593679c4f2b06deb0"
+    },
+    {
+      "label": "sell/0/cs_norm",
+      "replica_digest": "a9393760efceb01651a291d962739d475b6e09cf8fa1c4ef8854516e3ba3c85e",
+      "value_sha256": "2592b2edce6e9ba64a34de8e1ff78c4ee0c0f9f7fcaac8352f71e811c7dd44c6"
+    },
+    {
+      "label": "sell/1/real",
+      "replica_digest": "aceba08f7be7023d8e7f36ca0bd49d6a29184fd208f25fa176a78e6e124d5369",
+      "value_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+    },
+    {
+      "label": "sell/1/price",
+      "replica_digest": "339d266b0c992b309c2e35cd3f8314435fbd40fa6c851d87b589c35a68ae7480",
+      "value_sha256": "fdb65f59d083f18ac16c8a535d902e3a946d238fc3282524416b9dcb0a3476cc"
+    },
+    {
+      "label": "sell/1/quantity",
+      "replica_digest": "2cfa82c7c22380a810f102895d26c5d11937d74054729fe9449282fb65be58c3",
+      "value_sha256": "144c9e13bc6ada3c74cad3c2296356879f97879bc3c5bebb42f7deefcc9461d6"
+    },
+    {
+      "label": "sell/1/credit",
+      "replica_digest": "da1af392974c360786718433e45d04a1c172c84c11559f064eaf142fc2477e62",
+      "value_sha256": "a3aaf5a0e9ad2901ab35ce73910be7fbbe1731a3ed1ff947a6ac395c5024a8b3"
+    },
+    {
+      "label": "sell/1/constraint",
+      "replica_digest": "4c52a94ee32d66e2367e3b8f1e621821108168a250fd5c1abc11faaafbae6926",
+      "value_sha256": "4e47eb5525df25f94da777993dafa41d9ab2bfa80a89e28f76d42cd46ab082e7"
+    },
+    {
+      "label": "sell/1/ap_norm",
+      "replica_digest": "7c9e0cf0aa3d02eef2b2c6b7b88d7b0ca74333b801ffc90432a44be76da48c4b",
+      "value_sha256": "6cce36d9f8a9e151b100234af75cca89d55bcb94c153f51847debdf1f39cae45"
+    },
+    {
+      "label": "sell/1/cs_norm",
+      "replica_digest": "1a02a89f872f32b416599839c5f0dbfb9dea096fe2e9268d9a4ceaea9b2097ec",
+      "value_sha256": "48d2f09b9fa0cefc248eedc31e6c1dda436d9350066daaa3031d88d0f18ee544"
+    },
+    {
+      "label": "sell/2/real",
+      "replica_digest": "3a71813f6537dd03be7296cf4f47bcf7bf252e6c55295002bfc13dc19a31b81e",
+      "value_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+    },
+    {
+      "label": "sell/2/price",
+      "replica_digest": "dba6508ae991cf77b05d4ac63d9607c15ac04673d2b9d60f2772afb795617ed6",
+      "value_sha256": "fb24b4dba00ebc899fa56e30e908a53e15700e95672b5c128367f7581d19a686"
+    },
+    {
+      "label": "sell/2/quantity",
+      "replica_digest": "fbf83dd33182bb34e14eb48aca9f91b66dc685aaa93cd3c3d1da7d453ad4327d",
+      "value_sha256": "16b6205bc3d98c1b23f586fa78520158bb30b83de24e04472fcfe2595b5e5291"
+    },
+    {
+      "label": "sell/2/credit",
+      "replica_digest": "f0755475a075c2ea328330ee34f17309f43030ac1bd469419ca299b0b5efa0ce",
+      "value_sha256": "814fd2e8e45e9a6d3e1f6ff86867aaf2251ccd07f3eed02708fae286192c29e3"
+    },
+    {
+      "label": "sell/2/constraint",
+      "replica_digest": "2514582638136e07b610fd2544a2864bc864fbfbea18230d82fecea28c5122cf",
+      "value_sha256": "fabf5b7fedb3e62a81c9298b19706249ee128011bf9d94867681020c16f8b741"
+    },
+    {
+      "label": "sell/2/ap_norm",
+      "replica_digest": "ec7b67518df74817792ac262e0f36151865792d55587eebdbc09906d37379e81",
+      "value_sha256": "050dff8add7f07818fcf085283aae71de4ddfeab70eace024981437f6576ea57"
+    },
+    {
+      "label": "sell/2/cs_norm",
+      "replica_digest": "7f4ca929e64700b560b006ca8f9e9039a6533617af8ee33fa6fdae75b90e71af",
+      "value_sha256": "ad79628ea677e21eaa11eddbddbf10b6647d1f8717e1b3a25f22c0c2916e1914"
+    },
+    {
+      "label": "sell/3/real",
+      "replica_digest": "77996a35bce2a993528fa034c2504541aea5101bb3aacf8d62dca781fa54a3d2",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/3/price",
+      "replica_digest": "9a01ff42a318231e77341d781765098d7205c647eefa1958b7c360aadc040c54",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/3/quantity",
+      "replica_digest": "60dc4598c9c264a1d76187a0e3b231bc39b3b117b0cb90a632b6e75474965c14",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/3/credit",
+      "replica_digest": "1adb554fc9180f78065ab448cecff9b4557418be2f86c1fc426cc9fd477788cb",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/3/constraint",
+      "replica_digest": "a5697bab59625c4969a704801569326da80a3b0e48b21d0212673806acb0d7d8",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/3/ap_norm",
+      "replica_digest": "840b82d6c789aea6592da543fe56e41df387fbf9f70a5105adcf401f66293e08",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/3/cs_norm",
+      "replica_digest": "449e84f5a92484258a3d58c1aae617ef4d2c79e25d3f392f21554bd5869848ce",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/4/real",
+      "replica_digest": "9db5d747d79085ec41324421c7f4abfbbbb08ba491a3ed223665113ae95ffd7a",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/4/price",
+      "replica_digest": "25870681ce7b592b22e277a13e1daf87c9aae1304d377a9821e5ebbbb1335c7d",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/4/quantity",
+      "replica_digest": "2fd803a3bb4a28c0c98f7ef822729492f5770b37d3190a2ef83760279c9e8ec4",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/4/credit",
+      "replica_digest": "ef225593571585b7ba7c455de48a0728326ea5146f92a6b4a0230196c63de5dd",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/4/constraint",
+      "replica_digest": "a20c1e1e018f5d85bdf4fc8e160526bbc5974011606db9e40659ec7a890096cd",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/4/ap_norm",
+      "replica_digest": "39891b0b05b834e8b0e21344ee1b5d30b53d1a2de137fb57f514ca6e8bf3d90e",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/4/cs_norm",
+      "replica_digest": "1ab2590d7d90b4c2301b2492a771cb475bbe19e911c8e04f3b4d3b94630d1fa6",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/5/real",
+      "replica_digest": "3fbd31c7aa1348d770b42a3cb52ca9b6767d0e5f2f9564867748e3ab500d2cba",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/5/price",
+      "replica_digest": "8b619e9d901d92670ed20ba786574b0a812e138691d7d8a13208e590d3dd2302",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/5/quantity",
+      "replica_digest": "bda2551827e8f36a1bcd14d1dc8efc2692272a8e53bce0187eed6050458c2362",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/5/credit",
+      "replica_digest": "073adad7d0891da3314e91fe9e0cd412239f06b424dcff2799e9ab7d09e2b991",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/5/constraint",
+      "replica_digest": "0f64e303d04ce279304cf04e5cf76b69ea6d0ac49184f8c56e60440d4af055df",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/5/ap_norm",
+      "replica_digest": "e40af22fe5d128c79ef8efc7a8efd42d4365f1ecc7d9c08cb4254cef88d38641",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/5/cs_norm",
+      "replica_digest": "ae0737cf223982cb42a460804a59a931c86c3d0604b1f70d9f0175e52101a029",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/6/real",
+      "replica_digest": "0ff559399ae57b17c262a9a9d7e42ed2de8cd838c6221acf2a9f6d955d380a0b",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/6/price",
+      "replica_digest": "37ad2219fadc37aba0117d6c619d427a5754c2a7e7883aba80d32ac77fdd9004",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/6/quantity",
+      "replica_digest": "c252ce37954657ba8e31b7fe866fef0bc8c8e57dc2afc5fbcec45a2f79d57816",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/6/credit",
+      "replica_digest": "69edf0ae84a38fbfe4068884a9299cb5236fe10e966a07a9d61b0c2d2a9befaa",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/6/constraint",
+      "replica_digest": "23e28e9f53cc0b861f8c72cdf32cf121f9825cdbf38782d132800e20e5699aa3",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/6/ap_norm",
+      "replica_digest": "53223d35299f4d3162793455bca3bea08939cf7c9cd37330e46355fd9cdee2f0",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/6/cs_norm",
+      "replica_digest": "c70863a382483fe3374a0ec98b89768db37808ab365cd6864a162d72a78ef359",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/7/real",
+      "replica_digest": "d25221505407b1ad0a7a0ff0dd4cab2cd25994e9f74320b701228e0bcbf5b01e",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/7/price",
+      "replica_digest": "8c7dbe0433a4c568fb3c16092e3d8c4e8527b9e71e7c37843c3affc577cd76c5",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/7/quantity",
+      "replica_digest": "dec65e4a1285645b5f020560382e6e5a928adc6b6345a22ce64e44cc30319ead",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/7/credit",
+      "replica_digest": "6e1628e8ffdab7b95fc780861286ea6d4742ed7306bb92f710c51659ed8b1d52",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/7/constraint",
+      "replica_digest": "a3fc60d0b6f1d7b53f998399d6eca72358f0bb5643394262d52c9a10b2a9fd95",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/7/ap_norm",
+      "replica_digest": "bb338b7f3e1009004ded7ddfce77af8396bc2e8afef9a3320bb7e8fbd554a332",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/7/cs_norm",
+      "replica_digest": "673bce2397cb35e4b89de2228ac6e58090636216e05862bcdfc629e94ed89864",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/8/real",
+      "replica_digest": "27cc7566db62c19e0c9810873ae341e290b9f226974529a009a5a00619b1ad40",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/8/price",
+      "replica_digest": "44a27f1a6a4f89fcc39d67214d9cb93595840df67d285c9bd4ad727f386e3627",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/8/quantity",
+      "replica_digest": "c33a7668674fdcca897a51b43febfd527c39496b90dc633d4da27f081434a6ef",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/8/credit",
+      "replica_digest": "4291578561c5b7d609d6f1b6878dc7c95abeaae987451d6de70346ec227d118a",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/8/constraint",
+      "replica_digest": "e28f1086e4ea52acb68afe377288efc802adca98cb01b0bbba557d3dedd01de0",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/8/ap_norm",
+      "replica_digest": "4036961d735977aca5882d19663c0d404581001e9cc03629c5e594e4d7aa9ca4",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/8/cs_norm",
+      "replica_digest": "ad7d87eea149c454307f675aa7e28dc704d2b65c67391b3397893d35530cd495",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/9/real",
+      "replica_digest": "aef802c5fc8ab872857ad7e8c30525d046a33b73d34d95e0aa842902e1c1e461",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/9/price",
+      "replica_digest": "2dfc1d45e012503a917c77316fddda110fef6abe0ab56de1a8416a36bcc0ee46",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/9/quantity",
+      "replica_digest": "204c98127e76bb2d2c3402f71430abd26c50d6989735302e972079f3c2af87ce",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/9/credit",
+      "replica_digest": "a78dcb41adbe910775cc728d342a64eb8665c2a38c3910a582fbdfd367876392",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/9/constraint",
+      "replica_digest": "0dc80f7d299fe410744826aa6e052fe9d5d599dd8d7b262c400e8560360e282a",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/9/ap_norm",
+      "replica_digest": "c7cc2a3245b0d7f6f10716158f020787e33562d18b164d8f4f4fc6e63472a563",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/9/cs_norm",
+      "replica_digest": "e8af67a7dc37b91add1b52997647228969bcbb37f8ac2c5c5a991504f4a132db",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/10/real",
+      "replica_digest": "a55dc8044814dc18d1abdbf89b269791bb0e0c9d0471183dc7ab6e0d65a9a1ea",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/10/price",
+      "replica_digest": "45d81769d010a10797aaba5f12e02ad7719aa435fc4d18a3852dea79bcb16615",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/10/quantity",
+      "replica_digest": "2334021039939fa8058e8e62b7cd6ea7ec7d1b69d1af31641b651b0ae739e7e4",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/10/credit",
+      "replica_digest": "69fc9933c38eb30155dd7089bbc20b26c50b55df37fde5f47f4b55c34fdf6412",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/10/constraint",
+      "replica_digest": "38f27b78744609eb2dcf7c9c5810fc98ab8b4d62e2f0d8b06881f97baf660319",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/10/ap_norm",
+      "replica_digest": "10d182efd38087fb8dc92868586da4174c0e58a66e5898bf9d915b39f63b2921",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/10/cs_norm",
+      "replica_digest": "47046d525576e71e06efede99b95cc58098ab6ff8a7277bfb8d15b6b7a5257ce",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/11/real",
+      "replica_digest": "100e9056ac783ddf5f3785ccc68ddc0c3445cd82a51452d328c9b70e241dface",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/11/price",
+      "replica_digest": "332f68ad76b52d0346fcdeddb11c5b063c62960ccb0d032fa7f71c5d705b306c",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/11/quantity",
+      "replica_digest": "1ea824fa1f38b82f3feab29a07617ada9772e42dc415620190db741847002372",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/11/credit",
+      "replica_digest": "729ad3e0d87693ef3c17d9950f98d6b5f3b379bfdf806296be6d4f374ede706f",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/11/constraint",
+      "replica_digest": "8d1831f0e26039dac2bd0fee3ca13c57eb2365c1462a42b96bfbce7cd52f4ae2",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/11/ap_norm",
+      "replica_digest": "a2314bbb3dd7c7a1febdba1030856cd9df839239256a72c28f0332643f088ea0",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/11/cs_norm",
+      "replica_digest": "86823f71f86d9eccfd35ad61168cd7549d22b942484ccf4855725eca14f5cc01",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/12/real",
+      "replica_digest": "707fa673a74cb8e710599c70fce49c01ef716f603dcbacf962cf9aa53eb60728",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/12/price",
+      "replica_digest": "9051e1da09cfdd639deda8e63f60dff9c22dd00fe5f305895457ad453fde7d9b",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/12/quantity",
+      "replica_digest": "388b522e0f2a5ff815d752ccbad8bbfa97fb9f72c806ec0a08af5d26ada1bc9a",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/12/credit",
+      "replica_digest": "d05d119632e5e6aed9ea33f1b6e453d63798a43b9ef8d6fb5aaa287085ea6336",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/12/constraint",
+      "replica_digest": "a889da8bfc5754bb671a5739b838ec34b87aaf0ac545ebacd40ca95eaf6c6888",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/12/ap_norm",
+      "replica_digest": "b8a30efbcae61fc68662011f9d32d408699902162bc35b03a188e4fe09d624ae",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/12/cs_norm",
+      "replica_digest": "930054f40e5dfdbabbe6cff28eee28dab12a4e63506c818ab576a67d4e2e1f31",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/13/real",
+      "replica_digest": "7984eaf988d49753073a149871c679058d6153f7aaaad6788848475f535c8662",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/13/price",
+      "replica_digest": "409368ab892f9fa6eccdd03eba59988eb3174356600f66003ee5540e080fff1b",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/13/quantity",
+      "replica_digest": "923bf6a476c3cd0fab7084bcc5da2728e24a2123fe8f2eaf90d0be56a1f3a49f",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/13/credit",
+      "replica_digest": "66937cad5e56f24046d04c2747bfc52114ccd27915a72a458b43352730dab3cf",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/13/constraint",
+      "replica_digest": "66264374c147efea67dbe8bd693664cdf93aa3e92f87b70a0fa9044f2f079921",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/13/ap_norm",
+      "replica_digest": "b437c76f96b3c42a152a8ccdb764bbf1c81454f57e0c168019636aa386c43882",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/13/cs_norm",
+      "replica_digest": "6bb7581d93b42b6c7ed6023b20b4c5309f297ca4b1eec4eeae776fda05eab52e",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/14/real",
+      "replica_digest": "ee58fd490663ecd3734fe97519d698a91f89da9a0628c931272ec61b943f6032",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/14/price",
+      "replica_digest": "0dd919957d3abc65fa67bb71fd7d279855b85cfc13839848b94445b209b09a81",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/14/quantity",
+      "replica_digest": "e0f8173ad87791294eb0c4414f68c20ea0626003e712efef38b9ffd109161e95",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/14/credit",
+      "replica_digest": "684e2cc1b2d87d44cd514fd7a04268170dcab910a47f2f3ceb87263cfb8dcd8b",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/14/constraint",
+      "replica_digest": "8562b99a9dc7c91727aafd55dc8db0578ededecb39018711ee92bcc43c3bc41a",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/14/ap_norm",
+      "replica_digest": "9661be9dd76ccb5aeac4b926e41e6b3f6341be84d7cd40fd44967b7e76643ea7",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/14/cs_norm",
+      "replica_digest": "33551b3495a11221497d91af557ae1b2c31cf2f02af0c0ce1a95226e0fb99f02",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/15/real",
+      "replica_digest": "00d4f6e4e965704cb8319e1847fc72d05f952451d326751fe7d86aad7ba6964e",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/15/price",
+      "replica_digest": "6b65fc86acfad58c761131b2d51867d917b4a605664bd6de34638e860ec524be",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/15/quantity",
+      "replica_digest": "7bb5d5aafb8e7eb9158c9513d082a9ccd25cc16c568009c2cea06f5ef315bd61",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/15/credit",
+      "replica_digest": "fe5a67313a657fcf2baa8ba2387d03a448c45486d3524e4bf1689d50832af914",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/15/constraint",
+      "replica_digest": "81ab491d2a9208d6c39c3f1517b4864e54e547a8a6009a7686687f12b9d0edad",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/15/ap_norm",
+      "replica_digest": "358d7637ecd66514754fbbec9a824d1c235e0c82011c93727ea4bfb032269528",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "label": "sell/15/cs_norm",
+      "replica_digest": "1c3efa2b685b4e58f9562c86aeb7d1fc343b36895f8cd507ce5d508890887f90",
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    }
+  ]
+}

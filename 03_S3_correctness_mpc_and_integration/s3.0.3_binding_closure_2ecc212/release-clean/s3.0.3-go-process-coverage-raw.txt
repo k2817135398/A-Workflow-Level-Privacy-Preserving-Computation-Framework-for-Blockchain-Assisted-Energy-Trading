@@ -1,0 +1,45 @@
+command=GOTOOLCHAIN=local go test -count=1 -coverprofile=s3.0.3-go-process-coverage.out -run TestRealRustProcessConsistencyVerifier -v ./mpc/inputbinding
+started_at_utc=2026-07-22T15:44:04Z
+git_commit=2ecc21216f7e2b7b0877e90e47e683d6375394ca
+=== RUN   TestRealRustProcessConsistencyVerifier
+--- PASS: TestRealRustProcessConsistencyVerifier (0.80s)
+PASS
+coverage: 11.1% of statements
+ok  	github.com/retf/source/v2/mpc/inputbinding	0.814s	coverage: 11.1% of statements
+github.com/retf/source/v2/mpc/inputbinding/binding.go:115:			consistencyEvidenceDigest	0.0%
+github.com/retf/source/v2/mpc/inputbinding/binding.go:127:			Validate			0.0%
+github.com/retf/source/v2/mpc/inputbinding/binding.go:281:			canonicalMaterial		0.0%
+github.com/retf/source/v2/mpc/inputbinding/binding.go:314:			CanonicalBytes			0.0%
+github.com/retf/source/v2/mpc/inputbinding/binding.go:370:			ComputeDigest			0.0%
+github.com/retf/source/v2/mpc/inputbinding/binding.go:379:			ValidateDigest			0.0%
+github.com/retf/source/v2/mpc/inputbinding/binding.go:416:			NewMemoryReplayStore		0.0%
+github.com/retf/source/v2/mpc/inputbinding/binding.go:420:			UseOnce				0.0%
+github.com/retf/source/v2/mpc/inputbinding/binding.go:506:			ValidateShape			0.0%
+github.com/retf/source/v2/mpc/inputbinding/binding.go:573:			CanonicalBytes			0.0%
+github.com/retf/source/v2/mpc/inputbinding/binding.go:580:			Digest				0.0%
+github.com/retf/source/v2/mpc/inputbinding/binding.go:589:			SigningBytes			0.0%
+github.com/retf/source/v2/mpc/inputbinding/binding.go:598:			Sign				0.0%
+github.com/retf/source/v2/mpc/inputbinding/binding.go:610:			UserShareLeaf			0.0%
+github.com/retf/source/v2/mpc/inputbinding/binding.go:614:			CreditShareLeaf			0.0%
+github.com/retf/source/v2/mpc/inputbinding/binding.go:618:			shareLeaf			0.0%
+github.com/retf/source/v2/mpc/inputbinding/binding.go:631:			MerkleParent			0.0%
+github.com/retf/source/v2/mpc/inputbinding/binding.go:639:			VerifyMerkleProof		0.0%
+github.com/retf/source/v2/mpc/inputbinding/binding.go:663:			Admit				0.0%
+github.com/retf/source/v2/mpc/inputbinding/binding.go:816:			authorizationReplayKey		0.0%
+github.com/retf/source/v2/mpc/inputbinding/binding.go:822:			backendInputDigest		0.0%
+github.com/retf/source/v2/mpc/inputbinding/binding.go:834:			matchesDigest			0.0%
+github.com/retf/source/v2/mpc/inputbinding/binding.go:843:			requireHex			75.0%
+github.com/retf/source/v2/mpc/inputbinding/input_record_state.go:18:		ValidateInputRecordTransition	0.0%
+github.com/retf/source/v2/mpc/inputbinding/persistent_replay.go:37:		UseOnce				0.0%
+github.com/retf/source/v2/mpc/inputbinding/persistent_replay.go:123:		readReplayJournal		0.0%
+github.com/retf/source/v2/mpc/inputbinding/persistent_replay.go:187:		replayKeyDigest			0.0%
+github.com/retf/source/v2/mpc/inputbinding/persistent_replay_lock_unix.go:16:	acquireReplayFileLock		0.0%
+github.com/retf/source/v2/mpc/inputbinding/persistent_replay_lock_unix.go:39:	release				0.0%
+github.com/retf/source/v2/mpc/inputbinding/persistent_replay_lock_unix.go:44:	syncReplayDirectory		0.0%
+github.com/retf/source/v2/mpc/inputbinding/process_consistency.go:72:		Verify				73.3%
+github.com/retf/source/v2/mpc/inputbinding/process_consistency.go:182:		verifyExecutableDigest		66.7%
+github.com/retf/source/v2/mpc/inputbinding/process_consistency.go:210:		Write				0.0%
+github.com/retf/source/v2/mpc/inputbinding/verified_launcher.go:19:		Launch				0.0%
+total:										(statements)			11.1%
+ended_at_utc=2026-07-22T15:44:06Z
+exit_code=0

@@ -1,0 +1,133 @@
+{
+  "schema_version": "saib-retf-s3.1-bounded-mutation-report/1",
+  "scope": "seven explicitly selected input-gate mutants; not a whole-program mutation score",
+  "selected_mutants": 7,
+  "viable_mutants": 7,
+  "non_viable_mutants": 0,
+  "killed_mutants": 7,
+  "all_viable_killed": true,
+  "mutants": [
+    {
+      "mutant_id": 1,
+      "name": "channel_binding_removed",
+      "source_anchor": "binding.ChannelID != gate.ChannelID",
+      "replacement": "false",
+      "viable": true,
+      "killed": true,
+      "exit_code": 1,
+      "test_output": [
+        "--- FAIL: TestGateRejectsSubstitutionAndStaleContext (0.00s)",
+        "    --- FAIL: TestGateRejectsSubstitutionAndStaleContext/channel (0.00s)",
+        "        binding_test.go:188: channel attack accepted",
+        "FAIL",
+        "FAIL\tgithub.com/retf/source/v2/mpc/inputbinding\t0.011s",
+        "FAIL"
+      ]
+    },
+    {
+      "mutant_id": 2,
+      "name": "expiry_check_removed",
+      "source_anchor": "now >= binding.ExpiresAtUnix",
+      "replacement": "false",
+      "viable": true,
+      "killed": true,
+      "exit_code": 1,
+      "test_output": [
+        "--- FAIL: TestGateRejectsSubstitutionAndStaleContext (0.00s)",
+        "    --- FAIL: TestGateRejectsSubstitutionAndStaleContext/expired (0.00s)",
+        "        binding_test.go:188: expired attack accepted",
+        "FAIL",
+        "FAIL\tgithub.com/retf/source/v2/mpc/inputbinding\t0.011s",
+        "FAIL"
+      ]
+    },
+    {
+      "mutant_id": 3,
+      "name": "replay_check_removed",
+      "source_anchor": "if !gate.Replay.UseOnce(replayKey) {",
+      "replacement": "if gate.Replay.UseOnce(replayKey) && false {",
+      "viable": true,
+      "killed": true,
+      "exit_code": 1,
+      "test_output": [
+        "--- FAIL: TestGateAcceptsCommittedBoundLocalShareAndRejectsReplay (0.00s)",
+        "    binding_test.go:138: exact local-share replay was accepted",
+        "--- FAIL: TestConcurrentIdenticalBindingAcceptsExactlyOnce (0.00s)",
+        "    binding_test.go:210: accepted 50 identical bindings, want exactly one",
+        "FAIL",
+        "FAIL\tgithub.com/retf/source/v2/mpc/inputbinding\t0.011s",
+        "FAIL"
+      ]
+    },
+    {
+      "mutant_id": 4,
+      "name": "order_commitment_check_removed",
+      "source_anchor": "record.OrderCommitment != binding.OrderCommitment",
+      "replacement": "false",
+      "viable": true,
+      "killed": true,
+      "exit_code": 1,
+      "test_output": [
+        "--- FAIL: TestGateRejectsSubstitutionAndStaleContext (0.00s)",
+        "    --- FAIL: TestGateRejectsSubstitutionAndStaleContext/order_commitment (0.00s)",
+        "        binding_test.go:188: order commitment attack accepted",
+        "FAIL",
+        "FAIL\tgithub.com/retf/source/v2/mpc/inputbinding\t0.013s",
+        "FAIL"
+      ]
+    },
+    {
+      "mutant_id": 5,
+      "name": "signature_verification_removed",
+      "source_anchor": "!ed25519.Verify(publicKey, message, envelope.Signature)",
+      "replacement": "ed25519.Verify(publicKey, message, envelope.Signature) && false",
+      "viable": true,
+      "killed": true,
+      "exit_code": 1,
+      "test_output": [
+        "--- FAIL: TestGateRejectsSubstitutionAndStaleContext (0.00s)",
+        "    --- FAIL: TestGateRejectsSubstitutionAndStaleContext/signature (0.00s)",
+        "        binding_test.go:188: signature attack accepted",
+        "FAIL",
+        "FAIL\tgithub.com/retf/source/v2/mpc/inputbinding\t0.010s",
+        "FAIL"
+      ]
+    },
+    {
+      "mutant_id": 6,
+      "name": "merkle_root_compare_removed",
+      "source_anchor": "subtle.ConstantTimeCompare(provided, current[:]) != 1",
+      "replacement": "false",
+      "viable": true,
+      "killed": true,
+      "exit_code": 1,
+      "test_output": [
+        "--- FAIL: TestGateRejectsSubstitutionAndStaleContext (0.00s)",
+        "    --- FAIL: TestGateRejectsSubstitutionAndStaleContext/user_Merkle_proof (0.00s)",
+        "        binding_test.go:188: user Merkle proof attack accepted",
+        "    --- FAIL: TestGateRejectsSubstitutionAndStaleContext/credit_Merkle_proof (0.00s)",
+        "        binding_test.go:188: credit Merkle proof attack accepted",
+        "FAIL",
+        "FAIL\tgithub.com/retf/source/v2/mpc/inputbinding\t0.011s",
+        "FAIL"
+      ]
+    },
+    {
+      "mutant_id": 7,
+      "name": "binding_set_check_removed",
+      "source_anchor": "session.BindingSetDigest != binding.BindingSetDigest",
+      "replacement": "false",
+      "viable": true,
+      "killed": true,
+      "exit_code": 1,
+      "test_output": [
+        "--- FAIL: TestGateRejectsSubstitutionAndStaleContext (0.00s)",
+        "    --- FAIL: TestGateRejectsSubstitutionAndStaleContext/binding_set (0.00s)",
+        "        binding_test.go:188: binding set attack accepted",
+        "FAIL",
+        "FAIL\tgithub.com/retf/source/v2/mpc/inputbinding\t0.013s",
+        "FAIL"
+      ]
+    }
+  ]
+}

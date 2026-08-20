@@ -1,0 +1,53 @@
+{
+  "schema_version": "SAIB-RETF/S3.3.2/provenance/1",
+  "release_commit": "b1305e2e2cca622422fae77f49b3b64c26f78252",
+  "release_tag": "s3.3.2-fmatch-obliviousness-audit",
+  "tested_commit": "6ad977f06774387d0d59489751fabb8dd89d624e",
+  "packaging_only_delta": [
+    "experiments/v2/runners/generate-s3.3.2-release.py"
+  ],
+  "base_tag": "s3.3.1-fmatch-implementation-audit-v1.2",
+  "base_commit": "6f18f396e63e354047384484e1bf9dd4688145df",
+  "merge_base": "6f18f396e63e354047384484e1bf9dd4688145df",
+  "git_dirty": false,
+  "git_status": [],
+  "backend_commit": "a6cda6eaa03d65b8ad8a655b46a575ed8341d930",
+  "deployment_model": "three real MPC processes on one physical host",
+  "network_scope": "local process transport; not independent hosts",
+  "measurement_scope": "fixed instruction/loop/round/logical-message/byte/trace/output shape; wall-clock constancy is not claimed",
+  "runtime_trace_payload_sha256": "76086e56d22cfffda6ab3f4c6bdb82b178b9a96d16ce35bca7313734bf73933f",
+  "runtime_trace_file_sha256": "9d7c90978872b22bc3d9e60bd6543e7b05270760635e430fe48f7bdf55a9cb92",
+  "runtime_trace_attestation": "Ed25519 ephemeral release-evidence key; not an authorization key",
+  "tests": {
+    "capacities": [
+      16,
+      32,
+      64,
+      128,
+      256
+    ],
+    "distributions": [
+      "all-match",
+      "all-non-match",
+      "sparse-match",
+      "dense-match",
+      "equal-price",
+      "extreme-price",
+      "random-price",
+      "low-dummy",
+      "high-dummy"
+    ],
+    "input_jsonl_sha256": "165fb110be9b376edf88ce2b90b2cd720e39530eee36b10393bec49adfdc79a8",
+    "real_mpc_executions": 45,
+    "real_mpc_processes": 135,
+    "result": "PASS",
+    "schema_version": "SAIB-RETF/S3.3.2/suite-summary/1",
+    "shape_groups_passed": 5,
+    "shape_groups_total": 5
+  },
+  "s3_3_2_fmatch_obliviousness": "GO",
+  "s3_4_single_host_production_integration": "NOT COMPLETED",
+  "formal_performance_experiments": "NO-GO",
+  "tdsc_experiment_readiness": "NO-GO",
+  "generated_at_utc": "2026-07-25T10:46:30.045272+00:00"
+}

@@ -1,0 +1,10 @@
+command=go test -count=1 ./fabric/s3productionchaincode
+started_at_utc=2026-07-28T08:00:01.716857Z
+--- FAIL: TestFinalizationRejectsInsufficientAndDuplicateCommitteeSignatures (0.00s)
+    --- FAIL: TestFinalizationRejectsInsufficientAndDuplicateCommitteeSignatures/duplicate_party (0.00s)
+        contract_test.go:285: duplicate committee party was accepted
+FAIL
+FAIL	github.com/retf/source/v2/fabric/s3productionchaincode	0.047s
+FAIL
+ended_at_utc=2026-07-28T08:00:02.906247Z
+exit_code=1

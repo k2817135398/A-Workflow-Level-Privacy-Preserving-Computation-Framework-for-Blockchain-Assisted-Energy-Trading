@@ -1,0 +1,58 @@
+    Checking credx v0.2.1 (/mnt/g/paperexper/retf/saib-retf/prototype/anoncred-rust/vendor/credx-0.2.1-saib)
+warning: use of deprecated associated function `elliptic_curve::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> vendor/credx-0.2.1-saib/src/presentation/verifiable_encryption_decryption.rs:164:46
+    |
+164 |         let key = aes_gcm::Key::<Aes128Gcm>::from_slice(&okm[..16]);
+    |                                              ^^^^^^^^^^
+    |
+    = note: `#[warn(deprecated)]` on by default
+
+warning: use of deprecated associated function `elliptic_curve::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> vendor/credx-0.2.1-saib/src/presentation/verifiable_encryption_decryption.rs:235:28
+    |
+235 |         let nonce = Nonce::from_slice(&self.ciphertext[..12]);
+    |                            ^^^^^^^^^^
+
+warning: use of deprecated associated function `elliptic_curve::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> vendor/credx-0.2.1-saib/src/presentation/verifiable_encryption_decryption.rs:243:46
+    |
+243 |         let key = aes_gcm::Key::<Aes128Gcm>::from_slice(&okm[..16]);
+    |                                              ^^^^^^^^^^
+
+warning: `credx` (lib) generated 3 warnings
+    Checking saib-anoncred v0.1.0 (/mnt/g/paperexper/retf/saib-retf/prototype/anoncred-rust)
+warning: this expression creates a reference which is immediately dereferenced by the compiler
+   --> tests/s3_committed_input.rs:117:66
+    |
+117 |     assert!(verify_consistency_bundle(&bundle, &wrong_component, &context).is_err());
+    |                                                                  ^^^^^^^^ help: change this to: `context`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrow
+    = note: `#[warn(clippy::needless_borrow)]` on by default
+
+warning: this expression creates a reference which is immediately dereferenced by the compiler
+   --> tests/s3_committed_input.rs:126:64
+    |
+126 |     assert!(verify_consistency_bundle(&wrong_range, &nodes[0], &context).is_err());
+    |                                                                ^^^^^^^^ help: change this to: `context`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrow
+
+warning: this expression creates a reference which is immediately dereferenced by the compiler
+   --> tests/s3_committed_input.rs:140:64
+    |
+140 |     assert!(verify_consistency_bundle(&wrong_field, &nodes[0], &context).is_err());
+    |                                                                ^^^^^^^^ help: change this to: `context`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrow
+
+warning: this expression creates a reference which is immediately dereferenced by the compiler
+   --> tests/s3_committed_input.rs:148:65
+    |
+148 |     assert!(verify_consistency_bundle(&wrong_credit, &nodes[0], &context).is_err());
+    |                                                                 ^^^^^^^^ help: change this to: `context`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrow
+
+warning: `saib-anoncred` (test "s3_committed_input") generated 4 warnings (run `cargo clippy --fix --test "s3_committed_input"` to apply 4 suggestions)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 17.25s

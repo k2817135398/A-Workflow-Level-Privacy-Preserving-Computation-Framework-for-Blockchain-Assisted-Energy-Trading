@@ -1,0 +1,276 @@
+warning: use of deprecated associated function `elliptic_curve::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> vendor/credx-0.2.1-saib/src/presentation/verifiable_encryption_decryption.rs:164:46
+    |
+164 |         let key = aes_gcm::Key::<Aes128Gcm>::from_slice(&okm[..16]);
+    |                                              ^^^^^^^^^^
+    |
+    = note: `#[warn(deprecated)]` on by default
+
+warning: use of deprecated associated function `elliptic_curve::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> vendor/credx-0.2.1-saib/src/presentation/verifiable_encryption_decryption.rs:235:28
+    |
+235 |         let nonce = Nonce::from_slice(&self.ciphertext[..12]);
+    |                            ^^^^^^^^^^
+
+warning: use of deprecated associated function `elliptic_curve::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> vendor/credx-0.2.1-saib/src/presentation/verifiable_encryption_decryption.rs:243:46
+    |
+243 |         let key = aes_gcm::Key::<Aes128Gcm>::from_slice(&okm[..16]);
+    |                                              ^^^^^^^^^^
+
+warning: `credx` (lib) generated 3 warnings
+    Checking saib-anoncred v0.1.0 (/mnt/g/paperexper/retf/saib-retf/prototype/anoncred-rust)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 17.61s
+warning: use of deprecated associated function `elliptic_curve::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> vendor/credx-0.2.1-saib/src/presentation/verifiable_encryption_decryption.rs:164:46
+    |
+164 |         let key = aes_gcm::Key::<Aes128Gcm>::from_slice(&okm[..16]);
+    |                                              ^^^^^^^^^^
+    |
+    = note: `#[warn(deprecated)]` on by default
+
+warning: use of deprecated associated function `elliptic_curve::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> vendor/credx-0.2.1-saib/src/presentation/verifiable_encryption_decryption.rs:235:28
+    |
+235 |         let nonce = Nonce::from_slice(&self.ciphertext[..12]);
+    |                            ^^^^^^^^^^
+
+warning: use of deprecated associated function `elliptic_curve::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> vendor/credx-0.2.1-saib/src/presentation/verifiable_encryption_decryption.rs:243:46
+    |
+243 |         let key = aes_gcm::Key::<Aes128Gcm>::from_slice(&okm[..16]);
+    |                                              ^^^^^^^^^^
+
+warning: `credx` (lib) generated 3 warnings
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 5.70s
+     Running unittests src/lib.rs (target/debug/deps/saib_anoncred-59ed5513bb655016)
+
+running 9 tests
+test tests::ffi_rejects_null_empty_oversize_malformed_and_unknown_operation ... ok
+test holder::tests::holder_continuation_zeroizes_scalar_secrets_and_handles_public_claims ... ok
+test role_process::tests::secure_envelope_rejects_malformed_domains_and_encodings ... ok
+test role_process::tests::authenticated_request_nonce_is_consumed_once_across_restarts ... ok
+test role_process::tests::authenticated_tcp_exchange_round_trip ... ok
+test role_process::tests::role_transport_keys_are_separate_and_strict ... ok
+test role_process::tests::role_state_file_boundaries_and_private_permissions ... ok
+test role_process::tests::authenticated_role_envelope_rejects_tamper_and_cross_role_use ... ok
+test tests::ffi_malformed_corpus_never_panics ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.16s
+
+     Running unittests src/bin/s2_1_vector_tool.rs (target/debug/deps/s2_1_vector_tool-3171c0dadab799e7)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/s2_2_global_issuer.rs (target/debug/deps/s2_2_global_issuer-3b09fcd6847cb5e0)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/s2_2_holder.rs (target/debug/deps/s2_2_holder-4b66e7cdc06a95b7)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/s2_2_regional_issuer.rs (target/debug/deps/s2_2_regional_issuer-1b8bd7548b56229c)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/s3_4_1_unlinkability.rs (target/debug/deps/s3_4_1_unlinkability-7c2d4497f3d07a50)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/s3_committed_input_vector.rs (target/debug/deps/s3_committed_input_vector-529d275fbf91cd19)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/s3_consistency_verifier.rs (target/debug/deps/s3_consistency_verifier-fb055da5f893dc0b)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/s3_equality_vector.rs (target/debug/deps/s3_equality_vector-41ac1f6af90af1ac)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/s3_equality_verifier.rs (target/debug/deps/s3_equality_verifier-3626602a1eddef68)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/s3_live_committed_input.rs (target/debug/deps/s3_live_committed_input-b5c61443efcccae8)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/golden_vectors.rs (target/debug/deps/golden_vectors-42256beaabb7f0c6)
+
+running 1 test
+test public_golden_vector_replays_without_secret_state ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.41s
+
+     Running tests/s2_2_role_isolation.rs (target/debug/deps/s2_2_role_isolation-f76c8171d625e254)
+
+running 5 tests
+test two_issuers_have_independent_keys_ids_and_state ... ok
+test role_state_restart_and_key_rotation_fail_closed ... ok
+test tampered_delta_and_wrong_role_are_rejected ... ok
+test old_presentation_is_rejected_after_registry_key_and_epoch_rotation ... ok
+test issuer_public_delta_updates_only_nonrevoked_holder_wallet ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.90s
+
+     Running tests/s3_committed_input.rs (target/debug/deps/s3_committed_input-b99d1e31cba4e3fc)
+
+running 7 tests
+
+thread 'component_substitution_range_mutation_and_policy_substitution_fail' panicked at /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs:701:9:
+assertion `left == right` failed
+  left: 0
+ right: 1
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+test component_substitution_range_mutation_and_policy_substitution_fail ... ok
+test complete_submitter_chosen_generator_attack_is_rejected ... ok
+test malformed_field_profile_registry_and_credential_commitment_fail ... ok
+test credx_commitment_vss_ranges_and_all_replica_layouts_verify ... ok
+test alice_s2_context_rejects_bob_s3_proof_and_openings ... ok
+test critical_security_rejection_branches_are_executed ... ok
+test equal_value_rerandomized_retry_accepts_and_changed_value_retry_rejects ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 7.57s
+
+     Running tests/s3_credit_commitment.rs (target/debug/deps/s3_credit_commitment-f7b940ae5ff60032)
+
+running 2 tests
+test holder_recovers_exact_credx_credit_commitment_opening ... ok
+test all_small_credit_guesses_fail_against_independent_blinder ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.40s
+
+     Running tests/s3_structured_properties.rs (target/debug/deps/s3_structured_properties-6bc03fa47c03a272)
+
+running 1 test
+
+thread 'structured_public_bundle_mutations_fail_closed_without_escaping_panic' panicked at /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs:701:9:
+assertion `left == right` failed
+  left: 0
+ right: 1
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+thread 'structured_public_bundle_mutations_fail_closed_without_escaping_panic' panicked at /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs:701:9:
+assertion `left == right` failed
+  left: 0
+ right: 1
+
+thread 'structured_public_bundle_mutations_fail_closed_without_escaping_panic' panicked at /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs:701:9:
+assertion `left == right` failed
+  left: 0
+ right: 1
+
+thread 'structured_public_bundle_mutations_fail_closed_without_escaping_panic' panicked at /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs:701:9:
+assertion `left == right` failed
+  left: 0
+ right: 1
+
+thread 'structured_public_bundle_mutations_fail_closed_without_escaping_panic' panicked at /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs:701:9:
+assertion `left == right` failed
+  left: 0
+ right: 1
+
+thread 'structured_public_bundle_mutations_fail_closed_without_escaping_panic' panicked at /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs:701:9:
+assertion `left == right` failed
+  left: 0
+ right: 1
+
+thread 'structured_public_bundle_mutations_fail_closed_without_escaping_panic' panicked at /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs:701:9:
+assertion `left == right` failed
+  left: 0
+ right: 1
+
+thread 'structured_public_bundle_mutations_fail_closed_without_escaping_panic' panicked at /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs:701:9:
+assertion `left == right` failed
+  left: 0
+ right: 1
+
+thread 'structured_public_bundle_mutations_fail_closed_without_escaping_panic' panicked at /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs:701:9:
+assertion `left == right` failed
+  left: 0
+ right: 1
+
+thread 'structured_public_bundle_mutations_fail_closed_without_escaping_panic' panicked at /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs:701:9:
+assertion `left == right` failed
+  left: 0
+ right: 1
+
+thread 'structured_public_bundle_mutations_fail_closed_without_escaping_panic' panicked at /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs:701:9:
+assertion `left == right` failed
+  left: 0
+ right: 1
+
+thread 'structured_public_bundle_mutations_fail_closed_without_escaping_panic' panicked at /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs:701:9:
+assertion `left == right` failed
+  left: 0
+ right: 1
+test structured_public_bundle_mutations_fail_closed_without_escaping_panic ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 23.80s
+
+     Running tests/security_cases.rs (target/debug/deps/security_cases-4920e87c49a03105)
+
+running 29 tests
+test s02_blind_request_does_not_serialize_link_secret ... ok
+test s01_blind_issuance_is_holder_issuer_message_flow ... ok
+test s17_malformed_proof_is_rejected ... ok
+test s04_different_link_secrets_cannot_form_joint_proof ... ok
+test s20_credit_one_above_value_is_rejected ... ok
+test s21_credit_threshold_outside_protocol_range_is_rejected ... ok
+test s22_nonrevoked_witness_update_succeeds ... ok
+test s10_binding_tag_substitution_is_rejected ... ok
+test s12_scope_substitution_is_rejected ... ok
+test s11_order_digest_substitution_is_rejected_independently ... ok
+test s25_revoked_holder_witness_update_is_rejected ... ok
+test s15_global_regional_registry_swap_is_rejected ... ok
+test s27_tampered_blind_request_is_rejected_by_issuer ... ok
+test s16_stale_epoch_is_rejected ... ok
+test s14_credit_threshold_substitution_is_rejected ... ok
+test s13_region_substitution_is_rejected ... ok
+test s09_proof_bit_mutation_is_rejected ... ok
+test s29_prover_rejects_stale_registry_epoch_before_proof ... ok
+test s18_credit_lower_boundary_zero_is_accepted ... ok
+test s19_credit_exact_value_boundary_is_accepted ... ok
+test s03_registered_joint_credential_proof_verifies ... ok
+test s23_stale_revocation_root_is_rejected ... ok
+test s24_revoked_credential_cannot_create_current_proof ... ok
+test s07_cross_task_pseudonyms_are_different ... ok
+test s06_same_task_epoch_pseudonym_is_intentionally_stable ... ok
+test s05_presentations_are_randomized ... ok
+test s08_cross_epoch_pseudonyms_are_different ... ok
+test s28_cryptographic_nonce_binding_is_verified_not_only_envelope_fields ... ok
+test s26_dual_holder_revocation_preserves_nonrevoked_holder_after_witness_update ... ok
+
+test result: ok. 29 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 3.16s
+
+     Running tests/structured_fuzz.rs (target/debug/deps/structured_fuzz-a68ff175105ed1fa)
+
+running 2 tests
+test structured_ffi_request_fuzz_never_panics_or_accepts_invalid_shape ... ok
+test structured_public_statement_fuzz_fails_closed ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.96s
+

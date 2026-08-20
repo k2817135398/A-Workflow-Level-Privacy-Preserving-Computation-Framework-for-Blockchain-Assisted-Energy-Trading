@@ -1,0 +1,378 @@
+command=go test -count=1 -v ./mpc/inputbinding ./fabric/mpcinputregistry
+started_at_utc=2026-07-24T11:26:28.753897Z
+=== RUN   TestGateAcceptsCommittedBoundLocalShareAndRejectsReplay
+--- PASS: TestGateAcceptsCommittedBoundLocalShareAndRejectsReplay (0.00s)
+=== RUN   TestVerifierToBackendHandoffBitFlipIsRejected
+--- PASS: TestVerifierToBackendHandoffBitFlipIsRejected (0.00s)
+=== RUN   TestInnerOuterReceiptSubstitutionsAreRejected
+=== RUN   TestInnerOuterReceiptSubstitutionsAreRejected/pseudonym
+=== RUN   TestInnerOuterReceiptSubstitutionsAreRejected/credit
+=== RUN   TestInnerOuterReceiptSubstitutionsAreRejected/order
+=== RUN   TestInnerOuterReceiptSubstitutionsAreRejected/parameter
+=== RUN   TestInnerOuterReceiptSubstitutionsAreRejected/node
+=== RUN   TestInnerOuterReceiptSubstitutionsAreRejected/context
+--- PASS: TestInnerOuterReceiptSubstitutionsAreRejected (0.00s)
+    --- PASS: TestInnerOuterReceiptSubstitutionsAreRejected/pseudonym (0.00s)
+    --- PASS: TestInnerOuterReceiptSubstitutionsAreRejected/credit (0.00s)
+    --- PASS: TestInnerOuterReceiptSubstitutionsAreRejected/order (0.00s)
+    --- PASS: TestInnerOuterReceiptSubstitutionsAreRejected/parameter (0.00s)
+    --- PASS: TestInnerOuterReceiptSubstitutionsAreRejected/node (0.00s)
+    --- PASS: TestInnerOuterReceiptSubstitutionsAreRejected/context (0.00s)
+=== RUN   TestAttemptAwareReplayAllowsGovernedAttemptTwoButRejectsEachAttemptReplay
+--- PASS: TestAttemptAwareReplayAllowsGovernedAttemptTwoButRejectsEachAttemptReplay (0.00s)
+=== RUN   TestFrozenS2AuthorizationSchemaIsNotExtendedByS3
+--- PASS: TestFrozenS2AuthorizationSchemaIsNotExtendedByS3 (0.00s)
+=== RUN   TestS3InputCommitmentStateTransitionsAreMonotonicAndImmutable
+--- PASS: TestS3InputCommitmentStateTransitionsAreMonotonicAndImmutable (0.00s)
+=== RUN   TestCanonicalInputCommitmentRecordDigestBindsImmutableMaterial
+--- PASS: TestCanonicalInputCommitmentRecordDigestBindsImmutableMaterial (0.00s)
+=== RUN   TestIndependentAdmissionChecksCannotBeBypassedByMatchingRequesterFields
+=== RUN   TestIndependentAdmissionChecksCannotBeBypassedByMatchingRequesterFields/local_channel_configuration
+=== RUN   TestIndependentAdmissionChecksCannotBeBypassedByMatchingRequesterFields/S2_link
+=== RUN   TestIndependentAdmissionChecksCannotBeBypassedByMatchingRequesterFields/session_binding_set
+=== RUN   TestIndependentAdmissionChecksCannotBeBypassedByMatchingRequesterFields/record_digest
+=== RUN   TestIndependentAdmissionChecksCannotBeBypassedByMatchingRequesterFields/consistency_verifier
+--- PASS: TestIndependentAdmissionChecksCannotBeBypassedByMatchingRequesterFields (0.00s)
+    --- PASS: TestIndependentAdmissionChecksCannotBeBypassedByMatchingRequesterFields/local_channel_configuration (0.00s)
+    --- PASS: TestIndependentAdmissionChecksCannotBeBypassedByMatchingRequesterFields/S2_link (0.00s)
+    --- PASS: TestIndependentAdmissionChecksCannotBeBypassedByMatchingRequesterFields/session_binding_set (0.00s)
+    --- PASS: TestIndependentAdmissionChecksCannotBeBypassedByMatchingRequesterFields/record_digest (0.00s)
+    --- PASS: TestIndependentAdmissionChecksCannotBeBypassedByMatchingRequesterFields/consistency_verifier (0.00s)
+=== RUN   TestGateRejectsSubstitutionAndStaleContext
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/credit_Merkle_proof
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/range_proof
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/future
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/signature
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/channel
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/chaincode
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/wrong_share_index
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/credit_share
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/key_version
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/deployment
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/user_root
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/credit_equality_proof
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/network
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/program_substitution
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/authorization
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/binding_set
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/order_commitment
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/credit_commitment
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/user_share
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/user_Merkle_proof
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/committee_config
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/task
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/domain
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/wrong_node
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/committee_epoch
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/order_handle
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/key_ID
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/chaincode_version
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/chaincode_sequence
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/session
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/input_commitment_record
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/consistency_proof
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/expired
+--- PASS: TestGateRejectsSubstitutionAndStaleContext (0.01s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/credit_Merkle_proof (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/range_proof (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/future (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/signature (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/channel (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/chaincode (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/wrong_share_index (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/credit_share (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/key_version (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/deployment (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/user_root (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/credit_equality_proof (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/network (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/program_substitution (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/authorization (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/binding_set (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/order_commitment (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/credit_commitment (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/user_share (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/user_Merkle_proof (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/committee_config (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/task (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/domain (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/wrong_node (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/committee_epoch (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/order_handle (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/key_ID (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/chaincode_version (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/chaincode_sequence (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/session (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/input_commitment_record (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/consistency_proof (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/expired (0.00s)
+=== RUN   TestConcurrentIdenticalBindingAcceptsExactlyOnce
+--- PASS: TestConcurrentIdenticalBindingAcceptsExactlyOnce (0.01s)
+=== RUN   TestDualReplayKeysRejectChangedNonceAndNonceReuse
+=== RUN   TestDualReplayKeysRejectChangedNonceAndNonceReuse/same_order_different_nonce
+    binding_test.go:673: input-key collision: same order with different nonce = REJECT
+=== RUN   TestDualReplayKeysRejectChangedNonceAndNonceReuse/different_order_reused_nonce
+    binding_test.go:691: nonce-key collision: different order with reused nonce = REJECT
+--- PASS: TestDualReplayKeysRejectChangedNonceAndNonceReuse (0.00s)
+    --- PASS: TestDualReplayKeysRejectChangedNonceAndNonceReuse/same_order_different_nonce (0.00s)
+    --- PASS: TestDualReplayKeysRejectChangedNonceAndNonceReuse/different_order_reused_nonce (0.00s)
+=== RUN   TestPersistentReplayHelperProcess
+--- PASS: TestPersistentReplayHelperProcess (0.00s)
+=== RUN   TestPersistentReplayAcrossProcessesRestartAndConcurrentAttempts
+    binding_test.go:757: cross-process identical admission attempts=32 accepted=1 rejected=31
+    binding_test.go:762: restart replay: same authorization/new session/new handle/new nonce = REJECT
+    binding_test.go:767: restart replay: same order/new nonce = REJECT
+    binding_test.go:772: restart replay: new order/old nonce = REJECT
+    binding_test.go:777: restart replay: fresh order/fresh nonce = ACCEPT
+    binding_test.go:782: second restart: exact replay = REJECT
+--- PASS: TestPersistentReplayAcrossProcessesRestartAndConcurrentAttempts (0.19s)
+=== RUN   TestPersistentReplayJournalTruncationFailsClosed
+--- PASS: TestPersistentReplayJournalTruncationFailsClosed (0.00s)
+=== RUN   TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal
+=== RUN   TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/empty_keys
+=== RUN   TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/empty_path
+=== RUN   TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/parent_is_a_file
+=== RUN   TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/trailing_JSON
+=== RUN   TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/duplicate_authorization
+=== RUN   TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/invalid_digest
+=== RUN   TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/invalid_JSON
+=== RUN   TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/unknown_field
+=== RUN   TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/blank_record
+=== RUN   TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/duplicate_input
+=== RUN   TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/duplicate_nonce
+=== RUN   TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/invalid_schema
+=== RUN   TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/invalid_time
+=== RUN   TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/oversized_journal
+=== RUN   TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/lock_timeout
+--- PASS: TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal (0.02s)
+    --- PASS: TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/empty_keys (0.00s)
+    --- PASS: TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/empty_path (0.00s)
+    --- PASS: TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/parent_is_a_file (0.00s)
+    --- PASS: TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/trailing_JSON (0.00s)
+    --- PASS: TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/duplicate_authorization (0.00s)
+    --- PASS: TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/invalid_digest (0.00s)
+    --- PASS: TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/invalid_JSON (0.00s)
+    --- PASS: TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/unknown_field (0.00s)
+    --- PASS: TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/blank_record (0.00s)
+    --- PASS: TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/duplicate_input (0.00s)
+    --- PASS: TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/duplicate_nonce (0.00s)
+    --- PASS: TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/invalid_schema (0.00s)
+    --- PASS: TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/invalid_time (0.00s)
+    --- PASS: TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/oversized_journal (0.00s)
+    --- PASS: TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/lock_timeout (0.01s)
+=== RUN   TestMalformedBindingsProofsAndTrustFailClosed
+=== RUN   TestMalformedBindingsProofsAndTrustFailClosed/shape/schema
+=== RUN   TestMalformedBindingsProofsAndTrustFailClosed/shape/sequence_zero
+=== RUN   TestMalformedBindingsProofsAndTrustFailClosed/shape/share_index
+=== RUN   TestMalformedBindingsProofsAndTrustFailClosed/shape/pseudonym
+=== RUN   TestMalformedBindingsProofsAndTrustFailClosed/shape/time_order
+=== RUN   TestMalformedBindingsProofsAndTrustFailClosed/shape/attestor_version
+=== RUN   TestMalformedBindingsProofsAndTrustFailClosed/shape/missing_commitment_scheme
+=== RUN   TestMalformedBindingsProofsAndTrustFailClosed/shape/empty_network
+=== RUN   TestMalformedBindingsProofsAndTrustFailClosed/shape/bad_digest
+=== RUN   TestMalformedBindingsProofsAndTrustFailClosed/shape/uppercase
+=== RUN   TestMalformedBindingsProofsAndTrustFailClosed/proof_array_mismatch
+=== RUN   TestMalformedBindingsProofsAndTrustFailClosed/proof_too_deep
+=== RUN   TestMalformedBindingsProofsAndTrustFailClosed/proof_sibling_length
+=== RUN   TestMalformedBindingsProofsAndTrustFailClosed/proof_root_encoding
+=== RUN   TestMalformedBindingsProofsAndTrustFailClosed/unconfigured_gate
+=== RUN   TestMalformedBindingsProofsAndTrustFailClosed/uncommitted_authorization
+=== RUN   TestMalformedBindingsProofsAndTrustFailClosed/uncommitted_input_commitment
+=== RUN   TestMalformedBindingsProofsAndTrustFailClosed/missing_consistency_verifier
+=== RUN   TestMalformedBindingsProofsAndTrustFailClosed/inactive_session
+=== RUN   TestMalformedBindingsProofsAndTrustFailClosed/empty_share
+=== RUN   TestMalformedBindingsProofsAndTrustFailClosed/oversized_share
+--- PASS: TestMalformedBindingsProofsAndTrustFailClosed (0.01s)
+    --- PASS: TestMalformedBindingsProofsAndTrustFailClosed/shape/schema (0.00s)
+    --- PASS: TestMalformedBindingsProofsAndTrustFailClosed/shape/sequence_zero (0.00s)
+    --- PASS: TestMalformedBindingsProofsAndTrustFailClosed/shape/share_index (0.00s)
+    --- PASS: TestMalformedBindingsProofsAndTrustFailClosed/shape/pseudonym (0.00s)
+    --- PASS: TestMalformedBindingsProofsAndTrustFailClosed/shape/time_order (0.00s)
+    --- PASS: TestMalformedBindingsProofsAndTrustFailClosed/shape/attestor_version (0.00s)
+    --- PASS: TestMalformedBindingsProofsAndTrustFailClosed/shape/missing_commitment_scheme (0.00s)
+    --- PASS: TestMalformedBindingsProofsAndTrustFailClosed/shape/empty_network (0.00s)
+    --- PASS: TestMalformedBindingsProofsAndTrustFailClosed/shape/bad_digest (0.00s)
+    --- PASS: TestMalformedBindingsProofsAndTrustFailClosed/shape/uppercase (0.00s)
+    --- PASS: TestMalformedBindingsProofsAndTrustFailClosed/proof_array_mismatch (0.00s)
+    --- PASS: TestMalformedBindingsProofsAndTrustFailClosed/proof_too_deep (0.00s)
+    --- PASS: TestMalformedBindingsProofsAndTrustFailClosed/proof_sibling_length (0.00s)
+    --- PASS: TestMalformedBindingsProofsAndTrustFailClosed/proof_root_encoding (0.00s)
+    --- PASS: TestMalformedBindingsProofsAndTrustFailClosed/unconfigured_gate (0.00s)
+    --- PASS: TestMalformedBindingsProofsAndTrustFailClosed/uncommitted_authorization (0.00s)
+    --- PASS: TestMalformedBindingsProofsAndTrustFailClosed/uncommitted_input_commitment (0.00s)
+    --- PASS: TestMalformedBindingsProofsAndTrustFailClosed/missing_consistency_verifier (0.00s)
+    --- PASS: TestMalformedBindingsProofsAndTrustFailClosed/inactive_session (0.00s)
+    --- PASS: TestMalformedBindingsProofsAndTrustFailClosed/empty_share (0.00s)
+    --- PASS: TestMalformedBindingsProofsAndTrustFailClosed/oversized_share (0.00s)
+=== RUN   TestDockerBackendUsesExactOCIReferenceAndFixedRuntimePolicy
+--- PASS: TestDockerBackendUsesExactOCIReferenceAndFixedRuntimePolicy (0.06s)
+=== RUN   TestDockerBackendRejectsImageWithoutAdmittedRepoDigest
+--- PASS: TestDockerBackendRejectsImageWithoutAdmittedRepoDigest (0.00s)
+=== RUN   TestPersistedDockerReceiptRejectsTrailingJSON
+--- PASS: TestPersistedDockerReceiptRejectsTrailingJSON (0.00s)
+=== RUN   TestVerifiedScalarVectorUsesCanonicalBigEndianBLSFieldValues
+--- PASS: TestVerifiedScalarVectorUsesCanonicalBigEndianBLSFieldValues (0.00s)
+=== RUN   TestMPSpdzProgramDigestBindsAllRuntimeArtifacts
+--- PASS: TestMPSpdzProgramDigestBindsAllRuntimeArtifacts (0.00s)
+=== RUN   TestMPSpdzBackendRejectsSessionAndProgramSubstitutionBeforeExecution
+=== RUN   TestMPSpdzBackendRejectsSessionAndProgramSubstitutionBeforeExecution/session_substitution
+=== RUN   TestMPSpdzBackendRejectsSessionAndProgramSubstitutionBeforeExecution/program_substitution
+--- PASS: TestMPSpdzBackendRejectsSessionAndProgramSubstitutionBeforeExecution (0.00s)
+    --- PASS: TestMPSpdzBackendRejectsSessionAndProgramSubstitutionBeforeExecution/session_substitution (0.00s)
+    --- PASS: TestMPSpdzBackendRejectsSessionAndProgramSubstitutionBeforeExecution/program_substitution (0.00s)
+=== RUN   TestRealRustProcessConsistencyVerifier
+    process_consistency_test.go:31: real Rust process verifier paths not configured
+--- SKIP: TestRealRustProcessConsistencyVerifier (0.00s)
+=== RUN   TestExternalReceiptForgeryAndBackendBypassFixturesDoNotCompile
+=== RUN   TestExternalReceiptForgeryAndBackendBypassFixturesDoNotCompile/positive_control
+=== RUN   TestExternalReceiptForgeryAndBackendBypassFixturesDoNotCompile/forged_receipt
+=== RUN   TestExternalReceiptForgeryAndBackendBypassFixturesDoNotCompile/direct_backend_bypass
+--- PASS: TestExternalReceiptForgeryAndBackendBypassFixturesDoNotCompile (5.09s)
+    --- PASS: TestExternalReceiptForgeryAndBackendBypassFixturesDoNotCompile/positive_control (1.83s)
+    --- PASS: TestExternalReceiptForgeryAndBackendBypassFixturesDoNotCompile/forged_receipt (1.64s)
+    --- PASS: TestExternalReceiptForgeryAndBackendBypassFixturesDoNotCompile/direct_backend_bypass (1.62s)
+=== RUN   TestRuntimeProfileSubstitutionsChangeDigestOrFailValidation
+=== RUN   TestRuntimeProfileSubstitutionsChangeDigestOrFailValidation/A-RUNTIME-03_schedule_replacement
+    runtime_profile_test.go:86: attack_id=A-RUNTIME-03 result=REJECT
+=== RUN   TestRuntimeProfileSubstitutionsChangeDigestOrFailValidation/A-RUNTIME-04_libSPDZ_replacement
+    runtime_profile_test.go:86: attack_id=A-RUNTIME-04 result=REJECT
+=== RUN   TestRuntimeProfileSubstitutionsChangeDigestOrFailValidation/A-RUNTIME-05_dependency_replacement
+    runtime_profile_test.go:86: attack_id=A-RUNTIME-05 result=REJECT
+=== RUN   TestRuntimeProfileSubstitutionsChangeDigestOrFailValidation/A-RUNTIME-06_program-name_replacement
+    runtime_profile_test.go:86: attack_id=A-RUNTIME-06 result=REJECT
+=== RUN   TestRuntimeProfileSubstitutionsChangeDigestOrFailValidation/A-RUNTIME-08_prime_replacement
+    runtime_profile_test.go:86: attack_id=A-RUNTIME-08 result=REJECT
+=== RUN   TestRuntimeProfileSubstitutionsChangeDigestOrFailValidation/A-RUNTIME-10_OCI-digest_replacement
+    runtime_profile_test.go:86: attack_id=A-RUNTIME-10 result=REJECT
+=== RUN   TestRuntimeProfileSubstitutionsChangeDigestOrFailValidation/A-RUNTIME-01_executable_replacement
+    runtime_profile_test.go:86: attack_id=A-RUNTIME-01 result=REJECT
+=== RUN   TestRuntimeProfileSubstitutionsChangeDigestOrFailValidation/A-RUNTIME-02_bytecode_replacement
+    runtime_profile_test.go:86: attack_id=A-RUNTIME-02 result=REJECT
+=== RUN   TestRuntimeProfileSubstitutionsChangeDigestOrFailValidation/A-RUNTIME-12_LD_PRELOAD_injection
+    runtime_profile_test.go:110: attack_id=A-RUNTIME-12 result=REJECT
+=== RUN   TestRuntimeProfileSubstitutionsChangeDigestOrFailValidation/A-RUNTIME-13_LD_LIBRARY_PATH_injection
+    runtime_profile_test.go:110: attack_id=A-RUNTIME-13 result=REJECT
+=== RUN   TestRuntimeProfileSubstitutionsChangeDigestOrFailValidation/A-RUNTIME-07_party-id_replacement
+    runtime_profile_test.go:110: attack_id=A-RUNTIME-07 result=REJECT
+=== RUN   TestRuntimeProfileSubstitutionsChangeDigestOrFailValidation/A-RUNTIME-09_host-port_replacement
+    runtime_profile_test.go:110: attack_id=A-RUNTIME-09 result=REJECT
+=== RUN   TestRuntimeProfileSubstitutionsChangeDigestOrFailValidation/A-RUNTIME-11_TLS-policy_replacement
+    runtime_profile_test.go:110: attack_id=A-RUNTIME-11 result=REJECT
+--- PASS: TestRuntimeProfileSubstitutionsChangeDigestOrFailValidation (0.00s)
+    --- PASS: TestRuntimeProfileSubstitutionsChangeDigestOrFailValidation/A-RUNTIME-03_schedule_replacement (0.00s)
+    --- PASS: TestRuntimeProfileSubstitutionsChangeDigestOrFailValidation/A-RUNTIME-04_libSPDZ_replacement (0.00s)
+    --- PASS: TestRuntimeProfileSubstitutionsChangeDigestOrFailValidation/A-RUNTIME-05_dependency_replacement (0.00s)
+    --- PASS: TestRuntimeProfileSubstitutionsChangeDigestOrFailValidation/A-RUNTIME-06_program-name_replacement (0.00s)
+    --- PASS: TestRuntimeProfileSubstitutionsChangeDigestOrFailValidation/A-RUNTIME-08_prime_replacement (0.00s)
+    --- PASS: TestRuntimeProfileSubstitutionsChangeDigestOrFailValidation/A-RUNTIME-10_OCI-digest_replacement (0.00s)
+    --- PASS: TestRuntimeProfileSubstitutionsChangeDigestOrFailValidation/A-RUNTIME-01_executable_replacement (0.00s)
+    --- PASS: TestRuntimeProfileSubstitutionsChangeDigestOrFailValidation/A-RUNTIME-02_bytecode_replacement (0.00s)
+    --- PASS: TestRuntimeProfileSubstitutionsChangeDigestOrFailValidation/A-RUNTIME-12_LD_PRELOAD_injection (0.00s)
+    --- PASS: TestRuntimeProfileSubstitutionsChangeDigestOrFailValidation/A-RUNTIME-13_LD_LIBRARY_PATH_injection (0.00s)
+    --- PASS: TestRuntimeProfileSubstitutionsChangeDigestOrFailValidation/A-RUNTIME-07_party-id_replacement (0.00s)
+    --- PASS: TestRuntimeProfileSubstitutionsChangeDigestOrFailValidation/A-RUNTIME-09_host-port_replacement (0.00s)
+    --- PASS: TestRuntimeProfileSubstitutionsChangeDigestOrFailValidation/A-RUNTIME-11_TLS-policy_replacement (0.00s)
+=== RUN   TestPostVerificationArtifactReplacementIsRejected
+    runtime_profile_test.go:168: attack_id=A-RUNTIME-14 result=REJECT
+--- PASS: TestPostVerificationArtifactReplacementIsRejected (0.00s)
+=== RUN   TestGateRejectsSharedPartyWorkingDirectory
+    runtime_profile_test.go:204: attack_id=A-RUNTIME-15 result=REJECT
+--- PASS: TestGateRejectsSharedPartyWorkingDirectory (0.00s)
+=== RUN   TestGateRejectsPartyCoordinatorThatIsNotP0
+--- PASS: TestGateRejectsPartyCoordinatorThatIsNotP0 (0.00s)
+=== RUN   TestRuntimeLaunchIDIsSessionScopedAcrossThreeParties
+--- PASS: TestRuntimeLaunchIDIsSessionScopedAcrossThreeParties (0.00s)
+=== RUN   TestBackendSuccessLedgerFailureRecoversWithoutReexecution
+    runtime_recovery_test.go:90: attack_id=A-RUNTIME-17 result=UNCERTAIN_THEN_RECOVERED
+    runtime_recovery_test.go:91: attack_id=A-RUNTIME-18 result=IDEMPOTENT_NO_REEXECUTION
+--- PASS: TestBackendSuccessLedgerFailureRecoversWithoutReexecution (0.00s)
+=== RUN   TestStaleLaunchReplayDoesNotReachBackend
+    runtime_recovery_test.go:107: attack_id=A-RUNTIME-19 result=REJECT
+--- PASS: TestStaleLaunchReplayDoesNotReachBackend (0.00s)
+=== RUN   TestS3031PostAdmissionInputMutationRegression
+--- PASS: TestS3031PostAdmissionInputMutationRegression (0.00s)
+=== RUN   TestSessionWorkspaceSeparatesPartiesAndSessions
+--- PASS: TestSessionWorkspaceSeparatesPartiesAndSessions (0.06s)
+=== RUN   TestConcurrentSessionReservationHasOneLaunchID
+    session_workspace_test.go:87: attack_id=A-RUNTIME-16 result=REJECT
+--- PASS: TestConcurrentSessionReservationHasOneLaunchID (0.01s)
+=== RUN   TestSessionWorkspaceRejectsTraversalAndOverwrite
+--- PASS: TestSessionWorkspaceRejectsTraversalAndOverwrite (0.03s)
+=== RUN   TestAdmitAndLaunchUsesOnlyVerifierReturnedBytes
+--- PASS: TestAdmitAndLaunchUsesOnlyVerifierReturnedBytes (0.00s)
+=== RUN   TestPostAdmissionInputBitFlipIsRejectedBeforeBackend
+--- PASS: TestPostAdmissionInputBitFlipIsRejectedBeforeBackend (0.00s)
+=== RUN   TestVerifiedLaunchCapabilityIsSingleUse
+--- PASS: TestVerifiedLaunchCapabilityIsSingleUse (0.00s)
+=== RUN   TestBackendFailureMarksAttemptAborted
+--- PASS: TestBackendFailureMarksAttemptAborted (0.00s)
+=== RUN   TestRealRustGateToThreeProcessMPSpdzSingleEntry
+    real_admit_launch_integration_test.go:126: real Rust/MP-SPDZ integration paths are not configured
+--- SKIP: TestRealRustGateToThreeProcessMPSpdzSingleEntry (0.00s)
+=== RUN   FuzzCanonicalBindingRoundTrip
+=== RUN   FuzzCanonicalBindingRoundTrip/seed#0
+--- PASS: FuzzCanonicalBindingRoundTrip (0.00s)
+    --- PASS: FuzzCanonicalBindingRoundTrip/seed#0 (0.00s)
+=== RUN   FuzzStructuredBindingSubstitution
+=== RUN   FuzzStructuredBindingSubstitution/seed#0
+=== RUN   FuzzStructuredBindingSubstitution/seed#1
+--- PASS: FuzzStructuredBindingSubstitution (0.00s)
+    --- PASS: FuzzStructuredBindingSubstitution/seed#0 (0.00s)
+    --- PASS: FuzzStructuredBindingSubstitution/seed#1 (0.00s)
+=== RUN   FuzzVerifiedBackendScalarVector
+=== RUN   FuzzVerifiedBackendScalarVector/seed#0
+=== RUN   FuzzVerifiedBackendScalarVector/seed#1
+--- PASS: FuzzVerifiedBackendScalarVector (0.00s)
+    --- PASS: FuzzVerifiedBackendScalarVector/seed#0 (0.00s)
+    --- PASS: FuzzVerifiedBackendScalarVector/seed#1 (0.00s)
+PASS
+ok  	github.com/retf/source/v2/mpc/inputbinding	5.532s
+=== RUN   TestRealRustEqualityVerifierToGoRegistryRebind
+    equality_process_integration_test.go:44: set S3_EQUALITY_VECTOR, S3_EQUALITY_RUST_VERIFIER, and S3_EQUALITY_ATTESTOR
+--- SKIP: TestRealRustEqualityVerifierToGoRegistryRebind (0.00s)
+=== RUN   TestAuthorizationCanCreateOnlyOneInputAcrossSessionHandleAndNonceChanges
+=== RUN   TestAuthorizationCanCreateOnlyOneInputAcrossSessionHandleAndNonceChanges/second_record
+    registry_test.go:225: attack=second record authorization=e838116b087382d4b201ad789f0a0813f08d6da2c42b7cade0dd660e91ffb856 candidate_session=session-2 candidate_handle=ef1e5814a8ca0b9d0463ecd5b25b01e3158b7794bc78a278aeacc70ca9710d44 result=REJECT reason="S2 authorization already has an S3 input record"
+=== RUN   TestAuthorizationCanCreateOnlyOneInputAcrossSessionHandleAndNonceChanges/changed_handle
+    registry_test.go:225: attack=changed handle authorization=e838116b087382d4b201ad789f0a0813f08d6da2c42b7cade0dd660e91ffb856 candidate_session=session-3 candidate_handle=dadc3d20e485a15be2638c3decda24004e4f0aed69fd136c77603c73ef8d6e36 result=REJECT reason="S2 authorization already has an S3 input record"
+--- PASS: TestAuthorizationCanCreateOnlyOneInputAcrossSessionHandleAndNonceChanges (0.00s)
+    --- PASS: TestAuthorizationCanCreateOnlyOneInputAcrossSessionHandleAndNonceChanges/second_record (0.00s)
+    --- PASS: TestAuthorizationCanCreateOnlyOneInputAcrossSessionHandleAndNonceChanges/changed_handle (0.00s)
+=== RUN   TestAbortRetryRequiresGovernedMonotonicRebind
+    registry_test.go:259: attack=unsigned_rebind attempt=2 result=REJECT reason="governance authorization signature is invalid"
+    registry_test.go:290: attack=governed_handle_substitution attempt=2 result=REJECT reason="governed rebind violates the monotonic authorization/order identity"
+    registry_test.go:295: transition=governed_rebind attempt=2 parent=d5d76de1d0fa940ea96a152556b954c72241655d6062dd50fdb894c26e6ecbb8 result=ACCEPT
+--- PASS: TestAbortRetryRequiresGovernedMonotonicRebind (0.00s)
+=== RUN   TestGovernedRebindRejectsUntrustedEpochPolicyAndKeys
+=== RUN   TestGovernedRebindRejectsUntrustedEpochPolicyAndKeys/epoch_zero
+=== RUN   TestGovernedRebindRejectsUntrustedEpochPolicyAndKeys/old_epoch
+=== RUN   TestGovernedRebindRejectsUntrustedEpochPolicyAndKeys/future_epoch
+=== RUN   TestGovernedRebindRejectsUntrustedEpochPolicyAndKeys/wrong_policy
+=== RUN   TestGovernedRebindRejectsUntrustedEpochPolicyAndKeys/old_equality_key
+=== RUN   TestGovernedRebindRejectsUntrustedEpochPolicyAndKeys/revoked_governance_key
+=== RUN   TestGovernedRebindRejectsUntrustedEpochPolicyAndKeys/same_governance_and_equality_key
+--- PASS: TestGovernedRebindRejectsUntrustedEpochPolicyAndKeys (0.00s)
+    --- PASS: TestGovernedRebindRejectsUntrustedEpochPolicyAndKeys/epoch_zero (0.00s)
+    --- PASS: TestGovernedRebindRejectsUntrustedEpochPolicyAndKeys/old_epoch (0.00s)
+    --- PASS: TestGovernedRebindRejectsUntrustedEpochPolicyAndKeys/future_epoch (0.00s)
+    --- PASS: TestGovernedRebindRejectsUntrustedEpochPolicyAndKeys/wrong_policy (0.00s)
+    --- PASS: TestGovernedRebindRejectsUntrustedEpochPolicyAndKeys/old_equality_key (0.00s)
+    --- PASS: TestGovernedRebindRejectsUntrustedEpochPolicyAndKeys/revoked_governance_key (0.00s)
+    --- PASS: TestGovernedRebindRejectsUntrustedEpochPolicyAndKeys/same_governance_and_equality_key (0.00s)
+=== RUN   TestFabricAttemptControllerConsumesOnlyAfterThreeNodeLaunches
+    registry_test.go:509: attack_id=A-RUNTIME-20 result=NO_CONSUMED_BEFORE_ALL_PARTIES
+--- PASS: TestFabricAttemptControllerConsumesOnlyAfterThreeNodeLaunches (0.00s)
+=== RUN   TestFabricAttemptControllerMarksBackendFailureAborted
+--- PASS: TestFabricAttemptControllerMarksBackendFailureAborted (0.00s)
+=== RUN   TestS3031StaleGovernanceEpochRegression
+--- PASS: TestS3031StaleGovernanceEpochRegression (0.00s)
+=== RUN   FuzzCanonicalEqualityRequest
+=== RUN   FuzzCanonicalEqualityRequest/seed#0
+=== RUN   FuzzCanonicalEqualityRequest/seed#1
+--- PASS: FuzzCanonicalEqualityRequest (0.00s)
+    --- PASS: FuzzCanonicalEqualityRequest/seed#0 (0.00s)
+    --- PASS: FuzzCanonicalEqualityRequest/seed#1 (0.00s)
+PASS
+ok  	github.com/retf/source/v2/fabric/mpcinputregistry	0.020s
+ended_at_utc=2026-07-24T11:26:35.448539Z
+exit_code=0

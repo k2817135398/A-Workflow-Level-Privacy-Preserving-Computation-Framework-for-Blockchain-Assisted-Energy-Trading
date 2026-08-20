@@ -1,0 +1,159 @@
+{
+  "schema_version": "saib-retf-s3.4-live-integration/1",
+  "started_at_utc": "2026-08-02T11:21:32.06968388Z",
+  "ended_at_utc": "2026-08-02T11:33:02.682601787Z",
+  "release_commit": "559e0bb531b3e4330c532e624d546d616c7849eb",
+  "capacity": 16,
+  "task_id": "s3.4-fmatch-live-559e0bb531b3-s4v123-prxsm1",
+  "session_id": "s34-1389aea4880e257cfbf30319",
+  "committee_policy_digest": "9d3efd4fbfd1ad93100107405074c78d5f3922b54c37d9b732f37757b93b931a",
+  "mpc_program_digest": "3fb80d6c88c30c8b24bfe312094037f925a01cd8566a2c491ae3ec0d883a37cd",
+  "session_runtime_root": "d82c89667396263dfefae4e8a6dc2119d756f86ad7cfd921f35d0825f89294fd",
+  "oci_manifest_digest": "sha256:532a8ccbe2aa5cc8d5d789fd51537f7e03d80aa07758509b75d4e14f13d76079",
+  "input_record_digests": [
+    "b54c7b241b9c5c65a4f6a4c7cf08cc718db34f1752fb59e65d3f346d26f125fa",
+    "24811aa658431e9e6b3ee85806320e421c08e758a9f391fda518f43f40844271"
+  ],
+  "session_record_digest": "2c64200cc4ac347868c2a5368ebb699356d4d36f60761ac781ad777a575abbea",
+  "party_receipts": [
+    {
+      "batch_launch_id": "58f9990715315c18975feb4dc0ce2a54eb241bf372a4fae866b8a497957aedf0",
+      "task_id": "s3.4-fmatch-live-559e0bb531b3-s4v123-prxsm1",
+      "session_id": "s34-1389aea4880e257cfbf30319",
+      "party_id": 0,
+      "node_id": "committee-0",
+      "binding_set_digest": "c05a660649e62550c034064a752aef0a36191b5e9480bd1ab5443feaf8675693",
+      "session_runtime_root": "d82c89667396263dfefae4e8a6dc2119d756f86ad7cfd921f35d0825f89294fd",
+      "actual_oci_manifest_digest": "sha256:532a8ccbe2aa5cc8d5d789fd51537f7e03d80aa07758509b75d4e14f13d76079",
+      "result_commitment": "081d00cff35d34ab4b6bc8075df08b7a39f373c4b20e46e41f5fdd533f2ce232",
+      "result_digest": "4c412b6d63bcad4287373844c9db6f39606c29a4cc6c0386cc95ade2043665d8",
+      "committee_signature_input": "0b7422d4cd3b13bd1c218d4f7397dfb95fa2a48ca12a6267b8c79dacf78755ba"
+    },
+    {
+      "batch_launch_id": "58f9990715315c18975feb4dc0ce2a54eb241bf372a4fae866b8a497957aedf0",
+      "task_id": "s3.4-fmatch-live-559e0bb531b3-s4v123-prxsm1",
+      "session_id": "s34-1389aea4880e257cfbf30319",
+      "party_id": 1,
+      "node_id": "committee-1",
+      "binding_set_digest": "c05a660649e62550c034064a752aef0a36191b5e9480bd1ab5443feaf8675693",
+      "session_runtime_root": "d82c89667396263dfefae4e8a6dc2119d756f86ad7cfd921f35d0825f89294fd",
+      "actual_oci_manifest_digest": "sha256:532a8ccbe2aa5cc8d5d789fd51537f7e03d80aa07758509b75d4e14f13d76079",
+      "result_commitment": "081d00cff35d34ab4b6bc8075df08b7a39f373c4b20e46e41f5fdd533f2ce232",
+      "result_digest": "4c412b6d63bcad4287373844c9db6f39606c29a4cc6c0386cc95ade2043665d8",
+      "committee_signature_input": "0b7422d4cd3b13bd1c218d4f7397dfb95fa2a48ca12a6267b8c79dacf78755ba"
+    },
+    {
+      "batch_launch_id": "58f9990715315c18975feb4dc0ce2a54eb241bf372a4fae866b8a497957aedf0",
+      "task_id": "s3.4-fmatch-live-559e0bb531b3-s4v123-prxsm1",
+      "session_id": "s34-1389aea4880e257cfbf30319",
+      "party_id": 2,
+      "node_id": "committee-2",
+      "binding_set_digest": "c05a660649e62550c034064a752aef0a36191b5e9480bd1ab5443feaf8675693",
+      "session_runtime_root": "d82c89667396263dfefae4e8a6dc2119d756f86ad7cfd921f35d0825f89294fd",
+      "actual_oci_manifest_digest": "sha256:532a8ccbe2aa5cc8d5d789fd51537f7e03d80aa07758509b75d4e14f13d76079",
+      "result_commitment": "081d00cff35d34ab4b6bc8075df08b7a39f373c4b20e46e41f5fdd533f2ce232",
+      "result_digest": "4c412b6d63bcad4287373844c9db6f39606c29a4cc6c0386cc95ade2043665d8",
+      "committee_signature_input": "0b7422d4cd3b13bd1c218d4f7397dfb95fa2a48ca12a6267b8c79dacf78755ba"
+    }
+  ],
+  "timings": {
+    "preparation_ms": 11941.459224,
+    "mpc_launch_ms": 669381.37287,
+    "finalization_ms": 2222.643716,
+    "total_ms": 690612.917907,
+    "fabric_transactions": [
+      {
+        "operation": "RegisterCommittee",
+        "transaction_id": "0839d8bbef122742454a4d2fab4c98313358e01454b71dbb9001ab64158c414e",
+        "endorsement_ms": 231.153739,
+        "submission_ms": 16.608154,
+        "commit_event_wait_ms": 2420.078998,
+        "total_ms": 2667.840891
+      },
+      {
+        "operation": "RegisterInputAttestorKey",
+        "transaction_id": "dae36d61facf6d2e561cd59e311ec1473157c13bd638d1b667dc00223b9c0b38",
+        "endorsement_ms": 54.376614,
+        "submission_ms": 4.08741,
+        "commit_event_wait_ms": 2158.054525,
+        "total_ms": 2216.518549
+      },
+      {
+        "operation": "SubmitInputCommitment",
+        "transaction_id": "4c2a53cce00d3aa4cbb68165c04bf2308cea8691a44f87a4c7dc45f1df5d29d7",
+        "endorsement_ms": 81.839142,
+        "submission_ms": 5.390432,
+        "commit_event_wait_ms": 2146.801399,
+        "total_ms": 2234.030973
+      },
+      {
+        "operation": "SubmitInputCommitment",
+        "transaction_id": "c9a4cd363d26406aab26f85a9688cdf79a93479dfdaf347bdf229364ded13178",
+        "endorsement_ms": 43.914356,
+        "submission_ms": 3.665709,
+        "commit_event_wait_ms": 2219.821201,
+        "total_ms": 2267.401266
+      },
+      {
+        "operation": "SubmitSessionInput",
+        "transaction_id": "238d41276826153176b4b8990f6414335d5d215d45dacd11ee901d5f38b87f57",
+        "endorsement_ms": 119.13944,
+        "submission_ms": 7.86634,
+        "commit_event_wait_ms": 2151.224825,
+        "total_ms": 2278.230605
+      },
+      {
+        "operation": "RecordPartyExecution",
+        "transaction_id": "c7e953199fb3ec4dd2ad7d321a020cf51e80f981ba8cbda190d141b409d81afa",
+        "endorsement_ms": 390.213068,
+        "submission_ms": 29.38293,
+        "commit_event_wait_ms": 2290.097487,
+        "total_ms": 2709.693485
+      },
+      {
+        "operation": "RecordPartyExecution",
+        "transaction_id": "490080d2c878cb37806b8a3ce772d27795f8ce06ae7c4a3a4ce7ab41084bdb89",
+        "endorsement_ms": 45.037434,
+        "submission_ms": 6.561517,
+        "commit_event_wait_ms": 2137.637282,
+        "total_ms": 2189.236233
+      },
+      {
+        "operation": "RecordPartyExecution",
+        "transaction_id": "704e1ceda204298c714edde0efe9fe322f2af512f3276cb0bbecc147ce0035f6",
+        "endorsement_ms": 40.478411,
+        "submission_ms": 3.574039,
+        "commit_event_wait_ms": 2158.052664,
+        "total_ms": 2202.105114
+      },
+      {
+        "operation": "FinalizeSession",
+        "transaction_id": "614a2e94ddfcbc4e0454c9758e98b677f242ffcab5c4264017525d0e6691423c",
+        "endorsement_ms": 61.331321,
+        "submission_ms": 10.509162,
+        "commit_event_wait_ms": 2149.215979,
+        "total_ms": 2221.056462
+      }
+    ]
+  },
+  "security_attacks": [],
+  "finalization": {
+    "schema_version": "SAIB-RETF/S3.4/FINALIZATION/1",
+    "protocol_version": "SAIB-RETF/S3.4/1",
+    "task_id": "s3.4-fmatch-live-559e0bb531b3-s4v123-prxsm1",
+    "session_id": "s34-1389aea4880e257cfbf30319",
+    "committee_id": "committee-s34-1389aea4880e257cfbf30319",
+    "committee_epoch": 2,
+    "input_record_digest": "2c64200cc4ac347868c2a5368ebb699356d4d36f60761ac781ad777a575abbea",
+    "input_commitment_root": "6a5ab62dd1b7eaec190679160d81ed67a4a9adbce77d3e9857b937a38ed4c314",
+    "mpc_program_digest": "3fb80d6c88c30c8b24bfe312094037f925a01cd8566a2c491ae3ec0d883a37cd",
+    "session_runtime_root": "d82c89667396263dfefae4e8a6dc2119d756f86ad7cfd921f35d0825f89294fd",
+    "result_commitment": "081d00cff35d34ab4b6bc8075df08b7a39f373c4b20e46e41f5fdd533f2ce232",
+    "result_digest": "4c412b6d63bcad4287373844c9db6f39606c29a4cc6c0386cc95ade2043665d8",
+    "committee_signature_input": "0b7422d4cd3b13bd1c218d4f7397dfb95fa2a48ca12a6267b8c79dacf78755ba",
+    "committee_signature_count": 3,
+    "transaction_id": "614a2e94ddfcbc4e0454c9758e98b677f242ffcab5c4264017525d0e6691423c",
+    "channel_id": "extra-channel"
+  },
+  "result": "PASS"
+}

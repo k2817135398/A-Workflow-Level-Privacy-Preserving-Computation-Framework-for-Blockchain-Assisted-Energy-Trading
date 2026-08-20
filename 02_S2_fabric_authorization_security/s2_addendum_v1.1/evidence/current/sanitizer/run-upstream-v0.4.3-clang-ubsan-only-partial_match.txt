@@ -1,0 +1,34 @@
+Running /tmp/saib-s3.1.1-sanitizer-9qs03c/upstream-v0.4.3-clang-ubsan-only/MP-SPDZ-0.4.3/Scripts/../malicious-rep-ring-party.x 0 saib_match_smoke -pn 19420 -h localhost
+Running /tmp/saib-s3.1.1-sanitizer-9qs03c/upstream-v0.4.3-clang-ubsan-only/MP-SPDZ-0.4.3/Scripts/../malicious-rep-ring-party.x 1 saib_match_smoke -pn 19420 -h localhost
+Running /tmp/saib-s3.1.1-sanitizer-9qs03c/upstream-v0.4.3-clang-ubsan-only/MP-SPDZ-0.4.3/Scripts/../malicious-rep-ring-party.x 2 saib_match_smoke -pn 19420 -h localhost
+Using statistical security parameter 40
+Tools/avx_memcpy.h:54:10: runtime error: store to misaligned address 0x7fff89ab745c for type '__m128i *', which requires 16 byte alignment
+0x7fff89ab745c: note: pointer points here
+  dc 4b 00 00 00 00 00 00  00 00 80 00 dc 4b 00 00  10 78 ab 89 ff 7f 00 00  80 74 ab 89 ff 7f 00 00
+              ^ 
+    #0 0x561a86109e63 in void avx_memcpy<4ul>(void*, void const*) /tmp/saib-s3.1.1-sanitizer-9qs03c/upstream-v0.4.3-clang-ubsan-only/MP-SPDZ-0.4.3/./Tools/avx_memcpy.h:54:3
+    #1 0x561a86109e63 in short_memcpy(void*, void*, unsigned long) /tmp/saib-s3.1.1-sanitizer-9qs03c/upstream-v0.4.3-clang-ubsan-only/MP-SPDZ-0.4.3/./Networking/data.h:26:20
+    #2 0x561a86109862 in encode_length(unsigned char*, unsigned long, unsigned long) /tmp/saib-s3.1.1-sanitizer-9qs03c/upstream-v0.4.3-clang-ubsan-only/MP-SPDZ-0.4.3/./Networking/data.h:46:5
+    #3 0x7fa70de38907 in void send<int>(int&, unsigned long, unsigned long) /tmp/saib-s3.1.1-sanitizer-9qs03c/upstream-v0.4.3-clang-ubsan-only/MP-SPDZ-0.4.3/./Networking/sockets.h:64:3
+    #4 0x7fa70de38907 in void octetStream::Send<int>(int) const /tmp/saib-s3.1.1-sanitizer-9qs03c/upstream-v0.4.3-clang-ubsan-only/MP-SPDZ-0.4.3/./Tools/octetStream.h:503:3
+    #5 0x7fa70de38907 in Names::setup_names(char const*, int) /tmp/saib-s3.1.1-sanitizer-9qs03c/upstream-v0.4.3-clang-ubsan-only/MP-SPDZ-0.4.3/Networking/Player.cpp:145:43
+    #6 0x7fa70de3870c in Names::init(int, int, int, char const*, bool) /tmp/saib-s3.1.1-sanitizer-9qs03c/upstream-v0.4.3-clang-ubsan-only/MP-SPDZ-0.4.3/Networking/Player.cpp:23:3
+    #7 0x7fa70de59f6b in Server::start_networking(Names&, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, int, int) /tmp/saib-s3.1.1-sanitizer-9qs03c/upstream-v0.4.3-clang-ubsan-only/MP-SPDZ-0.4.3/Networking/Server.cpp:183:9
+    #8 0x7fa70dd5e8ce in OnlineMachine::start_networking() /tmp/saib-s3.1.1-sanitizer-9qs03c/upstream-v0.4.3-clang-ubsan-only/MP-SPDZ-0.4.3/Processor/OnlineMachine.hpp:146:9
+    #9 0x7fa70dd5d7da in HonestMajorityMachine::HonestMajorityMachine(int, char const**, ez::ezOptionParser&, OnlineOptions&, int) /tmp/saib-s3.1.1-sanitizer-9qs03c/upstream-v0.4.3-clang-ubsan-only/MP-SPDZ-0.4.3/Processor/HonestMajorityMachine.cpp:38:5
+    #10 0x561a8608d92f in HonestMajorityRingMachineWithSecurity<MalRepRingShare, MaliciousRep3Share>::HonestMajorityRingMachineWithSecurity(int, char const**, ez::ezOptionParser&) /tmp/saib-s3.1.1-sanitizer-9qs03c/upstream-v0.4.3-clang-ubsan-only/MP-SPDZ-0.4.3/./Processor/RingMachine.hpp:86:27
+    #11 0x561a8608cf51 in main /tmp/saib-s3.1.1-sanitizer-9qs03c/upstream-v0.4.3-clang-ubsan-only/MP-SPDZ-0.4.3/Machines/malicious-rep-ring-party.cpp:17:5
+    #12 0x7fa70ceef1c9  (/lib/x86_64-linux-gnu/libc.so.6+0x2a1c9) (BuildId: 8e9fd827446c24067541ac5390e6f527fb5947bb)
+    #13 0x7fa70ceef28a in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2a28a) (BuildId: 8e9fd827446c24067541ac5390e6f527fb5947bb)
+    #14 0x561a86061c04 in _start (/tmp/saib-s3.1.1-sanitizer-9qs03c/upstream-v0.4.3-clang-ubsan-only/MP-SPDZ-0.4.3/malicious-rep-ring-party.x+0x2a8c04) (BuildId: 91464fc65a11c9146a1859ab300b1ed8e17eec0e)
+
+SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior Tools/avx_memcpy.h:54:10 
+=== Party 1
+    #14 0x5604dbd57c04 in _start (/tmp/saib-s3.1.1-sanitizer-9qs03c/upstream-v0.4.3-clang-ubsan-only/MP-SPDZ-0.4.3/malicious-rep-ring-party.x+0x2a8c04) (BuildId: 91464fc65a11c9146a1859ab300b1ed8e17eec0e)
+
+SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior Tools/avx_memcpy.h:54:10 
+=== Party 2
+    #14 0x561cd1f4dc04 in _start (/tmp/saib-s3.1.1-sanitizer-9qs03c/upstream-v0.4.3-clang-ubsan-only/MP-SPDZ-0.4.3/malicious-rep-ring-party.x+0x2a8c04) (BuildId: 91464fc65a11c9146a1859ab300b1ed8e17eec0e)
+
+SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior Tools/avx_memcpy.h:54:10 
+vector=partial_match exit_code=1 sanitizer_findings=10

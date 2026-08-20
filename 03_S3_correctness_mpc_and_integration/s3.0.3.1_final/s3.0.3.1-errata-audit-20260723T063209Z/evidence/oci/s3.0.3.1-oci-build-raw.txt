@@ -1,0 +1,49 @@
+started_at_utc=2026-07-23T06:29:59Z
+git_commit=d4d4ccb3e59b181ac10466ed8bb842c2d461b0f3
+docker_version=29.4.2
+buildx_version=github.com/docker/buildx v0.33.0-desktop.1 7f91f038ac14cbf5c4b2a6b76470860814424da1
+Name:          saib-s3-audit
+Driver:        docker-container
+Last Activity: 2026-07-23 05:06:06 +0000 UTC
+
+Nodes:
+Name:                  saib-s3-audit0
+Endpoint:              unix:///var/run/docker.sock
+Status:                running
+BuildKit daemon flags: --allow-insecure-entitlement=network.host
+BuildKit version:      v0.31.2
+Platforms:             linux/amd64, linux/amd64/v2, linux/amd64/v3, linux/arm64, linux/riscv64, linux/ppc64le, linux/s390x, linux/386, linux/arm/v7, linux/arm/v6
+Labels:
+ org.mobyproject.buildkit.worker.executor:         oci
+ org.mobyproject.buildkit.worker.hostname:         c1588c2dda70
+ org.mobyproject.buildkit.worker.network:          host
+ org.mobyproject.buildkit.worker.oci.process-mode: sandbox
+ org.mobyproject.buildkit.worker.selinux.enabled:  false
+ org.mobyproject.buildkit.worker.snapshotter:      overlayfs
+GC Policy rule#0:
+ All:            false
+ Filters:        type==source.local type==exec.cachemount type==source.git.checkout
+ Keep Duration:  48h0m0s
+ Max Used Space: 488.3MiB
+GC Policy rule#1:
+ All:            false
+ Keep Duration:  1440h0m0s
+ Reserved Space: 9.313GiB
+ Max Used Space: 93.13GiB
+ Min Free Space: 188.1GiB
+GC Policy rule#2:
+ All:            false
+ Reserved Space: 9.313GiB
+ Max Used Space: 93.13GiB
+ Min Free Space: 188.1GiB
+GC Policy rule#3:
+ All:            true
+ Reserved Space: 9.313GiB
+ Max Used Space: 93.13GiB
+ Min Free Space: 188.1GiB
+image=s3-equality-runtime operation=oci-no-cache-build
+image=s3-equality-runtime operation=local-no-cache-build
+image=s3-mpspdz-party-runtime operation=oci-no-cache-build
+image=s3-mpspdz-party-runtime operation=local-no-cache-build
+ended_at_utc=2026-07-23T06:30:40Z
+exit_code=0

@@ -1,0 +1,40 @@
+started_at_utc=2026-07-28T10:27:21Z
+release_commit=e310a58e5ef96f85d743dc1bd78a3f4a7774c98a
+run_id=e2e-e310a58-02
+production_path=true
+warning: use of deprecated associated function `elliptic_curve::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> vendor/credx-0.2.1-saib/src/presentation/verifiable_encryption_decryption.rs:164:46
+    |
+164 |         let key = aes_gcm::Key::<Aes128Gcm>::from_slice(&okm[..16]);
+    |                                              ^^^^^^^^^^
+    |
+    = note: `#[warn(deprecated)]` on by default
+
+warning: use of deprecated associated function `elliptic_curve::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> vendor/credx-0.2.1-saib/src/presentation/verifiable_encryption_decryption.rs:235:28
+    |
+235 |         let nonce = Nonce::from_slice(&self.ciphertext[..12]);
+    |                            ^^^^^^^^^^
+
+warning: use of deprecated associated function `elliptic_curve::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> vendor/credx-0.2.1-saib/src/presentation/verifiable_encryption_decryption.rs:243:46
+    |
+243 |         let key = aes_gcm::Key::<Aes128Gcm>::from_slice(&okm[..16]);
+    |                                              ^^^^^^^^^^
+
+warning: `credx` (lib) generated 3 warnings
+    Finished `release` profile [optimized] target(s) in 2.93s
+started_at_utc=2026-07-28T10:28:38Z
+release_commit=e310a58e5ef96f85d743dc1bd78a3f4a7774c98a
+run_id=e2e-e310a58-02
+production_path=true
+single_physical_host=true
+party_containers=3
+coordinator_binary_format=ELF
+COMMAND python3 /mnt/g/paperexper/retf/saib-retf/experiments/v2/runners/prepare-s3.4-live-authorizations.py authorize /mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.2-live /mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s3.4.1-live/real-e2e-e310a58-02
+COMMAND /mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s3.4.1-live/real-e2e-e310a58-02/runtime-secrets/bin/s3.4-live-production-integration --run-dir /mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s3.4.1-live/real-e2e-e310a58-02/runtime-secrets/integration-e2e-e310a58-02 --key-root /mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s3.4.1-live/real-e2e-e310a58-02/runtime-secrets --authorizations /mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s3.4.1-live/real-e2e-e310a58-02/authorization-public/fresh-s2-authorizations.json --buy-vector /mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s3.4.1-live/real-e2e-e310a58-02/authorization-private/vector-buy-placeholder.json --sell-vector /mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s3.4.1-live/real-e2e-e310a58-02/authorization-private/vector-sell-placeholder.json --program-profile /mnt/g/paperexper/retf/benchmarks/results/expand/s3.4-single-host-three-party-integration-final-20260726T133837Z/oci/s3.4-program-profile-16.json --rust-verifier /mnt/g/paperexper/retf/saib-retf/prototype/anoncred-rust/target/release/s3_consistency_verifier --image-repository localhost:5500/saib-retf/fmatch-party --mpc-tls-root /mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s3.4.1-live/real-e2e-e310a58-02/runtime-secrets/mpc-tls --workspace-root /mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s3.4.1-live/real-e2e-e310a58-02/runtime-secrets/mpc-workspaces-e2e-e310a58-02 --docker-network saib-s34-mpc --fabric-cert /mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s3.4.1-live/real-e2e-e310a58-02/runtime-secrets/relay-msp/signcerts/cert.pem --fabric-key /mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s3.4.1-live/real-e2e-e310a58-02/runtime-secrets/relay-msp/keystore/key.pem --fabric-tls-root /mnt/g/paperexper/retf/saib-retf/../docker/fabric/crypto-material/peerOrganizations/nsw.retf.com/peers/peer0.nsw.retf.com/tls/ca.crt --peer-endpoint localhost:7051 --peer-server-name peer0.nsw.retf.com --channel extra-channel --chaincode s3-fmatch --release-commit e310a58e5ef96f85d743dc1bd78a3f4a7774c98a
+ended_at_utc=2026-07-28T10:31:02Z
+exit_code=0
+s3.4.1_real_e2e_attacks=5/5_PASS
+ended_at_utc=2026-07-28T10:31:04Z
+exit_code=0

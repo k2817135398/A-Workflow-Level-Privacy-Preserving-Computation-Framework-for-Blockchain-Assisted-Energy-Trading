@@ -1,0 +1,17 @@
+non_test_backend_implementation=source/v2/mpc/inputbinding/mpspdz_backend.go
+public_entry=Gate.AdmitAndLaunch
+private_admission=Gate.admit
+private_capability=verifiedLaunchCapability.launch
+private_backend_method=MPSpdzProcessBackend.executeVerifiedInput
+call_edges:
+Gate.AdmitAndLaunch -> Gate.admit
+Gate.AdmitAndLaunch -> verifiedLaunchCapability.launch
+verifiedLaunchCapability.launch -> PinnedCommittedInputBackend.executeVerifiedInput
+MPSpdzProcessBackend.executeVerifiedInput -> exec.CommandContext
+external_direct_backend_call=UNREACHABLE_BY_GO_VISIBILITY
+external_receipt_construction=UNAVAILABLE
+/mnt/g/paperexper/retf/saib-retf/source/v2/mpc/inputbinding/admission_test_helpers_test.go:6:func (gate Gate) admitForTest(envelope LocalShareEnvelope) (PublicAdmissionReceipt, error) {
+/mnt/g/paperexper/retf/saib-retf/source/v2/mpc/inputbinding/binding.go:691:func (gate Gate) admit(envelope LocalShareEnvelope) (*verifiedLaunchCapability, PublicAdmissionReceipt, error) {
+/mnt/g/paperexper/retf/saib-retf/source/v2/mpc/inputbinding/mpspdz_backend.go:180:func (backend *MPSpdzProcessBackend) executeVerifiedInput(
+/mnt/g/paperexper/retf/saib-retf/source/v2/mpc/inputbinding/verified_launcher.go:74:func (capability *verifiedLaunchCapability) launch(ctx context.Context, backend PinnedCommittedInputBackend) error {
+/mnt/g/paperexper/retf/saib-retf/source/v2/mpc/inputbinding/verified_launcher.go:109:func (gate Gate) AdmitAndLaunch(

@@ -1,0 +1,46 @@
+{
+  "schema_version": "saib-retf-s2.2.2.1-block-scan-verification/1",
+  "source_path": "s2.2.2-fabric-block-scan-peer-source.jsonl",
+  "source_sha256": "e5076c4ae09426069ba5ed7be1a22c226a01f4dc07d33aefc52f33ecbea25a8e",
+  "authorization_transaction_records_total": 18,
+  "valid_records": 7,
+  "invalid_records": 11,
+  "invalid_validation_code_counts": {
+    "11": 11
+  },
+  "validation_code_11_interpretation": "MVCC_READ_CONFLICT",
+  "invalid_transaction_ids": [
+    "6f70ef0183d17741267542fbae33f74c2cc6a82d9f6535b0cd9a4805f66ba3f7",
+    "c9f8a10195e32667ebdf4b00eb339d911904597223f70f09453794091ff4d0d0",
+    "31d62681c1d102f1329dc7e89e6c553968b8f8fa1da34e3195dc8a874117348b",
+    "e33c8ee2d7e0d3fbf097814f6a177e2ed43f667f523da3be657fcf65f675b9cc",
+    "dd327ae084dbb2c0f352e86e809530495996151c598a892bfad532cd0d70687d",
+    "ad32988a20e23595a1b4c122977ff4979325b8c8491f39b9e8c6d84672cc2b21",
+    "ffb55b68a34017d5256a0ae4794cb3e0d0b450b7d1c515bf8dd548f8e7a69f20",
+    "1da1d006e283ce8fcca25fbf78e587c855a41ff5db939980c7e524cd46639e8d",
+    "0b902fed344b2b01cf11c9ea8eeeb807be3f94ef432cd3c8c2f1773d7622a5b2",
+    "5a38041aabf400893faedc14ff1f1bd18613a6f375388acd9422222aed70779c",
+    "f6344ace9bde9c26eb43ac264f1cb93e6599a07b8984c555fc6a816b62da8372"
+  ],
+  "valid_transaction_ids": [
+    "5c118ea89892d7b359adbf13536c3c80a252e8a52ad02b6432df338d61a72a09",
+    "c3b006a55b28ae8af3d66d320ea03158864b13fb46a3b123af28935861b8d8f8",
+    "1d87a38fabe543f37c9d45680c3955ab3a139c3c7647d936be6a04ab399a3f09",
+    "b00e68b4516258cad38b5136584353f314ca6a99e94eebe7885a891bd4627d7f",
+    "a512e9cdcdca85b9f09004925aeba32e5a0e2ea0d3b0c7720cd0e7d5ef717fa5",
+    "fdeae2e9c85436a552d07d8114d9b43fa353464669f5b2c45bfca7e56689df7a",
+    "ebee3d0063db21b843b16a3edf28b5dcfe426da608432d755242453ea120a7b3"
+  ],
+  "valid_record_selected_sensitive_field_hits": {
+    "Admin@nsw.retf.com": 0,
+    "BEGIN PRIVATE KEY": 0,
+    "OwnerID": 0,
+    "UserID": 0,
+    "issuer_state": 0,
+    "link_secret": 0,
+    "wallet": 0
+  },
+  "valid_record_selected_sensitive_field_hits_total": 0,
+  "finite_sample_limitation": "This is a finite-sample selected-field scan, not a universal unlinkability proof.",
+  "passed": true
+}

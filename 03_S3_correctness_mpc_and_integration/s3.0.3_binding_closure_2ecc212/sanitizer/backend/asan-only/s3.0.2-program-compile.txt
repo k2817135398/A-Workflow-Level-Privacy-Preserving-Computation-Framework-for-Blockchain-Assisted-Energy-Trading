@@ -1,0 +1,20 @@
+WARNING: --field/-F does not set the field size but the number of usable bits. Use -lgp with the virtual machine to set the field size.
+WARNING: --prime/-P activates code that usually isn't the most efficient variant. Consider using --field/-F and set the prime only during the actual computation.
+The chosen prime is particularly inefficient. Consider using a prime that is closer to a power of two, for example, 57896044618658097711785492504343953926634992332820282019728792003956562132993.
+Default bit length for compilation: 64
+Default security parameter for compilation: 40
+Compiling file Programs/Source/saib_committed_input.mpc
+Compiled 100000 lines at Wed Jul 22 23:27:55 2026
+Compiled 200000 lines at Wed Jul 22 23:27:57 2026
+Writing to Programs/Schedules/saib_committed_input.sch
+Writing to Programs/Bytecode/saib_committed_input-0.bc
+Hash: c493d104da1fe6c791e938f21948d42a1fae6aef622d3ab58f94f99fc13ae044
+Program requires at most:
+           6 integer inputs from player 0
+           6 integer inputs from player 1
+           6 integer inputs from player 2
+         619 integer opens
+      637289 integer triples
+      637289 integer simple multiplications
+      153000 integer bits
+        5908 virtual machine rounds

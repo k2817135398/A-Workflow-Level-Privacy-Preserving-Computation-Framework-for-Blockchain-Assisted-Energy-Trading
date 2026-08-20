@@ -1,0 +1,84 @@
+started_at_utc=2026-07-28T07:43:52Z
+release_commit=e310a58e5ef96f85d743dc1bd78a3f4a7774c98a
+git_clean=PASS
+go_version=go version go1.22.4 linux/amd64
+rust_version=rustc 1.85.1 (4eb161250 2025-03-15)
+backend_commit=a6cda6eaa03d65b8ad8a655b46a575ed8341d930
+go_test_all=PASS
+go_race_all=PASS
+go_vet_all=PASS
+ok  	github.com/retf/source/v2/fabric/privacychaincode221	0.047s	coverage: 45.2% of statements
+ok  	github.com/retf/source/v2/fabric/s3productionchaincode	0.060s	coverage: 31.3% of statements
+ok  	github.com/retf/source/v2/mpc/inputbinding	6.862s	coverage: 62.8% of statements
+ok  	github.com/retf/source/v2/fmatch/reference	0.023s	coverage: 78.3% of statements
+go_critical_coverage=PASS
+authorization-fuzz-100k=PASS executions>=100000
+input-binding-fuzz-100k=PASS executions>=100000
+backend-handoff-fuzz-100k=PASS executions>=100000
+fmatch-fuzz-100k=PASS executions>=100000
+rust_tests=PASS
+rust_structured_fuzz=PASS cases=100000_per_target
+rust_core_coverage=PASS
+selected_viable_mutants=PASS
+command=/mnt/g/paperexper/retf/saib-retf/experiments/v2/runners/run-s3.3.1-sanitizers.sh /mnt/g/paperexper/retf/third_party/MP-SPDZ-s3.1.1-patched /mnt/g/paperexper/retf/benchmarks/results/expand/s3.3.1-release-gates-20260724T233844Z/golden/G-ALL/run/effective-input.json /mnt/g/paperexper/retf/benchmarks/results/expand/s3.4.1-quality-e310a58-live-01/sanitizer/mp-spdz
+started_at_utc=2026-07-28T08:00:03Z
+candidate_commit=e310a58e5ef96f85d743dc1bd78a3f4a7774c98a
+backend_commit=a6cda6eaa03d65b8ad8a655b46a575ed8341d930
+clang_version=Ubuntu clang version 18.1.3 (1ubuntu1)
+command=/mnt/g/paperexper/retf/saib-retf/experiments/v2/runners/run-s3.3.1-fmatch-case.sh /tmp/saib-s3.3.1-sanitizers-G9te1g/backend-asan-only /mnt/g/paperexper/retf/benchmarks/results/expand/s3.3.1-release-gates-20260724T233844Z/golden/G-ALL/run/effective-input.json /mnt/g/paperexper/retf/benchmarks/results/expand/s3.4.1-quality-e310a58-live-01/sanitizer/mp-spdz/asan-only
+started_at_utc=2026-07-28T08:05:05Z
+capacity=16
+field_prime=52435875175126190479447740508185965837690552500527637822603658699938581184513
+compile_field_mode=255-bit-mask-comparison
+runtime_field_mode=exact-bls12-381-scalar-prime
+program_source_sha256=149e77baa6894a6eba8685dcb81311e64292e45c88838505ae7ff863998b2e0d
+program_schedule_sha256=8d9ef698912018f81f8eeb7cc9530d106c0ed071e979a599b6da4892b89d7b67
+{"result":"PASS","capacity":16,"logical_input_count":165,"party_scalar_count":329}
+{"schema_version":"SAIB-RETF/S3.3.1/mpc-oracle-comparison/1","result":"PASS","capacity":16,"party_log_sha256":{"node-0/process.log":"f5a3284bc43d10cdc005a3974b1efd1d554cd6acc7a1d8b899db260166fea64f","node-1/process.log":"a00bde4b8ecfa561008de3d3eb2745bdeaad5a1c94984842a619dbfda642e2b7","node-2/process.log":"7090ea8e35ff7024fe03b47d26450e4f1232c00cf5189748761fc4bbddbb780e"},"oracle_result_sha256":"c1db8e389044981b0633010ff4444183c624d9ac4a33cd49f763c31dc9d83650","input_manifest_sha256":"2c3ab1937580d00a9b25a7390f6ebf28551bdfe25d952caf8c3a7a23dae09ff9","mpc_summary":{"valid":1,"commitment":"28937473007530594384979196640245046975704080630466217003138927062924934440091","aggregate_matched_quantity":30000,"aggregate_settlement":12010365000,"match_slot_count":31,"residual_slot_count":32},"mismatches":[]}
+ended_at_utc=2026-07-28T08:05:29Z
+exit_code=0
+mode=asan-only build=0 run=0 findings=0 result=PASS
+command=/mnt/g/paperexper/retf/saib-retf/experiments/v2/runners/run-s3.3.1-fmatch-case.sh /tmp/saib-s3.3.1-sanitizers-G9te1g/backend-ubsan-only /mnt/g/paperexper/retf/benchmarks/results/expand/s3.3.1-release-gates-20260724T233844Z/golden/G-ALL/run/effective-input.json /mnt/g/paperexper/retf/benchmarks/results/expand/s3.4.1-quality-e310a58-live-01/sanitizer/mp-spdz/ubsan-only
+started_at_utc=2026-07-28T08:11:25Z
+capacity=16
+field_prime=52435875175126190479447740508185965837690552500527637822603658699938581184513
+compile_field_mode=255-bit-mask-comparison
+runtime_field_mode=exact-bls12-381-scalar-prime
+program_source_sha256=149e77baa6894a6eba8685dcb81311e64292e45c88838505ae7ff863998b2e0d
+program_schedule_sha256=c0e61adbb5699be5bfa88e7f1488831c356929aa86ff8c27da25611959d37f5c
+{"result":"PASS","capacity":16,"logical_input_count":165,"party_scalar_count":329}
+{"schema_version":"SAIB-RETF/S3.3.1/mpc-oracle-comparison/1","result":"PASS","capacity":16,"party_log_sha256":{"node-0/process.log":"0f824764f0a69025791ff3db3cdf0e1462f685af1f1a0f24502a1bc156ea104d","node-1/process.log":"c477f2a23fe459f537311528e7bb526e484e6136c36a828f4f78d4798afd2d33","node-2/process.log":"01aa40ffae8186f0b994426d0bbc496442ceec3a94beef4958c7ac7e4845426d"},"oracle_result_sha256":"5c93f9783289727ee16e9b3cfcd5ffc314328e5435231803e558b44ae3667420","input_manifest_sha256":"ce6ae6662479beac6d7fd4bf7c75c01668e466514e429e0379c28a9627020898","mpc_summary":{"valid":1,"commitment":"44554861009857595286939920992189899867362235816927308180803866889903508660186","aggregate_matched_quantity":30000,"aggregate_settlement":12010365000,"match_slot_count":31,"residual_slot_count":32},"mismatches":[]}
+ended_at_utc=2026-07-28T08:11:44Z
+exit_code=0
+mode=ubsan-only build=0 run=0 findings=0 result=PASS
+command=/mnt/g/paperexper/retf/saib-retf/experiments/v2/runners/run-s3.3.1-fmatch-case.sh /tmp/saib-s3.3.1-sanitizers-G9te1g/backend-asan-ubsan /mnt/g/paperexper/retf/benchmarks/results/expand/s3.3.1-release-gates-20260724T233844Z/golden/G-ALL/run/effective-input.json /mnt/g/paperexper/retf/benchmarks/results/expand/s3.4.1-quality-e310a58-live-01/sanitizer/mp-spdz/asan-ubsan
+started_at_utc=2026-07-28T08:19:07Z
+capacity=16
+field_prime=52435875175126190479447740508185965837690552500527637822603658699938581184513
+compile_field_mode=255-bit-mask-comparison
+runtime_field_mode=exact-bls12-381-scalar-prime
+program_source_sha256=149e77baa6894a6eba8685dcb81311e64292e45c88838505ae7ff863998b2e0d
+program_schedule_sha256=c0e61adbb5699be5bfa88e7f1488831c356929aa86ff8c27da25611959d37f5c
+{"result":"PASS","capacity":16,"logical_input_count":165,"party_scalar_count":329}
+{"schema_version":"SAIB-RETF/S3.3.1/mpc-oracle-comparison/1","result":"PASS","capacity":16,"party_log_sha256":{"node-0/process.log":"f552b053cfc5eae1147eaf3cf1c5b81eab93d25ab54a0584f1ca910a48b1afbd","node-1/process.log":"529f2a0ac4d71d3b67cb082f553d089fbbe39190cfc7c5d1b14a381376d88796","node-2/process.log":"4527fa4f48665ffb976d037964805285af9a902fe318be5a1e37915d22cd0c07"},"oracle_result_sha256":"b8e9abc27c7868ac0783b1697e1a23fa2e9eb06a59b70c7a9eda4b22cd5284d7","input_manifest_sha256":"257ae514ff9b80c750f8ae2d54cf4069bfd57746b022d01ec3c0f62c70be3225","mpc_summary":{"valid":1,"commitment":"18204323639315396254556780645737434611770556985144534072789928061488557030264","aggregate_matched_quantity":30000,"aggregate_settlement":12010365000,"match_slot_count":31,"residual_slot_count":32},"mismatches":[]}
+ended_at_utc=2026-07-28T08:19:47Z
+exit_code=0
+mode=asan-ubsan build=0 run=0 findings=0 result=PASS
+ended_at_utc=2026-07-28T08:19:47Z
+exit_code=0
+mp_spdz_asan_ubsan=PASS
+started_at_utc=2026-07-28T08:19:48Z
+image_reference=localhost:5500/saib-retf/fmatch-party@sha256:532a8ccbe2aa5cc8d5d789fd51537f7e03d80aa07758509b75d4e14f13d76079
+exact_oci_reference=PASS
+container_policy=PASS
+readelf=PASS
+ldd_not_found=0
+docker_run=PASS
+compiler_debugger_in_final_image=0
+mock_test_reconstruct_symbols=0
+ended_at_utc=2026-07-28T08:19:53Z
+exit_code=0
+production_image_symbol_scan=PASS
+compiled_production_source_private_mock_reconstruct_hits=0
+S3.4.1_QUALITY_GATES=PASS
+ended_at_utc=2026-07-28T08:19:56Z

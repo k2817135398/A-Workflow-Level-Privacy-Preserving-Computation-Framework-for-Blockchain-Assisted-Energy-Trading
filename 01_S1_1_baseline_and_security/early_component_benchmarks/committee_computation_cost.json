@@ -1,0 +1,71 @@
+{
+  "benchmark": "committee_computation_cost",
+  "committee_size": 3,
+  "runs_per_case": 50,
+  "seed": 2026,
+  "implementation_notes": {
+    "result_signing": "Off-chain ECDSA P-256 + SHA256 signing via committee.CommitteeNode.Sign; chaincode currently checks base64 format and signature count only. committeeSize=3 nodes each sign the SHA256 digest of matched pairs.",
+    "settlement": "RunSecureCSUpdate + explicit computation of matched quantity, Δ, FP, costs. Uses exported committee package functions.",
+    "sharing": "Additive secret sharing, n-of-n, not Shamir. splitAdditiveShares is a prototype benchmark implementation replicating committee/node.go:splitIntoShares (unexported). Fields shared: AP, CS, QT, OS.",
+    "sorting_matching": "Reconstruct ranking values inside committee, then sort.Slice (via committee.RunSecureSort) and AP_buyer \u003e= AP_seller comparison (via committee.RunSecureMatch); not oblivious sort or secure comparison.",
+    "total": "Wall-clock time around the complete workflow (sharing→sort/match→settlement→signing); not the arithmetic sum of phase averages."
+  },
+  "results": [
+    {
+      "orders": 50,
+      "committee_size": 3,
+      "sharing_avg_ms": 0.0059,
+      "sorting_matching_avg_ms": 0.0323,
+      "settlement_avg_ms": 0.0022,
+      "result_signing_avg_ms": 0.0815,
+      "total_avg_ms": 0.1642,
+      "sharing_p95_ms": 0.01,
+      "sorting_matching_p95_ms": 0.0263,
+      "settlement_p95_ms": 0.0035,
+      "result_signing_p95_ms": 0.1005,
+      "total_p95_ms": 0.3094
+    },
+    {
+      "orders": 100,
+      "committee_size": 3,
+      "sharing_avg_ms": 0.0127,
+      "sorting_matching_avg_ms": 0.0152,
+      "settlement_avg_ms": 0.0042,
+      "result_signing_avg_ms": 0.0717,
+      "total_avg_ms": 0.1625,
+      "sharing_p95_ms": 0.022,
+      "sorting_matching_p95_ms": 0.0207,
+      "settlement_p95_ms": 0.0067,
+      "result_signing_p95_ms": 0.0853,
+      "total_p95_ms": 0.2145
+    },
+    {
+      "orders": 500,
+      "committee_size": 3,
+      "sharing_avg_ms": 0.0679,
+      "sorting_matching_avg_ms": 0.0844,
+      "settlement_avg_ms": 0.017,
+      "result_signing_avg_ms": 0.0778,
+      "total_avg_ms": 0.467,
+      "sharing_p95_ms": 0.1333,
+      "sorting_matching_p95_ms": 0.2542,
+      "settlement_p95_ms": 0.0318,
+      "result_signing_p95_ms": 0.1013,
+      "total_p95_ms": 0.8473
+    },
+    {
+      "orders": 1000,
+      "committee_size": 3,
+      "sharing_avg_ms": 0.1206,
+      "sorting_matching_avg_ms": 0.1807,
+      "settlement_avg_ms": 0.0298,
+      "result_signing_avg_ms": 0.0926,
+      "total_avg_ms": 0.8695,
+      "sharing_p95_ms": 0.2114,
+      "sorting_matching_p95_ms": 0.4111,
+      "settlement_p95_ms": 0.0881,
+      "result_signing_p95_ms": 0.1791,
+      "total_p95_ms": 1.359
+    }
+  ]
+}

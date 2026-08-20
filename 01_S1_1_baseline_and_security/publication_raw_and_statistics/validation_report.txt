@@ -1,0 +1,67 @@
+FINAL VALIDATION REPORT (2026-07-13)
+====================================
+
+Code and script validation
+--------------------------
+PASS: all 17 Go modules discovered outside results/. Each completed `go test ./...`.
+This includes chaincode, all services, all benchmarks, and the new accumulator-scale
+and real E2E/E4/E5/E6 clients.
+
+PASS: seven Python files (six statistics scripts plus the final plotting script)
+compiled with py_compile.
+
+PASS: the copied plotting script was executed directly from
+expand/experiment/current_plotting_scripts and reproduced all three final PDFs
+from expand/experiment/statistics.
+
+PASS: run-e2.ps1, run-e4.ps1, run-e5.ps1, run-e6.ps1, and
+build-publication-artifact.ps1 parsed as PowerShell script blocks.
+
+PASS: the sanitized publication artifact contains 156 SHA-256-manifested files
+(plus SHA256SUMS.txt). Every hash was recomputed successfully. Its preserved
+relative source tree contains seven Go modules, and all seven pass `go test ./...`
+from inside the artifact. Private-key/binary/absolute-path scans pass.
+The artifact copies of the E7 and consolidated-summary builders reproduced
+byte-identical CSV files from artifact inputs.
+
+Raw-data validation
+-------------------
+E1: 500 rows; five groups x100; zero failures.
+E2: 2400 rows; 80 groups x30; zero failures.
+E3: 360 rows; 12 groups x30; zero failures.
+E4: 450 rows; nine groups x50; all success=true and business_valid=true.
+E5: 150 rows; five variants x30; three deployments; every paired block has five
+variants and one identical input hash and semantic hash; zero failures.
+E6: 320 rows; eight configurations x40; equal input/semantic hashes for every
+run_id across variants/concurrency; zero failures.
+E7: 160 persisted PP CouchDB receipts; four concurrency groups x40.
+Security: 38 cases x100; actual_result equals expected_result for every case.
+Semantics: 1010 rows; all_equal=true for every row.
+P5 connected evidence JSON: success=true.
+Runtime recheck: intra-channel retf-core is version 1.0.0, sequence 7, approved by
+NSWMSP; 20 containers are running on retf_network.
+
+Statistics and policy
+---------------------
+summary_statistics.csv contains 407 final E1-E7 statistical rows. Statistics use
+sample SD, nearest-rank p95, and Student-t 95% confidence intervals of the mean.
+No observation was removed. Resource CPU/memory values are labeled boundary
+snapshots; E7 state values are labeled logical rather than physical database growth.
+
+PDF validation
+--------------
+core_component_scalability_revised.pdf: one page, PDF 1.4.
+onchain_latency_revised.pdf: one page, PDF 1.4.
+e2e_latency_dual_panel_final.pdf: one page, PDF 1.4.
+
+All three PDFs were rendered at 180 dpi and visually inspected. Labels, error bars,
+axes, legends, and captions are legible and unclipped. Fig. 5 contains N/U/O/W,
+three fresh retained-ledger application contexts, all five delta/percentage labels,
+and no broken axis.
+
+Submission boundary
+-------------------
+Experiment/code validation passes for the implemented prototype. Final TDSC
+submission remains conditional on revising the manuscript source to remove or
+downgrade unsupported MPC, privacy/private-data, and scoped-audit claims and to
+describe E5/E6 as controlled receipt-workflow experiments.

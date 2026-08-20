@@ -1,0 +1,146 @@
+command=/mnt/g/paperexper/retf/saib-retf/experiments/v2/runners/run-s3.3.1-golden-suite.sh /mnt/g/paperexper/retf/third_party/MP-SPDZ-s3.1.1-patched /mnt/g/paperexper/retf/benchmarks/results/expand/s3.3-release-evidence-20260724T133119Z/s3.3-golden-vectors.json /mnt/g/paperexper/retf/benchmarks/results/expand/s3.3.1-release-gates-20260724T233844Z/golden
+started_at_utc=2026-07-24T15:38:48Z
+case_started=G-EMPTY 2026-07-24T15:38:48Z
+command=/mnt/g/paperexper/retf/saib-retf/experiments/v2/runners/run-s3.3.1-fmatch-case.sh /mnt/g/paperexper/retf/third_party/MP-SPDZ-s3.1.1-patched /mnt/g/paperexper/retf/benchmarks/results/expand/s3.3.1-release-gates-20260724T233844Z/golden/G-EMPTY/input.json /mnt/g/paperexper/retf/benchmarks/results/expand/s3.3.1-release-gates-20260724T233844Z/golden/G-EMPTY/run
+started_at_utc=2026-07-24T15:38:48Z
+capacity=16
+field_prime=52435875175126190479447740508185965837690552500527637822603658699938581184513
+compile_field_mode=255-bit-mask-comparison
+runtime_field_mode=exact-bls12-381-scalar-prime
+program_source_sha256=29a045afe8828f3d3f976977014f378fcc3d36ab49607d8c1e1a6b25382b8db4
+program_schedule_sha256=c2f128c539d7b8d31462821d0625cd6ac69cbb801651c8d9939c6637575515f1
+{"result":"PASS","capacity":16,"logical_input_count":229,"party_scalar_count":458}
+{"schema_version":"SAIB-RETF/S3.3.1/mpc-oracle-comparison/1","result":"PASS","capacity":16,"party_log_sha256":{"node-0/process.log":"8abd0b13b18ca6f0e8075506738745a7ec13adb19e6a2e9cfa8ca64fb3bdafca","node-1/process.log":"ed16b66d84a54255f28a8dd8bbc8bd2d67804b86a906c8d30041c9e9a6de9245","node-2/process.log":"caa775bcfa3e56553b716da1eb8714c25c017e99320a24834a80d6ea3fd0681c"},"oracle_result_sha256":"81c5d0b1c129bd952cc78cda640002c4b485adb5a8546658c6f96eb549cc73f7","input_manifest_sha256":"ddb793ceeba2eb42e21d5616884e0bd55cc80d1ef294a376189633fb11fa5640","mpc_summary":{"valid":1,"commitment":"42337356789396238512892557472380272974463620468455947522584570531033477030395","aggregate_matched_quantity":0,"aggregate_settlement":0,"match_slot_count":31,"residual_slot_count":32},"mismatches":[]}
+ended_at_utc=2026-07-24T15:38:56Z
+exit_code=0
+case_finished=G-EMPTY actual=PASS comparison=PASS
+case_started=G-ONE 2026-07-24T15:38:56Z
+command=/mnt/g/paperexper/retf/saib-retf/experiments/v2/runners/run-s3.3.1-fmatch-case.sh /mnt/g/paperexper/retf/third_party/MP-SPDZ-s3.1.1-patched /mnt/g/paperexper/retf/benchmarks/results/expand/s3.3.1-release-gates-20260724T233844Z/golden/G-ONE/input.json /mnt/g/paperexper/retf/benchmarks/results/expand/s3.3.1-release-gates-20260724T233844Z/golden/G-ONE/run
+started_at_utc=2026-07-24T15:38:57Z
+capacity=16
+field_prime=52435875175126190479447740508185965837690552500527637822603658699938581184513
+compile_field_mode=255-bit-mask-comparison
+runtime_field_mode=exact-bls12-381-scalar-prime
+program_source_sha256=29a045afe8828f3d3f976977014f378fcc3d36ab49607d8c1e1a6b25382b8db4
+program_schedule_sha256=c2f128c539d7b8d31462821d0625cd6ac69cbb801651c8d9939c6637575515f1
+{"result":"PASS","capacity":16,"logical_input_count":229,"party_scalar_count":458}
+{"schema_version":"SAIB-RETF/S3.3.1/mpc-oracle-comparison/1","result":"PASS","capacity":16,"party_log_sha256":{"node-0/process.log":"f1ceb641b06374ffe1745f5650dbcbc1f50508e59ac8e0b94991cba0a266ece6","node-1/process.log":"174cc20b1b49cca5a6fca42c441bad93bd856c410a2a9075d0ea4d9638e83d29","node-2/process.log":"83c16812ed95564bb259eb350494a6756af98818b145321d84a12f84b3993061"},"oracle_result_sha256":"5104ac494f0976dc2ed0e69d208bdb46359d86cfce29a91ee956078388303878","input_manifest_sha256":"7869d8bb607ab03cf6c4175789157c06ef8ea1634e58b55aa438b00ab54a7eea","mpc_summary":{"valid":1,"commitment":"33754864599006913660188296634230093799299720229387821001151203966989451092614","aggregate_matched_quantity":20000,"aggregate_settlement":10393560000,"match_slot_count":31,"residual_slot_count":32},"mismatches":[]}
+ended_at_utc=2026-07-24T15:39:06Z
+exit_code=0
+case_finished=G-ONE actual=PASS comparison=PASS
+case_started=G-ALL 2026-07-24T15:39:06Z
+command=/mnt/g/paperexper/retf/saib-retf/experiments/v2/runners/run-s3.3.1-fmatch-case.sh /mnt/g/paperexper/retf/third_party/MP-SPDZ-s3.1.1-patched /mnt/g/paperexper/retf/benchmarks/results/expand/s3.3.1-release-gates-20260724T233844Z/golden/G-ALL/input.json /mnt/g/paperexper/retf/benchmarks/results/expand/s3.3.1-release-gates-20260724T233844Z/golden/G-ALL/run
+started_at_utc=2026-07-24T15:39:06Z
+capacity=16
+field_prime=52435875175126190479447740508185965837690552500527637822603658699938581184513
+compile_field_mode=255-bit-mask-comparison
+runtime_field_mode=exact-bls12-381-scalar-prime
+program_source_sha256=29a045afe8828f3d3f976977014f378fcc3d36ab49607d8c1e1a6b25382b8db4
+program_schedule_sha256=c2f128c539d7b8d31462821d0625cd6ac69cbb801651c8d9939c6637575515f1
+{"result":"PASS","capacity":16,"logical_input_count":229,"party_scalar_count":458}
+{"schema_version":"SAIB-RETF/S3.3.1/mpc-oracle-comparison/1","result":"PASS","capacity":16,"party_log_sha256":{"node-0/process.log":"a37359e7efca0bb2585fcb623abf89ae92508540d7240c856631e6c17569dba3","node-1/process.log":"de678d0b47f67a06bb0c53fbb9ffc17c4b1c863338c09cbb136dc075270b3bae","node-2/process.log":"7816fadefed35d2c1acff8d9a3a98180805c2d583e7548189d85b021716f9222"},"oracle_result_sha256":"8cc969145520b7b056be4eea38f9bfe27893c39deb0f608560a6ea2eb2ad0df0","input_manifest_sha256":"b7f59f499b113642c2a79f13c80f3d73e33e9dfc52d5e55e6f59c4532ce0d59c","mpc_summary":{"valid":1,"commitment":"48607578449759942247802243109604034384572367243353832731342514211676693823642","aggregate_matched_quantity":30000,"aggregate_settlement":12010365000,"match_slot_count":31,"residual_slot_count":32},"mismatches":[]}
+ended_at_utc=2026-07-24T15:39:15Z
+exit_code=0
+case_finished=G-ALL actual=PASS comparison=PASS
+case_started=G-NONE 2026-07-24T15:39:15Z
+command=/mnt/g/paperexper/retf/saib-retf/experiments/v2/runners/run-s3.3.1-fmatch-case.sh /mnt/g/paperexper/retf/third_party/MP-SPDZ-s3.1.1-patched /mnt/g/paperexper/retf/benchmarks/results/expand/s3.3.1-release-gates-20260724T233844Z/golden/G-NONE/input.json /mnt/g/paperexper/retf/benchmarks/results/expand/s3.3.1-release-gates-20260724T233844Z/golden/G-NONE/run
+started_at_utc=2026-07-24T15:39:15Z
+capacity=16
+field_prime=52435875175126190479447740508185965837690552500527637822603658699938581184513
+compile_field_mode=255-bit-mask-comparison
+runtime_field_mode=exact-bls12-381-scalar-prime
+program_source_sha256=29a045afe8828f3d3f976977014f378fcc3d36ab49607d8c1e1a6b25382b8db4
+program_schedule_sha256=d58b6413be61ea58fd96433b6da1d3f53a4ef533d234011933c1c44d91e3fbce
+{"result":"PASS","capacity":16,"logical_input_count":229,"party_scalar_count":458}
+{"schema_version":"SAIB-RETF/S3.3.1/mpc-oracle-comparison/1","result":"PASS","capacity":16,"party_log_sha256":{"node-0/process.log":"21763fd54576b81639b95ce3da0523ead47cd4f025631b106eb7b964e466da37","node-1/process.log":"975ce3574e3e1dfd9a031818a1ae205e4c9fd63869eb8e46e0932603a0baf716","node-2/process.log":"c8a46eec9ba08a892d0da82665dbcaedf15c5f2c5251c934a7a133b934caac96"},"oracle_result_sha256":"31911656e8180ca77b486ddfcaf7351c96160cdef32ba178d2364254da93c866","input_manifest_sha256":"7658392bb843791e691fbc411c03b563f7ce99b57310479a1dadda6928f2797f","mpc_summary":{"valid":1,"commitment":"46229022691638802923502080100646145235371207472937631729199025079307676855264","aggregate_matched_quantity":0,"aggregate_settlement":0,"match_slot_count":31,"residual_slot_count":32},"mismatches":[]}
+ended_at_utc=2026-07-24T15:39:24Z
+exit_code=0
+case_finished=G-NONE actual=PASS comparison=PASS
+case_started=G-PARTIAL 2026-07-24T15:39:24Z
+command=/mnt/g/paperexper/retf/saib-retf/experiments/v2/runners/run-s3.3.1-fmatch-case.sh /mnt/g/paperexper/retf/third_party/MP-SPDZ-s3.1.1-patched /mnt/g/paperexper/retf/benchmarks/results/expand/s3.3.1-release-gates-20260724T233844Z/golden/G-PARTIAL/input.json /mnt/g/paperexper/retf/benchmarks/results/expand/s3.3.1-release-gates-20260724T233844Z/golden/G-PARTIAL/run
+started_at_utc=2026-07-24T15:39:24Z
+capacity=16
+field_prime=52435875175126190479447740508185965837690552500527637822603658699938581184513
+compile_field_mode=255-bit-mask-comparison
+runtime_field_mode=exact-bls12-381-scalar-prime
+program_source_sha256=29a045afe8828f3d3f976977014f378fcc3d36ab49607d8c1e1a6b25382b8db4
+program_schedule_sha256=c2f128c539d7b8d31462821d0625cd6ac69cbb801651c8d9939c6637575515f1
+{"result":"PASS","capacity":16,"logical_input_count":229,"party_scalar_count":458}
+{"schema_version":"SAIB-RETF/S3.3.1/mpc-oracle-comparison/1","result":"PASS","capacity":16,"party_log_sha256":{"node-0/process.log":"447c9bba77ac08f00d2985f0e1ab930f7cf705f4a2c4c1380c3a85ff513e1d5a","node-1/process.log":"3718c1186283860cd284a9048ae158a010a090dbda929f511e15229c6f16d43d","node-2/process.log":"80a6a6d0d895dfdc84ce527b9e0cc60b726b8dd8d573911edf069bdd50d1ee00"},"oracle_result_sha256":"b4a66012f1c8ba132ca8ac036dba7d6047ee3c8e08e5edefde8cfc119bf39af3","input_manifest_sha256":"4541971fa59ea785023f3db02c42a989a2e8ad9fcd38138577741c1602e49308","mpc_summary":{"valid":1,"commitment":"11343712335374013425894345744081237104159612448024221960730736636784079179839","aggregate_matched_quantity":70000,"aggregate_settlement":36363390000,"match_slot_count":31,"residual_slot_count":32},"mismatches":[]}
+ended_at_utc=2026-07-24T15:39:32Z
+exit_code=0
+case_finished=G-PARTIAL actual=PASS comparison=PASS
+case_started=G-EQUAL-PRICE 2026-07-24T15:39:32Z
+command=/mnt/g/paperexper/retf/saib-retf/experiments/v2/runners/run-s3.3.1-fmatch-case.sh /mnt/g/paperexper/retf/third_party/MP-SPDZ-s3.1.1-patched /mnt/g/paperexper/retf/benchmarks/results/expand/s3.3.1-release-gates-20260724T233844Z/golden/G-EQUAL-PRICE/input.json /mnt/g/paperexper/retf/benchmarks/results/expand/s3.3.1-release-gates-20260724T233844Z/golden/G-EQUAL-PRICE/run
+started_at_utc=2026-07-24T15:39:32Z
+capacity=16
+field_prime=52435875175126190479447740508185965837690552500527637822603658699938581184513
+compile_field_mode=255-bit-mask-comparison
+runtime_field_mode=exact-bls12-381-scalar-prime
+program_source_sha256=29a045afe8828f3d3f976977014f378fcc3d36ab49607d8c1e1a6b25382b8db4
+program_schedule_sha256=c2f128c539d7b8d31462821d0625cd6ac69cbb801651c8d9939c6637575515f1
+{"result":"PASS","capacity":16,"logical_input_count":229,"party_scalar_count":458}
+{"schema_version":"SAIB-RETF/S3.3.1/mpc-oracle-comparison/1","result":"PASS","capacity":16,"party_log_sha256":{"node-0/process.log":"f5925b6fcf0e6efd7a6115d78f712653f12d4edfa680860e2ef36a6c29815e1b","node-1/process.log":"9a06fe7147b4a054d08914df229fdf05e5659e61ee0932fd4667ca3e8611ae23","node-2/process.log":"3e34e2d91346d5bc2a74753c460d8cfee68926e34ee24d0f12ec075d7befd2a4"},"oracle_result_sha256":"b83b8ea31875ddba87a60985f727c97963e1772e3b1cc0ede39d5c74adc7ad42","input_manifest_sha256":"c7248798217187803354f282491098248ea0695a92277933ee39f8fbd37b8ec0","mpc_summary":{"valid":1,"commitment":"50760461000064556373933078052300737272599285801562962524354692327144361060485","aggregate_matched_quantity":40000,"aggregate_settlement":17322600000,"match_slot_count":31,"residual_slot_count":32},"mismatches":[]}
+ended_at_utc=2026-07-24T15:39:42Z
+exit_code=0
+case_finished=G-EQUAL-PRICE actual=PASS comparison=PASS
+case_started=G-EQUAL-QUANTITY 2026-07-24T15:39:42Z
+command=/mnt/g/paperexper/retf/saib-retf/experiments/v2/runners/run-s3.3.1-fmatch-case.sh /mnt/g/paperexper/retf/third_party/MP-SPDZ-s3.1.1-patched /mnt/g/paperexper/retf/benchmarks/results/expand/s3.3.1-release-gates-20260724T233844Z/golden/G-EQUAL-QUANTITY/input.json /mnt/g/paperexper/retf/benchmarks/results/expand/s3.3.1-release-gates-20260724T233844Z/golden/G-EQUAL-QUANTITY/run
+started_at_utc=2026-07-24T15:39:42Z
+capacity=16
+field_prime=52435875175126190479447740508185965837690552500527637822603658699938581184513
+compile_field_mode=255-bit-mask-comparison
+runtime_field_mode=exact-bls12-381-scalar-prime
+program_source_sha256=29a045afe8828f3d3f976977014f378fcc3d36ab49607d8c1e1a6b25382b8db4
+program_schedule_sha256=c2f128c539d7b8d31462821d0625cd6ac69cbb801651c8d9939c6637575515f1
+{"result":"PASS","capacity":16,"logical_input_count":229,"party_scalar_count":458}
+{"schema_version":"SAIB-RETF/S3.3.1/mpc-oracle-comparison/1","result":"PASS","capacity":16,"party_log_sha256":{"node-0/process.log":"f067e198d2e09b152b9fe003d8ac58dcd1e2dffc5d70df2f487a0bfe719881a1","node-1/process.log":"d028e59e7194947b39ea061064e57fc91d9f076401b9d3430a23e0216dcbd9f9","node-2/process.log":"42381960ff92b33ea296f593dd2e6e03c25a28473aa8b76af17163631ca65942"},"oracle_result_sha256":"c4f8974ef1de086e2a80b1c16203e98f59abe546d8d16d0286b762a0b7dba14d","input_manifest_sha256":"dab16eaf0981b1d9778eeb55cb17f3e8853af4bab32255c487e670dde1995e5a","mpc_summary":{"valid":1,"commitment":"4588497722466253100624957419439173174718246972310093441047514849331674615949","aggregate_matched_quantity":25000,"aggregate_settlement":12991950000,"match_slot_count":31,"residual_slot_count":32},"mismatches":[]}
+ended_at_utc=2026-07-24T15:39:51Z
+exit_code=0
+case_finished=G-EQUAL-QUANTITY actual=PASS comparison=PASS
+case_started=G-MAX 2026-07-24T15:39:51Z
+command=/mnt/g/paperexper/retf/saib-retf/experiments/v2/runners/run-s3.3.1-fmatch-case.sh /mnt/g/paperexper/retf/third_party/MP-SPDZ-s3.1.1-patched /mnt/g/paperexper/retf/benchmarks/results/expand/s3.3.1-release-gates-20260724T233844Z/golden/G-MAX/input.json /mnt/g/paperexper/retf/benchmarks/results/expand/s3.3.1-release-gates-20260724T233844Z/golden/G-MAX/run
+started_at_utc=2026-07-24T15:39:51Z
+capacity=256
+field_prime=52435875175126190479447740508185965837690552500527637822603658699938581184513
+compile_field_mode=255-bit-mask-comparison
+runtime_field_mode=exact-bls12-381-scalar-prime
+program_source_sha256=29a045afe8828f3d3f976977014f378fcc3d36ab49607d8c1e1a6b25382b8db4
+program_schedule_sha256=03df8c9bb8bda6ea26688362fe87a7c4fc39b5236973c8eb14bdc1d26241dbce
+{"result":"PASS","capacity":256,"logical_input_count":3589,"party_scalar_count":7178}
+{"schema_version":"SAIB-RETF/S3.3.1/mpc-oracle-comparison/1","result":"PASS","capacity":256,"party_log_sha256":{"node-0/process.log":"eebd37e7ff231756115819e61eb90d9cdf95974c9feb4550b10fc37a1feee4aa","node-1/process.log":"8b523188ccccdeb4fafc5c3e576c2abf3f461ab0d2c91b11191ad18f773f24a8","node-2/process.log":"cf85e7f64f5d1b403d692ea56aa8b0067c86845a1752600937a46fcee01c5e26"},"oracle_result_sha256":"02cb0124f4e4075f61976d4baa1710181f5bd2db41e1f47392a1753b5f1da37e","input_manifest_sha256":"3a1a03ab8cd493804900852a3449fc586bcf61fd092f48c477cdbb34b87db966","mpc_summary":{"valid":1,"commitment":"11508655866603392035913879039788200457338966690456709748662298092280079644572","aggregate_matched_quantity":1000000,"aggregate_settlement":464524000000,"match_slot_count":511,"residual_slot_count":512},"mismatches":[]}
+ended_at_utc=2026-07-24T15:41:25Z
+exit_code=0
+case_finished=G-MAX actual=PASS comparison=PASS
+case_started=G-BOUNDARY 2026-07-24T15:41:25Z
+command=/mnt/g/paperexper/retf/saib-retf/experiments/v2/runners/run-s3.3.1-fmatch-case.sh /mnt/g/paperexper/retf/third_party/MP-SPDZ-s3.1.1-patched /mnt/g/paperexper/retf/benchmarks/results/expand/s3.3.1-release-gates-20260724T233844Z/golden/G-BOUNDARY/input.json /mnt/g/paperexper/retf/benchmarks/results/expand/s3.3.1-release-gates-20260724T233844Z/golden/G-BOUNDARY/run
+started_at_utc=2026-07-24T15:41:25Z
+capacity=16
+field_prime=52435875175126190479447740508185965837690552500527637822603658699938581184513
+compile_field_mode=255-bit-mask-comparison
+runtime_field_mode=exact-bls12-381-scalar-prime
+program_source_sha256=29a045afe8828f3d3f976977014f378fcc3d36ab49607d8c1e1a6b25382b8db4
+program_schedule_sha256=c2f128c539d7b8d31462821d0625cd6ac69cbb801651c8d9939c6637575515f1
+{"result":"PASS","capacity":16,"logical_input_count":229,"party_scalar_count":458}
+{"schema_version":"SAIB-RETF/S3.3.1/mpc-oracle-comparison/1","result":"PASS","capacity":16,"party_log_sha256":{"node-0/process.log":"9ab7f29f1472bbf61033072c6971966520010bfe42a28cb4badfdbb9dbd20893","node-1/process.log":"4b75a01f61550818b2e86391235cf9a951a15da368aae7c2f7c7569f182e94ab","node-2/process.log":"0ac6ec234ef52c6327a0070bed8800423e19013dc7590065c1bc1407c9b7a813"},"oracle_result_sha256":"1b01de4f127963d83a697c9b3aae6c0be367f58c21229f172bb1eab7b104e7c7","input_manifest_sha256":"d084ea606284fc163dc5928d8bcf014be5e730a42c238b9e1712c688c4d457a7","mpc_summary":{"valid":1,"commitment":"16600491139451805005198866166964372125609726742098492687467880790469328937933","aggregate_matched_quantity":1,"aggregate_settlement":1,"match_slot_count":31,"residual_slot_count":32},"mismatches":[]}
+ended_at_utc=2026-07-24T15:41:34Z
+exit_code=0
+case_finished=G-BOUNDARY actual=PASS comparison=PASS
+case_started=G-DUMMY 2026-07-24T15:41:34Z
+command=/mnt/g/paperexper/retf/saib-retf/experiments/v2/runners/run-s3.3.1-fmatch-case.sh /mnt/g/paperexper/retf/third_party/MP-SPDZ-s3.1.1-patched /mnt/g/paperexper/retf/benchmarks/results/expand/s3.3.1-release-gates-20260724T233844Z/golden/G-DUMMY/input.json /mnt/g/paperexper/retf/benchmarks/results/expand/s3.3.1-release-gates-20260724T233844Z/golden/G-DUMMY/run
+started_at_utc=2026-07-24T15:41:34Z
+capacity=32
+field_prime=52435875175126190479447740508185965837690552500527637822603658699938581184513
+compile_field_mode=255-bit-mask-comparison
+runtime_field_mode=exact-bls12-381-scalar-prime
+program_source_sha256=29a045afe8828f3d3f976977014f378fcc3d36ab49607d8c1e1a6b25382b8db4
+program_schedule_sha256=123f3f2ea9c0ef254a81fb0a277a4405380e6a2db4fe6936d6a58b531c042bc1
+{"result":"PASS","capacity":32,"logical_input_count":453,"party_scalar_count":906}
+{"schema_version":"SAIB-RETF/S3.3.1/mpc-oracle-comparison/1","result":"PASS","capacity":32,"party_log_sha256":{"node-0/process.log":"ae0c6d1550f54c08deb35cf8c30c7a5be7686c672fc8f969dd59c2debf2b4ad5","node-1/process.log":"fca5e23ed82ac80c3a77e0dae8bb5de469a8e9de6d6cb499983325c79a7cb07d","node-2/process.log":"39822aec7c8297a4f872829a7cb34099dd312145a4e7ed442a043580cce7eaef"},"oracle_result_sha256":"e0fcb1477be6a1409a374f558bd1805c0d2607157cee6d6dfe5d49564a54fdb4","input_manifest_sha256":"3cc5be2e89cfb8bee0b1a7a9459be306587a27db70ab165b39e1507fe8b4a1ed","mpc_summary":{"valid":1,"commitment":"32285272391386682027244867060155809155586831430806144225517194067949636576476","aggregate_matched_quantity":10000,"aggregate_settlement":5196780000,"match_slot_count":63,"residual_slot_count":64},"mismatches":[]}
+ended_at_utc=2026-07-24T15:41:48Z
+exit_code=0
+case_finished=G-DUMMY actual=PASS comparison=PASS
+cases=10
+passed=10
+ended_at_utc=2026-07-24T15:41:48Z
+exit_code=0

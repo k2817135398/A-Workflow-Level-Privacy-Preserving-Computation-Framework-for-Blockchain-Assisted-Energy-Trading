@@ -1,0 +1,514 @@
+command=/mnt/g/paperexper/retf/saib-retf/experiments/v2/runners/run-s3.0.2-release-clean.sh /mnt/g/paperexper/retf/third_party/MP-SPDZ-s3.1.1-patched /mnt/g/paperexper/retf/benchmarks/results/expand/s3.0.2-working-evidence-20260722T120600Z/s3.0.2-committed-input-golden-vector.json /mnt/g/paperexper/retf/benchmarks/results/expand/s3.0.2-working-evidence-20260722T120600Z/s3.0.2-release-clean
+started_at_utc=2026-07-22T12:13:10Z
+release_commit=a085a352e8404ed1140466fa201108a8f9f31cdb
+git_status_porcelain_count=0
+?   	github.com/retf/source/v2/chaincode/privacy-state	[no test files]
+?   	github.com/retf/source/v2/chaincode/private-finalization	[no test files]
+?   	github.com/retf/source/v2/chaincode/private-task	[no test files]
+?   	github.com/retf/source/v2/cmd/s2.2-privacy-chaincode	[no test files]
+?   	github.com/retf/source/v2/cmd/s2.2.1-block-scan	[no test files]
+?   	github.com/retf/source/v2/cmd/s2.2.1-material-tool	[no test files]
+?   	github.com/retf/source/v2/cmd/s2.2.1-privacy-chaincode	[no test files]
+?   	github.com/retf/source/v2/cmd/s2.2.2-ccaas-mtls-probe	[no test files]
+?   	github.com/retf/source/v2/cmd/s2.2.2-proposal-time-probe	[no test files]
+?   	github.com/retf/source/v2/cmd/s3-binding-vector	[no test files]
+?   	github.com/retf/source/v2/cmd/v2-static-check	[no test files]
+?   	github.com/retf/source/v2/crypto/anoncred	[no test files]
+?   	github.com/retf/source/v2/crypto/anoncred/ffi	[no test files]
+?   	github.com/retf/source/v2/crypto/anoncred/real	[no test files]
+?   	github.com/retf/source/v2/crypto/credit	[no test files]
+?   	github.com/retf/source/v2/crypto/endorsement	[no test files]
+?   	github.com/retf/source/v2/mpc/adapter	[no test files]
+?   	github.com/retf/source/v2/privacy/authstatement	[no test files]
+?   	github.com/retf/source/v2/protocol/canonical	[no test files]
+?   	github.com/retf/source/v2/protocol/messages	[no test files]
+?   	github.com/retf/source/v2/runtime/trace	[no test files]
+ok  	github.com/retf/source/v2/fabric/mpcinputregistry	1.045s
+ok  	github.com/retf/source/v2/fabric/privacychaincode	1.083s
+ok  	github.com/retf/source/v2/fabric/privacychaincode221	1.125s
+ok  	github.com/retf/source/v2/mpc/inputbinding	7.896s
+ok  	github.com/retf/source/v2/privacy/securitybinding	1.032s
+ok  	github.com/retf/source/v2/protocol/binding	1.033s
+=== RUN   TestGateAcceptsCommittedBoundLocalShareAndRejectsReplay
+--- PASS: TestGateAcceptsCommittedBoundLocalShareAndRejectsReplay (0.00s)
+=== RUN   TestFrozenS2AuthorizationSchemaIsNotExtendedByS3
+--- PASS: TestFrozenS2AuthorizationSchemaIsNotExtendedByS3 (0.00s)
+=== RUN   TestS3InputCommitmentStateTransitionsAreMonotonicAndImmutable
+--- PASS: TestS3InputCommitmentStateTransitionsAreMonotonicAndImmutable (0.00s)
+=== RUN   TestCanonicalInputCommitmentRecordDigestBindsImmutableMaterial
+--- PASS: TestCanonicalInputCommitmentRecordDigestBindsImmutableMaterial (0.00s)
+=== RUN   TestIndependentAdmissionChecksCannotBeBypassedByMatchingRequesterFields
+=== RUN   TestIndependentAdmissionChecksCannotBeBypassedByMatchingRequesterFields/local_channel_configuration
+=== RUN   TestIndependentAdmissionChecksCannotBeBypassedByMatchingRequesterFields/S2_link
+=== RUN   TestIndependentAdmissionChecksCannotBeBypassedByMatchingRequesterFields/session_binding_set
+=== RUN   TestIndependentAdmissionChecksCannotBeBypassedByMatchingRequesterFields/record_digest
+=== RUN   TestIndependentAdmissionChecksCannotBeBypassedByMatchingRequesterFields/consistency_verifier
+--- PASS: TestIndependentAdmissionChecksCannotBeBypassedByMatchingRequesterFields (0.00s)
+    --- PASS: TestIndependentAdmissionChecksCannotBeBypassedByMatchingRequesterFields/local_channel_configuration (0.00s)
+    --- PASS: TestIndependentAdmissionChecksCannotBeBypassedByMatchingRequesterFields/S2_link (0.00s)
+    --- PASS: TestIndependentAdmissionChecksCannotBeBypassedByMatchingRequesterFields/session_binding_set (0.00s)
+    --- PASS: TestIndependentAdmissionChecksCannotBeBypassedByMatchingRequesterFields/record_digest (0.00s)
+    --- PASS: TestIndependentAdmissionChecksCannotBeBypassedByMatchingRequesterFields/consistency_verifier (0.00s)
+=== RUN   TestGateRejectsSubstitutionAndStaleContext
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/input_commitment_record
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/future
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/network
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/program_substitution
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/session
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/key_version
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/domain
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/credit_Merkle_proof
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/range_proof
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/wrong_share_index
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/user_share
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/user_root
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/key_ID
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/binding_set
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/task
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/user_Merkle_proof
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/chaincode_sequence
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/deployment
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/signature
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/authorization
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/consistency_proof
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/credit_equality_proof
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/expired
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/chaincode
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/chaincode_version
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/credit_commitment
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/committee_config
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/order_handle
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/order_commitment
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/credit_share
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/channel
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/wrong_node
+=== RUN   TestGateRejectsSubstitutionAndStaleContext/committee_epoch
+--- PASS: TestGateRejectsSubstitutionAndStaleContext (0.01s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/input_commitment_record (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/future (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/network (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/program_substitution (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/session (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/key_version (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/domain (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/credit_Merkle_proof (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/range_proof (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/wrong_share_index (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/user_share (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/user_root (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/key_ID (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/binding_set (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/task (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/user_Merkle_proof (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/chaincode_sequence (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/deployment (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/signature (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/authorization (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/consistency_proof (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/credit_equality_proof (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/expired (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/chaincode (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/chaincode_version (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/credit_commitment (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/committee_config (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/order_handle (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/order_commitment (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/credit_share (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/channel (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/wrong_node (0.00s)
+    --- PASS: TestGateRejectsSubstitutionAndStaleContext/committee_epoch (0.00s)
+=== RUN   TestConcurrentIdenticalBindingAcceptsExactlyOnce
+--- PASS: TestConcurrentIdenticalBindingAcceptsExactlyOnce (0.00s)
+=== RUN   TestDualReplayKeysRejectChangedNonceAndNonceReuse
+=== RUN   TestDualReplayKeysRejectChangedNonceAndNonceReuse/same_order_different_nonce
+    binding_test.go:498: input-key collision: same order with different nonce = REJECT
+=== RUN   TestDualReplayKeysRejectChangedNonceAndNonceReuse/different_order_reused_nonce
+    binding_test.go:516: nonce-key collision: different order with reused nonce = REJECT
+--- PASS: TestDualReplayKeysRejectChangedNonceAndNonceReuse (0.00s)
+    --- PASS: TestDualReplayKeysRejectChangedNonceAndNonceReuse/same_order_different_nonce (0.00s)
+    --- PASS: TestDualReplayKeysRejectChangedNonceAndNonceReuse/different_order_reused_nonce (0.00s)
+=== RUN   TestPersistentReplayHelperProcess
+--- PASS: TestPersistentReplayHelperProcess (0.00s)
+=== RUN   TestPersistentReplayAcrossProcessesRestartAndConcurrentAttempts
+    binding_test.go:582: cross-process identical admission attempts=32 accepted=1 rejected=31
+    binding_test.go:587: restart replay: same authorization/new session/new handle/new nonce = REJECT
+    binding_test.go:592: restart replay: same order/new nonce = REJECT
+    binding_test.go:597: restart replay: new order/old nonce = REJECT
+    binding_test.go:602: restart replay: fresh order/fresh nonce = ACCEPT
+    binding_test.go:607: second restart: exact replay = REJECT
+--- PASS: TestPersistentReplayAcrossProcessesRestartAndConcurrentAttempts (0.15s)
+=== RUN   TestPersistentReplayJournalTruncationFailsClosed
+--- PASS: TestPersistentReplayJournalTruncationFailsClosed (0.00s)
+=== RUN   TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal
+=== RUN   TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/empty_keys
+=== RUN   TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/empty_path
+=== RUN   TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/parent_is_a_file
+=== RUN   TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/blank_record
+=== RUN   TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/trailing_JSON
+=== RUN   TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/duplicate_authorization
+=== RUN   TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/duplicate_nonce
+=== RUN   TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/invalid_schema
+=== RUN   TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/invalid_time
+=== RUN   TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/invalid_JSON
+=== RUN   TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/unknown_field
+=== RUN   TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/duplicate_input
+=== RUN   TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/invalid_digest
+=== RUN   TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/oversized_journal
+=== RUN   TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/lock_timeout
+--- PASS: TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal (0.02s)
+    --- PASS: TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/empty_keys (0.00s)
+    --- PASS: TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/empty_path (0.00s)
+    --- PASS: TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/parent_is_a_file (0.00s)
+    --- PASS: TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/blank_record (0.00s)
+    --- PASS: TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/trailing_JSON (0.00s)
+    --- PASS: TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/duplicate_authorization (0.00s)
+    --- PASS: TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/duplicate_nonce (0.00s)
+    --- PASS: TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/invalid_schema (0.00s)
+    --- PASS: TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/invalid_time (0.00s)
+    --- PASS: TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/invalid_JSON (0.00s)
+    --- PASS: TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/unknown_field (0.00s)
+    --- PASS: TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/duplicate_input (0.00s)
+    --- PASS: TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/invalid_digest (0.00s)
+    --- PASS: TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/oversized_journal (0.00s)
+    --- PASS: TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/lock_timeout (0.01s)
+=== RUN   TestMalformedBindingsProofsAndTrustFailClosed
+=== RUN   TestMalformedBindingsProofsAndTrustFailClosed/shape/pseudonym
+=== RUN   TestMalformedBindingsProofsAndTrustFailClosed/shape/attestor_version
+=== RUN   TestMalformedBindingsProofsAndTrustFailClosed/shape/missing_commitment_scheme
+=== RUN   TestMalformedBindingsProofsAndTrustFailClosed/shape/time_order
+=== RUN   TestMalformedBindingsProofsAndTrustFailClosed/shape/schema
+=== RUN   TestMalformedBindingsProofsAndTrustFailClosed/shape/empty_network
+=== RUN   TestMalformedBindingsProofsAndTrustFailClosed/shape/sequence_zero
+=== RUN   TestMalformedBindingsProofsAndTrustFailClosed/shape/share_index
+=== RUN   TestMalformedBindingsProofsAndTrustFailClosed/shape/bad_digest
+=== RUN   TestMalformedBindingsProofsAndTrustFailClosed/shape/uppercase
+=== RUN   TestMalformedBindingsProofsAndTrustFailClosed/proof_array_mismatch
+=== RUN   TestMalformedBindingsProofsAndTrustFailClosed/proof_too_deep
+=== RUN   TestMalformedBindingsProofsAndTrustFailClosed/proof_sibling_length
+=== RUN   TestMalformedBindingsProofsAndTrustFailClosed/proof_root_encoding
+=== RUN   TestMalformedBindingsProofsAndTrustFailClosed/unconfigured_gate
+=== RUN   TestMalformedBindingsProofsAndTrustFailClosed/uncommitted_authorization
+=== RUN   TestMalformedBindingsProofsAndTrustFailClosed/uncommitted_input_commitment
+=== RUN   TestMalformedBindingsProofsAndTrustFailClosed/missing_consistency_verifier
+=== RUN   TestMalformedBindingsProofsAndTrustFailClosed/inactive_session
+=== RUN   TestMalformedBindingsProofsAndTrustFailClosed/empty_share
+=== RUN   TestMalformedBindingsProofsAndTrustFailClosed/oversized_share
+--- PASS: TestMalformedBindingsProofsAndTrustFailClosed (0.00s)
+    --- PASS: TestMalformedBindingsProofsAndTrustFailClosed/shape/pseudonym (0.00s)
+    --- PASS: TestMalformedBindingsProofsAndTrustFailClosed/shape/attestor_version (0.00s)
+    --- PASS: TestMalformedBindingsProofsAndTrustFailClosed/shape/missing_commitment_scheme (0.00s)
+    --- PASS: TestMalformedBindingsProofsAndTrustFailClosed/shape/time_order (0.00s)
+    --- PASS: TestMalformedBindingsProofsAndTrustFailClosed/shape/schema (0.00s)
+    --- PASS: TestMalformedBindingsProofsAndTrustFailClosed/shape/empty_network (0.00s)
+    --- PASS: TestMalformedBindingsProofsAndTrustFailClosed/shape/sequence_zero (0.00s)
+    --- PASS: TestMalformedBindingsProofsAndTrustFailClosed/shape/share_index (0.00s)
+    --- PASS: TestMalformedBindingsProofsAndTrustFailClosed/shape/bad_digest (0.00s)
+    --- PASS: TestMalformedBindingsProofsAndTrustFailClosed/shape/uppercase (0.00s)
+    --- PASS: TestMalformedBindingsProofsAndTrustFailClosed/proof_array_mismatch (0.00s)
+    --- PASS: TestMalformedBindingsProofsAndTrustFailClosed/proof_too_deep (0.00s)
+    --- PASS: TestMalformedBindingsProofsAndTrustFailClosed/proof_sibling_length (0.00s)
+    --- PASS: TestMalformedBindingsProofsAndTrustFailClosed/proof_root_encoding (0.00s)
+    --- PASS: TestMalformedBindingsProofsAndTrustFailClosed/unconfigured_gate (0.00s)
+    --- PASS: TestMalformedBindingsProofsAndTrustFailClosed/uncommitted_authorization (0.00s)
+    --- PASS: TestMalformedBindingsProofsAndTrustFailClosed/uncommitted_input_commitment (0.00s)
+    --- PASS: TestMalformedBindingsProofsAndTrustFailClosed/missing_consistency_verifier (0.00s)
+    --- PASS: TestMalformedBindingsProofsAndTrustFailClosed/inactive_session (0.00s)
+    --- PASS: TestMalformedBindingsProofsAndTrustFailClosed/empty_share (0.00s)
+    --- PASS: TestMalformedBindingsProofsAndTrustFailClosed/oversized_share (0.00s)
+=== RUN   TestRealRustProcessConsistencyVerifier
+    process_consistency_test.go:25: real Rust process verifier paths not configured
+--- SKIP: TestRealRustProcessConsistencyVerifier (0.00s)
+=== RUN   FuzzCanonicalBindingRoundTrip
+=== RUN   FuzzCanonicalBindingRoundTrip/seed#0
+--- PASS: FuzzCanonicalBindingRoundTrip (0.00s)
+    --- PASS: FuzzCanonicalBindingRoundTrip/seed#0 (0.00s)
+=== RUN   FuzzStructuredBindingSubstitution
+=== RUN   FuzzStructuredBindingSubstitution/seed#0
+=== RUN   FuzzStructuredBindingSubstitution/seed#1
+--- PASS: FuzzStructuredBindingSubstitution (0.00s)
+    --- PASS: FuzzStructuredBindingSubstitution/seed#0 (0.00s)
+    --- PASS: FuzzStructuredBindingSubstitution/seed#1 (0.00s)
+PASS
+ok  	github.com/retf/source/v2/mpc/inputbinding	0.207s
+=== RUN   TestAuthorizationCanCreateOnlyOneInputAcrossSessionHandleAndNonceChanges
+=== RUN   TestAuthorizationCanCreateOnlyOneInputAcrossSessionHandleAndNonceChanges/changed_handle
+    registry_test.go:102: attack=changed handle authorization=e838116b087382d4b201ad789f0a0813f08d6da2c42b7cade0dd660e91ffb856 candidate_session=session-3 candidate_handle=dadc3d20e485a15be2638c3decda24004e4f0aed69fd136c77603c73ef8d6e36 result=REJECT reason="S2 authorization already has an S3 input record"
+=== RUN   TestAuthorizationCanCreateOnlyOneInputAcrossSessionHandleAndNonceChanges/second_record
+    registry_test.go:102: attack=second record authorization=e838116b087382d4b201ad789f0a0813f08d6da2c42b7cade0dd660e91ffb856 candidate_session=session-2 candidate_handle=ef1e5814a8ca0b9d0463ecd5b25b01e3158b7794bc78a278aeacc70ca9710d44 result=REJECT reason="S2 authorization already has an S3 input record"
+--- PASS: TestAuthorizationCanCreateOnlyOneInputAcrossSessionHandleAndNonceChanges (0.00s)
+    --- PASS: TestAuthorizationCanCreateOnlyOneInputAcrossSessionHandleAndNonceChanges/changed_handle (0.00s)
+    --- PASS: TestAuthorizationCanCreateOnlyOneInputAcrossSessionHandleAndNonceChanges/second_record (0.00s)
+=== RUN   TestAbortRetryRequiresGovernedMonotonicRebind
+    registry_test.go:131: attack=unauthorized_rebind attempt=2 result=REJECT reason="S3 input rebind requires governance authorization"
+    registry_test.go:139: attack=governed_handle_substitution attempt=2 result=REJECT reason="governed rebind violates the monotonic authorization/order identity"
+    registry_test.go:144: transition=governed_rebind attempt=2 parent=6ad0cf2bfd4b10c6b8b8729cb9d17a3b7e3773cbcf89fe337a92a53c718aecca result=ACCEPT
+--- PASS: TestAbortRetryRequiresGovernedMonotonicRebind (0.00s)
+PASS
+ok  	github.com/retf/source/v2/fabric/mpcinputregistry	0.005s
+warning: use of deprecated associated function `elliptic_curve::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> vendor/credx-0.2.1-saib/src/presentation/verifiable_encryption_decryption.rs:164:46
+    |
+164 |         let key = aes_gcm::Key::<Aes128Gcm>::from_slice(&okm[..16]);
+    |                                              ^^^^^^^^^^
+    |
+    = note: `#[warn(deprecated)]` on by default
+
+warning: use of deprecated associated function `elliptic_curve::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> vendor/credx-0.2.1-saib/src/presentation/verifiable_encryption_decryption.rs:235:28
+    |
+235 |         let nonce = Nonce::from_slice(&self.ciphertext[..12]);
+    |                            ^^^^^^^^^^
+
+warning: use of deprecated associated function `elliptic_curve::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> vendor/credx-0.2.1-saib/src/presentation/verifiable_encryption_decryption.rs:243:46
+    |
+243 |         let key = aes_gcm::Key::<Aes128Gcm>::from_slice(&okm[..16]);
+    |                                              ^^^^^^^^^^
+
+warning: `credx` (lib) generated 3 warnings
+   Compiling saib-anoncred v0.1.0 (/mnt/g/paperexper/retf/saib-retf/prototype/anoncred-rust)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 2m 53s
+     Running unittests src/lib.rs (target/debug/deps/saib_anoncred-61c2ca59c2dfbda5)
+
+running 8 tests
+test role_process::tests::role_transport_keys_are_separate_and_strict ... ok
+test tests::ffi_rejects_null_empty_oversize_malformed_and_unknown_operation ... ok
+test role_process::tests::secure_envelope_rejects_malformed_domains_and_encodings ... ok
+test role_process::tests::authenticated_tcp_exchange_round_trip ... ok
+test role_process::tests::authenticated_request_nonce_is_consumed_once_across_restarts ... ok
+test role_process::tests::authenticated_role_envelope_rejects_tamper_and_cross_role_use ... ok
+test role_process::tests::role_state_file_boundaries_and_private_permissions ... ok
+test tests::ffi_malformed_corpus_never_panics ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.16s
+
+     Running unittests src/bin/s2_1_vector_tool.rs (target/debug/deps/s2_1_vector_tool-ba222f0abe9205f4)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/s2_2_global_issuer.rs (target/debug/deps/s2_2_global_issuer-cf896e65823c19a7)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/s2_2_holder.rs (target/debug/deps/s2_2_holder-1c2a31698c4415d9)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/s2_2_regional_issuer.rs (target/debug/deps/s2_2_regional_issuer-8f5d46bfe46ffa29)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/s3_committed_input_vector.rs (target/debug/deps/s3_committed_input_vector-e0df080283bbe86e)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/s3_consistency_verifier.rs (target/debug/deps/s3_consistency_verifier-492c72f0e8260723)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/golden_vectors.rs (target/debug/deps/golden_vectors-da0f6fd2ad1e032b)
+
+running 1 test
+test public_golden_vector_replays_without_secret_state ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.25s
+
+     Running tests/s2_2_role_isolation.rs (target/debug/deps/s2_2_role_isolation-3f931618892f3d62)
+
+running 5 tests
+test two_issuers_have_independent_keys_ids_and_state ... ok
+test role_state_restart_and_key_rotation_fail_closed ... ok
+test tampered_delta_and_wrong_role_are_rejected ... ok
+test old_presentation_is_rejected_after_registry_key_and_epoch_rotation ... ok
+test issuer_public_delta_updates_only_nonrevoked_holder_wallet ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.84s
+
+     Running tests/s3_committed_input.rs (target/debug/deps/s3_committed_input-d94d576d2c19df3a)
+
+running 3 tests
+test malformed_field_profile_registry_and_credential_commitment_fail ... ok
+
+thread 'component_substitution_range_mutation_and_policy_substitution_fail' panicked at /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs:701:9:
+assertion `left == right` failed
+  left: 0
+ right: 1
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+test component_substitution_range_mutation_and_policy_substitution_fail ... ok
+test credx_commitment_vss_ranges_and_all_replica_layouts_verify ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 3.14s
+
+     Running tests/s3_credit_commitment.rs (target/debug/deps/s3_credit_commitment-aa34ab8bfc5a6e12)
+
+running 2 tests
+test holder_recovers_exact_credx_credit_commitment_opening ... ok
+test all_small_credit_guesses_fail_against_independent_blinder ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.24s
+
+     Running tests/s3_structured_properties.rs (target/debug/deps/s3_structured_properties-c23e0a1b4868865d)
+
+running 1 test
+
+thread 'structured_public_bundle_mutations_fail_closed_without_escaping_panic' panicked at /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs:701:9:
+assertion `left == right` failed
+  left: 0
+ right: 1
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+thread 'structured_public_bundle_mutations_fail_closed_without_escaping_panic' panicked at /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs:701:9:
+assertion `left == right` failed
+  left: 0
+ right: 1
+
+thread 'structured_public_bundle_mutations_fail_closed_without_escaping_panic' panicked at /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs:701:9:
+assertion `left == right` failed
+  left: 0
+ right: 1
+
+thread 'structured_public_bundle_mutations_fail_closed_without_escaping_panic' panicked at /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs:701:9:
+assertion `left == right` failed
+  left: 0
+ right: 1
+
+thread 'structured_public_bundle_mutations_fail_closed_without_escaping_panic' panicked at /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs:701:9:
+assertion `left == right` failed
+  left: 0
+ right: 1
+
+thread 'structured_public_bundle_mutations_fail_closed_without_escaping_panic' panicked at /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs:701:9:
+assertion `left == right` failed
+  left: 0
+ right: 1
+
+thread 'structured_public_bundle_mutations_fail_closed_without_escaping_panic' panicked at /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs:701:9:
+assertion `left == right` failed
+  left: 0
+ right: 1
+
+thread 'structured_public_bundle_mutations_fail_closed_without_escaping_panic' panicked at /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs:701:9:
+assertion `left == right` failed
+  left: 0
+ right: 1
+
+thread 'structured_public_bundle_mutations_fail_closed_without_escaping_panic' panicked at /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs:701:9:
+assertion `left == right` failed
+  left: 0
+ right: 1
+
+thread 'structured_public_bundle_mutations_fail_closed_without_escaping_panic' panicked at /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs:701:9:
+assertion `left == right` failed
+  left: 0
+ right: 1
+
+thread 'structured_public_bundle_mutations_fail_closed_without_escaping_panic' panicked at /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs:701:9:
+assertion `left == right` failed
+  left: 0
+ right: 1
+
+thread 'structured_public_bundle_mutations_fail_closed_without_escaping_panic' panicked at /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs:701:9:
+assertion `left == right` failed
+  left: 0
+ right: 1
+test structured_public_bundle_mutations_fail_closed_without_escaping_panic ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 23.77s
+
+     Running tests/security_cases.rs (target/debug/deps/security_cases-11ca6810a83009e4)
+
+running 29 tests
+test s02_blind_request_does_not_serialize_link_secret ... ok
+test s01_blind_issuance_is_holder_issuer_message_flow ... ok
+test s17_malformed_proof_is_rejected ... ok
+test s04_different_link_secrets_cannot_form_joint_proof ... ok
+test s20_credit_one_above_value_is_rejected ... ok
+test s21_credit_threshold_outside_protocol_range_is_rejected ... ok
+test s22_nonrevoked_witness_update_succeeds ... ok
+test s15_global_regional_registry_swap_is_rejected ... ok
+test s12_scope_substitution_is_rejected ... ok
+test s09_proof_bit_mutation_is_rejected ... ok
+test s10_binding_tag_substitution_is_rejected ... ok
+test s13_region_substitution_is_rejected ... ok
+test s27_tampered_blind_request_is_rejected_by_issuer ... ok
+test s11_order_digest_substitution_is_rejected_independently ... ok
+test s25_revoked_holder_witness_update_is_rejected ... ok
+test s29_prover_rejects_stale_registry_epoch_before_proof ... ok
+test s16_stale_epoch_is_rejected ... ok
+test s14_credit_threshold_substitution_is_rejected ... ok
+test s03_registered_joint_credential_proof_verifies ... ok
+test s19_credit_exact_value_boundary_is_accepted ... ok
+test s18_credit_lower_boundary_zero_is_accepted ... ok
+test s23_stale_revocation_root_is_rejected ... ok
+test s24_revoked_credential_cannot_create_current_proof ... ok
+test s05_presentations_are_randomized ... ok
+test s07_cross_task_pseudonyms_are_different ... ok
+test s06_same_task_epoch_pseudonym_is_intentionally_stable ... ok
+test s08_cross_epoch_pseudonyms_are_different ... ok
+test s28_cryptographic_nonce_binding_is_verified_not_only_envelope_fields ... ok
+test s26_dual_holder_revocation_preserves_nonrevoked_holder_after_witness_update ... ok
+
+test result: ok. 29 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.51s
+
+     Running tests/structured_fuzz.rs (target/debug/deps/structured_fuzz-37c646a6b0be5cc6)
+
+running 2 tests
+test structured_ffi_request_fuzz_never_panics_or_accepts_invalid_shape ... ok
+test structured_public_statement_fuzz_fails_closed ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.43s
+
+warning: use of deprecated associated function `elliptic_curve::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> vendor/credx-0.2.1-saib/src/presentation/verifiable_encryption_decryption.rs:164:46
+    |
+164 |         let key = aes_gcm::Key::<Aes128Gcm>::from_slice(&okm[..16]);
+    |                                              ^^^^^^^^^^
+    |
+    = note: `#[warn(deprecated)]` on by default
+
+warning: use of deprecated associated function `elliptic_curve::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> vendor/credx-0.2.1-saib/src/presentation/verifiable_encryption_decryption.rs:235:28
+    |
+235 |         let nonce = Nonce::from_slice(&self.ciphertext[..12]);
+    |                            ^^^^^^^^^^
+
+warning: use of deprecated associated function `elliptic_curve::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> vendor/credx-0.2.1-saib/src/presentation/verifiable_encryption_decryption.rs:243:46
+    |
+243 |         let key = aes_gcm::Key::<Aes128Gcm>::from_slice(&okm[..16]);
+    |                                              ^^^^^^^^^^
+
+warning: `credx` (lib) generated 3 warnings
+    Finished `release` profile [optimized] target(s) in 2.70s
+253e626525beb76f4e35a6edf0830ebae64f2c84d8bd692de73eccb8820d319b  /mnt/g/paperexper/retf/saib-retf/prototype/anoncred-rust/target/release/s3_consistency_verifier
+=== RUN   TestRealRustProcessConsistencyVerifier
+--- PASS: TestRealRustProcessConsistencyVerifier (0.90s)
+PASS
+ok  	github.com/retf/source/v2/mpc/inputbinding	0.918s
+selected=9 viable=9 non_viable=0 killed=9
+command=/mnt/g/paperexper/retf/saib-retf/experiments/v2/runners/run-s3.0.2-committed-input.sh /mnt/g/paperexper/retf/third_party/MP-SPDZ-s3.1.1-patched /mnt/g/paperexper/retf/benchmarks/results/expand/s3.0.2-working-evidence-20260722T120600Z/s3.0.2-committed-input-golden-vector.json /mnt/g/paperexper/retf/benchmarks/results/expand/s3.0.2-working-evidence-20260722T120600Z/s3.0.2-release-clean/three-process
+started_at_utc=2026-07-22T12:17:18Z
+backend_commit=8ec865f19ee3d114c3fa1410ef68acb257850094
+prime=52435875175126190479447740508185965837690552500527637822603658699938581184513
+security_model=malicious-three-party-prime-field-with-abort
+maximum_corruptions=1
+program_source_sha256=b1bc7cfa91d8726d4fffb662b6b1c60430dc2e9ed73ee1d81fdcc933ce71172e
+program_bytecode_sha256=be15f8d8ee4c710ea86ead8d1aeeb402a53fb66f447dc4871c34e15bfe462083
+program_schedule_sha256=ba4dc34db2282ea3c834f3d48b2a8836a708760b9023571a1dca5b263d4fd2e0
+backend_binary_sha256=097e3e6bcf301a9f0ee791ad1f1bb3c851c1dcf83df41d29a4a98df2fd54146b
+ended_at_utc=2026-07-22T12:17:40Z
+exit_code=0
+ended_at_utc=2026-07-22T12:17:40Z
+exit_code=0

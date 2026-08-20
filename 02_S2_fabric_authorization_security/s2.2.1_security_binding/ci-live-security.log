@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/mnt/g/paperexper/retf/saib-retf/experiments/v2/runners/run-s2.2.1-live-tests.py", line 336, in <module>
+    main()
+  File "/mnt/g/paperexper/retf/saib-retf/experiments/v2/runners/run-s2.2.1-live-tests.py", line 331, in main
+    raise RuntimeError(f"S2.2.1 security tests failed: {failed}")
+RuntimeError: S2.2.1 security tests failed: ['registry_epoch_expired', 'legacy_environment_public_key_replacement', 'three_peer_state_replication_consistency']

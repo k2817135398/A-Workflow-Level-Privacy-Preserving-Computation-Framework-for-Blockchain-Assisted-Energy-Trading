@@ -1,0 +1,84 @@
+{
+  "schema_version": "saib-retf-s3.4.1-single-party-post-cleanup-view/1",
+  "release_commit": "e310a58e5ef96f85d743dc1bd78a3f4a7774c98a",
+  "deployment_model": "three isolated real MPC parties on one physical host",
+  "workspace_root_name": "mpc-workspaces-e2e-e310a58-02",
+  "session_id": "s34-82967a13dc7a5ff8a2f44079",
+  "share_lifecycle": "Each verified share was placed only in its party input directory for execution and wipe-and-remove cleanup was mandatory on backend return. The post-execution view therefore must contain zero Input-P*-0 files.",
+  "parties": [
+    {
+      "party_id": 0,
+      "ephemeral_own_share_files_after_cleanup": 0,
+      "foreign_share_files_after_cleanup": 0,
+      "all_session_share_files_after_cleanup": 0,
+      "input_directory_empty": true,
+      "execution_receipt_sha256": "ad82c22b5d069b95142f81704603ee888258a8789282b487e866e93a65c96364",
+      "runtime_profile_sha256": "c8fe919d471bd9bf5c36d28996f585b533f3e951f0a0c155a7cc5f56944370bd",
+      "execution_receipt_party_id": 0,
+      "runtime_profile_party_id": 0,
+      "files_scanned": 4,
+      "selected_plaintext_marker_hits": {
+        "link_secret": 0,
+        "wallet": 0,
+        "issuer_state": 0,
+        "\"price\":": 0,
+        "\"quantity\":": 0,
+        "\"credit_score\":": 0,
+        "private_match_result": 0,
+        "reconstruct_input": 0
+      },
+      "complete_input_recovered": false,
+      "result": "PASS"
+    },
+    {
+      "party_id": 1,
+      "ephemeral_own_share_files_after_cleanup": 0,
+      "foreign_share_files_after_cleanup": 0,
+      "all_session_share_files_after_cleanup": 0,
+      "input_directory_empty": true,
+      "execution_receipt_sha256": "a72372bad8df7d7051d9a2c116590c2b8d48455433fcc51ede0bc18c67a70ecd",
+      "runtime_profile_sha256": "7d520c7dffbf368ef0848c8e6270592d822174ba15a48f82d58660c69603a613",
+      "execution_receipt_party_id": 1,
+      "runtime_profile_party_id": 1,
+      "files_scanned": 4,
+      "selected_plaintext_marker_hits": {
+        "link_secret": 0,
+        "wallet": 0,
+        "issuer_state": 0,
+        "\"price\":": 0,
+        "\"quantity\":": 0,
+        "\"credit_score\":": 0,
+        "private_match_result": 0,
+        "reconstruct_input": 0
+      },
+      "complete_input_recovered": false,
+      "result": "PASS"
+    },
+    {
+      "party_id": 2,
+      "ephemeral_own_share_files_after_cleanup": 0,
+      "foreign_share_files_after_cleanup": 0,
+      "all_session_share_files_after_cleanup": 0,
+      "input_directory_empty": true,
+      "execution_receipt_sha256": "7ee66218063b29365f1de35964b90d8479cd7cedf711b06a98b06330809fb253",
+      "runtime_profile_sha256": "e0d60487ada77aa2050e91b99f5deb679b625018fc9ab7339b1ba75fc7dc65a0",
+      "execution_receipt_party_id": 2,
+      "runtime_profile_party_id": 2,
+      "files_scanned": 4,
+      "selected_plaintext_marker_hits": {
+        "link_secret": 0,
+        "wallet": 0,
+        "issuer_state": 0,
+        "\"price\":": 0,
+        "\"quantity\":": 0,
+        "\"credit_score\":": 0,
+        "private_match_result": 0,
+        "reconstruct_input": 0
+      },
+      "complete_input_recovered": false,
+      "result": "PASS"
+    }
+  ],
+  "claim_scope": "Post-execution party views contain distinct runtime receipts and logs, no remaining own or foreign share files, and no selected plaintext markers. Pre-execution isolation is covered by the frozen S3.4 runtime tests. This does not establish resistance to a malicious physical-host administrator.",
+  "result": "PASS"
+}

@@ -1,0 +1,239 @@
+[
+    {
+        "Id": "3014bf11b1884d4c3711032e79e814d4196de7e63822ca7188ccc47e384605a7",
+        "Created": "2026-08-02T11:14:22.567171498Z",
+        "Path": "/chaincode",
+        "Args": [],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 37301,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-08-02T11:14:22.737425315Z",
+            "FinishedAt": "0001-01-01T00:00:00Z"
+        },
+        "Image": "sha256:18c8ab913964ce0c67d856f419240461b7a721e7b8061644fa09870de4207dde",
+        "ResolvConfPath": "/var/lib/docker/containers/3014bf11b1884d4c3711032e79e814d4196de7e63822ca7188ccc47e384605a7/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/3014bf11b1884d4c3711032e79e814d4196de7e63822ca7188ccc47e384605a7/hostname",
+        "HostsPath": "/var/lib/docker/containers/3014bf11b1884d4c3711032e79e814d4196de7e63822ca7188ccc47e384605a7/hosts",
+        "LogPath": "/var/lib/docker/containers/3014bf11b1884d4c3711032e79e814d4196de7e63822ca7188ccc47e384605a7/3014bf11b1884d4c3711032e79e814d4196de7e63822ca7188ccc47e384605a7-json.log",
+        "Name": "/s222-chaincode-nsw",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.2-live/public-config/ccaas-nsw-cert.pem:/run/tls/server.pem:ro",
+                "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.2-live/runtime-secrets/ccaas-tls-s2.2.2.1/nsw.key:/run/tls/server.key:ro",
+                "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.2-live/public-config/ccaas-nsw-ca.pem:/run/tls/client-ca.pem:ro"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "retf_network",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": [
+                "ALL"
+            ],
+            "CgroupnsMode": "private",
+            "Dns": null,
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": true,
+            "SecurityOpt": [
+                "no-new-privileges:true"
+            ],
+            "Tmpfs": {
+                "/tmp": "rw,noexec,nosuid,size=16m"
+            },
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 268435456,
+            "NanoCpus": 500000000,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": [],
+            "BlkioDeviceReadBps": [],
+            "BlkioDeviceWriteBps": [],
+            "BlkioDeviceReadIOps": [],
+            "BlkioDeviceWriteIOps": [],
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [],
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 536870912,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": 128,
+            "Ulimits": [],
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/acpi",
+                "/proc/asound",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/sys/devices/virtual/powercap",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "ID": "3014bf11b1884d4c3711032e79e814d4196de7e63822ca7188ccc47e384605a7",
+                "LowerDir": "/var/lib/docker/overlay2/f1cd7d98fae437f2650165614acfc036aaf0b664cea30f89a67813f29926868e-init/diff:/var/lib/docker/overlay2/k0flseeb8f9w0qwe8q6949ywr/diff",
+                "MergedDir": "/var/lib/docker/overlay2/f1cd7d98fae437f2650165614acfc036aaf0b664cea30f89a67813f29926868e/merged",
+                "UpperDir": "/var/lib/docker/overlay2/f1cd7d98fae437f2650165614acfc036aaf0b664cea30f89a67813f29926868e/diff",
+                "WorkDir": "/var/lib/docker/overlay2/f1cd7d98fae437f2650165614acfc036aaf0b664cea30f89a67813f29926868e/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [
+            {
+                "Type": "bind",
+                "Source": "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.2-live/public-config/ccaas-nsw-cert.pem",
+                "Destination": "/run/tls/server.pem",
+                "Mode": "ro",
+                "RW": false,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.2-live/runtime-secrets/ccaas-tls-s2.2.2.1/nsw.key",
+                "Destination": "/run/tls/server.key",
+                "Mode": "ro",
+                "RW": false,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.2-live/public-config/ccaas-nsw-ca.pem",
+                "Destination": "/run/tls/client-ca.pem",
+                "Mode": "ro",
+                "RW": false,
+                "Propagation": "rprivate"
+            }
+        ],
+        "Config": {
+            "Hostname": "3014bf11b188",
+            "Domainname": "",
+            "User": "65532:65532",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "7052/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "CHAINCODE_TLS_CLIENT_CA_FILE=/run/tls/client-ca.pem",
+                "CHAINCODE_SERVER_ADDRESS=0.0.0.0:7052",
+                "CHAINCODE_ID=s3.4.1-authorization-nsw:48fabdd9a9fb49728848e7057dc49880f8d598f7f7ffc111541fe68e187d333c",
+                "S221_GOVERNANCE_PUBLIC_KEY_B64=RNH0uUUphlFOLdQQzdNn9l6h4mKpmmk1NbdD/VAgeAQ=",
+                "S221_GOVERNANCE_PUBLIC_KEY_SHA256=36c5c005bd01b33e32cbff4b1c52da84d8542d8acc520f99fab384f03709d7a8",
+                "S221_GOVERNANCE_MSP_ID=NSWMSP",
+                "CHAINCODE_TLS_CERT_FILE=/run/tls/server.pem",
+                "CHAINCODE_TLS_KEY_FILE=/run/tls/server.key",
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Cmd": null,
+            "Image": "saib-s4.0-authorization-chaincode:559e0bb531b3",
+            "Volumes": null,
+            "WorkingDir": "/",
+            "Entrypoint": [
+                "/chaincode"
+            ],
+            "Labels": {
+                "desktop.docker.io/wsl-distro": "Ubuntu"
+            },
+            "StopTimeout": 1
+        },
+        "NetworkSettings": {
+            "SandboxID": "78f76c66aa4e9eae2297d547bf7d03854aa36976a35abb384c4aaf9db5080b8e",
+            "SandboxKey": "/var/run/docker/netns/78f76c66aa4e",
+            "Ports": {
+                "7052/tcp": null
+            },
+            "Networks": {
+                "retf_network": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "791a52f6b0b8f12ba22fc42b5f69a633501ec410e5a1211b5344259bac150fc2",
+                    "EndpointID": "41198941059c308d6924585e00d4952d613988b3a6ebe4b3d4b46611bb5f4a91",
+                    "Gateway": "172.18.0.1",
+                    "IPAddress": "172.18.0.21",
+                    "MacAddress": "2e:7b:ae:f4:c5:84",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": [
+                        "s222-chaincode-nsw",
+                        "3014bf11b188"
+                    ]
+                }
+            }
+        }
+    }
+]

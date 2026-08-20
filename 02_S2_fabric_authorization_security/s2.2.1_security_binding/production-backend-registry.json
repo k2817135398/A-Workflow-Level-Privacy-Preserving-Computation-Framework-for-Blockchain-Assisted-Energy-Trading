@@ -1,0 +1,106 @@
+{
+  "schema_version": "saib-retf-s2.2.1-production-backend-registry/1",
+  "registry_id": "s2.2.1-local-audit-f03928147652",
+  "enabled": true,
+  "scope": "local audit OCI registry plus externally replayable offline layouts",
+  "release_commit": "f0392814765270c57e0bfbb45c43385490c3391b",
+  "components": [
+    {
+      "component": "holder",
+      "local_image": "saib-s2.2.1-holder:local",
+      "local_image_id": "sha256:534e2fba23121e290be56d82b84f831f89c727559016c7820b03e9d174bf0378",
+      "registry_reference": "localhost:5000/saib/s2.2.1-holder:audit",
+      "registry_immutable_reference": "localhost:5000/saib/s2.2.1-holder@sha256:d7a7483a5d994c1b14715043776993a9e4b1f628f139412abc990afa23d04931",
+      "registry_manifest_digest": "sha256:d7a7483a5d994c1b14715043776993a9e4b1f628f139412abc990afa23d04931",
+      "offline_oci_manifest_digest": "sha256:094fa9d4f25849c0e9377334345fb897140a1811c7934a17b908ec59a4b28553",
+      "config_digest": "sha256:534e2fba23121e290be56d82b84f831f89c727559016c7820b03e9d174bf0378",
+      "layer_digests": [
+        "sha256:9a314f7e0f06102da024d7f2f64aa96aaabdfb3bf075c931d01ff96262839f4b",
+        "sha256:869633a225e2925dcdbd5cc5bb2c09a34f66e7b4becf341e87cfc1012728ff0d",
+        "sha256:6b7e57bff2311863d66975dc859bd6d469987776f41365384bd1bd4de97bede6"
+      ],
+      "oci_layout_directory": "s2.2.1-holder-oci",
+      "oci_layout_archive": "s2.2.1-holder-oci-layout.tar.gz",
+      "oci_layout_archive_sha256": "629600dd27189474f2e5166577aa619e83c84fffdee519e4d3c5fd622ec5fc26",
+      "oci_layout_archive_bytes": 2885294
+    },
+    {
+      "component": "global-issuer",
+      "local_image": "saib-s2.2.1-global-issuer:local",
+      "local_image_id": "sha256:e29ff9a43a057d0cc788fc960aa3e8769663929e191dbcdedd66a7905036a8d9",
+      "registry_reference": "localhost:5000/saib/s2.2.1-global-issuer:audit",
+      "registry_immutable_reference": "localhost:5000/saib/s2.2.1-global-issuer@sha256:fe44fe1814ba389e3524ca9b8a88899aac58b9e7e450fee2946c9f43fe18caec",
+      "registry_manifest_digest": "sha256:fe44fe1814ba389e3524ca9b8a88899aac58b9e7e450fee2946c9f43fe18caec",
+      "offline_oci_manifest_digest": "sha256:9a70af5ba84751916079c659571b137fab53bdbf99970dbfba48f50c7a2266f9",
+      "config_digest": "sha256:e29ff9a43a057d0cc788fc960aa3e8769663929e191dbcdedd66a7905036a8d9",
+      "layer_digests": [
+        "sha256:9a314f7e0f06102da024d7f2f64aa96aaabdfb3bf075c931d01ff96262839f4b",
+        "sha256:eec7bce0678b994241a3174dbb7c36d8bbd53e96ed0c6d7cbb11f21ecf025b9d",
+        "sha256:47914df232d97fce101d2ea1e25b2cf3c462640976035111f268d4644a0bff04"
+      ],
+      "oci_layout_directory": "s2.2.1-global-issuer-oci",
+      "oci_layout_archive": "s2.2.1-global-issuer-oci-layout.tar.gz",
+      "oci_layout_archive_sha256": "af3f070c784b84f9f4ec87c2116c0f10bcb17524bd8ab0f8dc284afb64083fdd",
+      "oci_layout_archive_bytes": 2681058
+    },
+    {
+      "component": "regional-issuer",
+      "local_image": "saib-s2.2.1-regional-issuer:local",
+      "local_image_id": "sha256:bbdbad103a1b3c7a9fc26e9e1e37ce893a147aea7063495a305318b001aeb15f",
+      "registry_reference": "localhost:5000/saib/s2.2.1-regional-issuer:audit",
+      "registry_immutable_reference": "localhost:5000/saib/s2.2.1-regional-issuer@sha256:b161c9489a10d342fe9acfee32db00b26ca4839a1db0a0d1c20f42d4ae903226",
+      "registry_manifest_digest": "sha256:b161c9489a10d342fe9acfee32db00b26ca4839a1db0a0d1c20f42d4ae903226",
+      "offline_oci_manifest_digest": "sha256:8c130a78b434c5f55dcf94418427c2005088182b8c3ffedd6912b109008e6879",
+      "config_digest": "sha256:bbdbad103a1b3c7a9fc26e9e1e37ce893a147aea7063495a305318b001aeb15f",
+      "layer_digests": [
+        "sha256:9a314f7e0f06102da024d7f2f64aa96aaabdfb3bf075c931d01ff96262839f4b",
+        "sha256:9e6aa5c57f7e1efd6ce8d93d39db540297802808ae4255ccdb294a35cbeb0909",
+        "sha256:761deb1ff3b4b1c634a5998d336c6c58d9449692125e980e30a968d103212d24"
+      ],
+      "oci_layout_directory": "s2.2.1-regional-issuer-oci",
+      "oci_layout_archive": "s2.2.1-regional-issuer-oci-layout.tar.gz",
+      "oci_layout_archive_sha256": "d4ad0016edc808750ad7d68199e5177e58548230d609784409ec5ed19a2cbbba",
+      "oci_layout_archive_bytes": 2681495
+    },
+    {
+      "component": "verifier",
+      "local_image": "saib-s2.2.1-verifier:local",
+      "local_image_id": "sha256:c5d26ccc20efbb93922b352a7557c1268e86d44ba5ab1d759868ea1f91da3068",
+      "registry_reference": "localhost:5000/saib/s2.2.1-verifier:audit",
+      "registry_immutable_reference": "localhost:5000/saib/s2.2.1-verifier@sha256:a8b8bd3dd0b0faedc0ea2c65096e268ac478209b5d6e8b861c75fc1ddb1a455d",
+      "registry_manifest_digest": "sha256:a8b8bd3dd0b0faedc0ea2c65096e268ac478209b5d6e8b861c75fc1ddb1a455d",
+      "offline_oci_manifest_digest": "sha256:d980effcffa4926ae97d601786ea44f47840df310b699a92b2a22e55454c7956",
+      "config_digest": "sha256:c5d26ccc20efbb93922b352a7557c1268e86d44ba5ab1d759868ea1f91da3068",
+      "layer_digests": [
+        "sha256:9a314f7e0f06102da024d7f2f64aa96aaabdfb3bf075c931d01ff96262839f4b",
+        "sha256:f123b86e6109dc40cf00b39599eff455f4997c579f2462abe5208b7103cb3e2d",
+        "sha256:fb1147c648d717e727ae4ff139eea3c21aca1044ad3df2c7fd681e52e32e3aeb"
+      ],
+      "oci_layout_directory": "s2.2.1-verifier-oci",
+      "oci_layout_archive": "s2.2.1-verifier-oci-layout.tar.gz",
+      "oci_layout_archive_sha256": "dab3262039c282179e2a8b4870706caf581c778ee6ba466defb21e25e2f3da6c",
+      "oci_layout_archive_bytes": 6945449
+    },
+    {
+      "component": "fabric-chaincode",
+      "local_image": "saib-s2.2.1-fabric-chaincode:local",
+      "local_image_id": "sha256:aa65f078b2be6cd0d89ae572d1bc9d2cc833f111e8ba5c30e223384bc37f1d73",
+      "registry_reference": "localhost:5000/saib/s2.2.1-fabric-chaincode:audit",
+      "registry_immutable_reference": "localhost:5000/saib/s2.2.1-fabric-chaincode@sha256:2cd602c178e720c04ffa5265c951a44b5d51cb7f6568e9d5b00f7cea0ebbf611",
+      "registry_manifest_digest": "sha256:2cd602c178e720c04ffa5265c951a44b5d51cb7f6568e9d5b00f7cea0ebbf611",
+      "offline_oci_manifest_digest": "sha256:1b9b362b60551ec12fa4c69282e803b171b5b80392e57f66e873c15bc58ec67e",
+      "config_digest": "sha256:aa65f078b2be6cd0d89ae572d1bc9d2cc833f111e8ba5c30e223384bc37f1d73",
+      "layer_digests": [
+        "sha256:608722392d96e76df7958518780958e1645086e74cbf3c917da5e45aa4956cdd"
+      ],
+      "oci_layout_directory": "s2.2.1-fabric-chaincode-oci",
+      "oci_layout_archive": "s2.2.1-fabric-chaincode-oci-layout.tar.gz",
+      "oci_layout_archive_sha256": "17db50679db906bc2a1f31ad36eb0ac32c4b1ee2afe18c61a03fa18b9d277bf8",
+      "oci_layout_archive_bytes": 5106355
+    }
+  ],
+  "verifier_library_sha256": "8a892b70f775c6f62ca25a16e554ccbaf97b757f47c37aa037456ea5fb5cbc90",
+  "source_manifest_sha256": "79cb8b6c423b3903773f49ecdfd9dbf9b319a48933d18eea83044a40b298c32d",
+  "policy_registry_sha256": "d6a875c75a068185049ac59ce3b77160729ce27c95ff1afd835d87dd7508a5a6",
+  "credential_registry_sha256": "41e40f47dd484e82595a4e780b25789ac0eaeda20b1e16e40cb8fa023558b870"
+}

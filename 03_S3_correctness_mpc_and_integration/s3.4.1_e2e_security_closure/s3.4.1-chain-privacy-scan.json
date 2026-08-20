@@ -1,0 +1,26 @@
+{
+  "schema_version": "saib-retf-s3.4.1-fabric-block-scan-summary/2",
+  "release_commit": "e310a58e5ef96f85d743dc1bd78a3f4a7774c98a",
+  "scope": "finite_sample_sensitive_field_scan",
+  "input_path": "s3.4.1-fabric-block-scan.jsonl",
+  "input_sha256": "b5422af7140d49d0500e986f10499285843db6bb86b8bfa2d0520e86d9af23cd",
+  "authorization_records_total": 10132,
+  "authorization_records_valid": 10102,
+  "authorization_records_invalid": 30,
+  "valid_distinct_task_ids": 10001,
+  "valid_distinct_domains": 10101,
+  "valid_distinct_pseudonyms": 10102,
+  "dedicated_relay_creator_digests": 2,
+  "dedicated_relay_profiles": [
+    "s2.2.2-privacy-relay",
+    "s3.4-governance-relay"
+  ],
+  "valid_records_with_fewer_than_three_endorsement_msps": 0,
+  "valid_records_outside_exact_dual_relay_allowlist": 0,
+  "selected_sensitive_field_hits": 0,
+  "s2_relay_scan_sha256": "3ec569ebe019e08826af9209ae1a3d59d59e0fb41af6c61db4bd60e3282d31cf",
+  "s3_relay_scan_sha256": "89efbfc4b69c451a43ea0f516699c693f1174afa21ef2a2459add0b08f08684c",
+  "s3_relay_certificate_file_sha256": "6bb5e7a3fe7ef42368d52db8213e0ab1b82e10d358a90897f528063c5f42eff9",
+  "limitation": "This is a finite sample scan over two exact, role-separated dedicated relay certificates, not a general proof of unlinkability or absence of all side channels.",
+  "result": "PASS"
+}

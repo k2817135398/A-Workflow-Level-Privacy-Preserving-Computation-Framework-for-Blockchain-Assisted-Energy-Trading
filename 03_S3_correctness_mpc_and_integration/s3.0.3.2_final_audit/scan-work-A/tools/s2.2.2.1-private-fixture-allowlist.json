@@ -1,0 +1,32 @@
+{
+  "schema_version": "saib-retf-s2.2.2.1-private-fixture-allowlist/1",
+  "entries": [
+    {
+      "path": "experiments/v2/testdata/trace-attestor-s2-test-private.pem",
+      "sha256": "53b5b4e09a81feec8442b91a5d082d1069b10e35e453bb329dd9e94f96677684",
+      "purpose": "formal-admission test fixture only"
+    },
+    {
+      "path": "experiments/v2/statistics/test_validate_formal_input.py",
+      "sha256": "73739a16006ece7272aaf40d0f4894ac44462a085c465e2030152a2491efbff4",
+      "purpose": "embedded deterministic formal-admission test fixture only"
+    },
+    {
+      "path": "usr/lib/x86_64-linux-gnu/libgnutls.so.30.34.3",
+      "sha256": "779b25d20249988bea2c1aa6bbeb218f5ae7ea8a9d30ce4f54ea37372965cc4b",
+      "purpose": "pinned Debian runtime library containing upstream cryptographic test-vector PEM strings; not an operational key file"
+    }
+  ],
+  "history_entries": [
+    {
+      "path": "experiments/v2/testdata/trace-attestor-s2-test-private.pem",
+      "key_public_spki_sha256": "44ca0cf355aa2087a6e328a63978b5aa873cff3079691b9f1f8e74bb2e80953c",
+      "purpose": "formal-admission test fixture only; never a production attestor"
+    },
+    {
+      "path": "experiments/v2/statistics/test_validate_formal_input.py",
+      "key_public_spki_sha256": "44ca0cf355aa2087a6e328a63978b5aa873cff3079691b9f1f8e74bb2e80953c",
+      "purpose": "embedded deterministic formal-admission test fixture only; historical file hashes may differ"
+    }
+  ]
+}

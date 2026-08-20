@@ -1,0 +1,119 @@
+{
+  "schema_version": "saib-retf-s3.4-live-integration/1",
+  "started_at_utc": "2026-07-28T10:28:46.537193897Z",
+  "ended_at_utc": "2026-07-28T10:31:02.266039767Z",
+  "release_commit": "e310a58e5ef96f85d743dc1bd78a3f4a7774c98a",
+  "task_id": "s3.4-fmatch-live-e310a58e5ef9-e2e-e310a58-02",
+  "session_id": "s34-82967a13dc7a5ff8a2f44079",
+  "committee_policy_digest": "04baf458ead547d67c71667990db5eaa85fa738fee623bdeecadc1d80bce67ac",
+  "mpc_program_digest": "3fb80d6c88c30c8b24bfe312094037f925a01cd8566a2c491ae3ec0d883a37cd",
+  "session_runtime_root": "0d4ad5e1d398242f3a81364507e1bdfd61a6a3c84e292cc2f6f725b05841b1f9",
+  "oci_manifest_digest": "sha256:532a8ccbe2aa5cc8d5d789fd51537f7e03d80aa07758509b75d4e14f13d76079",
+  "input_record_digests": [
+    "3f973f337541cad07bc750b07c951118e1c988563a3136236d41766e629d639e",
+    "3fb329aaed7906d4a92b07d4fd8368c32abfd2df326899088e2767f0d118f89f"
+  ],
+  "session_record_digest": "92122c7a07bf556a2e2bb939c5574167132a6ae2c3755503e40786ba34b1785d",
+  "party_receipts": [
+    {
+      "batch_launch_id": "5b53f6126bd7d242540764521ec09b8c9b1f0ebcbd77abde38effbd27c8ae66f",
+      "task_id": "s3.4-fmatch-live-e310a58e5ef9-e2e-e310a58-02",
+      "session_id": "s34-82967a13dc7a5ff8a2f44079",
+      "party_id": 0,
+      "node_id": "committee-0",
+      "binding_set_digest": "f086dbe8486ec69bdc96f93cc8f54b85ac8c6f5b70a7aae351bb3847cfb0477f",
+      "session_runtime_root": "0d4ad5e1d398242f3a81364507e1bdfd61a6a3c84e292cc2f6f725b05841b1f9",
+      "actual_oci_manifest_digest": "sha256:532a8ccbe2aa5cc8d5d789fd51537f7e03d80aa07758509b75d4e14f13d76079",
+      "result_commitment": "0337981dd9eab70c9fa2c54cbf7a3402695564bb06e7039907cab59a1df7c146",
+      "result_digest": "a6acaa486697094edced6a3481b029f2a6f0fdc4df8de3d64827fb3269d8b36b",
+      "committee_signature_input": "e5c1c0dfc2a3df6da6cafbdef5391533448e1167bff45d5a37ed6b295764cce5"
+    },
+    {
+      "batch_launch_id": "5b53f6126bd7d242540764521ec09b8c9b1f0ebcbd77abde38effbd27c8ae66f",
+      "task_id": "s3.4-fmatch-live-e310a58e5ef9-e2e-e310a58-02",
+      "session_id": "s34-82967a13dc7a5ff8a2f44079",
+      "party_id": 1,
+      "node_id": "committee-1",
+      "binding_set_digest": "f086dbe8486ec69bdc96f93cc8f54b85ac8c6f5b70a7aae351bb3847cfb0477f",
+      "session_runtime_root": "0d4ad5e1d398242f3a81364507e1bdfd61a6a3c84e292cc2f6f725b05841b1f9",
+      "actual_oci_manifest_digest": "sha256:532a8ccbe2aa5cc8d5d789fd51537f7e03d80aa07758509b75d4e14f13d76079",
+      "result_commitment": "0337981dd9eab70c9fa2c54cbf7a3402695564bb06e7039907cab59a1df7c146",
+      "result_digest": "a6acaa486697094edced6a3481b029f2a6f0fdc4df8de3d64827fb3269d8b36b",
+      "committee_signature_input": "e5c1c0dfc2a3df6da6cafbdef5391533448e1167bff45d5a37ed6b295764cce5"
+    },
+    {
+      "batch_launch_id": "5b53f6126bd7d242540764521ec09b8c9b1f0ebcbd77abde38effbd27c8ae66f",
+      "task_id": "s3.4-fmatch-live-e310a58e5ef9-e2e-e310a58-02",
+      "session_id": "s34-82967a13dc7a5ff8a2f44079",
+      "party_id": 2,
+      "node_id": "committee-2",
+      "binding_set_digest": "f086dbe8486ec69bdc96f93cc8f54b85ac8c6f5b70a7aae351bb3847cfb0477f",
+      "session_runtime_root": "0d4ad5e1d398242f3a81364507e1bdfd61a6a3c84e292cc2f6f725b05841b1f9",
+      "actual_oci_manifest_digest": "sha256:532a8ccbe2aa5cc8d5d789fd51537f7e03d80aa07758509b75d4e14f13d76079",
+      "result_commitment": "0337981dd9eab70c9fa2c54cbf7a3402695564bb06e7039907cab59a1df7c146",
+      "result_digest": "a6acaa486697094edced6a3481b029f2a6f0fdc4df8de3d64827fb3269d8b36b",
+      "committee_signature_input": "e5c1c0dfc2a3df6da6cafbdef5391533448e1167bff45d5a37ed6b295764cce5"
+    }
+  ],
+  "security_attacks": [
+    {
+      "test_case": "result_commitment_replacement",
+      "expected_result": "reject",
+      "actual_result": "reject",
+      "transaction_id": "bb3078027661f9f3dfa2530b1d5097eaddb9bdb28afc027054b95da94d6eb253",
+      "error": "FinalizeSession endorse: rpc error: code = Aborted desc = failed to endorse transaction, see attached details for more info",
+      "result": "PASS"
+    },
+    {
+      "test_case": "insufficient_committee_signatures",
+      "expected_result": "reject",
+      "actual_result": "reject",
+      "transaction_id": "6e5b82cb2c88542921af5970521134433448e5f72542309ede6d89b1e867e061",
+      "error": "FinalizeSession endorse: rpc error: code = Aborted desc = failed to endorse transaction, see attached details for more info",
+      "result": "PASS"
+    },
+    {
+      "test_case": "duplicate_committee_party",
+      "expected_result": "reject",
+      "actual_result": "reject",
+      "transaction_id": "f9ca9d565b70647800df6d641cdb6a429aba22a4299d99d832bb1bf5d29c0929",
+      "error": "FinalizeSession endorse: rpc error: code = Aborted desc = failed to endorse transaction, see attached details for more info",
+      "result": "PASS"
+    },
+    {
+      "test_case": "forged_committee_signature",
+      "expected_result": "reject",
+      "actual_result": "reject",
+      "transaction_id": "9f33c68e32477d41556e55705d412d382fe34c1d6c37ee5cac14e880035207ce",
+      "error": "FinalizeSession endorse: rpc error: code = Aborted desc = failed to endorse transaction, see attached details for more info",
+      "result": "PASS"
+    },
+    {
+      "test_case": "duplicate_finalization",
+      "expected_result": "reject",
+      "actual_result": "reject",
+      "transaction_id": "23dc82f328976fb49403cd33ab6a727fdd25a28dc7aaebca07b2c1bde23afb92",
+      "error": "FinalizeSession endorse: rpc error: code = Aborted desc = failed to endorse transaction, see attached details for more info",
+      "result": "PASS"
+    }
+  ],
+  "finalization": {
+    "schema_version": "SAIB-RETF/S3.4/FINALIZATION/1",
+    "protocol_version": "SAIB-RETF/S3.4/1",
+    "task_id": "s3.4-fmatch-live-e310a58e5ef9-e2e-e310a58-02",
+    "session_id": "s34-82967a13dc7a5ff8a2f44079",
+    "committee_id": "committee-s34-82967a13dc7a5ff8a2f44079",
+    "committee_epoch": 2,
+    "input_record_digest": "92122c7a07bf556a2e2bb939c5574167132a6ae2c3755503e40786ba34b1785d",
+    "input_commitment_root": "96125cd708c19965b34b897458585724e9c2cb84a57620c35adcc7621cf1b1f6",
+    "mpc_program_digest": "3fb80d6c88c30c8b24bfe312094037f925a01cd8566a2c491ae3ec0d883a37cd",
+    "session_runtime_root": "0d4ad5e1d398242f3a81364507e1bdfd61a6a3c84e292cc2f6f725b05841b1f9",
+    "result_commitment": "0337981dd9eab70c9fa2c54cbf7a3402695564bb06e7039907cab59a1df7c146",
+    "result_digest": "a6acaa486697094edced6a3481b029f2a6f0fdc4df8de3d64827fb3269d8b36b",
+    "committee_signature_input": "e5c1c0dfc2a3df6da6cafbdef5391533448e1167bff45d5a37ed6b295764cce5",
+    "committee_signature_count": 3,
+    "transaction_id": "545c91a8838971881969875354b821c96057a624298359dfc34861bf4b43a1be",
+    "channel_id": "extra-channel"
+  },
+  "result": "PASS"
+}

@@ -1,0 +1,81 @@
+PP-RETF REVISION EXPERIMENT ENVIRONMENT
+Verified: 2026-07-13, Asia/Shanghai
+=======================================
+
+Evidence policy
+---------------
+Only values read from the current host, Docker runtime, image metadata, source,
+or module manifests are reported. Uncontrolled facts are marked NOT RECORDED.
+
+Hardware
+--------
+CPU: AMD Ryzen 7 5800H with Radeon Graphics
+CPU topology: 8 physical cores / 16 logical threads
+Reported maximum clock: 3,201 MHz (Windows Win32_Processor.MaxClockSpeed)
+RAM: 16 GB installed
+Storage: SK hynix HFS512GDE9X084N, 512 GB NVMe SSD
+
+Host and container platform
+---------------------------
+Host OS: Microsoft Windows 11 Home China, x64
+Windows version/build: 10.0.26200 / build 26200
+WSL package: 2.1.5.0
+WSL distribution: Ubuntu 24.04.4 LTS
+WSL kernel: 5.15.146.1-microsoft-standard-WSL2
+Docker Desktop: 4.72.0 (225998)
+Docker Engine/CLI: 29.4.2
+Docker Compose: v5.1.3
+containerd: 2.2.3
+runc: 1.3.5
+Host Go: go1.22.4 windows/amd64
+
+Placement and host-load control
+-------------------------------
+All Fabric containers, CouchDB instances, local benchmark clients, temporary
+preprocessing signers, and independent committee processes ran on this one
+physical host. No remote machine was used. The Fabric stack contained 20 running
+containers: one orderer, nine peers, nine CouchDB instances, and one CCaaS
+chaincode container. Therefore the old informal description "18 containers" is
+not correct for these reruns.
+
+The experiments did not use CPU pinning, a dedicated bare-metal host, or an
+automated host-load guard. Whether every unrelated high-load desktop program was
+closed for every sample is NOT RECORDED. No stronger isolation claim should be
+made. No timing observation was removed because of observed host load.
+
+Software
+--------
+Hyperledger Fabric peer/orderer images: 2.5.4
+Fabric build metadata: commit e1e8e2e; Go 1.20.6; linux/amd64
+Fabric Gateway Go SDK: github.com/hyperledger/fabric-gateway v1.7.1
+Fabric Contract API: github.com/hyperledger/fabric-contract-api-go v1.2.2
+Chaincode language/toolchain: Go 1.22 / toolchain go1.22.4
+order-service: Go 1.22
+committee-service: Go 1.22
+gateway-api: Go 1.22
+verifier-service: Go 1.22
+CouchDB: 3.3.3 (image couchdb:3.3.3)
+
+Cryptographic implementation
+----------------------------
+Hash/HMAC diagnostic code: Go crypto/sha256 and crypto/hmac.
+Production preprocessing authentication: Go crypto/ecdsa, elliptic.P256,
+crypto/x509, ecdsa.SignASN1, and ecdsa.VerifyASN1.
+Committee authentication: ECDSA P-256 with canonical SHA-256 result digests and
+distinct current-epoch signer enforcement in chaincode.
+
+RSA accumulator: project implementation in chaincode/retf-core/rsa_accumulator;
+there is no third-party accumulator library or library version. The current
+construction uses domain-separated SHA-256 and deterministic search for a
+256-bit probable-prime representative. The production experiment uses a 2048-bit
+public modulus. Prime search is included in hash-to-prime measurements; RSA setup
+and p/q generation are outside operation timings. The private factors p and q are
+not stored in chaincode state or the publication artifact.
+
+Private-key handling
+--------------------
+Fabric Admin MSP material was copied from the running peer into a temporary
+directory for the one-command clients. Preprocessing and committee keys were
+generated temporarily. Temporary directories were deleted after each run. The
+publication artifact excludes Fabric crypto material, private keys, binaries,
+Fabric CA databases, and Docker volumes.

@@ -1,0 +1,48 @@
+{
+  "schema_version": "s2.2.1-provenance/1",
+  "generated_at_utc": "2026-07-15T16:23:34.607594Z",
+  "release_commit": "f0392814765270c57e0bfbb45c43385490c3391b",
+  "release_tag": "s2.2.1-audit",
+  "git_dirty": false,
+  "git_status": [],
+  "parent_commit": "9edaf44c23d4697a59e60a01f658b588f34e233f",
+  "s2.2_merge_base": "6dba20ec35a86d395b1d8580e78736089d6db19e",
+  "s2.1_audit_commit": "ed0fa2cd8030ece0858334492e8940a4ad0d2b00",
+  "source_files": 175,
+  "source_manifest_sha256": "79cb8b6c423b3903773f49ecdfd9dbf9b319a48933d18eea83044a40b298c32d",
+  "security_tests": {
+    "passed": 31,
+    "total": 31
+  },
+  "formal_admission_tests": {
+    "passed": 13,
+    "total": 13
+  },
+  "runtime_trace_payload_sha256": "527bf2632a5afa21b93d6081979595c9f3fc2aefaa63e6a5f529e42c3bed71f2",
+  "runtime_trace_file_sha256": "c969807211cf64019e6ee84d63fa2572336deeee473d97e91feb38f453817555",
+  "runtime_trace_attestation": "Ed25519 local-audit deployment key version 2",
+  "runtime_trace_events_resolved": 11,
+  "production_registry_enabled": true,
+  "production_registry_scope": "local audit OCI registry plus externally replayable offline layouts",
+  "rust_coverage_summary": [
+    "S2.2.1 Rust coverage",
+    "all_targets_lines=78.91% (1235/1565)",
+    "production_library_lines=89.95% (1235/1373)",
+    "functions=63.01% (92/146)",
+    "regions=56.48% (610/1080)",
+    "branches=NOT_COLLECTED (0/0)",
+    "holder_lines=100.00% (28/28)",
+    "issuer_lines=100.00% (9/9)",
+    "verifier_lines=100.00% (14/14)",
+    "role_process_lines=92.79% (309/333)",
+    "prove_executed=31",
+    "verify_executed=473",
+    "revoke_executed=4",
+    "witness_update_executed=6",
+    "coverage_warning_mismatched_data=false",
+    "binary_entrypoints_included_in_all_targets_but_excluded_from_library_gate=true",
+    "coverage_gate=PASS"
+  ],
+  "s3_distributed_mpc": "NOT STARTED",
+  "formal_performance_experiments": "STILL NO-GO"
+}

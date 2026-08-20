@@ -1,0 +1,41 @@
+command=docker buildx build --builder saib-s3-audit --no-cache --progress=plain --output type=oci
+#0 building with "saib-s3-audit" instance using docker-container driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 674B done
+#1 DONE 0.0s
+
+#2 [internal] load .dockerignore
+#2 transferring context: 2B done
+#2 DONE 0.0s
+
+#3 [internal] load build context
+#3 transferring context: 108.81MB 1.8s done
+#3 DONE 1.8s
+
+#4 [1/5] ADD debian-bookworm-slim-rootfs.tar /
+#4 DONE 0.3s
+
+#5 [2/5] COPY --chmod=0555 malicious-rep-field-party.x /opt/mp-spdz/malicious-rep-field-party.x
+#5 DONE 0.2s
+
+#6 [3/5] COPY --chmod=0444 saib_committed_input-0.bc /opt/mp-spdz/Programs/Bytecode/saib_committed_input-0.bc
+#6 DONE 0.0s
+
+#7 [4/5] COPY --chmod=0444 saib_committed_input.sch /opt/mp-spdz/Programs/Schedules/saib_committed_input.sch
+#7 DONE 0.0s
+
+#8 [5/5] WORKDIR /opt/mp-spdz
+#8 DONE 0.0s
+
+#9 exporting to oci image format
+#9 exporting layers
+#9 exporting layers 3.4s done
+#9 exporting manifest sha256:d40972a5d566873830d1c515c6da9cbfb32e9d4f8c7475d990c6b967992f2a18 0.0s done
+#9 exporting config sha256:baa94661a0e4a934eeafc9e666ae8d3bc5113996da1406bd42ce1a5cabb61654 0.0s done
+#9 sending tarball
+#9 sending tarball 0.8s done
+#9 DONE 4.2s
+
+#10 resolving provenance for metadata file
+#10 DONE 0.0s

@@ -1,0 +1,11 @@
+command=go test -count=1 ./fabric/privacychaincode221
+started_at_utc=2026-07-28T07:59:54.659364Z
+--- FAIL: TestGovernanceEpochFloorCannotRollBack (0.00s)
+    contract_test.go:331: committee epoch rollback accepted
+--- FAIL: TestTaskPolicyBatchRejectsMissingFloorDomainMismatchAndFloorRollback (0.00s)
+    contract_test.go:557: committee epoch floor rollback was accepted
+FAIL
+FAIL	github.com/retf/source/v2/fabric/privacychaincode221	0.024s
+FAIL
+ended_at_utc=2026-07-28T07:59:55.444295Z
+exit_code=1

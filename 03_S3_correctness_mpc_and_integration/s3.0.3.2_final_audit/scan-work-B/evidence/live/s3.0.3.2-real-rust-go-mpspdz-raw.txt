@@ -1,0 +1,65 @@
+command=/mnt/g/paperexper/retf/saib-retf/experiments/v2/runners/run-s3.0.3.2-live-integration.sh /mnt/g/paperexper/retf/third_party/MP-SPDZ-s3.1.1-patched /mnt/g/paperexper/retf/benchmarks/results/expand/s3.0.3.2-release-evidence-07301dd /mnt/g/paperexper/retf/benchmarks/results/expand/s3.0.3.1-release-evidence-d4d4ccb/security/s3.0.3.1-committed-input-vector.json [PRIVATE_SECRET_ROOT] /mnt/g/paperexper/retf/benchmarks/results/expand/s3.0.3.2-release-evidence-07301dd/live
+started_at_utc=2026-07-24T11:26:12Z
+release_commit=07301dd8e0037a2fb889ace957d30f50587974c5
+cargo_command=CARGO_NET_OFFLINE=true /root/.cargo/bin/cargo build --locked --release --bin s3_consistency_verifier
+warning: use of deprecated associated function `elliptic_curve::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> vendor/credx-0.2.1-saib/src/presentation/verifiable_encryption_decryption.rs:164:46
+    |
+164 |         let key = aes_gcm::Key::<Aes128Gcm>::from_slice(&okm[..16]);
+    |                                              ^^^^^^^^^^
+    |
+    = note: `#[warn(deprecated)]` on by default
+
+warning: use of deprecated associated function `elliptic_curve::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> vendor/credx-0.2.1-saib/src/presentation/verifiable_encryption_decryption.rs:235:28
+    |
+235 |         let nonce = Nonce::from_slice(&self.ciphertext[..12]);
+    |                            ^^^^^^^^^^
+
+warning: use of deprecated associated function `elliptic_curve::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> vendor/credx-0.2.1-saib/src/presentation/verifiable_encryption_decryption.rs:243:46
+    |
+243 |         let key = aes_gcm::Key::<Aes128Gcm>::from_slice(&okm[..16]);
+    |                                              ^^^^^^^^^^
+
+warning: `credx` (lib) generated 3 warnings
+    Finished `release` profile [optimized] target(s) in 3.97s
+rust_verifier_sha256=e76f94bfa4d2d47b5da619becd03f0fb9b7efa178c20a3790ed62083b7cdbeef
+Setting up SSL for 3 parties
+..+.........+.+...+......+.....+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*..+....+......+...+..+...+....+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*...+........+.........................+..+...............+....+..............+....+..+....+...............+.................+.......+...+.........+.....+....+......+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.+...+...+......+.....+......+...+.......+.....+...+.+...+...+...+.....+.......+.....+...+....+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*...........+......+.+...+............+...+...+...............+...+..+...+.+...+............+.....+.+............+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*............+.+..+...+...+................+.....+...................+......+........+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+-----
+..+.....................+...+...+...+.......+..+.+.....+.+...+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*..+.+...........+.+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*...................+.+...+...........+.+..+.+...............+..+....+......+........+.+...+...+.........+...........+...+...............+.+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+..+.....+............+......+.+..............+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*..+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*....+...+.....+.+...........+.......+..+..........+...........+...+.......+..+.+.........+...........+.......+.....+.........+.+..+......................+.....+...+......+.+...+...............+...............+.....+..................+...+.........+.+...........+.+.........+.....+.+..+......+..........+..+.......+...+............+..................+.................+.............+..+...+.......+........+.......+...........+......+.+..+..........+............+...+.....+.+......+.....+..........+.....+....+..+...+............+.........+.............+..+.+.................+.+..+...+.......+...+..+...+.+......+...............+..+.............+..+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+-----
+....+.............+...............+.................+.+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*.+...+......+.....+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*.+............+...+.+.....+.+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+..+......+.+.........+..+.......+...+...+..+....+........+......+.......+.........+...+..+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*......+...........+............+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*.....+...+...+..+....+...+..+...+.+............+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+-----
+rm: cannot remove '/mnt/g/paperexper/retf/benchmarks/results/expand/s3.0.3.2-live-secrets-07301dd-final/mpc-tls/all/*.0': No such file or directory
+Doing /mnt/g/paperexper/retf/benchmarks/results/expand/s3.0.3.2-live-secrets-07301dd-final/mpc-tls/all
+link P0.pem -> 690ad341.0
+link P0.pem -> 16036ff6.0
+link P1.pem -> 0c19e31f.0
+link P1.pem -> 98ab66c2.0
+link P2.pem -> 786af600.0
+link P2.pem -> 722e178a.0
+parties=3
+private_key_per_party=1
+cross_party_private_key_hits=0
+private_key_delivery=read-only runtime mount
+docker_network=saib-s3032-runtime
+docker_subnet=172.31.0.0/24
+integration_command=GOTOOLCHAIN=local CGO_ENABLED=1 go test -count=1 -run TestRealRustGateToThreeProcessMPSpdzSingleEntry -v ./mpc/inputbinding
+=== RUN   TestRealRustGateToThreeProcessMPSpdzSingleEntry
+    real_admit_launch_integration_test.go:500: single_entry=RustVerifier->GoGate.AdmitAndLaunch->MP-SPDZ parties=3 docker=true result=ACCEPT program_digest=98450170fdb9895a814a4b9bb2abc25fdb1eeee229bb550749a6fa9de16926db backend_sha256=d6e0218a8ab831f2d4ef849ff37c8cf8195c220df55bb8d946a9aa4edd348769 oci_manifest_digest=sha256:60398b53cdc74e1ab06dbe3cb76ecb39b66e3d8ea3f1b0512c53003fb3d67389
+--- PASS: TestRealRustGateToThreeProcessMPSpdzSingleEntry (3.63s)
+PASS
+ok  	github.com/retf/source/v2/mpc/inputbinding	3.655s
+oci_manifest_digest=sha256:60398b53cdc74e1ab06dbe3cb76ecb39b66e3d8ea3f1b0512c53003fb3d67389
+single_entry=RustVerifier->GoGate.AdmitAndLaunch->MP-SPDZ
+parties=3
+party_processes=3
+physical_hosts=1
+private_key_in_evidence=0
+ended_at_utc=2026-07-24T11:26:26Z
+exit_code=0

@@ -1,0 +1,901 @@
+[34m2026-07-15 18:12:58.086 UTC 0001 INFO[0m [nodeCmd] [34;1mserve[0m -> Starting peer:
+ Version: v3.1.4
+ Commit SHA: 57f91e9
+ Go version: go1.26.0
+ OS/Arch: linux/amd64
+ Chaincode:
+  Base Docker Label: org.hyperledger.fabric
+  Docker Namespace: hyperledger
+[34m2026-07-15 18:12:58.089 UTC 0002 INFO[0m [nodeCmd] [34;1mserve[0m -> Peer config with combined core.yaml settings and environment variable overrides:
+chaincode:
+    builder: $(DOCKER_NS)/fabric-ccenv:$(TWO_DIGIT_VERSION)
+    executetimeout: 30s
+    externalbuilders:
+        - name: ccaas_builder
+          path: /opt/hyperledger/ccaas_builder
+          propagateenvironment:
+            - CHAINCODE_AS_A_SERVICE_BUILDER_CONFIG
+    golang:
+        dynamiclink: false
+        runtime: $(DOCKER_NS)/fabric-baseos:$(TWO_DIGIT_VERSION)
+    installtimeout: 300s
+    java:
+        runtime: $(DOCKER_NS)/fabric-javaenv:$(TWO_DIGIT_VERSION)
+    keepalive: 0
+    logging:
+        format: '%{color}%{time:2006-01-02 15:04:05.000 MST} [%{module}] %{shortfunc} -> %{level:.4s} %{id:03x}%{color:reset} %{message}'
+        level: info
+        shim: warning
+    mode: net
+    node:
+        runtime: $(DOCKER_NS)/fabric-nodeenv:$(TWO_DIGIT_VERSION)
+    pull: false
+    startuptimeout: 300s
+    system:
+        _lifecycle: enable
+        cscc: enable
+        lscc: enable
+        qscc: enable
+ledger:
+    history:
+        enablehistorydatabase: true
+    pvtdatastore:
+        collelgprocdbbatchesinterval: 1000
+        collelgprocmaxdbbatchsize: 5000
+        deprioritizeddatareconcilerinterval: 60m
+        purgedkeyauditlogging: true
+        purgeinterval: 100
+    snapshots:
+        rootdir: /var/hyperledger/production/snapshots
+    state:
+        couchdbconfig:
+            cachesize: 64
+            couchdbaddress: nsw-couchdb0:5984
+            createglobalchangesdb: false
+            internalquerylimit: 1000
+            maxbatchupdatesize: 1000
+            maxretries: 3
+            maxretriesonstartup: 10
+            password: adminpw
+            requesttimeout: 35s
+            username: admin
+        statedatabase: CouchDB
+        totalquerylimit: 100000
+logging_level: ""
+metrics:
+    provider: disabled
+    statsd:
+        address: 127.0.0.1:8125
+        network: udp
+        writeinterval: 10s
+operations:
+    listenaddress: 127.0.0.1:9443
+    tls:
+        clientauthrequired: false
+        clientrootcas:
+            files: []
+        enabled: false
+peer:
+    address: peer0.nsw.retf.com:7051
+    addressautodetect: false
+    authentication:
+        timewindow: 30s
+    bccsp:
+        default: SW
+        sw:
+            hash: SHA2
+            security: 256
+    client:
+        conntimeout: 3s
+    deliveryclient:
+        blockgossipenabled: true
+        conntimeout: 3s
+        reconnectbackoffthreshold: 3600s
+        reconnecttotaltimethreshold: 3600s
+    discovery:
+        authcacheenabled: true
+        authcachemaxsize: 1000
+        authcachepurgeretentionratio: 0.75
+        enabled: true
+        orgmembersallowedaccess: false
+    filesystempath: /var/hyperledger/production
+    gateway:
+        broadcasttimeout: 30s
+        dialtimeout: 2m
+        enabled: true
+        endorsementtimeout: 30s
+    gossip:
+        aliveexpirationtimeout: 25s
+        alivetimeinterval: 5s
+        bootstrap: peer1.nsw.retf.com:7051
+        conntimeout: 2s
+        dialtimeout: 3s
+        digestwaittime: 1s
+        election:
+            leaderalivethreshold: 10s
+            leaderelectionduration: 5s
+            membershipsampleinterval: 1s
+            startupgraceperiod: 15s
+        externalendpoint: peer0.nsw.retf.com:7051
+        maxblockcounttostore: 10
+        maxconnectionattempts: 120
+        maxpropagationburstlatency: 10ms
+        maxpropagationburstsize: 10
+        membershiptrackerinterval: 5s
+        msgexpirationfactor: 20
+        orgleader: true
+        propagateiterations: 1
+        propagatepeernum: 3
+        publishcertperiod: 10s
+        publishstateinfointerval: 4s
+        pullinterval: 4s
+        pullpeernum: 3
+        pvtdata:
+            btlpullmargin: 10
+            implicitcollectiondisseminationpolicy:
+                maxpeercount: 1
+                requiredpeercount: 0
+            pullretrythreshold: 60s
+            pushacktimeout: 3s
+            reconcilebatchsize: 10
+            reconcilesleepinterval: 1m
+            reconciliationenabled: true
+            skippullinginvalidtransactionsduringcommit: false
+            transientstoremaxblockretention: 1000
+        reconnectinterval: 25s
+        recvbuffsize: 20
+        requeststateinfointerval: 4s
+        requestwaittime: 1500ms
+        responsewaittime: 2s
+        sendbuffsize: 200
+        skipblockverification: false
+        state:
+            batchsize: 10
+            blockbuffersize: 20
+            checkinterval: 10s
+            enabled: false
+            maxretries: 3
+            responsetimeout: 3s
+        useleaderelection: false
+    handlers:
+        authfilters:
+            - name: DefaultAuth
+            - name: ExpirationCheck
+            - name: TimeWindowCheck
+        decorators:
+            - name: DefaultDecorator
+        endorsers:
+            escc:
+                name: DefaultEndorsement
+        validators:
+            vscc:
+                name: DefaultValidation
+    id: peer0.nsw.retf.com
+    keepalive:
+        client:
+            interval: 60s
+            timeout: 20s
+        deliveryclient:
+            interval: 60s
+            timeout: 20s
+        interval: 7200s
+        mininterval: 60s
+        timeout: 20s
+    limits:
+        concurrency:
+            deliverservice: 2500
+            endorserservice: 2500
+            gatewayservice: 500
+    listenaddress: 0.0.0.0:7051
+    localmspid: NSWMSP
+    localmsptype: bccsp
+    maxrecvmsgsize: 104857600
+    maxsendmsgsize: 104857600
+    mspconfigpath: /var/hyperledger/msp
+    networkid: dev
+    profile:
+        enabled: "true"
+        listenaddress: 0.0.0.0:6060
+    tls:
+        cert:
+            file: /etc/hyperledger/fabric/tls/server.crt
+        clientauthrequired: false
+        clientrootcas:
+            files:
+                - tls/ca.crt
+        enabled: "true"
+        key:
+            file: /etc/hyperledger/fabric/tls/server.key
+        rootcert:
+            file: /etc/hyperledger/fabric/tls/ca.crt
+vm:
+    docker:
+        attachstdout: false
+        hostconfig:
+            logconfig:
+                config:
+                    max-file: "5"
+                    max-size: 50m
+                type: json-file
+            memory: 2147483648
+            networkmode: retf_network
+        tls:
+            ca:
+                file: docker/ca.crt
+            cert:
+                file: docker/tls.crt
+            enabled: false
+            key:
+                file: docker/tls.key
+    endpoint: unix:///host/var/run/docker.sock
+[34m2026-07-15 18:12:58.090 UTC 0003 INFO[0m [peer] [34;1mgetLocalAddress[0m -> Auto-detected peer address: 172.18.0.15:7051
+[34m2026-07-15 18:12:58.090 UTC 0004 INFO[0m [peer] [34;1mgetLocalAddress[0m -> Returning peer0.nsw.retf.com:7051
+[34m2026-07-15 18:12:58.119 UTC 0005 INFO[0m [nodeCmd] [34;1minitGrpcSemaphores[0m -> concurrency limit for endorser service is 2500
+[34m2026-07-15 18:12:58.119 UTC 0006 INFO[0m [nodeCmd] [34;1minitGrpcSemaphores[0m -> concurrency limit for deliver service is 2500
+[34m2026-07-15 18:12:58.119 UTC 0007 INFO[0m [nodeCmd] [34;1minitGrpcSemaphores[0m -> concurrency limit for gateway service is 500
+[34m2026-07-15 18:12:58.119 UTC 0008 INFO[0m [nodeCmd] [34;1mserve[0m -> Starting peer with TLS enabled
+[34m2026-07-15 18:12:58.161 UTC 0009 INFO[0m [deliveryClient] [34;1mloadDeliverServiceConfig[0m -> peer.deliveryclient.blockCensorshipTimeoutKey is not set, defaulting to 30000000000 s.
+[34m2026-07-15 18:12:58.161 UTC 000a INFO[0m [deliveryClient] [34;1mloadDeliverServiceConfig[0m -> peer.deliveryclient.minimalReconnectInterval is not set, defaulting to 100000000 ms.
+[34m2026-07-15 18:12:58.161 UTC 000b INFO[0m [deliveryClient] [34;1mloadDeliverServiceConfig[0m -> peer.deliveryclient.policy is not set, defaulting to cluster.
+[34m2026-07-15 18:12:58.161 UTC 000c INFO[0m [certmonitor] [34;1mtrackCertExpiration[0m -> The enrollment certificate will expire on 2036-04-19 03:26:00 +0000 UTC
+[34m2026-07-15 18:12:58.161 UTC 000d INFO[0m [certmonitor] [34;1mtrackCertExpiration[0m -> The server TLS certificate will expire on 2036-04-19 03:26:00 +0000 UTC
+[34m2026-07-15 18:12:58.162 UTC 000e INFO[0m [ledgermgmt] [34;1mNewLedgerMgr[0m -> Initializing LedgerMgr
+[34m2026-07-15 18:12:58.422 UTC 000f INFO[0m [ledgermgmt] [34;1mNewLedgerMgr[0m -> Initialized LedgerMgr
+[34m2026-07-15 18:12:58.422 UTC 0010 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Server #1]Server created
+[34m2026-07-15 18:12:58.479 UTC 0011 INFO[0m [gossip.service] [34;1mNew[0m -> Initialize gossip with endpoint peer0.nsw.retf.com:7051
+[34m2026-07-15 18:12:58.480 UTC 0012 INFO[0m [gossip.gossip] [34;1mNew[0m -> Creating gossip service with self membership of Endpoint: peer0.nsw.retf.com:7051, InternalEndpoint: peer0.nsw.retf.com:7051, PKI-ID: c20a1002742ccbd3981d8cbe3e829e09e07e1ef73822a263446ed9ffd8b910e5, Metadata: 
+[34m2026-07-15 18:12:58.482 UTC 0013 INFO[0m [gossip.gossip] [34;1mstart[0m -> Gossip instance peer0.nsw.retf.com:7051 started
+[34m2026-07-15 18:12:58.483 UTC 0014 INFO[0m [grpc] [34;1mInfof[0m -> [core] original dial target is: "peer1.nsw.retf.com:7051"
+[34m2026-07-15 18:12:58.483 UTC 0015 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #2]Channel created
+[34m2026-07-15 18:12:58.483 UTC 0016 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #2]parsed dial target is: resolver.Target{URL:url.URL{Scheme:"passthrough", Opaque:"", User:(*url.Userinfo)(nil), Host:"", Path:"/peer1.nsw.retf.com:7051", Fragment:"", RawQuery:"", RawPath:"", RawFragment:"", ForceQuery:false, OmitHost:false}}
+[34m2026-07-15 18:12:58.483 UTC 0017 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #2]Channel authority set to "peer1.nsw.retf.com:7051"
+[34m2026-07-15 18:12:58.483 UTC 0018 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #2]Resolver state updated: {
+  "Addresses": [
+    {
+      "Addr": "peer1.nsw.retf.com:7051",
+      "ServerName": "",
+      "Attributes": null,
+      "BalancerAttributes": null,
+      "Metadata": null
+    }
+  ],
+  "Endpoints": [
+    {
+      "Addresses": [
+        {
+          "Addr": "peer1.nsw.retf.com:7051",
+          "ServerName": "",
+          "Attributes": null,
+          "BalancerAttributes": null,
+          "Metadata": null
+        }
+      ],
+      "Attributes": null
+    }
+  ],
+  "ServiceConfig": null,
+  "Attributes": null
+} (resolver returned new addresses)
+[34m2026-07-15 18:12:58.483 UTC 0019 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #2]Channel switches to new LB policy "pick_first"
+[34m2026-07-15 18:12:58.483 UTC 001a INFO[0m [grpc] [34;1mInfof[0m -> [pick-first-leaf-lb] [pick-first-leaf-lb 0x3143b00f53b0] Received new config {
+  "shuffleAddressList": false
+}, resolver state {
+  "Addresses": [
+    {
+      "Addr": "peer1.nsw.retf.com:7051",
+      "ServerName": "",
+      "Attributes": null,
+      "BalancerAttributes": null,
+      "Metadata": null
+    }
+  ],
+  "Endpoints": [
+    {
+      "Addresses": [
+        {
+          "Addr": "peer1.nsw.retf.com:7051",
+          "ServerName": "",
+          "Attributes": null,
+          "BalancerAttributes": null,
+          "Metadata": null
+        }
+      ],
+      "Attributes": null
+    }
+  ],
+  "ServiceConfig": null,
+  "Attributes": null
+}
+[34m2026-07-15 18:12:58.483 UTC 001b INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #2]Channel Connectivity change to CONNECTING
+[34m2026-07-15 18:12:58.483 UTC 001c INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #2 SubChannel #3]Subchannel created
+[34m2026-07-15 18:12:58.483 UTC 001d INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #2]Channel exiting idle mode
+[34m2026-07-15 18:12:58.483 UTC 001e INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #2 SubChannel #3]Subchannel Connectivity change to CONNECTING
+[34m2026-07-15 18:12:58.484 UTC 001f INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #2 SubChannel #3]Subchannel picks a new address "peer1.nsw.retf.com:7051" to connect
+[34m2026-07-15 18:12:58.484 UTC 0020 INFO[0m [lifecycle] [34;1mInitializeLocalChaincodes[0m -> Initialized lifecycle cache with 12 already installed chaincodes
+[34m2026-07-15 18:12:58.485 UTC 0021 INFO[0m [nodeCmd] [34;1mcomputeChaincodeEndpoint[0m -> Entering computeChaincodeEndpoint with peerHostname: peer0.nsw.retf.com
+[34m2026-07-15 18:12:58.485 UTC 0022 INFO[0m [nodeCmd] [34;1mcomputeChaincodeEndpoint[0m -> Exit with ccEndpoint: peer0.nsw.retf.com:7052
+[34m2026-07-15 18:12:58.485 UTC 0023 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Server #4]Server created
+[34m2026-07-15 18:12:58.486 UTC 0024 INFO[0m [sccapi] [34;1mDeploySysCC[0m -> deploying system chaincode 'cscc'
+[34m2026-07-15 18:12:58.486 UTC 0025 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Server #4 ListenSocket #6]ListenSocket created
+[34m2026-07-15 18:12:58.486 UTC 0026 INFO[0m [sccapi] [34;1mDeploySysCC[0m -> deploying system chaincode 'qscc'
+[34m2026-07-15 18:12:58.486 UTC 0027 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #2 SubChannel #3]Subchannel Connectivity change to READY
+[34m2026-07-15 18:12:58.486 UTC 0028 INFO[0m [grpc] [34;1mInfof[0m -> [pick-first-leaf-lb] [pick-first-leaf-lb 0x3143b00f53b0] SubConn 0x3143b019a960 reported connectivity state READY and the health listener is disabled. Transitioning SubConn to READY.
+[34m2026-07-15 18:12:58.486 UTC 0029 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #2]Channel Connectivity change to READY
+[34m2026-07-15 18:12:58.488 UTC 002a INFO[0m [sccapi] [34;1mDeploySysCC[0m -> deploying system chaincode '_lifecycle'
+[34m2026-07-15 18:12:58.489 UTC 002b INFO[0m [nodeCmd] [34;1mserve[0m -> Deployed system chaincodes
+[34m2026-07-15 18:12:58.489 UTC 002c INFO[0m [peer] [34;1mInitialize[0m -> Loading chain extra-channel
+[34m2026-07-15 18:12:58.489 UTC 002d INFO[0m [ledgermgmt] [34;1mOpenLedger[0m -> Opening ledger with id = extra-channel
+[34m2026-07-15 18:12:58.491 UTC 002e INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #2]Channel Connectivity change to SHUTDOWN
+[34m2026-07-15 18:12:58.491 UTC 002f INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #2]Closing the name resolver
+[34m2026-07-15 18:12:58.491 UTC 0030 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #2]ccBalancerWrapper: closing
+[34m2026-07-15 18:12:58.491 UTC 0031 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #2 SubChannel #3]Subchannel Connectivity change to SHUTDOWN
+[34m2026-07-15 18:12:58.492 UTC 0032 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #2 SubChannel #3]Subchannel deleted
+[34m2026-07-15 18:12:58.492 UTC 0033 INFO[0m [grpc] [34;1mInfof[0m -> [transport] [client-transport 0x3143b3b88008] Closing: rpc error: code = Canceled desc = grpc: the client connection is closing
+[34m2026-07-15 18:12:58.492 UTC 0034 INFO[0m [grpc] [34;1mInfof[0m -> [transport] [client-transport 0x3143b3b88008] loopyWriter exiting with error: rpc error: code = Canceled desc = grpc: the client connection is closing
+[34m2026-07-15 18:12:58.493 UTC 0035 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #2]Channel deleted
+[34m2026-07-15 18:12:58.494 UTC 0036 INFO[0m [grpc] [34;1mInfof[0m -> [core] original dial target is: "peer1.nsw.retf.com:7051"
+[34m2026-07-15 18:12:58.494 UTC 0037 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #7]Channel created
+[34m2026-07-15 18:12:58.494 UTC 0038 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #7]parsed dial target is: resolver.Target{URL:url.URL{Scheme:"passthrough", Opaque:"", User:(*url.Userinfo)(nil), Host:"", Path:"/peer1.nsw.retf.com:7051", Fragment:"", RawQuery:"", RawPath:"", RawFragment:"", ForceQuery:false, OmitHost:false}}
+[34m2026-07-15 18:12:58.494 UTC 0039 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #7]Channel authority set to "peer1.nsw.retf.com:7051"
+[34m2026-07-15 18:12:58.494 UTC 003a INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #7]Resolver state updated: {
+  "Addresses": [
+    {
+      "Addr": "peer1.nsw.retf.com:7051",
+      "ServerName": "",
+      "Attributes": null,
+      "BalancerAttributes": null,
+      "Metadata": null
+    }
+  ],
+  "Endpoints": [
+    {
+      "Addresses": [
+        {
+          "Addr": "peer1.nsw.retf.com:7051",
+          "ServerName": "",
+          "Attributes": null,
+          "BalancerAttributes": null,
+          "Metadata": null
+        }
+      ],
+      "Attributes": null
+    }
+  ],
+  "ServiceConfig": null,
+  "Attributes": null
+} (resolver returned new addresses)
+[34m2026-07-15 18:12:58.494 UTC 003b INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #7]Channel switches to new LB policy "pick_first"
+[34m2026-07-15 18:12:58.494 UTC 003c INFO[0m [grpc] [34;1mInfof[0m -> [pick-first-leaf-lb] [pick-first-leaf-lb 0x3143b3898c60] Received new config {
+  "shuffleAddressList": false
+}, resolver state {
+  "Addresses": [
+    {
+      "Addr": "peer1.nsw.retf.com:7051",
+      "ServerName": "",
+      "Attributes": null,
+      "BalancerAttributes": null,
+      "Metadata": null
+    }
+  ],
+  "Endpoints": [
+    {
+      "Addresses": [
+        {
+          "Addr": "peer1.nsw.retf.com:7051",
+          "ServerName": "",
+          "Attributes": null,
+          "BalancerAttributes": null,
+          "Metadata": null
+        }
+      ],
+      "Attributes": null
+    }
+  ],
+  "ServiceConfig": null,
+  "Attributes": null
+}
+[34m2026-07-15 18:12:58.494 UTC 003d INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #7]Channel Connectivity change to CONNECTING
+[34m2026-07-15 18:12:58.494 UTC 003e INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #7 SubChannel #8]Subchannel created
+[34m2026-07-15 18:12:58.494 UTC 003f INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #7]Channel exiting idle mode
+[34m2026-07-15 18:12:58.495 UTC 0040 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #7 SubChannel #8]Subchannel Connectivity change to CONNECTING
+[34m2026-07-15 18:12:58.495 UTC 0041 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #7 SubChannel #8]Subchannel picks a new address "peer1.nsw.retf.com:7051" to connect
+[34m2026-07-15 18:12:58.498 UTC 0042 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #7 SubChannel #8]Subchannel Connectivity change to READY
+[34m2026-07-15 18:12:58.498 UTC 0043 INFO[0m [grpc] [34;1mInfof[0m -> [pick-first-leaf-lb] [pick-first-leaf-lb 0x3143b3898c60] SubConn 0x3143b3c1abe0 reported connectivity state READY and the health listener is disabled. Transitioning SubConn to READY.
+[34m2026-07-15 18:12:58.498 UTC 0044 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #7]Channel Connectivity change to READY
+[34m2026-07-15 18:12:58.531 UTC 0045 INFO[0m [lifecycle] [34;1mupdate[0m -> Updating cached definition for chaincode 's2-privacy-221' on channel 'extra-channel'
+[34m2026-07-15 18:12:58.570 UTC 0046 INFO[0m [lifecycle] [34;1mupdate[0m -> Chaincode with package ID 's2-privacy-221_2.2.1-nsw:42def0ee965dc6f14f183e8050379623363d3568c960b984713bd5d8ab87ac29' now available on channel extra-channel for chaincode definition s2-privacy-221:2.2.1
+[34m2026-07-15 18:12:58.570 UTC 0047 INFO[0m [lifecycle] [34;1mupdate[0m -> Updating cached definition for chaincode 's2-privacy-221-shadow' on channel 'extra-channel'
+[34m2026-07-15 18:12:58.571 UTC 0048 INFO[0m [grpc] [34;1mInfof[0m -> [core] original dial target is: "s221-chaincode-nsw:7052"
+[34m2026-07-15 18:12:58.571 UTC 0049 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #10]Channel created
+[34m2026-07-15 18:12:58.571 UTC 004a INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #10]parsed dial target is: resolver.Target{URL:url.URL{Scheme:"passthrough", Opaque:"", User:(*url.Userinfo)(nil), Host:"", Path:"/s221-chaincode-nsw:7052", Fragment:"", RawQuery:"", RawPath:"", RawFragment:"", ForceQuery:false, OmitHost:false}}
+[34m2026-07-15 18:12:58.571 UTC 004b INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #10]Channel authority set to "s221-chaincode-nsw:7052"
+[34m2026-07-15 18:12:58.571 UTC 004c INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #10]Resolver state updated: {
+  "Addresses": [
+    {
+      "Addr": "s221-chaincode-nsw:7052",
+      "ServerName": "",
+      "Attributes": null,
+      "BalancerAttributes": null,
+      "Metadata": null
+    }
+  ],
+  "Endpoints": [
+    {
+      "Addresses": [
+        {
+          "Addr": "s221-chaincode-nsw:7052",
+          "ServerName": "",
+          "Attributes": null,
+          "BalancerAttributes": null,
+          "Metadata": null
+        }
+      ],
+      "Attributes": null
+    }
+  ],
+  "ServiceConfig": null,
+  "Attributes": null
+} (resolver returned new addresses)
+[34m2026-07-15 18:12:58.571 UTC 004d INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #10]Channel switches to new LB policy "pick_first"
+[34m2026-07-15 18:12:58.572 UTC 004e INFO[0m [grpc] [34;1mInfof[0m -> [pick-first-leaf-lb] [pick-first-leaf-lb 0x3143b07445a0] Received new config {
+  "shuffleAddressList": false
+}, resolver state {
+  "Addresses": [
+    {
+      "Addr": "s221-chaincode-nsw:7052",
+      "ServerName": "",
+      "Attributes": null,
+      "BalancerAttributes": null,
+      "Metadata": null
+    }
+  ],
+  "Endpoints": [
+    {
+      "Addresses": [
+        {
+          "Addr": "s221-chaincode-nsw:7052",
+          "ServerName": "",
+          "Attributes": null,
+          "BalancerAttributes": null,
+          "Metadata": null
+        }
+      ],
+      "Attributes": null
+    }
+  ],
+  "ServiceConfig": null,
+  "Attributes": null
+}
+[34m2026-07-15 18:12:58.572 UTC 004f INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #10]Channel Connectivity change to CONNECTING
+[34m2026-07-15 18:12:58.572 UTC 0050 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #10 SubChannel #11]Subchannel created
+[34m2026-07-15 18:12:58.572 UTC 0051 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #10]Channel exiting idle mode
+[34m2026-07-15 18:12:58.572 UTC 0052 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #10 SubChannel #11]Subchannel Connectivity change to CONNECTING
+[34m2026-07-15 18:12:58.572 UTC 0053 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #10 SubChannel #11]Subchannel picks a new address "s221-chaincode-nsw:7052" to connect
+[34m2026-07-15 18:12:58.584 UTC 0054 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #10 SubChannel #11]Subchannel Connectivity change to READY
+[34m2026-07-15 18:12:58.584 UTC 0055 INFO[0m [grpc] [34;1mInfof[0m -> [pick-first-leaf-lb] [pick-first-leaf-lb 0x3143b07445a0] SubConn 0x3143b3c1bbd0 reported connectivity state READY and the health listener is disabled. Transitioning SubConn to READY.
+[34m2026-07-15 18:12:58.584 UTC 0056 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #10]Channel Connectivity change to READY
+[34m2026-07-15 18:12:58.608 UTC 0057 INFO[0m [lifecycle] [34;1mupdate[0m -> Chaincode with package ID 's2-privacy-221_2.2.1-nsw:42def0ee965dc6f14f183e8050379623363d3568c960b984713bd5d8ab87ac29' now available on channel extra-channel for chaincode definition s2-privacy-221-shadow:2.2.1
+[34m2026-07-15 18:12:58.608 UTC 0058 INFO[0m [lifecycle] [34;1mupdate[0m -> Updating cached definition for chaincode 'retf-core' on channel 'extra-channel'
+[34m2026-07-15 18:12:58.643 UTC 0059 INFO[0m [lifecycle] [34;1mupdate[0m -> Chaincode with package ID 'retf-core_1.0.0:1371610544775ed34d01d1bc7e9ba8be11f92abb2f6b09ad28ba8d5a50ffb0dd' now available on channel extra-channel for chaincode definition retf-core:1.0.0
+[34m2026-07-15 18:12:58.644 UTC 005a INFO[0m [grpc] [34;1mInfof[0m -> [core] original dial target is: "retf-core:7052"
+[34m2026-07-15 18:12:58.644 UTC 005b INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #13]Channel created
+[34m2026-07-15 18:12:58.644 UTC 005c INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #13]parsed dial target is: resolver.Target{URL:url.URL{Scheme:"passthrough", Opaque:"", User:(*url.Userinfo)(nil), Host:"", Path:"/retf-core:7052", Fragment:"", RawQuery:"", RawPath:"", RawFragment:"", ForceQuery:false, OmitHost:false}}
+[34m2026-07-15 18:12:58.644 UTC 005d INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #13]Channel authority set to "retf-core:7052"
+[34m2026-07-15 18:12:58.644 UTC 005e INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #13]Resolver state updated: {
+  "Addresses": [
+    {
+      "Addr": "retf-core:7052",
+      "ServerName": "",
+      "Attributes": null,
+      "BalancerAttributes": null,
+      "Metadata": null
+    }
+  ],
+  "Endpoints": [
+    {
+      "Addresses": [
+        {
+          "Addr": "retf-core:7052",
+          "ServerName": "",
+          "Attributes": null,
+          "BalancerAttributes": null,
+          "Metadata": null
+        }
+      ],
+      "Attributes": null
+    }
+  ],
+  "ServiceConfig": null,
+  "Attributes": null
+} (resolver returned new addresses)
+[34m2026-07-15 18:12:58.644 UTC 005f INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #13]Channel switches to new LB policy "pick_first"
+[34m2026-07-15 18:12:58.644 UTC 0060 INFO[0m [grpc] [34;1mInfof[0m -> [pick-first-leaf-lb] [pick-first-leaf-lb 0x3143b0c0ebd0] Received new config {
+  "shuffleAddressList": false
+}, resolver state {
+  "Addresses": [
+    {
+      "Addr": "retf-core:7052",
+      "ServerName": "",
+      "Attributes": null,
+      "BalancerAttributes": null,
+      "Metadata": null
+    }
+  ],
+  "Endpoints": [
+    {
+      "Addresses": [
+        {
+          "Addr": "retf-core:7052",
+          "ServerName": "",
+          "Attributes": null,
+          "BalancerAttributes": null,
+          "Metadata": null
+        }
+      ],
+      "Attributes": null
+    }
+  ],
+  "ServiceConfig": null,
+  "Attributes": null
+}
+[34m2026-07-15 18:12:58.644 UTC 0061 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #13]Channel Connectivity change to CONNECTING
+[34m2026-07-15 18:12:58.644 UTC 0062 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #13 SubChannel #14]Subchannel created
+[34m2026-07-15 18:12:58.644 UTC 0063 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #13]Channel exiting idle mode
+[34m2026-07-15 18:12:58.644 UTC 0064 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #13 SubChannel #14]Subchannel Connectivity change to CONNECTING
+[34m2026-07-15 18:12:58.644 UTC 0065 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #13 SubChannel #14]Subchannel picks a new address "retf-core:7052" to connect
+[34m2026-07-15 18:12:58.649 UTC 0066 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #13 SubChannel #14]Subchannel Connectivity change to READY
+[34m2026-07-15 18:12:58.649 UTC 0067 INFO[0m [ledgermgmt] [34;1mOpenLedger[0m -> Opened ledger with id = extra-channel
+[34m2026-07-15 18:12:58.649 UTC 0068 INFO[0m [grpc] [34;1mInfof[0m -> [pick-first-leaf-lb] [pick-first-leaf-lb 0x3143b0c0ebd0] SubConn 0x3143b0222820 reported connectivity state READY and the health listener is disabled. Transitioning SubConn to READY.
+[34m2026-07-15 18:12:58.649 UTC 0069 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #13]Channel Connectivity change to READY
+[31m2026-07-15 18:12:58.650 UTC 006a ERRO[0m [chaincode] [31;1mnotifyRegistry[0m -> failed to start retf-core_1.0.0_revision:938804a948c20cec904be9d394e002444ef653c252c5ea7caa9b81bbb954594d -- peer will not accept external chaincode connection retf-core_1.0.0_revision:938804a948c20cec904be9d394e002444ef653c252c5ea7caa9b81bbb954594d (except in dev mode)
+[34m2026-07-15 18:12:58.665 UTC 006b INFO[0m [gossip.gossip] [34;1mJoinChan[0m -> Joining gossip network of channel extra-channel with 3 organizations
+[34m2026-07-15 18:12:58.665 UTC 006c INFO[0m [gossip.gossip] [34;1mlearnAnchorPeers[0m -> Learning about the configured anchor peers of QLDMSP for channel extra-channel: [{peer0.qld.retf.com 7051}]
+[34m2026-07-15 18:12:58.665 UTC 006d INFO[0m [gossip.gossip] [34;1mlearnAnchorPeers[0m -> Learning about the configured anchor peers of SAMS for channel extra-channel: [{peer0.sa.retf.com 7051}]
+[34m2026-07-15 18:12:58.665 UTC 006e INFO[0m [gossip.gossip] [34;1mlearnAnchorPeers[0m -> Learning about the configured anchor peers of NSWMSP for channel extra-channel: [{peer0.nsw.retf.com 7051}]
+[34m2026-07-15 18:12:58.665 UTC 006f INFO[0m [gossip.gossip] [34;1mlearnAnchorPeers[0m -> Anchor peer for channel extra-channel with same endpoint, skipping connecting to myself
+[34m2026-07-15 18:12:58.666 UTC 0070 INFO[0m [gossip.state] [34;1mNewGossipStateProvider[0m -> Updating metadata information for channel extra-channel, current ledger sequence is at = 58, next expected block is = 59
+[34m2026-07-15 18:12:58.666 UTC 0071 INFO[0m [grpc] [34;1mInfof[0m -> [core] original dial target is: "peer0.qld.retf.com:7051"
+[34m2026-07-15 18:12:58.666 UTC 0072 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #16]Channel created
+[34m2026-07-15 18:12:58.666 UTC 0073 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #16]parsed dial target is: resolver.Target{URL:url.URL{Scheme:"passthrough", Opaque:"", User:(*url.Userinfo)(nil), Host:"", Path:"/peer0.qld.retf.com:7051", Fragment:"", RawQuery:"", RawPath:"", RawFragment:"", ForceQuery:false, OmitHost:false}}
+[34m2026-07-15 18:12:58.666 UTC 0074 INFO[0m [grpc] [34;1mInfof[0m -> [core] original dial target is: "peer0.sa.retf.com:7051"
+[34m2026-07-15 18:12:58.666 UTC 0075 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #17]Channel created
+[34m2026-07-15 18:12:58.666 UTC 0076 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #16]Channel authority set to "peer0.qld.retf.com:7051"
+[34m2026-07-15 18:12:58.666 UTC 0077 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #17]parsed dial target is: resolver.Target{URL:url.URL{Scheme:"passthrough", Opaque:"", User:(*url.Userinfo)(nil), Host:"", Path:"/peer0.sa.retf.com:7051", Fragment:"", RawQuery:"", RawPath:"", RawFragment:"", ForceQuery:false, OmitHost:false}}
+[34m2026-07-15 18:12:58.666 UTC 0078 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #17]Channel authority set to "peer0.sa.retf.com:7051"
+[34m2026-07-15 18:12:58.666 UTC 0079 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #17]Resolver state updated: {
+  "Addresses": [
+    {
+      "Addr": "peer0.sa.retf.com:7051",
+      "ServerName": "",
+      "Attributes": null,
+      "BalancerAttributes": null,
+      "Metadata": null
+    }
+  ],
+  "Endpoints": [
+    {
+      "Addresses": [
+        {
+          "Addr": "peer0.sa.retf.com:7051",
+          "ServerName": "",
+          "Attributes": null,
+          "BalancerAttributes": null,
+          "Metadata": null
+        }
+      ],
+      "Attributes": null
+    }
+  ],
+  "ServiceConfig": null,
+  "Attributes": null
+} (resolver returned new addresses)
+[34m2026-07-15 18:12:58.666 UTC 007a INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #16]Resolver state updated: {
+  "Addresses": [
+    {
+      "Addr": "peer0.qld.retf.com:7051",
+      "ServerName": "",
+      "Attributes": null,
+      "BalancerAttributes": null,
+      "Metadata": null
+    }
+  ],
+  "Endpoints": [
+    {
+      "Addresses": [
+        {
+          "Addr": "peer0.qld.retf.com:7051",
+          "ServerName": "",
+          "Attributes": null,
+          "BalancerAttributes": null,
+          "Metadata": null
+        }
+      ],
+      "Attributes": null
+    }
+  ],
+  "ServiceConfig": null,
+  "Attributes": null
+} (resolver returned new addresses)
+[34m2026-07-15 18:12:58.666 UTC 007b INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #17]Channel switches to new LB policy "pick_first"
+[34m2026-07-15 18:12:58.666 UTC 007c INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #16]Channel switches to new LB policy "pick_first"
+[34m2026-07-15 18:12:58.666 UTC 007d INFO[0m [grpc] [34;1mInfof[0m -> [pick-first-leaf-lb] [pick-first-leaf-lb 0x3143b0c0f560] Received new config {
+  "shuffleAddressList": false
+}, resolver state {
+  "Addresses": [
+    {
+      "Addr": "peer0.sa.retf.com:7051",
+      "ServerName": "",
+      "Attributes": null,
+      "BalancerAttributes": null,
+      "Metadata": null
+    }
+  ],
+  "Endpoints": [
+    {
+      "Addresses": [
+        {
+          "Addr": "peer0.sa.retf.com:7051",
+          "ServerName": "",
+          "Attributes": null,
+          "BalancerAttributes": null,
+          "Metadata": null
+        }
+      ],
+      "Attributes": null
+    }
+  ],
+  "ServiceConfig": null,
+  "Attributes": null
+}
+[34m2026-07-15 18:12:58.666 UTC 007e INFO[0m [grpc] [34;1mInfof[0m -> [pick-first-leaf-lb] [pick-first-leaf-lb 0x3143b0baf680] Received new config {
+  "shuffleAddressList": false
+}, resolver state {
+  "Addresses": [
+    {
+      "Addr": "peer0.qld.retf.com:7051",
+      "ServerName": "",
+      "Attributes": null,
+      "BalancerAttributes": null,
+      "Metadata": null
+    }
+  ],
+  "Endpoints": [
+    {
+      "Addresses": [
+        {
+          "Addr": "peer0.qld.retf.com:7051",
+          "ServerName": "",
+          "Attributes": null,
+          "BalancerAttributes": null,
+          "Metadata": null
+        }
+      ],
+      "Attributes": null
+    }
+  ],
+  "ServiceConfig": null,
+  "Attributes": null
+}
+[34m2026-07-15 18:12:58.666 UTC 0080 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #16]Channel Connectivity change to CONNECTING
+[34m2026-07-15 18:12:58.666 UTC 0081 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #16 SubChannel #18]Subchannel created
+[34m2026-07-15 18:12:58.666 UTC 0082 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #16]Channel exiting idle mode
+[34m2026-07-15 18:12:58.666 UTC 007f INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #17]Channel Connectivity change to CONNECTING
+[34m2026-07-15 18:12:58.666 UTC 0083 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #16 SubChannel #18]Subchannel Connectivity change to CONNECTING
+[34m2026-07-15 18:12:58.666 UTC 0084 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #17 SubChannel #19]Subchannel created
+[34m2026-07-15 18:12:58.666 UTC 0086 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #17]Channel exiting idle mode
+[34m2026-07-15 18:12:58.666 UTC 0085 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #16 SubChannel #18]Subchannel picks a new address "peer0.qld.retf.com:7051" to connect
+[34m2026-07-15 18:12:58.666 UTC 0087 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #17 SubChannel #19]Subchannel Connectivity change to CONNECTING
+[34m2026-07-15 18:12:58.667 UTC 0088 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #17 SubChannel #19]Subchannel picks a new address "peer0.sa.retf.com:7051" to connect
+[34m2026-07-15 18:12:58.669 UTC 0089 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #16 SubChannel #18]Subchannel Connectivity change to READY
+[34m2026-07-15 18:12:58.669 UTC 008a INFO[0m [grpc] [34;1mInfof[0m -> [pick-first-leaf-lb] [pick-first-leaf-lb 0x3143b0baf680] SubConn 0x3143b3e47db0 reported connectivity state READY and the health listener is disabled. Transitioning SubConn to READY.
+[34m2026-07-15 18:12:58.669 UTC 008b INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #16]Channel Connectivity change to READY
+[34m2026-07-15 18:12:58.669 UTC 008c INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #17 SubChannel #19]Subchannel Connectivity change to READY
+[34m2026-07-15 18:12:58.670 UTC 008d INFO[0m [grpc] [34;1mInfof[0m -> [pick-first-leaf-lb] [pick-first-leaf-lb 0x3143b0c0f560] SubConn 0x3143b0223900 reported connectivity state READY and the health listener is disabled. Transitioning SubConn to READY.
+[34m2026-07-15 18:12:58.670 UTC 008e INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #17]Channel Connectivity change to READY
+[31m2026-07-15 18:12:58.671 UTC 008f ERRO[0m [gossip.comm] [31;1mauthenticateRemotePeer[0m -> Failed verifying signature from 172.18.0.13:7051 : Could not acquire policy manager for channel extra-channel
+[33m2026-07-15 18:12:58.671 UTC 0090 WARN[0m [gossip.comm] [33;1mHandshake[0m -> Authentication failed: Could not acquire policy manager for channel extra-channel
+[34m2026-07-15 18:12:58.671 UTC 0091 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #16]Channel Connectivity change to SHUTDOWN
+[34m2026-07-15 18:12:58.671 UTC 0092 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #16]Closing the name resolver
+[34m2026-07-15 18:12:58.671 UTC 0093 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #16]ccBalancerWrapper: closing
+[34m2026-07-15 18:12:58.671 UTC 0094 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #16 SubChannel #18]Subchannel Connectivity change to SHUTDOWN
+[34m2026-07-15 18:12:58.671 UTC 0095 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #16 SubChannel #18]Subchannel deleted
+[34m2026-07-15 18:12:58.671 UTC 0096 INFO[0m [grpc] [34;1mInfof[0m -> [transport] [client-transport 0x3143b3824fc8] Closing: rpc error: code = Canceled desc = grpc: the client connection is closing
+[34m2026-07-15 18:12:58.671 UTC 0097 INFO[0m [grpc] [34;1mInfof[0m -> [transport] [client-transport 0x3143b3824fc8] loopyWriter exiting with error: rpc error: code = Canceled desc = grpc: the client connection is closing
+[34m2026-07-15 18:12:58.671 UTC 0098 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #16]Channel deleted
+[33m2026-07-15 18:12:58.671 UTC 0099 WARN[0m [gossip.gossip] [33;1mfunc1[0m -> Deep probe of peer0.qld.retf.com:7051 for channel extra-channel failed: Could not acquire policy manager for channel extra-channel
+[33m2026-07-15 18:12:58.671 UTC 009a WARN[0m [gossip.discovery] [33;1mfunc1[0m -> Could not connect to Endpoint: peer0.qld.retf.com:7051, InternalEndpoint: peer0.qld.retf.com:7051, PKI-ID: <nil>, Metadata:  : Could not acquire policy manager for channel extra-channel
+[31m2026-07-15 18:12:58.671 UTC 009b ERRO[0m [gossip.comm] [31;1mauthenticateRemotePeer[0m -> Failed verifying signature from 172.18.0.19:7051 : Could not acquire policy manager for channel extra-channel
+[33m2026-07-15 18:12:58.671 UTC 009c WARN[0m [gossip.comm] [33;1mHandshake[0m -> Authentication failed: Could not acquire policy manager for channel extra-channel
+[34m2026-07-15 18:12:58.672 UTC 009d INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #17]Channel Connectivity change to SHUTDOWN
+[34m2026-07-15 18:12:58.672 UTC 009e INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #17]Closing the name resolver
+[34m2026-07-15 18:12:58.672 UTC 009f INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #17]ccBalancerWrapper: closing
+[34m2026-07-15 18:12:58.672 UTC 00a0 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #17 SubChannel #19]Subchannel Connectivity change to SHUTDOWN
+[34m2026-07-15 18:12:58.672 UTC 00a1 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #17 SubChannel #19]Subchannel deleted
+[34m2026-07-15 18:12:58.672 UTC 00a2 INFO[0m [grpc] [34;1mInfof[0m -> [transport] [client-transport 0x3143b3e25d48] Closing: rpc error: code = Canceled desc = grpc: the client connection is closing
+[34m2026-07-15 18:12:58.672 UTC 00a3 INFO[0m [grpc] [34;1mInfof[0m -> [transport] [client-transport 0x3143b3e25d48] loopyWriter exiting with error: rpc error: code = Canceled desc = grpc: the client connection is closing
+[34m2026-07-15 18:12:58.672 UTC 00a4 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #17]Channel deleted
+[33m2026-07-15 18:12:58.672 UTC 00a5 WARN[0m [gossip.gossip] [33;1mfunc1[0m -> Deep probe of peer0.sa.retf.com:7051 for channel extra-channel failed: Could not acquire policy manager for channel extra-channel
+[33m2026-07-15 18:12:58.672 UTC 00a6 WARN[0m [gossip.discovery] [33;1mfunc1[0m -> Could not connect to Endpoint: peer0.sa.retf.com:7051, InternalEndpoint: peer0.sa.retf.com:7051, PKI-ID: <nil>, Metadata:  : Could not acquire policy manager for channel extra-channel
+[33m2026-07-15 18:12:58.673 UTC 00a7 WARN[0m [gossip.gossip] [33;1mvalidateMsg[0m -> StateInfo message GossipMessage: Channel: , nonce: 0, tag: CHAN_OR_ORG state_info_message: Timestamp:inc_num:1784139178432035651 seq_num:1784139178448534863PKI-id:05680cf7bd8d2654a68ad8309bcdcc005b7e4505f42d77b144bbb810f087f69e channel MAC:3c789df7fdd26e9580508bea7887bd81e1425f55a0614adbdf5a85ee6b442f7e properties:ledger_height:59 chaincodes:{name:"retf-core" version:"1"} chaincodes:{name:"s2-privacy-221" version:"1"} chaincodes:{name:"s2-privacy-221-shadow" version:"1"} chaincodes:{name:"_lifecycle" version:"1"}, Envelope: 181 bytes, Signature: 70 bytes is found invalid: Could not acquire policy manager for channel extra-channel
+[33m2026-07-15 18:12:58.673 UTC 00a8 WARN[0m [gossip.gossip] [33;1mhandleMessage[0m -> Message GossipMessage: Channel: , nonce: 0, tag: CHAN_OR_ORG state_info_message: Timestamp:inc_num:1784139178432035651 seq_num:1784139178448534863PKI-id:05680cf7bd8d2654a68ad8309bcdcc005b7e4505f42d77b144bbb810f087f69e channel MAC:3c789df7fdd26e9580508bea7887bd81e1425f55a0614adbdf5a85ee6b442f7e properties:ledger_height:59 chaincodes:{name:"retf-core" version:"1"} chaincodes:{name:"s2-privacy-221" version:"1"} chaincodes:{name:"s2-privacy-221-shadow" version:"1"} chaincodes:{name:"_lifecycle" version:"1"}, Envelope: 181 bytes, Signature: 70 bytes isn't valid
+[33m2026-07-15 18:12:58.674 UTC 00a9 WARN[0m [gossip.gossip] [33;1mvalidateMsg[0m -> StateInfo message GossipMessage: Channel: , nonce: 0, tag: CHAN_OR_ORG state_info_message: Timestamp:inc_num:1784139178610930095 seq_num:1784139178628619929PKI-id:1710b88a6508fdaa598c5a9ddfd323d3eb2c1cad2ec1e965632eea63786bd284 channel MAC:b77de3b18db5dd3706768387f192f6170acdee5530caf4717ce4a301f0df95fc properties:ledger_height:59 chaincodes:{name:"retf-core" version:"1"} chaincodes:{name:"s2-privacy-221" version:"1"} chaincodes:{name:"s2-privacy-221-shadow" version:"1"} chaincodes:{name:"_lifecycle" version:"1"}, Envelope: 181 bytes, Signature: 71 bytes is found invalid: Could not acquire policy manager for channel extra-channel
+[33m2026-07-15 18:12:58.674 UTC 00aa WARN[0m [gossip.gossip] [33;1mhandleMessage[0m -> Message GossipMessage: Channel: , nonce: 0, tag: CHAN_OR_ORG state_info_message: Timestamp:inc_num:1784139178610930095 seq_num:1784139178628619929PKI-id:1710b88a6508fdaa598c5a9ddfd323d3eb2c1cad2ec1e965632eea63786bd284 channel MAC:b77de3b18db5dd3706768387f192f6170acdee5530caf4717ce4a301f0df95fc properties:ledger_height:59 chaincodes:{name:"retf-core" version:"1"} chaincodes:{name:"s2-privacy-221" version:"1"} chaincodes:{name:"s2-privacy-221-shadow" version:"1"} chaincodes:{name:"_lifecycle" version:"1"}, Envelope: 181 bytes, Signature: 71 bytes isn't valid
+[34m2026-07-15 18:12:58.675 UTC 00ab INFO[0m [deliveryClient] [34;1mcreateBlockDelivererCFT[0m -> Creating a CFT (crash fault tolerant) BlockDeliverer for channel `extra-channel`
+[34m2026-07-15 18:12:58.678 UTC 00ac INFO[0m [peer.orderers] [34;1mUpdate[0m -> Processing updates for orderer endpoints: global: [orderer.orderer.retf.com:7050]; orgs: map[OrdererMSP:{[] [[45 45 45 45 45 66 69 71 73 78 32 67 69 82 84 73 70 73 67 65 84 69 45 45 45 45 45 10 77 73 73 67 86 122 67 67 65 102 50 103 65 119 73 66 65 103 73 81 75 97 107 77 54 98 66 89 68 47 79 99 76 102 43 86 51 54 115 105 104 106 65 75 66 103 103 113 104 107 106 79 80 81 81 68 65 106 66 50 77 81 115 119 10 67 81 89 68 86 81 81 71 69 119 74 86 85 122 69 84 77 66 69 71 65 49 85 69 67 66 77 75 81 50 70 115 97 87 90 118 99 109 53 112 89 84 69 87 77 66 81 71 65 49 85 69 66 120 77 78 85 50 70 117 73 69 90 121 10 89 87 53 106 97 88 78 106 98 122 69 90 77 66 99 71 65 49 85 69 67 104 77 81 98 51 74 107 90 88 74 108 99 105 53 121 90 88 82 109 76 109 78 118 98 84 69 102 77 66 48 71 65 49 85 69 65 120 77 87 100 71 120 122 10 89 50 69 117 98 51 74 107 90 88 74 108 99 105 53 121 90 88 82 109 76 109 78 118 98 84 65 101 70 119 48 121 78 106 65 48 77 106 73 119 77 122 73 50 77 68 66 97 70 119 48 122 78 106 65 48 77 84 107 119 77 122 73 50 10 77 68 66 97 77 72 89 120 67 122 65 74 66 103 78 86 66 65 89 84 65 108 86 84 77 82 77 119 69 81 89 68 86 81 81 73 69 119 112 68 89 87 120 112 90 109 57 121 98 109 108 104 77 82 89 119 70 65 89 68 86 81 81 72 10 69 119 49 84 89 87 52 103 82 110 74 104 98 109 78 112 99 50 78 118 77 82 107 119 70 119 89 68 86 81 81 75 69 120 66 118 99 109 82 108 99 109 86 121 76 110 74 108 100 71 89 117 89 50 57 116 77 82 56 119 72 81 89 68 10 86 81 81 68 69 120 90 48 98 72 78 106 89 83 53 118 99 109 82 108 99 109 86 121 76 110 74 108 100 71 89 117 89 50 57 116 77 70 107 119 69 119 89 72 75 111 90 73 122 106 48 67 65 81 89 73 75 111 90 73 122 106 48 68 10 65 81 99 68 81 103 65 69 79 118 107 57 80 72 75 75 87 47 115 50 49 111 72 70 72 76 97 121 116 115 51 75 108 103 43 100 66 118 114 104 74 76 86 99 83 66 89 106 55 83 117 90 122 83 74 70 85 122 89 110 69 51 56 55 10 54 90 79 99 105 74 47 105 43 85 112 117 82 116 74 115 79 47 55 75 66 84 110 122 88 97 69 106 57 75 78 116 77 71 115 119 68 103 89 68 86 82 48 80 65 81 72 47 66 65 81 68 65 103 71 109 77 66 48 71 65 49 85 100 10 74 81 81 87 77 66 81 71 67 67 115 71 65 81 85 70 66 119 77 67 66 103 103 114 66 103 69 70 66 81 99 68 65 84 65 80 66 103 78 86 72 82 77 66 65 102 56 69 66 84 65 68 65 81 72 47 77 67 107 71 65 49 85 100 10 68 103 81 105 66 67 68 117 65 109 54 73 105 122 104 118 65 120 110 102 113 119 102 109 66 56 107 48 122 65 55 67 84 109 89 51 77 72 84 52 102 111 117 54 108 71 74 114 120 122 65 75 66 103 103 113 104 107 106 79 80 81 81 68 10 65 103 78 73 65 68 66 70 65 105 65 102 49 47 114 57 99 102 87 48 102 97 97 76 110 70 51 115 74 102 116 119 83 109 67 81 110 72 121 112 107 88 75 97 75 120 78 87 88 90 47 80 74 119 73 104 65 76 119 87 105 72 78 48 10 75 72 106 87 47 122 111 104 102 83 43 43 50 43 55 99 79 121 80 74 88 89 85 109 107 78 85 109 113 121 98 117 105 55 119 114 10 45 45 45 45 45 69 78 68 32 67 69 82 84 73 70 73 67 65 84 69 45 45 45 45 45 10]]}]
+[34m2026-07-15 18:12:58.678 UTC 00ad INFO[0m [deliveryClient] [34;1mStartDeliverForChannel[0m -> This peer will retrieve blocks from ordering service and disseminate to other peers in the organization channel=extra-channel
+[34m2026-07-15 18:12:58.678 UTC 00ae INFO[0m [peer] [34;1mInitialize[0m -> Loading chain intra-channel
+[34m2026-07-15 18:12:58.679 UTC 00af INFO[0m [ledgermgmt] [34;1mOpenLedger[0m -> Opening ledger with id = intra-channel
+[34m2026-07-15 18:12:58.679 UTC 00b0 INFO[0m [grpc] [34;1mInfof[0m -> [core] original dial target is: "orderer.orderer.retf.com:7050"
+[34m2026-07-15 18:12:58.679 UTC 00b1 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #22]Channel created
+[34m2026-07-15 18:12:58.679 UTC 00b2 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #22]parsed dial target is: resolver.Target{URL:url.URL{Scheme:"passthrough", Opaque:"", User:(*url.Userinfo)(nil), Host:"", Path:"/orderer.orderer.retf.com:7050", Fragment:"", RawQuery:"", RawPath:"", RawFragment:"", ForceQuery:false, OmitHost:false}}
+[34m2026-07-15 18:12:58.679 UTC 00b3 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #22]Channel authority set to "orderer.orderer.retf.com:7050"
+[34m2026-07-15 18:12:58.679 UTC 00b4 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #22]Resolver state updated: {
+  "Addresses": [
+    {
+      "Addr": "orderer.orderer.retf.com:7050",
+      "ServerName": "",
+      "Attributes": null,
+      "BalancerAttributes": null,
+      "Metadata": null
+    }
+  ],
+  "Endpoints": [
+    {
+      "Addresses": [
+        {
+          "Addr": "orderer.orderer.retf.com:7050",
+          "ServerName": "",
+          "Attributes": null,
+          "BalancerAttributes": null,
+          "Metadata": null
+        }
+      ],
+      "Attributes": null
+    }
+  ],
+  "ServiceConfig": null,
+  "Attributes": null
+} (resolver returned new addresses)
+[34m2026-07-15 18:12:58.679 UTC 00b5 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #22]Channel switches to new LB policy "pick_first"
+[34m2026-07-15 18:12:58.679 UTC 00b6 INFO[0m [grpc] [34;1mInfof[0m -> [pick-first-leaf-lb] [pick-first-leaf-lb 0x3143b2123560] Received new config {
+  "shuffleAddressList": false
+}, resolver state {
+  "Addresses": [
+    {
+      "Addr": "orderer.orderer.retf.com:7050",
+      "ServerName": "",
+      "Attributes": null,
+      "BalancerAttributes": null,
+      "Metadata": null
+    }
+  ],
+  "Endpoints": [
+    {
+      "Addresses": [
+        {
+          "Addr": "orderer.orderer.retf.com:7050",
+          "ServerName": "",
+          "Attributes": null,
+          "BalancerAttributes": null,
+          "Metadata": null
+        }
+      ],
+      "Attributes": null
+    }
+  ],
+  "ServiceConfig": null,
+  "Attributes": null
+}
+[34m2026-07-15 18:12:58.679 UTC 00b7 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #22]Channel Connectivity change to CONNECTING
+[34m2026-07-15 18:12:58.679 UTC 00b8 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #22 SubChannel #23]Subchannel created
+[34m2026-07-15 18:12:58.680 UTC 00b9 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #22]Channel exiting idle mode
+[34m2026-07-15 18:12:58.680 UTC 00ba INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #22 SubChannel #23]Subchannel Connectivity change to CONNECTING
+[34m2026-07-15 18:12:58.680 UTC 00bb INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #22 SubChannel #23]Subchannel picks a new address "orderer.orderer.retf.com:7050" to connect
+[34m2026-07-15 18:12:58.683 UTC 00bc INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #22 SubChannel #23]Subchannel Connectivity change to READY
+[34m2026-07-15 18:12:58.683 UTC 00bd INFO[0m [grpc] [34;1mInfof[0m -> [pick-first-leaf-lb] [pick-first-leaf-lb 0x3143b2123560] SubConn 0x3143b212c280 reported connectivity state READY and the health listener is disabled. Transitioning SubConn to READY.
+[34m2026-07-15 18:12:58.683 UTC 00be INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #22]Channel Connectivity change to READY
+[34m2026-07-15 18:12:58.684 UTC 00bf INFO[0m [peer.blocksprovider] [34;1mStart[0m -> BlockReceiver starting channel=extra-channel orderer-address=orderer.orderer.retf.com:7050
+[34m2026-07-15 18:12:58.712 UTC 00c0 INFO[0m [lifecycle] [34;1mupdate[0m -> Updating cached definition for chaincode 'retf-core' on channel 'intra-channel'
+[34m2026-07-15 18:12:58.754 UTC 00c1 INFO[0m [lifecycle] [34;1mupdate[0m -> Chaincode with package ID 'retf-core_1.0.0_revision:938804a948c20cec904be9d394e002444ef653c252c5ea7caa9b81bbb954594d' now available on channel intra-channel for chaincode definition retf-core:1.0.0
+[34m2026-07-15 18:12:58.754 UTC 00c2 INFO[0m [lifecycle] [34;1mupdate[0m -> Updating cached definition for chaincode 's2-privacy' on channel 'intra-channel'
+[34m2026-07-15 18:12:58.793 UTC 00c3 INFO[0m [lifecycle] [34;1mupdate[0m -> Chaincode with package ID 's2-privacy_2.2.0:3eff28e361e93488612edf07d13614bc5b49edaf2682411e77eedf8ebc3212d9' now available on channel intra-channel for chaincode definition s2-privacy:2.2.0
+[34m2026-07-15 18:12:58.793 UTC 00c4 INFO[0m [lifecycle] [34;1mupdate[0m -> Updating cached definition for chaincode 's2-privacy-221' on channel 'intra-channel'
+[34m2026-07-15 18:12:58.822 UTC 00c5 INFO[0m [lifecycle] [34;1mupdate[0m -> Chaincode with package ID 's2-privacy-221_2.2.1-nsw:42def0ee965dc6f14f183e8050379623363d3568c960b984713bd5d8ab87ac29' now available on channel intra-channel for chaincode definition s2-privacy-221:2.2.1
+[34m2026-07-15 18:12:58.827 UTC 00c6 INFO[0m [ledgermgmt] [34;1mOpenLedger[0m -> Opened ledger with id = intra-channel
+[34m2026-07-15 18:12:58.842 UTC 00c7 INFO[0m [gossip.gossip] [34;1mJoinChan[0m -> Joining gossip network of channel intra-channel with 1 organizations
+[34m2026-07-15 18:12:58.842 UTC 00c8 INFO[0m [gossip.gossip] [34;1mlearnAnchorPeers[0m -> Learning about the configured anchor peers of NSWMSP for channel intra-channel: [{peer0.nsw.retf.com 7051}]
+[34m2026-07-15 18:12:58.842 UTC 00c9 INFO[0m [gossip.gossip] [34;1mlearnAnchorPeers[0m -> Anchor peer for channel intra-channel with same endpoint, skipping connecting to myself
+[34m2026-07-15 18:12:58.843 UTC 00ca INFO[0m [gossip.state] [34;1mNewGossipStateProvider[0m -> Updating metadata information for channel intra-channel, current ledger sequence is at = 2097, next expected block is = 2098
+[34m2026-07-15 18:12:58.846 UTC 00cb INFO[0m [deliveryClient] [34;1mcreateBlockDelivererCFT[0m -> Creating a CFT (crash fault tolerant) BlockDeliverer for channel `intra-channel`
+[34m2026-07-15 18:12:58.848 UTC 00cc INFO[0m [peer.orderers] [34;1mUpdate[0m -> Processing updates for orderer endpoints: global: [orderer.orderer.retf.com:7050]; orgs: map[OrdererMSP:{[] [[45 45 45 45 45 66 69 71 73 78 32 67 69 82 84 73 70 73 67 65 84 69 45 45 45 45 45 10 77 73 73 67 86 122 67 67 65 102 50 103 65 119 73 66 65 103 73 81 75 97 107 77 54 98 66 89 68 47 79 99 76 102 43 86 51 54 115 105 104 106 65 75 66 103 103 113 104 107 106 79 80 81 81 68 65 106 66 50 77 81 115 119 10 67 81 89 68 86 81 81 71 69 119 74 86 85 122 69 84 77 66 69 71 65 49 85 69 67 66 77 75 81 50 70 115 97 87 90 118 99 109 53 112 89 84 69 87 77 66 81 71 65 49 85 69 66 120 77 78 85 50 70 117 73 69 90 121 10 89 87 53 106 97 88 78 106 98 122 69 90 77 66 99 71 65 49 85 69 67 104 77 81 98 51 74 107 90 88 74 108 99 105 53 121 90 88 82 109 76 109 78 118 98 84 69 102 77 66 48 71 65 49 85 69 65 120 77 87 100 71 120 122 10 89 50 69 117 98 51 74 107 90 88 74 108 99 105 53 121 90 88 82 109 76 109 78 118 98 84 65 101 70 119 48 121 78 106 65 48 77 106 73 119 77 122 73 50 77 68 66 97 70 119 48 122 78 106 65 48 77 84 107 119 77 122 73 50 10 77 68 66 97 77 72 89 120 67 122 65 74 66 103 78 86 66 65 89 84 65 108 86 84 77 82 77 119 69 81 89 68 86 81 81 73 69 119 112 68 89 87 120 112 90 109 57 121 98 109 108 104 77 82 89 119 70 65 89 68 86 81 81 72 10 69 119 49 84 89 87 52 103 82 110 74 104 98 109 78 112 99 50 78 118 77 82 107 119 70 119 89 68 86 81 81 75 69 120 66 118 99 109 82 108 99 109 86 121 76 110 74 108 100 71 89 117 89 50 57 116 77 82 56 119 72 81 89 68 10 86 81 81 68 69 120 90 48 98 72 78 106 89 83 53 118 99 109 82 108 99 109 86 121 76 110 74 108 100 71 89 117 89 50 57 116 77 70 107 119 69 119 89 72 75 111 90 73 122 106 48 67 65 81 89 73 75 111 90 73 122 106 48 68 10 65 81 99 68 81 103 65 69 79 118 107 57 80 72 75 75 87 47 115 50 49 111 72 70 72 76 97 121 116 115 51 75 108 103 43 100 66 118 114 104 74 76 86 99 83 66 89 106 55 83 117 90 122 83 74 70 85 122 89 110 69 51 56 55 10 54 90 79 99 105 74 47 105 43 85 112 117 82 116 74 115 79 47 55 75 66 84 110 122 88 97 69 106 57 75 78 116 77 71 115 119 68 103 89 68 86 82 48 80 65 81 72 47 66 65 81 68 65 103 71 109 77 66 48 71 65 49 85 100 10 74 81 81 87 77 66 81 71 67 67 115 71 65 81 85 70 66 119 77 67 66 103 103 114 66 103 69 70 66 81 99 68 65 84 65 80 66 103 78 86 72 82 77 66 65 102 56 69 66 84 65 68 65 81 72 47 77 67 107 71 65 49 85 100 10 68 103 81 105 66 67 68 117 65 109 54 73 105 122 104 118 65 120 110 102 113 119 102 109 66 56 107 48 122 65 55 67 84 109 89 51 77 72 84 52 102 111 117 54 108 71 74 114 120 122 65 75 66 103 103 113 104 107 106 79 80 81 81 68 10 65 103 78 73 65 68 66 70 65 105 65 102 49 47 114 57 99 102 87 48 102 97 97 76 110 70 51 115 74 102 116 119 83 109 67 81 110 72 121 112 107 88 75 97 75 120 78 87 88 90 47 80 74 119 73 104 65 76 119 87 105 72 78 48 10 75 72 106 87 47 122 111 104 102 83 43 43 50 43 55 99 79 121 80 74 88 89 85 109 107 78 85 109 113 121 98 117 105 55 119 114 10 45 45 45 45 45 69 78 68 32 67 69 82 84 73 70 73 67 65 84 69 45 45 45 45 45 10]]}]
+[34m2026-07-15 18:12:58.848 UTC 00cd INFO[0m [deliveryClient] [34;1mStartDeliverForChannel[0m -> This peer will retrieve blocks from ordering service and disseminate to other peers in the organization channel=intra-channel
+[34m2026-07-15 18:12:58.849 UTC 00ce INFO[0m [discovery] [34;1mNewService[0m -> Created with config TLS: true, authCacheMaxSize: 1000, authCachePurgeRatio: 0.750000
+[34m2026-07-15 18:12:58.849 UTC 00cf INFO[0m [nodeCmd] [34;1mserve[0m -> Discovery service activated
+[34m2026-07-15 18:12:58.849 UTC 00d0 INFO[0m [nodeCmd] [34;1mserve[0m -> Starting peer with ID=[peer0.nsw.retf.com], network ID=[dev], address=[peer0.nsw.retf.com:7051]
+[34m2026-07-15 18:12:58.849 UTC 00d1 INFO[0m [grpc] [34;1mInfof[0m -> [core] original dial target is: "orderer.orderer.retf.com:7050"
+[34m2026-07-15 18:12:58.849 UTC 00d2 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #25]Channel created
+[34m2026-07-15 18:12:58.849 UTC 00d3 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #25]parsed dial target is: resolver.Target{URL:url.URL{Scheme:"passthrough", Opaque:"", User:(*url.Userinfo)(nil), Host:"", Path:"/orderer.orderer.retf.com:7050", Fragment:"", RawQuery:"", RawPath:"", RawFragment:"", ForceQuery:false, OmitHost:false}}
+[34m2026-07-15 18:12:58.849 UTC 00d4 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #25]Channel authority set to "orderer.orderer.retf.com:7050"
+[34m2026-07-15 18:12:58.849 UTC 00d5 INFO[0m [nodeCmd] [34;1mfunc7[0m -> Starting profiling server with listenAddress = 0.0.0.0:6060
+[34m2026-07-15 18:12:58.849 UTC 00d6 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #25]Resolver state updated: {
+  "Addresses": [
+    {
+      "Addr": "orderer.orderer.retf.com:7050",
+      "ServerName": "",
+      "Attributes": null,
+      "BalancerAttributes": null,
+      "Metadata": null
+    }
+  ],
+  "Endpoints": [
+    {
+      "Addresses": [
+        {
+          "Addr": "orderer.orderer.retf.com:7050",
+          "ServerName": "",
+          "Attributes": null,
+          "BalancerAttributes": null,
+          "Metadata": null
+        }
+      ],
+      "Attributes": null
+    }
+  ],
+  "ServiceConfig": null,
+  "Attributes": null
+} (resolver returned new addresses)
+[34m2026-07-15 18:12:58.849 UTC 00d7 INFO[0m [nodeCmd] [34;1mserve[0m -> Started peer with ID=[peer0.nsw.retf.com], network ID=[dev], address=[peer0.nsw.retf.com:7051]
+[34m2026-07-15 18:12:58.849 UTC 00d9 INFO[0m [kvledger] [34;1mLoadPreResetHeight[0m -> Loading prereset height from path [/var/hyperledger/production/ledgersData/chains]
+[34m2026-07-15 18:12:58.849 UTC 00d8 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #25]Channel switches to new LB policy "pick_first"
+[34m2026-07-15 18:12:58.849 UTC 00da INFO[0m [grpc] [34;1mInfof[0m -> [pick-first-leaf-lb] [pick-first-leaf-lb 0x3143b3016990] Received new config {
+  "shuffleAddressList": false
+}, resolver state {
+  "Addresses": [
+    {
+      "Addr": "orderer.orderer.retf.com:7050",
+      "ServerName": "",
+      "Attributes": null,
+      "BalancerAttributes": null,
+      "Metadata": null
+    }
+  ],
+  "Endpoints": [
+    {
+      "Addresses": [
+        {
+          "Addr": "orderer.orderer.retf.com:7050",
+          "ServerName": "",
+          "Attributes": null,
+          "BalancerAttributes": null,
+          "Metadata": null
+        }
+      ],
+      "Attributes": null
+    }
+  ],
+  "ServiceConfig": null,
+  "Attributes": null
+}
+[34m2026-07-15 18:12:58.849 UTC 00dc INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #25]Channel Connectivity change to CONNECTING
+[34m2026-07-15 18:12:58.849 UTC 00dd INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #25 SubChannel #26]Subchannel created
+[34m2026-07-15 18:12:58.849 UTC 00de INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #25]Channel exiting idle mode
+[34m2026-07-15 18:12:58.849 UTC 00db INFO[0m [nodeCmd] [34;1mserve[0m -> Starting peer with Gateway enabled
+[34m2026-07-15 18:12:58.849 UTC 00df INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #25 SubChannel #26]Subchannel Connectivity change to CONNECTING
+[34m2026-07-15 18:12:58.849 UTC 00e0 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Server #1 ListenSocket #27]ListenSocket created
+[34m2026-07-15 18:12:58.850 UTC 00e1 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #25 SubChannel #26]Subchannel picks a new address "orderer.orderer.retf.com:7050" to connect
+[31m2026-07-15 18:12:58.851 UTC 00e2 ERRO[0m [core.comm] [31;1mServerHandshake[0m -> Server TLS handshake failed in 933.821µs with error remote error: tls: bad certificate server=PeerServer remoteaddress=172.18.0.19:51344
+[34m2026-07-15 18:12:58.851 UTC 00e3 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Server #1]grpc: Server.Serve failed to create ServerTransport: connection error: desc = "ServerHandshake(\"172.18.0.19:51344\") failed: remote error: tls: bad certificate"
+[34m2026-07-15 18:12:58.852 UTC 00e4 INFO[0m [comm.grpc.server] [34;1mfunc1[0m -> unary call completed grpc.service=gossip.Gossip grpc.method=Ping grpc.request_deadline=2026-07-15T18:13:00.852Z grpc.peer_address=172.18.0.13:37358 grpc.peer_subject="CN=peer0.qld.retf.com,L=San Francisco,ST=California,C=US" grpc.code=OK grpc.call_duration=49.096µs
+[34m2026-07-15 18:12:58.853 UTC 00e5 INFO[0m [gossip.comm] [34;1mGossipStream[0m -> Peer 05680cf7bd8d2654a68ad8309bcdcc005b7e4505f42d77b144bbb810f087f69e (172.18.0.13:37358) probed us
+[34m2026-07-15 18:12:58.853 UTC 00e6 INFO[0m [comm.grpc.server] [34;1mfunc1[0m -> streaming call completed grpc.service=gossip.Gossip grpc.method=GossipStream grpc.request_deadline=2026-07-15T18:13:08.852Z grpc.peer_address=172.18.0.13:37358 grpc.peer_subject="CN=peer0.qld.retf.com,L=San Francisco,ST=California,C=US" grpc.code=OK grpc.call_duration=856.618µs
+[34m2026-07-15 18:12:58.854 UTC 00e7 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #25 SubChannel #26]Subchannel Connectivity change to READY
+[34m2026-07-15 18:12:58.854 UTC 00e8 INFO[0m [grpc] [34;1mInfof[0m -> [pick-first-leaf-lb] [pick-first-leaf-lb 0x3143b3016990] SubConn 0x3143b301e230 reported connectivity state READY and the health listener is disabled. Transitioning SubConn to READY.
+[34m2026-07-15 18:12:58.854 UTC 00e9 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #25]Channel Connectivity change to READY
+[34m2026-07-15 18:12:58.854 UTC 00ea INFO[0m [peer.blocksprovider] [34;1mStart[0m -> BlockReceiver starting channel=intra-channel orderer-address=orderer.orderer.retf.com:7050
+[34m2026-07-15 18:12:58.854 UTC 00eb INFO[0m [grpc] [34;1mInfof[0m -> [transport] [server-transport 0x3143b3d54d00] Closing: EOF
+[34m2026-07-15 18:12:58.854 UTC 00ec INFO[0m [grpc] [34;1mInfof[0m -> [transport] [server-transport 0x3143b3d54d00] loopyWriter exiting with error: transport closed by client
+[34m2026-07-15 18:12:58.859 UTC 00ed INFO[0m [comm.grpc.server] [34;1mfunc1[0m -> unary call completed grpc.service=gossip.Gossip grpc.method=Ping grpc.request_deadline=2026-07-15T18:13:00.859Z grpc.peer_address=172.18.0.13:37370 grpc.peer_subject="CN=peer0.qld.retf.com,L=San Francisco,ST=California,C=US" grpc.code=OK grpc.call_duration=55.149µs
+[31m2026-07-15 18:12:59.855 UTC 00ee ERRO[0m [core.comm] [31;1mServerHandshake[0m -> Server TLS handshake failed in 1.390686ms with error remote error: tls: bad certificate server=PeerServer remoteaddress=172.18.0.19:51352
+[34m2026-07-15 18:12:59.855 UTC 00ef INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Server #1]grpc: Server.Serve failed to create ServerTransport: connection error: desc = "ServerHandshake(\"172.18.0.19:51352\") failed: remote error: tls: bad certificate"
+[31m2026-07-15 18:13:01.246 UTC 00f0 ERRO[0m [core.comm] [31;1mServerHandshake[0m -> Server TLS handshake failed in 869.233µs with error remote error: tls: bad certificate server=PeerServer remoteaddress=172.18.0.19:38692
+[34m2026-07-15 18:13:01.246 UTC 00f1 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Server #1]grpc: Server.Serve failed to create ServerTransport: connection error: desc = "ServerHandshake(\"172.18.0.19:38692\") failed: remote error: tls: bad certificate"

@@ -1,0 +1,78 @@
+{
+  "schema_version": "saib-retf-s2.2.2.1-provenance/1",
+  "generated_at_utc": "2026-07-16T04:24:29.241549Z",
+  "release_commit": "724095cc35da4dad5d73e7605891c60418c7be34",
+  "release_tag": "s2.2.2.1-audit",
+  "release_branch": "s2.2.2.1-audit-errata",
+  "parent_commit": "6e4eb94c695632413820a5716ae76da05054ac79",
+  "s2.2.2_merge_base": "6e4eb94c695632413820a5716ae76da05054ac79",
+  "historical_s2.2.2_tag_commit": "6e4eb94c695632413820a5716ae76da05054ac79",
+  "historical_tag_moved": false,
+  "git_dirty": false,
+  "git_status": [],
+  "source_files": 200,
+  "source_manifest_sha256": "12966d02c06df00b0f6a83cc1973e2d7c244b342a94be0c3077921b80e0f5dec",
+  "security_regressions": {
+    "passed": 31,
+    "total": 31
+  },
+  "corrected_historical_freshness_references": {
+    "passed": 9,
+    "total": 9
+  },
+  "time_boundary_tests": {
+    "passed": 6,
+    "total": 6
+  },
+  "ccaas_cross_org_matrix": {
+    "passed": 12,
+    "total": 12
+  },
+  "fabric_block_scan": {
+    "authorization_records_total": 18,
+    "valid_records": 7,
+    "invalid_records": 11,
+    "invalid_reason": "MVCC_READ_CONFLICT",
+    "valid_selected_sensitive_hits": 0,
+    "finite_sample": true
+  },
+  "freshness_model": {
+    "time_source": "Fabric proposal timestamp constrained by peer TimeWindowCheck",
+    "maximum_relaxation": "30 seconds plus node clock error",
+    "exact_wall_clock_expiry_claim": false
+  },
+  "evidence_reference_gate": {
+    "references": 27,
+    "resolved": 27,
+    "missing": 0,
+    "hash_mismatch": 0,
+    "semantic_locator_mismatch": 0,
+    "passed": true
+  },
+  "recursive_private_material_scan": {
+    "passed": true,
+    "forbidden_hits": 0,
+    "allowlist_mode": "exact normalized path plus exact SHA-256"
+  },
+  "trace_authorization_key_separation": {
+    "schema_version": "saib-retf-s2.2.2.1-key-separation-test/1",
+    "authorization_attestor_key_id": "s222-attestor",
+    "authorization_attestor_key_version": 2,
+    "release_trace_key_id": "s2221-release-trace",
+    "release_trace_key_version": 1,
+    "authorization_public_key_sha256": "c1e6d97bbc72f9074401279d4f03fa7f317b0e891af70168c334c3c31c9d9dce",
+    "release_trace_public_key_sha256": "1acb8ffe14e5df0a01e6d943a19b8345d613cc5fbba3695d763547fd6310a435",
+    "public_keys_distinct": true,
+    "release_public_file_matches_private": true,
+    "self_signature_verifications": 2,
+    "cross_signature_rejections": 2,
+    "private_keys_packaged": false,
+    "passed": true
+  },
+  "runtime_trace_payload_sha256": "44ca284d702eda36a734805e2337396698cc5849f75de06f344619cdac588169",
+  "runtime_trace_file_sha256": "033e4b4b5765f81d0ab007cbf52c08852817de3c000b97baa8dd1886e51af8e1",
+  "runtime_trace_attestation": "Ed25519 release-trace-only key; distinct from authorization attestor; private key excluded",
+  "runtime_trace_events_resolved": 9,
+  "s3_distributed_mpc": "NOT STARTED",
+  "formal_performance_experiments": "STILL NO-GO"
+}

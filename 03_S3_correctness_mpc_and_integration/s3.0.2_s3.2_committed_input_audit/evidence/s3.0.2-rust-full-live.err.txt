@@ -1,0 +1,42 @@
+warning: use of deprecated associated function `elliptic_curve::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> vendor/credx-0.2.1-saib/src/presentation/verifiable_encryption_decryption.rs:164:46
+    |
+164 |         let key = aes_gcm::Key::<Aes128Gcm>::from_slice(&okm[..16]);
+    |                                              ^^^^^^^^^^
+    |
+    = note: `#[warn(deprecated)]` on by default
+
+warning: use of deprecated associated function `elliptic_curve::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> vendor/credx-0.2.1-saib/src/presentation/verifiable_encryption_decryption.rs:235:28
+    |
+235 |         let nonce = Nonce::from_slice(&self.ciphertext[..12]);
+    |                            ^^^^^^^^^^
+
+warning: use of deprecated associated function `elliptic_curve::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> vendor/credx-0.2.1-saib/src/presentation/verifiable_encryption_decryption.rs:243:46
+    |
+243 |         let key = aes_gcm::Key::<Aes128Gcm>::from_slice(&okm[..16]);
+    |                                              ^^^^^^^^^^
+
+warning: `credx` (lib) generated 3 warnings
+   Compiling saib-anoncred v0.1.0 (/mnt/g/paperexper/retf/saib-retf/prototype/anoncred-rust)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 2m 49s
+     Running unittests src/lib.rs (target/debug/deps/saib_anoncred-61c2ca59c2dfbda5)
+     Running unittests src/bin/s2_1_vector_tool.rs (target/debug/deps/s2_1_vector_tool-ba222f0abe9205f4)
+     Running unittests src/bin/s2_2_global_issuer.rs (target/debug/deps/s2_2_global_issuer-cf896e65823c19a7)
+     Running unittests src/bin/s2_2_holder.rs (target/debug/deps/s2_2_holder-1c2a31698c4415d9)
+     Running unittests src/bin/s2_2_regional_issuer.rs (target/debug/deps/s2_2_regional_issuer-8f5d46bfe46ffa29)
+     Running unittests src/bin/s3_committed_input_vector.rs (target/debug/deps/s3_committed_input_vector-e0df080283bbe86e)
+     Running unittests src/bin/s3_consistency_verifier.rs (target/debug/deps/s3_consistency_verifier-492c72f0e8260723)
+     Running tests/golden_vectors.rs (target/debug/deps/golden_vectors-da0f6fd2ad1e032b)
+     Running tests/s2_2_role_isolation.rs (target/debug/deps/s2_2_role_isolation-3f931618892f3d62)
+     Running tests/s3_committed_input.rs (target/debug/deps/s3_committed_input-d94d576d2c19df3a)
+
+thread 'component_substitution_range_mutation_and_policy_substitution_fail' panicked at /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs:701:9:
+assertion `left == right` failed
+  left: 0
+ right: 1
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+     Running tests/s3_credit_commitment.rs (target/debug/deps/s3_credit_commitment-aa34ab8bfc5a6e12)
+     Running tests/security_cases.rs (target/debug/deps/security_cases-11ca6810a83009e4)
+     Running tests/structured_fuzz.rs (target/debug/deps/structured_fuzz-37c646a6b0be5cc6)

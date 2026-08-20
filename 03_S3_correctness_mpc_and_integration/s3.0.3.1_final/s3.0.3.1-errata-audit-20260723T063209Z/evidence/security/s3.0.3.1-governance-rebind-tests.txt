@@ -1,0 +1,37 @@
+=== RUN   TestAuthorizationCanCreateOnlyOneInputAcrossSessionHandleAndNonceChanges
+=== RUN   TestAuthorizationCanCreateOnlyOneInputAcrossSessionHandleAndNonceChanges/second_record
+    registry_test.go:225: attack=second record authorization=e838116b087382d4b201ad789f0a0813f08d6da2c42b7cade0dd660e91ffb856 candidate_session=session-2 candidate_handle=ef1e5814a8ca0b9d0463ecd5b25b01e3158b7794bc78a278aeacc70ca9710d44 result=REJECT reason="S2 authorization already has an S3 input record"
+=== RUN   TestAuthorizationCanCreateOnlyOneInputAcrossSessionHandleAndNonceChanges/changed_handle
+    registry_test.go:225: attack=changed handle authorization=e838116b087382d4b201ad789f0a0813f08d6da2c42b7cade0dd660e91ffb856 candidate_session=session-3 candidate_handle=dadc3d20e485a15be2638c3decda24004e4f0aed69fd136c77603c73ef8d6e36 result=REJECT reason="S2 authorization already has an S3 input record"
+--- PASS: TestAuthorizationCanCreateOnlyOneInputAcrossSessionHandleAndNonceChanges (0.00s)
+    --- PASS: TestAuthorizationCanCreateOnlyOneInputAcrossSessionHandleAndNonceChanges/second_record (0.00s)
+    --- PASS: TestAuthorizationCanCreateOnlyOneInputAcrossSessionHandleAndNonceChanges/changed_handle (0.00s)
+=== RUN   TestAbortRetryRequiresGovernedMonotonicRebind
+    registry_test.go:259: attack=unsigned_rebind attempt=2 result=REJECT reason="governance authorization signature is invalid"
+    registry_test.go:290: attack=governed_handle_substitution attempt=2 result=REJECT reason="governed rebind violates the monotonic authorization/order identity"
+    registry_test.go:295: transition=governed_rebind attempt=2 parent=8d88815ea7e01373347eb06a66469cc313dbc1073a72dfbdf70753f424597b87 result=ACCEPT
+--- PASS: TestAbortRetryRequiresGovernedMonotonicRebind (0.00s)
+=== RUN   TestGovernedRebindRejectsUntrustedEpochPolicyAndKeys
+=== RUN   TestGovernedRebindRejectsUntrustedEpochPolicyAndKeys/epoch_zero
+=== RUN   TestGovernedRebindRejectsUntrustedEpochPolicyAndKeys/old_epoch
+=== RUN   TestGovernedRebindRejectsUntrustedEpochPolicyAndKeys/future_epoch
+=== RUN   TestGovernedRebindRejectsUntrustedEpochPolicyAndKeys/wrong_policy
+=== RUN   TestGovernedRebindRejectsUntrustedEpochPolicyAndKeys/old_equality_key
+=== RUN   TestGovernedRebindRejectsUntrustedEpochPolicyAndKeys/revoked_governance_key
+=== RUN   TestGovernedRebindRejectsUntrustedEpochPolicyAndKeys/same_governance_and_equality_key
+--- PASS: TestGovernedRebindRejectsUntrustedEpochPolicyAndKeys (0.00s)
+    --- PASS: TestGovernedRebindRejectsUntrustedEpochPolicyAndKeys/epoch_zero (0.00s)
+    --- PASS: TestGovernedRebindRejectsUntrustedEpochPolicyAndKeys/old_epoch (0.00s)
+    --- PASS: TestGovernedRebindRejectsUntrustedEpochPolicyAndKeys/future_epoch (0.00s)
+    --- PASS: TestGovernedRebindRejectsUntrustedEpochPolicyAndKeys/wrong_policy (0.00s)
+    --- PASS: TestGovernedRebindRejectsUntrustedEpochPolicyAndKeys/old_equality_key (0.00s)
+    --- PASS: TestGovernedRebindRejectsUntrustedEpochPolicyAndKeys/revoked_governance_key (0.00s)
+    --- PASS: TestGovernedRebindRejectsUntrustedEpochPolicyAndKeys/same_governance_and_equality_key (0.00s)
+=== RUN   TestFabricAttemptControllerConsumesOnlyAfterThreeNodeLaunches
+--- PASS: TestFabricAttemptControllerConsumesOnlyAfterThreeNodeLaunches (0.00s)
+=== RUN   TestFabricAttemptControllerMarksBackendFailureAborted
+--- PASS: TestFabricAttemptControllerMarksBackendFailureAborted (0.00s)
+=== RUN   TestS3031StaleGovernanceEpochRegression
+--- PASS: TestS3031StaleGovernanceEpochRegression (0.00s)
+PASS
+ok  	github.com/retf/source/v2/fabric/mpcinputregistry	0.013s

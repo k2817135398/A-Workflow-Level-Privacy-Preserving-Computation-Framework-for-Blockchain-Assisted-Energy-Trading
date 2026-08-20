@@ -1,0 +1,1059 @@
+{
+  "schema_version": "saib-retf-s2.2.2.1-recursive-private-material-scan/1",
+  "root": ".",
+  "files_inspected_including_nested": 830,
+  "archives_expanded": 21,
+  "allowed_fixture_hits": [
+    {
+      "path": "s4.0-source.tar.gz::experiments/v2/testdata/trace-attestor-s2-test-private.pem",
+      "inner_path": "experiments/v2/testdata/trace-attestor-s2-test-private.pem",
+      "sha256": "53b5b4e09a81feec8442b91a5d082d1069b10e35e453bb329dd9e94f96677684"
+    }
+  ],
+  "forbidden_private_material_hits": [],
+  "opaque_git_bundles": [],
+  "git_history_scans": [
+    {
+      "path": "s4.0-git.bundle",
+      "report": {
+        "schema_version": "saib-retf-s2.2.2.1-git-history-private-scan/1",
+        "bundle_path": "s4.0-git.bundle",
+        "bundle_sha256": "914603e9cda12b3dae0f6f086b977b39ea99414841f9ce216fe2e594f5bf0527",
+        "bundle_verify_passed": true,
+        "bundle_verify_output": [
+          "The bundle contains these 79 refs:",
+          "7c88fbbb71bf4a78d93b272d7380fc1becd82032 refs/heads/main",
+          "d2cac6f27d78681df7762d8830e3be9744955ca4 refs/heads/s2-anoncred-prototype",
+          "ed0fa2cd8030ece0858334492e8940a4ad0d2b00 refs/heads/s2.1-security-closure",
+          "6dba20ec35a86d395b1d8580e78736089d6db19e refs/heads/s2.2-production-integration",
+          "f0392814765270c57e0bfbb45c43385490c3391b refs/heads/s2.2.1-security-binding",
+          "6e4eb94c695632413820a5716ae76da05054ac79 refs/heads/s2.2.2-freshness-closure",
+          "ba21eab3814d9e39e427d3f0722794f96bd9be32 refs/heads/s2.2.2.1-audit-addendum",
+          "986c64a8f3acb49ee428a590f443b86242de56a9 refs/heads/s2.2.2.1-audit-addendum-v1.1",
+          "724095cc35da4dad5d73e7605891c60418c7be34 refs/heads/s2.2.2.1-audit-errata",
+          "b440622ecbe22d5faa1ea3dda6fb4cda37073ed3 refs/heads/s3-distributed-mpc-prototype",
+          "559e0bb531b3e4330c532e624d546d616c7849eb refs/heads/s3-final-experiment",
+          "b8ec6876b5d4acdfd74a3cc21808f2bce57fe366 refs/heads/s3.0.1-s3.1.1-binding-qualification",
+          "a085a352e8404ed1140466fa201108a8f9f31cdb refs/heads/s3.0.2-s3.2-committed-input",
+          "2ecc21216f7e2b7b0877e90e47e683d6375394ca refs/heads/s3.0.3-s3.2.1-binding-closure",
+          "d4d4ccb3e59b181ac10466ed8bb842c2d461b0f3 refs/heads/s3.0.3.1-errata",
+          "4d84a0b1e014b2bef9f9b28cf46a1320fad3223d refs/heads/s3.3-fmatch-design-reference",
+          "6f18f396e63e354047384484e1bf9dd4688145df refs/heads/s3.3.1-fmatch-implementation",
+          "b1305e2e2cca622422fae77f49b3b64c26f78252 refs/heads/s3.3.2-fmatch-obliviousness",
+          "cdaea345cc6ca012c37ace2d8f19e69d56c51fea refs/heads/s3.4-single-host-three-party-integration",
+          "a0923ef549a3b6b8b9816c4d186c031e9fa3e1ee refs/heads/s3.4.1-e2e-security-closure",
+          "059fa182b848211ab81e2620702b6b148e0acd96 refs/tags/s1.1-audit",
+          "98561e3b6273d1b82463a912f10b9af9f4748a72 refs/tags/s2.1-audit",
+          "092a287949b6f3606a8cc28751af9e9e964c1efa refs/tags/s2.2.1-audit",
+          "2ba0c14cb8c25498da26c5dd27edfe6083a3ddb1 refs/tags/s2.2.2-audit",
+          "55343587a57c2f3d733e43d60b32d3113e8ef76a refs/tags/s2.2.2.1-audit",
+          "84cf67b767ccbb38b49cc051be7d1cd20b059ba2 refs/tags/s2.2.2.1-history-scan-addendum",
+          "017af954d64fa78add1537699fffb04477e52ab2 refs/tags/s2.2.2.1-history-scan-addendum-v1.1",
+          "04ed48a265f8e1a54a1995a16cc22ffae2c38f4c refs/tags/s3.0.2-s3.2-committed-input-audit",
+          "67c7f19b59952bebbf1e7f8dffb3b223471e6b22 refs/tags/s3.0.2-s3.2-committed-input-audit-v1.1",
+          "c6406d22a14c4c71a9382e644eb471694962be8e refs/tags/s3.0.3-s3.2.1-binding-closure-audit",
+          "edc3d2bb3be0b68bcf752aa27d222f7f1eb8341d refs/tags/s3.0.3.1-errata-audit",
+          "6ec0754c4b41d9a9758e634e24d39a20a7c7da32 refs/tags/s3.0.3.1-errata-audit-v1.1",
+          "a1f3ccc10cfa7063479972cc687a88bf5dd271ec refs/tags/s3.0.3.2-runtime-integrity-audit",
+          "b19ab4e52987353e44f3b7962cf1468a7dae0554 refs/tags/s3.1-prototype-audit",
+          "6d46e4817cff3685aab8cc9123be3ce453f7bdae refs/tags/s3.1.1-binding-qualification-audit",
+          "30962e1966ae687d4b8dbabbe5c794eb78fdd38d refs/tags/s3.3-fmatch-design-freeze",
+          "86a1555b9918f45790892d721b0a492194782d79 refs/tags/s3.3.1-fmatch-implementation-audit",
+          "470ae21fb36ad762e13247d71ca0640ef5bed144 refs/tags/s3.3.1-fmatch-implementation-audit-v1.1",
+          "7ba168cffc7300d0292d25d373a28362ecec87ba refs/tags/s3.3.1-fmatch-implementation-audit-v1.2",
+          "84637774ec1dfed6aa30ea682c9bc505f5dd3932 refs/tags/s3.3.2-fmatch-obliviousness-audit",
+          "1bdce248035f8976882a0c863b4f485c06424f20 refs/tags/s3.4-single-host-three-party-integration-audit",
+          "230c6cc74887ffce28520f851fb912121f9ece83 refs/tags/s3.4.1-e2e-security-closure-audit",
+          "1581467b2a4e49ae1cb8f5621d260823a5487edf refs/tags/s3.4.1-e2e-security-closure-audit-v1.1",
+          "68bde036d1b3ee46fd84332538a29c0f9e30bf57 refs/tags/s3.4.1-e2e-security-closure-audit-v1.2",
+          "839a8c1f65b5903d7cec0ca0e17013dcc3468366 refs/tags/s3.4.1-e2e-security-closure-audit-v1.3",
+          "73671f7f7a9ad30d16454ae51f92cfe8c75eaaba refs/tags/s3.4.1-e2e-security-closure-packaging-v1.4",
+          "b5807fbefcb236c01e38dcd267222cae8742cf7c refs/tags/s3.4.1-e2e-security-closure-packaging-v1.5",
+          "d58bae5aca3938de487767b436fcdb3a22508e4f refs/tags/s3.4.1-e2e-security-closure-packaging-v1.6",
+          "0f6e24640340a10220b909509d0c03b0fb164538 refs/tags/s4.0-formal-benchmark-freeze",
+          "55df0391db7209d1b3d1c05f3d849a22b9c045ac refs/tags/s4.0-formal-benchmark-freeze-v1.1",
+          "8c3b13c45010988a132830dbc94d810c85<bundle> is okay",
+          "f2c4d9 refs/tags/s4.0-formal-benchmark-freeze-v1.10",
+          "ac15a29f31fc6788d02b62b4f8b960ed0ba692d6 refs/tags/s4.0-formal-benchmark-freeze-v1.11",
+          "923029970c5e7749f9d58c4bd24583f868f7857a refs/tags/s4.0-formal-benchmark-freeze-v1.12",
+          "b6a5abd38641711072c3b5c37cf7759c50526954 refs/tags/s4.0-formal-benchmark-freeze-v1.13",
+          "69f839ed93d3d0277efe26ca2ca16c3d734f95c7 refs/tags/s4.0-formal-benchmark-freeze-v1.14",
+          "c7d96f17da1793c7c1a888ffb76619ef67751cfa refs/tags/s4.0-formal-benchmark-freeze-v1.15",
+          "4928da8ec146ba24589dc36442350d0401db23ea refs/tags/s4.0-formal-benchmark-freeze-v1.16",
+          "14ee8e23b68b56bae220f5458519d2c199303c6a refs/tags/s4.0-formal-benchmark-freeze-v1.17",
+          "466d26232308504204737083e552c420583080f3 refs/tags/s4.0-formal-benchmark-freeze-v1.18",
+          "fdbabd58f116b1aa893a73daec295fd701879487 refs/tags/s4.0-formal-benchmark-freeze-v1.19",
+          "3b39fbdc1f75b1551ab4ed0fe84cf1b1ba070f6a refs/tags/s4.0-formal-benchmark-freeze-v1.2",
+          "19f0960e95429ad3f59744c045f240acdc0824c7 refs/tags/s4.0-formal-benchmark-freeze-v1.20",
+          "9cce18d1ef5bc5bf3d847bba9c4fd17a81d9ffd7 refs/tags/s4.0-formal-benchmark-freeze-v1.21",
+          "4ef83d6696f8f7634aeae0f72b23432797347443 refs/tags/s4.0-formal-benchmark-freeze-v1.22",
+          "00eb0797a83408d22cbb0163c657f56ec653d4d5 refs/tags/s4.0-formal-benchmark-freeze-v1.23",
+          "6f0f7310a73a245bae7ace5d148d583e1841504f refs/tags/s4.0-formal-benchmark-freeze-v1.3",
+          "05e91db042cf71f87c5cdb9eba05b603649d9567 refs/tags/s4.0-formal-benchmark-freeze-v1.4",
+          "ab966825241af6ecb018bfa4038f83abd1aacc44 refs/tags/s4.0-formal-benchmark-freeze-v1.5",
+          "076d70a49ffb35c3dab4725cf2f0beefbbf472a7 refs/tags/s4.0-formal-benchmark-freeze-v1.6",
+          "6db4273e9969936f40356a2cc269c1d38f91b580 refs/tags/s4.0-formal-benchmark-freeze-v1.7",
+          "fffb3cbd0ff82e0a34018169bee7b1fa5bd1a0f7 refs/tags/s4.0-formal-benchmark-freeze-v1.8",
+          "e627dc9f84b6573f5a763e517024f0aebe3f5415 refs/tags/s4.0-formal-benchmark-freeze-v1.9",
+          "e7dda8671667d977b71f0918c463150cfeb9ae3f refs/tags/s4.1-component-performance-audit",
+          "5b37056d8fcecfe11c346ade6ab0304f8d346dec refs/tags/s4.1-component-performance-audit-v1.2",
+          "8422c1b14f31eed13387652fad1e572e5da6814f refs/tags/s4.1-component-performance-audit-v1.5",
+          "eb3820739c81d6b1da983c16a1301f87d34ef8f8 refs/tags/s4.1-component-performance-audit-v1.6",
+          "17c9ad0c9019fd47c021e35c8e9202c113a9cc77 refs/tags/s4.1-component-performance-audit-v1.7",
+          "f18fbeafd83cc9252aef7db10110a652e853f7f5 refs/tags/s4.1-component-performance-audit-v1.8",
+          "559e0bb531b3e4330c532e624d546d616c7849eb HEAD",
+          "The bundle records a complete history.",
+          "The bundle uses this hash algorithm: sha1"
+        ],
+        "bundle_verify_repository": "temporary empty bare repository",
+        "source_repository_dependency": false,
+        "bundle_list_heads": [
+          {
+            "object_id": "7c88fbbb71bf4a78d93b272d7380fc1becd82032",
+            "ref": "refs/heads/main"
+          },
+          {
+            "object_id": "d2cac6f27d78681df7762d8830e3be9744955ca4",
+            "ref": "refs/heads/s2-anoncred-prototype"
+          },
+          {
+            "object_id": "ed0fa2cd8030ece0858334492e8940a4ad0d2b00",
+            "ref": "refs/heads/s2.1-security-closure"
+          },
+          {
+            "object_id": "6dba20ec35a86d395b1d8580e78736089d6db19e",
+            "ref": "refs/heads/s2.2-production-integration"
+          },
+          {
+            "object_id": "f0392814765270c57e0bfbb45c43385490c3391b",
+            "ref": "refs/heads/s2.2.1-security-binding"
+          },
+          {
+            "object_id": "6e4eb94c695632413820a5716ae76da05054ac79",
+            "ref": "refs/heads/s2.2.2-freshness-closure"
+          },
+          {
+            "object_id": "ba21eab3814d9e39e427d3f0722794f96bd9be32",
+            "ref": "refs/heads/s2.2.2.1-audit-addendum"
+          },
+          {
+            "object_id": "986c64a8f3acb49ee428a590f443b86242de56a9",
+            "ref": "refs/heads/s2.2.2.1-audit-addendum-v1.1"
+          },
+          {
+            "object_id": "724095cc35da4dad5d73e7605891c60418c7be34",
+            "ref": "refs/heads/s2.2.2.1-audit-errata"
+          },
+          {
+            "object_id": "b440622ecbe22d5faa1ea3dda6fb4cda37073ed3",
+            "ref": "refs/heads/s3-distributed-mpc-prototype"
+          },
+          {
+            "object_id": "559e0bb531b3e4330c532e624d546d616c7849eb",
+            "ref": "refs/heads/s3-final-experiment"
+          },
+          {
+            "object_id": "b8ec6876b5d4acdfd74a3cc21808f2bce57fe366",
+            "ref": "refs/heads/s3.0.1-s3.1.1-binding-qualification"
+          },
+          {
+            "object_id": "a085a352e8404ed1140466fa201108a8f9f31cdb",
+            "ref": "refs/heads/s3.0.2-s3.2-committed-input"
+          },
+          {
+            "object_id": "2ecc21216f7e2b7b0877e90e47e683d6375394ca",
+            "ref": "refs/heads/s3.0.3-s3.2.1-binding-closure"
+          },
+          {
+            "object_id": "d4d4ccb3e59b181ac10466ed8bb842c2d461b0f3",
+            "ref": "refs/heads/s3.0.3.1-errata"
+          },
+          {
+            "object_id": "4d84a0b1e014b2bef9f9b28cf46a1320fad3223d",
+            "ref": "refs/heads/s3.3-fmatch-design-reference"
+          },
+          {
+            "object_id": "6f18f396e63e354047384484e1bf9dd4688145df",
+            "ref": "refs/heads/s3.3.1-fmatch-implementation"
+          },
+          {
+            "object_id": "b1305e2e2cca622422fae77f49b3b64c26f78252",
+            "ref": "refs/heads/s3.3.2-fmatch-obliviousness"
+          },
+          {
+            "object_id": "cdaea345cc6ca012c37ace2d8f19e69d56c51fea",
+            "ref": "refs/heads/s3.4-single-host-three-party-integration"
+          },
+          {
+            "object_id": "a0923ef549a3b6b8b9816c4d186c031e9fa3e1ee",
+            "ref": "refs/heads/s3.4.1-e2e-security-closure"
+          },
+          {
+            "object_id": "059fa182b848211ab81e2620702b6b148e0acd96",
+            "ref": "refs/tags/s1.1-audit"
+          },
+          {
+            "object_id": "98561e3b6273d1b82463a912f10b9af9f4748a72",
+            "ref": "refs/tags/s2.1-audit"
+          },
+          {
+            "object_id": "092a287949b6f3606a8cc28751af9e9e964c1efa",
+            "ref": "refs/tags/s2.2.1-audit"
+          },
+          {
+            "object_id": "2ba0c14cb8c25498da26c5dd27edfe6083a3ddb1",
+            "ref": "refs/tags/s2.2.2-audit"
+          },
+          {
+            "object_id": "55343587a57c2f3d733e43d60b32d3113e8ef76a",
+            "ref": "refs/tags/s2.2.2.1-audit"
+          },
+          {
+            "object_id": "84cf67b767ccbb38b49cc051be7d1cd20b059ba2",
+            "ref": "refs/tags/s2.2.2.1-history-scan-addendum"
+          },
+          {
+            "object_id": "017af954d64fa78add1537699fffb04477e52ab2",
+            "ref": "refs/tags/s2.2.2.1-history-scan-addendum-v1.1"
+          },
+          {
+            "object_id": "04ed48a265f8e1a54a1995a16cc22ffae2c38f4c",
+            "ref": "refs/tags/s3.0.2-s3.2-committed-input-audit"
+          },
+          {
+            "object_id": "67c7f19b59952bebbf1e7f8dffb3b223471e6b22",
+            "ref": "refs/tags/s3.0.2-s3.2-committed-input-audit-v1.1"
+          },
+          {
+            "object_id": "c6406d22a14c4c71a9382e644eb471694962be8e",
+            "ref": "refs/tags/s3.0.3-s3.2.1-binding-closure-audit"
+          },
+          {
+            "object_id": "edc3d2bb3be0b68bcf752aa27d222f7f1eb8341d",
+            "ref": "refs/tags/s3.0.3.1-errata-audit"
+          },
+          {
+            "object_id": "6ec0754c4b41d9a9758e634e24d39a20a7c7da32",
+            "ref": "refs/tags/s3.0.3.1-errata-audit-v1.1"
+          },
+          {
+            "object_id": "a1f3ccc10cfa7063479972cc687a88bf5dd271ec",
+            "ref": "refs/tags/s3.0.3.2-runtime-integrity-audit"
+          },
+          {
+            "object_id": "b19ab4e52987353e44f3b7962cf1468a7dae0554",
+            "ref": "refs/tags/s3.1-prototype-audit"
+          },
+          {
+            "object_id": "6d46e4817cff3685aab8cc9123be3ce453f7bdae",
+            "ref": "refs/tags/s3.1.1-binding-qualification-audit"
+          },
+          {
+            "object_id": "30962e1966ae687d4b8dbabbe5c794eb78fdd38d",
+            "ref": "refs/tags/s3.3-fmatch-design-freeze"
+          },
+          {
+            "object_id": "86a1555b9918f45790892d721b0a492194782d79",
+            "ref": "refs/tags/s3.3.1-fmatch-implementation-audit"
+          },
+          {
+            "object_id": "470ae21fb36ad762e13247d71ca0640ef5bed144",
+            "ref": "refs/tags/s3.3.1-fmatch-implementation-audit-v1.1"
+          },
+          {
+            "object_id": "7ba168cffc7300d0292d25d373a28362ecec87ba",
+            "ref": "refs/tags/s3.3.1-fmatch-implementation-audit-v1.2"
+          },
+          {
+            "object_id": "84637774ec1dfed6aa30ea682c9bc505f5dd3932",
+            "ref": "refs/tags/s3.3.2-fmatch-obliviousness-audit"
+          },
+          {
+            "object_id": "1bdce248035f8976882a0c863b4f485c06424f20",
+            "ref": "refs/tags/s3.4-single-host-three-party-integration-audit"
+          },
+          {
+            "object_id": "230c6cc74887ffce28520f851fb912121f9ece83",
+            "ref": "refs/tags/s3.4.1-e2e-security-closure-audit"
+          },
+          {
+            "object_id": "1581467b2a4e49ae1cb8f5621d260823a5487edf",
+            "ref": "refs/tags/s3.4.1-e2e-security-closure-audit-v1.1"
+          },
+          {
+            "object_id": "68bde036d1b3ee46fd84332538a29c0f9e30bf57",
+            "ref": "refs/tags/s3.4.1-e2e-security-closure-audit-v1.2"
+          },
+          {
+            "object_id": "839a8c1f65b5903d7cec0ca0e17013dcc3468366",
+            "ref": "refs/tags/s3.4.1-e2e-security-closure-audit-v1.3"
+          },
+          {
+            "object_id": "73671f7f7a9ad30d16454ae51f92cfe8c75eaaba",
+            "ref": "refs/tags/s3.4.1-e2e-security-closure-packaging-v1.4"
+          },
+          {
+            "object_id": "b5807fbefcb236c01e38dcd267222cae8742cf7c",
+            "ref": "refs/tags/s3.4.1-e2e-security-closure-packaging-v1.5"
+          },
+          {
+            "object_id": "d58bae5aca3938de487767b436fcdb3a22508e4f",
+            "ref": "refs/tags/s3.4.1-e2e-security-closure-packaging-v1.6"
+          },
+          {
+            "object_id": "0f6e24640340a10220b909509d0c03b0fb164538",
+            "ref": "refs/tags/s4.0-formal-benchmark-freeze"
+          },
+          {
+            "object_id": "55df0391db7209d1b3d1c05f3d849a22b9c045ac",
+            "ref": "refs/tags/s4.0-formal-benchmark-freeze-v1.1"
+          },
+          {
+            "object_id": "8c3b13c45010988a132830dbc94d810c85f2c4d9",
+            "ref": "refs/tags/s4.0-formal-benchmark-freeze-v1.10"
+          },
+          {
+            "object_id": "ac15a29f31fc6788d02b62b4f8b960ed0ba692d6",
+            "ref": "refs/tags/s4.0-formal-benchmark-freeze-v1.11"
+          },
+          {
+            "object_id": "923029970c5e7749f9d58c4bd24583f868f7857a",
+            "ref": "refs/tags/s4.0-formal-benchmark-freeze-v1.12"
+          },
+          {
+            "object_id": "b6a5abd38641711072c3b5c37cf7759c50526954",
+            "ref": "refs/tags/s4.0-formal-benchmark-freeze-v1.13"
+          },
+          {
+            "object_id": "69f839ed93d3d0277efe26ca2ca16c3d734f95c7",
+            "ref": "refs/tags/s4.0-formal-benchmark-freeze-v1.14"
+          },
+          {
+            "object_id": "c7d96f17da1793c7c1a888ffb76619ef67751cfa",
+            "ref": "refs/tags/s4.0-formal-benchmark-freeze-v1.15"
+          },
+          {
+            "object_id": "4928da8ec146ba24589dc36442350d0401db23ea",
+            "ref": "refs/tags/s4.0-formal-benchmark-freeze-v1.16"
+          },
+          {
+            "object_id": "14ee8e23b68b56bae220f5458519d2c199303c6a",
+            "ref": "refs/tags/s4.0-formal-benchmark-freeze-v1.17"
+          },
+          {
+            "object_id": "466d26232308504204737083e552c420583080f3",
+            "ref": "refs/tags/s4.0-formal-benchmark-freeze-v1.18"
+          },
+          {
+            "object_id": "fdbabd58f116b1aa893a73daec295fd701879487",
+            "ref": "refs/tags/s4.0-formal-benchmark-freeze-v1.19"
+          },
+          {
+            "object_id": "3b39fbdc1f75b1551ab4ed0fe84cf1b1ba070f6a",
+            "ref": "refs/tags/s4.0-formal-benchmark-freeze-v1.2"
+          },
+          {
+            "object_id": "19f0960e95429ad3f59744c045f240acdc0824c7",
+            "ref": "refs/tags/s4.0-formal-benchmark-freeze-v1.20"
+          },
+          {
+            "object_id": "9cce18d1ef5bc5bf3d847bba9c4fd17a81d9ffd7",
+            "ref": "refs/tags/s4.0-formal-benchmark-freeze-v1.21"
+          },
+          {
+            "object_id": "4ef83d6696f8f7634aeae0f72b23432797347443",
+            "ref": "refs/tags/s4.0-formal-benchmark-freeze-v1.22"
+          },
+          {
+            "object_id": "00eb0797a83408d22cbb0163c657f56ec653d4d5",
+            "ref": "refs/tags/s4.0-formal-benchmark-freeze-v1.23"
+          },
+          {
+            "object_id": "6f0f7310a73a245bae7ace5d148d583e1841504f",
+            "ref": "refs/tags/s4.0-formal-benchmark-freeze-v1.3"
+          },
+          {
+            "object_id": "05e91db042cf71f87c5cdb9eba05b603649d9567",
+            "ref": "refs/tags/s4.0-formal-benchmark-freeze-v1.4"
+          },
+          {
+            "object_id": "ab966825241af6ecb018bfa4038f83abd1aacc44",
+            "ref": "refs/tags/s4.0-formal-benchmark-freeze-v1.5"
+          },
+          {
+            "object_id": "076d70a49ffb35c3dab4725cf2f0beefbbf472a7",
+            "ref": "refs/tags/s4.0-formal-benchmark-freeze-v1.6"
+          },
+          {
+            "object_id": "6db4273e9969936f40356a2cc269c1d38f91b580",
+            "ref": "refs/tags/s4.0-formal-benchmark-freeze-v1.7"
+          },
+          {
+            "object_id": "fffb3cbd0ff82e0a34018169bee7b1fa5bd1a0f7",
+            "ref": "refs/tags/s4.0-formal-benchmark-freeze-v1.8"
+          },
+          {
+            "object_id": "e627dc9f84b6573f5a763e517024f0aebe3f5415",
+            "ref": "refs/tags/s4.0-formal-benchmark-freeze-v1.9"
+          },
+          {
+            "object_id": "e7dda8671667d977b71f0918c463150cfeb9ae3f",
+            "ref": "refs/tags/s4.1-component-performance-audit"
+          },
+          {
+            "object_id": "5b37056d8fcecfe11c346ade6ab0304f8d346dec",
+            "ref": "refs/tags/s4.1-component-performance-audit-v1.2"
+          },
+          {
+            "object_id": "8422c1b14f31eed13387652fad1e572e5da6814f",
+            "ref": "refs/tags/s4.1-component-performance-audit-v1.5"
+          },
+          {
+            "object_id": "eb3820739c81d6b1da983c16a1301f87d34ef8f8",
+            "ref": "refs/tags/s4.1-component-performance-audit-v1.6"
+          },
+          {
+            "object_id": "17c9ad0c9019fd47c021e35c8e9202c113a9cc77",
+            "ref": "refs/tags/s4.1-component-performance-audit-v1.7"
+          },
+          {
+            "object_id": "f18fbeafd83cc9252aef7db10110a652e853f7f5",
+            "ref": "refs/tags/s4.1-component-performance-audit-v1.8"
+          },
+          {
+            "object_id": "559e0bb531b3e4330c532e624d546d616c7849eb",
+            "ref": "HEAD"
+          }
+        ],
+        "refs_count": 78,
+        "refs": [
+          {
+            "name": "refs/heads/main",
+            "object_id": "7c88fbbb71bf4a78d93b272d7380fc1becd82032",
+            "object_type": "commit"
+          },
+          {
+            "name": "refs/heads/s2-anoncred-prototype",
+            "object_id": "d2cac6f27d78681df7762d8830e3be9744955ca4",
+            "object_type": "commit"
+          },
+          {
+            "name": "refs/heads/s2.1-security-closure",
+            "object_id": "ed0fa2cd8030ece0858334492e8940a4ad0d2b00",
+            "object_type": "commit"
+          },
+          {
+            "name": "refs/heads/s2.2-production-integration",
+            "object_id": "6dba20ec35a86d395b1d8580e78736089d6db19e",
+            "object_type": "commit"
+          },
+          {
+            "name": "refs/heads/s2.2.1-security-binding",
+            "object_id": "f0392814765270c57e0bfbb45c43385490c3391b",
+            "object_type": "commit"
+          },
+          {
+            "name": "refs/heads/s2.2.2-freshness-closure",
+            "object_id": "6e4eb94c695632413820a5716ae76da05054ac79",
+            "object_type": "commit"
+          },
+          {
+            "name": "refs/heads/s2.2.2.1-audit-addendum",
+            "object_id": "ba21eab3814d9e39e427d3f0722794f96bd9be32",
+            "object_type": "commit"
+          },
+          {
+            "name": "refs/heads/s2.2.2.1-audit-addendum-v1.1",
+            "object_id": "986c64a8f3acb49ee428a590f443b86242de56a9",
+            "object_type": "commit"
+          },
+          {
+            "name": "refs/heads/s2.2.2.1-audit-errata",
+            "object_id": "724095cc35da4dad5d73e7605891c60418c7be34",
+            "object_type": "commit"
+          },
+          {
+            "name": "refs/heads/s3-distributed-mpc-prototype",
+            "object_id": "b440622ecbe22d5faa1ea3dda6fb4cda37073ed3",
+            "object_type": "commit"
+          },
+          {
+            "name": "refs/heads/s3-final-experiment",
+            "object_id": "559e0bb531b3e4330c532e624d546d616c7849eb",
+            "object_type": "commit"
+          },
+          {
+            "name": "refs/heads/s3.0.1-s3.1.1-binding-qualification",
+            "object_id": "b8ec6876b5d4acdfd74a3cc21808f2bce57fe366",
+            "object_type": "commit"
+          },
+          {
+            "name": "refs/heads/s3.0.2-s3.2-committed-input",
+            "object_id": "a085a352e8404ed1140466fa201108a8f9f31cdb",
+            "object_type": "commit"
+          },
+          {
+            "name": "refs/heads/s3.0.3-s3.2.1-binding-closure",
+            "object_id": "2ecc21216f7e2b7b0877e90e47e683d6375394ca",
+            "object_type": "commit"
+          },
+          {
+            "name": "refs/heads/s3.0.3.1-errata",
+            "object_id": "d4d4ccb3e59b181ac10466ed8bb842c2d461b0f3",
+            "object_type": "commit"
+          },
+          {
+            "name": "refs/heads/s3.3-fmatch-design-reference",
+            "object_id": "4d84a0b1e014b2bef9f9b28cf46a1320fad3223d",
+            "object_type": "commit"
+          },
+          {
+            "name": "refs/heads/s3.3.1-fmatch-implementation",
+            "object_id": "6f18f396e63e354047384484e1bf9dd4688145df",
+            "object_type": "commit"
+          },
+          {
+            "name": "refs/heads/s3.3.2-fmatch-obliviousness",
+            "object_id": "b1305e2e2cca622422fae77f49b3b64c26f78252",
+            "object_type": "commit"
+          },
+          {
+            "name": "refs/heads/s3.4-single-host-three-party-integration",
+            "object_id": "cdaea345cc6ca012c37ace2d8f19e69d56c51fea",
+            "object_type": "commit"
+          },
+          {
+            "name": "refs/heads/s3.4.1-e2e-security-closure",
+            "object_id": "a0923ef549a3b6b8b9816c4d186c031e9fa3e1ee",
+            "object_type": "commit"
+          },
+          {
+            "name": "refs/tags/s1.1-audit",
+            "object_id": "059fa182b848211ab81e2620702b6b148e0acd96",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s2.1-audit",
+            "object_id": "98561e3b6273d1b82463a912f10b9af9f4748a72",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s2.2.1-audit",
+            "object_id": "092a287949b6f3606a8cc28751af9e9e964c1efa",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s2.2.2-audit",
+            "object_id": "2ba0c14cb8c25498da26c5dd27edfe6083a3ddb1",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s2.2.2.1-audit",
+            "object_id": "55343587a57c2f3d733e43d60b32d3113e8ef76a",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s2.2.2.1-history-scan-addendum",
+            "object_id": "84cf67b767ccbb38b49cc051be7d1cd20b059ba2",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s2.2.2.1-history-scan-addendum-v1.1",
+            "object_id": "017af954d64fa78add1537699fffb04477e52ab2",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s3.0.2-s3.2-committed-input-audit",
+            "object_id": "04ed48a265f8e1a54a1995a16cc22ffae2c38f4c",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s3.0.2-s3.2-committed-input-audit-v1.1",
+            "object_id": "67c7f19b59952bebbf1e7f8dffb3b223471e6b22",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s3.0.3-s3.2.1-binding-closure-audit",
+            "object_id": "c6406d22a14c4c71a9382e644eb471694962be8e",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s3.0.3.1-errata-audit",
+            "object_id": "edc3d2bb3be0b68bcf752aa27d222f7f1eb8341d",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s3.0.3.1-errata-audit-v1.1",
+            "object_id": "6ec0754c4b41d9a9758e634e24d39a20a7c7da32",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s3.0.3.2-runtime-integrity-audit",
+            "object_id": "a1f3ccc10cfa7063479972cc687a88bf5dd271ec",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s3.1-prototype-audit",
+            "object_id": "b19ab4e52987353e44f3b7962cf1468a7dae0554",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s3.1.1-binding-qualification-audit",
+            "object_id": "6d46e4817cff3685aab8cc9123be3ce453f7bdae",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s3.3-fmatch-design-freeze",
+            "object_id": "30962e1966ae687d4b8dbabbe5c794eb78fdd38d",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s3.3.1-fmatch-implementation-audit",
+            "object_id": "86a1555b9918f45790892d721b0a492194782d79",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s3.3.1-fmatch-implementation-audit-v1.1",
+            "object_id": "470ae21fb36ad762e13247d71ca0640ef5bed144",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s3.3.1-fmatch-implementation-audit-v1.2",
+            "object_id": "7ba168cffc7300d0292d25d373a28362ecec87ba",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s3.3.2-fmatch-obliviousness-audit",
+            "object_id": "84637774ec1dfed6aa30ea682c9bc505f5dd3932",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s3.4-single-host-three-party-integration-audit",
+            "object_id": "1bdce248035f8976882a0c863b4f485c06424f20",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s3.4.1-e2e-security-closure-audit",
+            "object_id": "230c6cc74887ffce28520f851fb912121f9ece83",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s3.4.1-e2e-security-closure-audit-v1.1",
+            "object_id": "1581467b2a4e49ae1cb8f5621d260823a5487edf",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s3.4.1-e2e-security-closure-audit-v1.2",
+            "object_id": "68bde036d1b3ee46fd84332538a29c0f9e30bf57",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s3.4.1-e2e-security-closure-audit-v1.3",
+            "object_id": "839a8c1f65b5903d7cec0ca0e17013dcc3468366",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s3.4.1-e2e-security-closure-packaging-v1.4",
+            "object_id": "73671f7f7a9ad30d16454ae51f92cfe8c75eaaba",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s3.4.1-e2e-security-closure-packaging-v1.5",
+            "object_id": "b5807fbefcb236c01e38dcd267222cae8742cf7c",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s3.4.1-e2e-security-closure-packaging-v1.6",
+            "object_id": "d58bae5aca3938de487767b436fcdb3a22508e4f",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s4.0-formal-benchmark-freeze",
+            "object_id": "0f6e24640340a10220b909509d0c03b0fb164538",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s4.0-formal-benchmark-freeze-v1.1",
+            "object_id": "55df0391db7209d1b3d1c05f3d849a22b9c045ac",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s4.0-formal-benchmark-freeze-v1.10",
+            "object_id": "8c3b13c45010988a132830dbc94d810c85f2c4d9",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s4.0-formal-benchmark-freeze-v1.11",
+            "object_id": "ac15a29f31fc6788d02b62b4f8b960ed0ba692d6",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s4.0-formal-benchmark-freeze-v1.12",
+            "object_id": "923029970c5e7749f9d58c4bd24583f868f7857a",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s4.0-formal-benchmark-freeze-v1.13",
+            "object_id": "b6a5abd38641711072c3b5c37cf7759c50526954",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s4.0-formal-benchmark-freeze-v1.14",
+            "object_id": "69f839ed93d3d0277efe26ca2ca16c3d734f95c7",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s4.0-formal-benchmark-freeze-v1.15",
+            "object_id": "c7d96f17da1793c7c1a888ffb76619ef67751cfa",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s4.0-formal-benchmark-freeze-v1.16",
+            "object_id": "4928da8ec146ba24589dc36442350d0401db23ea",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s4.0-formal-benchmark-freeze-v1.17",
+            "object_id": "14ee8e23b68b56bae220f5458519d2c199303c6a",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s4.0-formal-benchmark-freeze-v1.18",
+            "object_id": "466d26232308504204737083e552c420583080f3",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s4.0-formal-benchmark-freeze-v1.19",
+            "object_id": "fdbabd58f116b1aa893a73daec295fd701879487",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s4.0-formal-benchmark-freeze-v1.2",
+            "object_id": "3b39fbdc1f75b1551ab4ed0fe84cf1b1ba070f6a",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s4.0-formal-benchmark-freeze-v1.20",
+            "object_id": "19f0960e95429ad3f59744c045f240acdc0824c7",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s4.0-formal-benchmark-freeze-v1.21",
+            "object_id": "9cce18d1ef5bc5bf3d847bba9c4fd17a81d9ffd7",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s4.0-formal-benchmark-freeze-v1.22",
+            "object_id": "4ef83d6696f8f7634aeae0f72b23432797347443",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s4.0-formal-benchmark-freeze-v1.23",
+            "object_id": "00eb0797a83408d22cbb0163c657f56ec653d4d5",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s4.0-formal-benchmark-freeze-v1.3",
+            "object_id": "6f0f7310a73a245bae7ace5d148d583e1841504f",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s4.0-formal-benchmark-freeze-v1.4",
+            "object_id": "05e91db042cf71f87c5cdb9eba05b603649d9567",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s4.0-formal-benchmark-freeze-v1.5",
+            "object_id": "ab966825241af6ecb018bfa4038f83abd1aacc44",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s4.0-formal-benchmark-freeze-v1.6",
+            "object_id": "076d70a49ffb35c3dab4725cf2f0beefbbf472a7",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s4.0-formal-benchmark-freeze-v1.7",
+            "object_id": "6db4273e9969936f40356a2cc269c1d38f91b580",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s4.0-formal-benchmark-freeze-v1.8",
+            "object_id": "fffb3cbd0ff82e0a34018169bee7b1fa5bd1a0f7",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s4.0-formal-benchmark-freeze-v1.9",
+            "object_id": "e627dc9f84b6573f5a763e517024f0aebe3f5415",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s4.1-component-performance-audit",
+            "object_id": "e7dda8671667d977b71f0918c463150cfeb9ae3f",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s4.1-component-performance-audit-v1.2",
+            "object_id": "5b37056d8fcecfe11c346ade6ab0304f8d346dec",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s4.1-component-performance-audit-v1.5",
+            "object_id": "8422c1b14f31eed13387652fad1e572e5da6814f",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s4.1-component-performance-audit-v1.6",
+            "object_id": "eb3820739c81d6b1da983c16a1301f87d34ef8f8",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s4.1-component-performance-audit-v1.7",
+            "object_id": "17c9ad0c9019fd47c021e35c8e9202c113a9cc77",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s4.1-component-performance-audit-v1.8",
+            "object_id": "f18fbeafd83cc9252aef7db10110a652e853f7f5",
+            "object_type": "tag"
+          }
+        ],
+        "reachable_commits": 136,
+        "reachable_objects": 2382,
+        "object_type_counts": {
+          "blob": 1182,
+          "commit": 136,
+          "tag": 58,
+          "tree": 1006
+        },
+        "reachable_blobs": 1182,
+        "scanned_unique_blobs": 1182,
+        "scanned_blob_bytes": 10506567,
+        "private_key_blocks": 4,
+        "private_key_findings": [
+          {
+            "blob_oid": "0020c14af1c1781b51e2bae2bbb1f2e11cf7983b",
+            "blob_sha256": "781cf064d46731810d92061243c7df62a6ec679c1159d63b709b2c0711fa4b54",
+            "blob_size": 20057,
+            "historical_paths": [
+              "experiments/v2/statistics/test_validate_formal_input.py"
+            ],
+            "key_public_spki_sha256": "44ca0cf355aa2087a6e328a63978b5aa873cff3079691b9f1f8e74bb2e80953c",
+            "approved_test_fixture": true,
+            "approvals": [
+              {
+                "path": "experiments/v2/statistics/test_validate_formal_input.py",
+                "purpose": "embedded deterministic formal-admission test fixture only; historical file hashes may differ"
+              }
+            ],
+            "parse_error": ""
+          },
+          {
+            "blob_oid": "0defe39c7762dfc3a7d74e077ec686f9b1faec39",
+            "blob_sha256": "73739a16006ece7272aaf40d0f4894ac44462a085c465e2030152a2491efbff4",
+            "blob_size": 15743,
+            "historical_paths": [
+              "experiments/v2/statistics/test_validate_formal_input.py"
+            ],
+            "key_public_spki_sha256": "44ca0cf355aa2087a6e328a63978b5aa873cff3079691b9f1f8e74bb2e80953c",
+            "approved_test_fixture": true,
+            "approvals": [
+              {
+                "path": "experiments/v2/statistics/test_validate_formal_input.py",
+                "purpose": "embedded deterministic formal-admission test fixture only; historical file hashes may differ"
+              }
+            ],
+            "parse_error": ""
+          },
+          {
+            "blob_oid": "27f45a2550ea9c5b0f5cf7d5c3321ef1fec522d8",
+            "blob_sha256": "1abb498ce237276390845ae9466fbe8216a515bec64c09f0ec732def79f36179",
+            "blob_size": 15531,
+            "historical_paths": [
+              "experiments/v2/statistics/test_validate_formal_input.py"
+            ],
+            "key_public_spki_sha256": "44ca0cf355aa2087a6e328a63978b5aa873cff3079691b9f1f8e74bb2e80953c",
+            "approved_test_fixture": true,
+            "approvals": [
+              {
+                "path": "experiments/v2/statistics/test_validate_formal_input.py",
+                "purpose": "embedded deterministic formal-admission test fixture only; historical file hashes may differ"
+              }
+            ],
+            "parse_error": ""
+          },
+          {
+            "blob_oid": "5a86a57d1b2a3ef1cfb609442ae9a9be945768ae",
+            "blob_sha256": "53b5b4e09a81feec8442b91a5d082d1069b10e35e453bb329dd9e94f96677684",
+            "blob_size": 119,
+            "historical_paths": [
+              "experiments/v2/testdata/trace-attestor-s2-test-private.pem"
+            ],
+            "key_public_spki_sha256": "44ca0cf355aa2087a6e328a63978b5aa873cff3079691b9f1f8e74bb2e80953c",
+            "approved_test_fixture": true,
+            "approvals": [
+              {
+                "path": "experiments/v2/testdata/trace-attestor-s2-test-private.pem",
+                "purpose": "formal-admission test fixture only; never a production attestor"
+              }
+            ],
+            "parse_error": ""
+          }
+        ],
+        "approved_test_fixture_key_blocks": 4,
+        "production_private_key_findings": 0,
+        "malformed_private_key_blocks": 0,
+        "certificate_blocks": 0,
+        "certificate_findings": [],
+        "sensitive_path_findings": [
+          {
+            "path": "prototype/anoncred-rust/vendor/credx-0.2.1-saib/src/blind/credential.rs",
+            "blob_oid": "17f2fed98539b04753e0c7ef20104937767965fe",
+            "blob_sha256": "618c4e449a9db9f2e039544895bd76bc9b6968574af12d17d612a71d88e33ab1",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "prototype/anoncred-rust/vendor/credx-0.2.1-saib/src/knox/ps/secret_key.rs",
+            "blob_oid": "2f1cf030bb1dd907cfd2c433c0fb01213f0ac17e",
+            "blob_sha256": "4b52d4e533c069d5ed0afa5adc7b60ce62a07bf8cab843d5f8c7133d78b63c0d",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "prototype/anoncred-rust/vendor/credx-0.2.1-saib/src/presentation/credential.rs",
+            "blob_oid": "4bd9c933cf3d603ed3b801fa5b89b724b000d0a5",
+            "blob_sha256": "e0cc46e40802b1e3218263792317ed771ad6bd761a042641165e3c141c5b866a",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "experiments/v2/testdata/trace-attestor-s2-test-private.pem",
+            "blob_oid": "5a86a57d1b2a3ef1cfb609442ae9a9be945768ae",
+            "blob_sha256": "53b5b4e09a81feec8442b91a5d082d1069b10e35e453bb329dd9e94f96677684",
+            "classification": "approved_test_private_fixture",
+            "contains_private_key": true
+          },
+          {
+            "path": "experiments/v2/statistics/recursive_private_material_scan.py",
+            "blob_oid": "68f819d50f7f2db027b495b624de16a4895fb729",
+            "blob_sha256": "1c578357e172dd91377e78464dd80ef9d5dd4c963e2c43ec597d3f525c5e9570",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "experiments/v2/statistics/git_history_private_scan.py",
+            "blob_oid": "6b0dfee95a3e757c320f76c8decce8741180c4b6",
+            "blob_sha256": "3a8ac3cc9adf6d3413ccf72f10b9e83584b650830a96dac0e4b42fec1cb65d05",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "docs/TRUSTED_CREDENTIAL_REGISTRY.md",
+            "blob_oid": "756ed6253f3525de188072e107ffe8cecea7ee0d",
+            "blob_sha256": "42e22101951b4009434e2ae1decdb4d19073676be9beee6210f638bd6e870fdb",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "experiments/v2/configs/s2.2.2.1-private-fixture-allowlist.json",
+            "blob_oid": "9606fdd217e84d9e300dbb2d7bc5f5d38b6ab2c8",
+            "blob_sha256": "282f0f05e1f34d712f5669c58a8abc8782ae6137a84aad93fb3e959701036026",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "experiments/v2/statistics/recursive_private_material_scan.py",
+            "blob_oid": "9d444879c3cd95b44bf4a0c6f7df0c617fb79176",
+            "blob_sha256": "0dde8456cfd4dbb047d69a379430e652778b07db21976d0e98cf6dacbc8c2b96",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "prototype/anoncred-rust/vendor/credx-0.2.1-saib/src/knox/bbs/secret_key.rs",
+            "blob_oid": "a9a82e0b1fccfc900e74b4dbadb33fb1383e028a",
+            "blob_sha256": "899a42b92290abbb832b60a370dee7ffd58ec1417b3f98be4aa3851651958a96",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "experiments/v2/configs/s2.2.2.1-private-fixture-allowlist.json",
+            "blob_oid": "aef1aa21d0af4f86a60debd76c693b00bb062cf9",
+            "blob_sha256": "faa393e6a043d40c744bd512a9573a1100b9b55158aad9ba89c04ce25c411451",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "experiments/v2/statistics/git_history_private_scan.py",
+            "blob_oid": "b595a576744525005dd756d0908784b32098e1e1",
+            "blob_sha256": "a443e49d1e8e417aa292645b87d360c726c6a24ac30951ac4be2db6e91c35a07",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "experiments/v2/configs/s2.2.2.1-private-fixture-allowlist.json",
+            "blob_oid": "c2b98259071cf19ed58687c0a73272a21eaabd25",
+            "blob_sha256": "f7c1555bd522e5237cc9a6371292b6733a7c4c91f090b4d28071ccc6b7694d34",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "experiments/v2/statistics/git_history_private_scan.py",
+            "blob_oid": "c376a1ec85846920cb81384b971e4d5c8fdc86e0",
+            "blob_sha256": "d4fabfff42f0cb50b4c10fc5b8ec8f47bdf81b30ba5aa3d4ffd3311f9d18a453",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "experiments/v2/statistics/git_history_private_scan.py",
+            "blob_oid": "c401b35747b2c760aa9f1c77b85ead659d9a85b5",
+            "blob_sha256": "464da035895c0249e7d73a26d3ab55cc0e32f299a7b4116ffd4d962c9d024da3",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "experiments/v2/configs/s2.2.2.1-private-fixture-allowlist.json",
+            "blob_oid": "cad117ea58aa3512e6f6fbae0fc2deed3d93dc98",
+            "blob_sha256": "680e730c48848eb770fe05871afdd82427dea5bae904672d7eabbd35cc576125",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "prototype/anoncred-rust/vendor/credx-0.2.1-saib/src/mapping/map_credential.rs",
+            "blob_oid": "cb2813d4657d248d8ea6a772a7206c7e9c83b68d",
+            "blob_sha256": "1a56f4c3b22b17202fce931228c4ba460fa3981dbb503885e0aa92d9df336148",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "experiments/v2/statistics/recursive_private_material_scan.py",
+            "blob_oid": "d119fcd9cbaf756f91d5e67e4b91b8805b0d9b9f",
+            "blob_sha256": "3682991b9d99d769fbf85fe174f1aa11f2fab465314913d3f33111a51aef0a54",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "prototype/anoncred-rust/vendor/credx-0.2.1-saib/src/credential.rs",
+            "blob_oid": "ee04f6804eff6ee07befe55eef409fd0f6f1dddd",
+            "blob_sha256": "8389b0c420cbb7614a5f4b0d2db66abb4aeb2a7ff8e5309c9a2e21611cf91e92",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "experiments/v2/statistics/recursive_private_material_scan.py",
+            "blob_oid": "f60b84effb225219dbf8eb915f122aa6c4fc2141",
+            "blob_sha256": "56fc522acf263e237171cfa1712e5e3c41181fc6c681835b392cd257ca192e8c",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          }
+        ],
+        "unreviewed_sensitive_path_findings": [],
+        "fixture_admission": "historical path + public-key SPKI SHA-256 fingerprint + declared test purpose",
+        "all_reachable_blobs_scanned": true,
+        "passed": true
+      }
+    }
+  ],
+  "allowlist_mode": "working/archive files: exact path + file SHA-256; Git history keys: path + public-key SPKI SHA-256 + test purpose",
+  "passed": true
+}

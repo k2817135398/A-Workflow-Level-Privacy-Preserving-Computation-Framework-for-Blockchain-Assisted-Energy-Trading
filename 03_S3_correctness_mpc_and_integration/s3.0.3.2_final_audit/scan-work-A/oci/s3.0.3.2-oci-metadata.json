@@ -1,0 +1,55 @@
+{
+  "buildx.build.provenance": {
+    "builder": {
+      "id": ""
+    },
+    "buildType": "https://mobyproject.org/buildkit@v1",
+    "materials": [
+      {
+        "uri": "pkg:docker/host.docker.internal%3A5500/saib-retf/debian-base?digest=sha256:de022c0e136c9185e8e1d7915a7ac0471efa44db550f543c0d916631a3764914\u0026platform=linux%2Famd64",
+        "digest": {
+          "sha256": "de022c0e136c9185e8e1d7915a7ac0471efa44db550f543c0d916631a3764914"
+        }
+      }
+    ],
+    "invocation": {
+      "configSource": {
+        "entryPoint": "Dockerfile"
+      },
+      "parameters": {
+        "frontend": "dockerfile.v0",
+        "args": {
+          "build-arg:BASE_IMAGE": "host.docker.internal:5500/saib-retf/debian-base@sha256:de022c0e136c9185e8e1d7915a7ac0471efa44db550f543c0d916631a3764914",
+          "build-arg:FIELD_PRIME": "52435875175126190479447740508185965837690552500527637822603658699938581184513",
+          "build-arg:RELEASE_COMMIT": "07301dd8e0037a2fb889ace957d30f50587974c5",
+          "no-cache": ""
+        },
+        "locals": [
+          {
+            "name": "context"
+          },
+          {
+            "name": "dockerfile"
+          }
+        ]
+      },
+      "environment": {
+        "dockerfileVersion": "1.25.0",
+        "platform": "linux/amd64"
+      }
+    }
+  },
+  "buildx.build.ref": "saib-s3032-wsl/saib-s3032-wsl0/zbfvbbcfx8z8dttgfbhw2416e",
+  "containerimage.config.digest": "sha256:5cc4cf8ba4ac377ed331da3fe7c317cfcc77ef83acabf10a1ede490306c31f63",
+  "containerimage.descriptor": {
+    "mediaType": "application/vnd.oci.image.manifest.v1+json",
+    "digest": "sha256:60398b53cdc74e1ab06dbe3cb76ecb39b66e3d8ea3f1b0512c53003fb3d67389",
+    "size": 1050,
+    "platform": {
+      "architecture": "amd64",
+      "os": "linux"
+    }
+  },
+  "containerimage.digest": "sha256:60398b53cdc74e1ab06dbe3cb76ecb39b66e3d8ea3f1b0512c53003fb3d67389",
+  "image.name": "host.docker.internal:5500/saib-retf/mpspdz-party:s3.0.3.2-audit"
+}

@@ -1,0 +1,19 @@
+command=go test -count=1 -run TestS3031Red -v ./mpc/inputbinding ./fabric/mpcinputregistry
+started_at_utc=2026-07-23T02:56:13.2593167Z
+baseline_commit=2ecc21216f7e2b7b0877e90e47e683d6375394ca
+expected_exit_code=nonzero
+=== RUN   TestS3031RedPostAdmissionInputMutation
+    s3_0_3_1_red_test.go:21: RED: post-admission backend-input mutation was launched
+--- FAIL: TestS3031RedPostAdmissionInputMutation (0.00s)
+FAIL
+FAIL	github.com/retf/source/v2/mpc/inputbinding	0.119s
+=== RUN   TestS3031RedStaleGovernanceEpoch
+    s3_0_3_1_red_test.go:39: RED: stale/future governance epoch was accepted
+--- FAIL: TestS3031RedStaleGovernanceEpoch (0.00s)
+FAIL
+FAIL	github.com/retf/source/v2/fabric/mpcinputregistry	0.315s
+FAIL
+
+ended_at_utc=2026-07-23T02:56:16.8940177Z
+actual_exit_code=1
+expected_red_observed=True

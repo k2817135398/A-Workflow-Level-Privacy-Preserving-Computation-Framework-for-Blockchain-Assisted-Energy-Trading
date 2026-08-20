@@ -1,0 +1,12 @@
+command=/mnt/g/paperexper/retf/saib-retf/experiments/v2/runners/run-s3.3.1-fmatch-case.sh /tmp/saib-s3.3.1-sanitizers-G9te1g/backend-asan-only /mnt/g/paperexper/retf/benchmarks/results/expand/s3.3.1-release-gates-20260724T233844Z/golden/G-ALL/run/effective-input.json /mnt/g/paperexper/retf/benchmarks/results/expand/s3.4.1-quality-e310a58-live-01/sanitizer/mp-spdz/asan-only
+started_at_utc=2026-07-28T08:05:05Z
+capacity=16
+field_prime=52435875175126190479447740508185965837690552500527637822603658699938581184513
+compile_field_mode=255-bit-mask-comparison
+runtime_field_mode=exact-bls12-381-scalar-prime
+program_source_sha256=149e77baa6894a6eba8685dcb81311e64292e45c88838505ae7ff863998b2e0d
+program_schedule_sha256=8d9ef698912018f81f8eeb7cc9530d106c0ed071e979a599b6da4892b89d7b67
+{"result":"PASS","capacity":16,"logical_input_count":165,"party_scalar_count":329}
+{"schema_version":"SAIB-RETF/S3.3.1/mpc-oracle-comparison/1","result":"PASS","capacity":16,"party_log_sha256":{"node-0/process.log":"f5a3284bc43d10cdc005a3974b1efd1d554cd6acc7a1d8b899db260166fea64f","node-1/process.log":"a00bde4b8ecfa561008de3d3eb2745bdeaad5a1c94984842a619dbfda642e2b7","node-2/process.log":"7090ea8e35ff7024fe03b47d26450e4f1232c00cf5189748761fc4bbddbb780e"},"oracle_result_sha256":"c1db8e389044981b0633010ff4444183c624d9ac4a33cd49f763c31dc9d83650","input_manifest_sha256":"2c3ab1937580d00a9b25a7390f6ebf28551bdfe25d952caf8c3a7a23dae09ff9","mpc_summary":{"valid":1,"commitment":"28937473007530594384979196640245046975704080630466217003138927062924934440091","aggregate_matched_quantity":30000,"aggregate_settlement":12010365000,"match_slot_count":31,"residual_slot_count":32},"mismatches":[]}
+ended_at_utc=2026-07-28T08:05:29Z
+exit_code=0

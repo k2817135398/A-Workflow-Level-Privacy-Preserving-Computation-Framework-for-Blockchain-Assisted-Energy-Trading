@@ -1,0 +1,14 @@
+Running /tmp/saib-s3.1.1-sanitizer-9qs03c/candidate-patched-v2-clang-asan-ubsan/MP-SPDZ-0.4.3/Scripts/../malicious-rep-ring-party.x 0 saib_match_smoke -pn 19490 -h localhost
+Running /tmp/saib-s3.1.1-sanitizer-9qs03c/candidate-patched-v2-clang-asan-ubsan/MP-SPDZ-0.4.3/Scripts/../malicious-rep-ring-party.x 1 saib_match_smoke -pn 19490 -h localhost
+Running /tmp/saib-s3.1.1-sanitizer-9qs03c/candidate-patched-v2-clang-asan-ubsan/MP-SPDZ-0.4.3/Scripts/../malicious-rep-ring-party.x 2 saib_match_smoke -pn 19490 -h localhost
+Using statistical security parameter 40
+Trying to run 64-bit computation
+S3_RESULT matched=1 quantity=5 settlement_ticks=500
+The following benchmarks are including preprocessing (offline phase).
+Time = 0.034997 seconds 
+Data sent = 0.040373 MB in ~38 rounds (party 0 only; use '-v' for more details)
+Global data sent = 0.121119 MB (all parties)
+This program might benefit from some protocol options.
+Consider adding the following at the beginning of your code:
+	program.use_edabit(True)
+vector=partial_match exit_code=0 sanitizer_findings=0

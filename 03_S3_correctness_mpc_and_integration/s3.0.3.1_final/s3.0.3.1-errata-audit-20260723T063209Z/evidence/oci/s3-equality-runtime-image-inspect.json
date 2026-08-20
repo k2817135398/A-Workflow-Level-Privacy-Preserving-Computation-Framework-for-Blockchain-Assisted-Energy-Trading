@@ -1,0 +1,47 @@
+[
+    {
+        "Id": "sha256:e30441f2592e59fe657c537f5b7f4399037bc4ee442a830fbda2ce24a9f33160",
+        "RepoTags": [
+            "saib-retf-s3-equality-runtime:s3.0.3.1-audit"
+        ],
+        "RepoDigests": [],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-07-23T06:30:11.958351659Z",
+        "Config": {
+            "User": "65532:65532",
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Entrypoint": [
+                "/usr/local/bin/s3.0.3.1-equality-attestor"
+            ],
+            "WorkingDir": "/",
+            "Labels": {
+                "org.saib-retf.base-image": "debian:bookworm-slim@sha256:7b140f374b289a7c2befc338f42ebe6441b7ea838a042bbd5acbfca6ec875818"
+            }
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 78852250,
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/e46ceed880eff5298643ae37734f2e55575a449b10d0c098e839161426e49afc/diff:/var/lib/docker/overlay2/7c31d3e63f6734355fa2c1e5b49e4efd2d80f468bd83533e5a028ee1120eb91a/diff",
+                "MergedDir": "/var/lib/docker/overlay2/8bce1e6ef662002fe52f37b78e4323c68b58e098b013ff92d1fc5d02872bca67/merged",
+                "UpperDir": "/var/lib/docker/overlay2/8bce1e6ef662002fe52f37b78e4323c68b58e098b013ff92d1fc5d02872bca67/diff",
+                "WorkDir": "/var/lib/docker/overlay2/8bce1e6ef662002fe52f37b78e4323c68b58e098b013ff92d1fc5d02872bca67/work"
+            },
+            "Name": "overlay2"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:06bb8de039c3822963e71aa347ebf59e0715bee9b6a5bd408529c8b81c83c81e",
+                "sha256:a330a3b3c9df0b6648ce10548093b431c4c3a38d081363fb4eb2b9806189517f",
+                "sha256:cf537b8851c3279421217c95a94bd42c76076de116b57ce57e6f08504f7bdd3b"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "0001-01-01T00:00:00Z"
+        }
+    }
+]

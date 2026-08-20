@@ -1,0 +1,13 @@
+=== GATE ffi_asan_ubsan_build ===
+command=gcc -std=c11 -Wall -Wextra -Werror -fsanitize=address\,undefined -fno-omit-frame-pointer -I/mnt/g/paperexper/retf/saib-retf/prototype/anoncred-rust/include /mnt/g/paperexper/retf/saib-retf/prototype/anoncred-rust/tests/ffi_sanitizer.c -L/mnt/g/paperexper/retf/saib-retf/prototype/anoncred-rust/target/release -lsaib_anoncred -o /tmp/saib-s2.2.1-ffi-sanitizer.wam3PL 
+started_at_utc=2026-07-15T16:20:51Z
+ended_at_utc=2026-07-15T16:20:51Z
+exit_code=0
+
+=== GATE ffi_asan_ubsan_execution ===
+command=env ASAN_OPTIONS=detect_leaks=1:halt_on_error=1 UBSAN_OPTIONS=halt_on_error=1 /tmp/saib-s2.2.1-ffi-sanitizer.wam3PL 
+started_at_utc=2026-07-15T16:20:51Z
+ffi_asan_ubsan=PASS
+ended_at_utc=2026-07-15T16:20:52Z
+exit_code=0
+

@@ -1,0 +1,38 @@
+{
+  "schema_version": "saib-retf-s3.1.1-upstream-fix-audit/2",
+  "started_at_utc": "2026-07-22T07:02:17.084759+00:00",
+  "ended_at_utc": "2026-07-22T07:02:21.024886+00:00",
+  "tag": "v0.4.3",
+  "tag_commit": "26a605368e40fed3a7e9cee78c9a3f4390b85eb5",
+  "tag_source_archive_sha256": "386399a869fd53d99402614c0c39954c092cfac7b4e18fa453024664083a4ab7",
+  "tag_header_sha256": "142455412b018291f168bfb130c5cf437c1a73bde6e2d65380536fb9ad4bc93d",
+  "master_commit": "6a2256e327b507918859f605735543bb32a39d9d",
+  "master_header_url": "https://raw.githubusercontent.com/data61/MP-SPDZ/6a2256e327b507918859f605735543bb32a39d9d/Tools/octetStream.h",
+  "master_header_http_status": 200,
+  "master_header_sha256": "142455412b018291f168bfb130c5cf437c1a73bde6e2d65380536fb9ad4bc93d",
+  "tag_avx_header_sha256": "62dc539972194f92a45ee2b1405ce7b10d883413c8859e246ec17e559403d5a2",
+  "master_avx_header_url": "https://raw.githubusercontent.com/data61/MP-SPDZ/6a2256e327b507918859f605735543bb32a39d9d/Tools/avx_memcpy.h",
+  "master_avx_header_http_status": 200,
+  "master_avx_header_sha256": "62dc539972194f92a45ee2b1405ce7b10d883413c8859e246ec17e559403d5a2",
+  "v0_4_3_null_pointer_append_pattern_present": true,
+  "master_null_pointer_append_pattern_present": true,
+  "master_candidate_null_guard_present": false,
+  "v0_4_3_unaligned_scalar_pattern_present": true,
+  "master_unaligned_scalar_pattern_present": true,
+  "v0_4_3_typed_vector_cursor_present": true,
+  "master_typed_vector_cursor_present": true,
+  "upstream_append_fix_present": false,
+  "upstream_alignment_fix_present": false,
+  "upstream_fix_present": false,
+  "candidate_patches": [
+    {
+      "path": "G:/paperexper/retf/saib-retf/prototype/mp-spdz/patches/0001-octetstream-null-safe-first-append.patch",
+      "sha256": "cdc999e5c75f6eff0923d4af7c0bfa85c9322b66b4f3df1f2cec58a971826db7"
+    },
+    {
+      "path": "G:/paperexper/retf/saib-retf/prototype/mp-spdz/patches/0002-avx-memcpy-use-unaligned-safe-byte-cursors.patch",
+      "sha256": "3932b330a30ff25718ca4e90d0d64371eb70d3c3232ade1dcc237283ccaee5dd"
+    }
+  ],
+  "conclusion": "Neither the null-first-append guard nor the unaligned-access repair was present at the pinned master commit; both local patches remain separately identified and are not represented as upstream."
+}

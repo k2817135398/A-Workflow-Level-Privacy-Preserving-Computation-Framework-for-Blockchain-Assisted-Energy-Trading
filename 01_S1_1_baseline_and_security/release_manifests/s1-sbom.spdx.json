@@ -1,0 +1,33 @@
+﻿{
+    "spdxVersion":  "SPDX-2.3",
+    "dataLicense":  "CC0-1.0",
+    "SPDXID":  "SPDXRef-DOCUMENT",
+    "name":  "SAIB-RETF-v2-S1",
+    "documentNamespace":  "urn:saib-retf:s1:74b9d117f3fcc5efea06c919569fbe2ed5d1636c5372116e693b7016b1003891",
+    "creationInfo":  {
+                         "created":  "2026-07-14T05:30:23Z",
+                         "creators":  [
+                                          "Tool: experiments/v2/runners/freeze-s1.ps1"
+                                      ]
+                     },
+    "packages":  [
+                     {
+                         "name":  "github.com/retf/source/v2",
+                         "SPDXID":  "SPDXRef-Package-SAIB-RETF-v2",
+                         "versionInfo":  "fa03890d23c18c9f302a79b154ed4549bde04aee",
+                         "downloadLocation":  "NOASSERTION",
+                         "filesAnalyzed":  false,
+                         "licenseConcluded":  "NOASSERTION",
+                         "licenseDeclared":  "NOASSERTION",
+                         "copyrightText":  "NOASSERTION",
+                         "comment":  "Go module contains no third-party module requirement at S1. Standard-library and pinned container provenance are recorded separately."
+                     }
+                 ],
+    "relationships":  [
+                          {
+                              "spdxElementId":  "SPDXRef-DOCUMENT",
+                              "relationshipType":  "DESCRIBES",
+                              "relatedSpdxElement":  "SPDXRef-Package-SAIB-RETF-v2"
+                          }
+                      ]
+}

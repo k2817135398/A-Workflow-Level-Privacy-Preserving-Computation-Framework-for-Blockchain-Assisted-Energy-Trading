@@ -1,0 +1,51 @@
+[
+    {
+        "Id": "sha256:5cc4cf8ba4ac377ed331da3fe7c317cfcc77ef83acabf10a1ede490306c31f63",
+        "RepoTags": [],
+        "RepoDigests": [
+            "localhost:5500/saib-retf/mpspdz-party@sha256:60398b53cdc74e1ab06dbe3cb76ecb39b66e3d8ea3f1b0512c53003fb3d67389"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-07-24T11:25:12.753448972Z",
+        "Config": {
+            "User": "65532:65532",
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Entrypoint": [
+                "/opt/mp-spdz/malicious-rep-field-party.x"
+            ],
+            "WorkingDir": "/sessions/P0",
+            "Labels": {
+                "org.opencontainers.image.description": "Pinned non-root MP-SPDZ committed-input runtime",
+                "org.opencontainers.image.revision": "07301dd8e0037a2fb889ace957d30f50587974c5",
+                "org.opencontainers.image.title": "SAIB-RETF S3.0.3.2 MP-SPDZ party runtime",
+                "org.saib-retf.stage": "S3.0.3.2"
+            }
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 176859240,
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/5e30d7e0fe8d6f454603a32d49a9a91163179014b445c626d57bccb67106baee/diff:/var/lib/docker/overlay2/d6ed9dd82c3e7686bf5a610cf732a164c9b9cd3ab44ba30fb585b91deed7b0a1/diff:/var/lib/docker/overlay2/abc4c794fad9c0de1b2213b07cfe72dc34249b7394d9fad9af4ba3c0c18257b1/diff",
+                "MergedDir": "/var/lib/docker/overlay2/6608a1f9bb3f903d8f31b1c9a901221031367a1d26ff8dbc2684d93653d78652/merged",
+                "UpperDir": "/var/lib/docker/overlay2/6608a1f9bb3f903d8f31b1c9a901221031367a1d26ff8dbc2684d93653d78652/diff",
+                "WorkDir": "/var/lib/docker/overlay2/6608a1f9bb3f903d8f31b1c9a901221031367a1d26ff8dbc2684d93653d78652/work"
+            },
+            "Name": "overlay2"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:81f823b9617547261c907396f63f770deaa554748ff739bedfa650e3bb74595a",
+                "sha256:cff85194c3f3e75d6752819ac7ef0394d76dd069e71ff3c28504978c9b9a2247",
+                "sha256:3f9e475e224aacce78e25b70a0d1fadca7f98090dd5bb8cfcc4e2a56fb272f0a",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "0001-01-01T00:00:00Z"
+        }
+    }
+]

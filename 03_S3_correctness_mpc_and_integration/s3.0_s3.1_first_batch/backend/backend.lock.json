@@ -1,0 +1,21 @@
+{
+  "schema_version": "saib-retf-s3-mpc-backend-lock/1",
+  "backend": "MP-SPDZ",
+  "upstream_repository": "https://github.com/data61/MP-SPDZ",
+  "version": "v0.4.3",
+  "commit": "26a605368e40fed3a7e9cee78c9a3f4390b85eb5",
+  "source_archive_url": "https://codeload.github.com/data61/MP-SPDZ/tar.gz/refs/tags/v0.4.3",
+  "source_archive_sha256": "386399a869fd53d99402614c0c39954c092cfac7b4e18fa453024664083a4ab7",
+  "license_file_sha256": "058bfbbd7da65ab998620441cddc59caf7593e92caa8a0d9a5c06b1f85356b06",
+  "license": "BSD-3-Clause",
+  "protocol": "mal-rep-ring",
+  "machine": "malicious-rep-ring-party.x",
+  "parties": 3,
+  "maximum_corruptions": 1,
+  "security_model": "malicious security with honest majority and abort",
+  "arithmetic_domain": "Z/(2^64)",
+  "compiler_arguments": ["-R", "64", "saib_match_smoke"],
+  "machine_build_arguments": ["make", "-j2", "malicious-rep-ring-party.x"],
+  "encrypted_channels_required": true,
+  "upstream_security_review_disclaimer": "MP-SPDZ states that supported implementations have not necessarily undergone the security review required for critical production code."
+}

@@ -1,0 +1,112 @@
+{
+  "program": {
+    "schema_version": "saib-retf-s3.4-program-profile/1",
+    "mp_spdz_version": "v0.4.3",
+    "upstream_commit": "26a605368e40fed3a7e9cee78c9a3f4390b85eb5",
+    "patch_set_digest": "84bc30cb430659b4c25ce28b34dd239d2855d4c8cb8e8bec4bfe1c84b5bbfae4",
+    "oci_manifest_digest": "sha256:532a8ccbe2aa5cc8d5d789fd51537f7e03d80aa07758509b75d4e14f13d76079",
+    "executable_digest": "d6e0218a8ab831f2d4ef849ff37c8cf8195c220df55bb8d946a9aa4edd348769",
+    "bytecode_digest": "554f4340e03a3acb8e3ceb5a8d7ba839247d3b1ee83e36299e2145dfd1fcafd8",
+    "schedule_digest": "9e7e95bbec64c0d37d245f9fda0aa6d6e9ba4a047d06f0536ce3d09144efb9c4",
+    "libspdz_digest": "fb88d472bc10a5515281d526d05d6ccfa7c1101077c781580629f13f2ffa55b4",
+    "dependencies": [
+      {
+        "soname": "libboost_filesystem.so.1.74.0",
+        "sha256": "a10dfbe2887ce546c4c2deceb87406d7d01691a9678f3c137576ab0d790c12c4"
+      },
+      {
+        "soname": "libboost_iostreams.so.1.74.0",
+        "sha256": "155ca5949e25eb125c8c694e6572c161357ee3ec23cae88fe3f0168070920fff"
+      },
+      {
+        "soname": "libbz2.so.1.0",
+        "sha256": "167c55ec73ba39583b716cd81fd5d98372ec30653d8fdd7eeaa4755a14b167d0"
+      },
+      {
+        "soname": "libcrypto.so.3",
+        "sha256": "454132002fc1b6b33e5b3bfae27a3a926c32f47f510aa5dd0aae237d15e07c90"
+      },
+      {
+        "soname": "libgcc_s.so.1",
+        "sha256": "1ef1ac69781aa698ccda6fa6c9a4ece50414120dd3c2f7cf94071cff88aa29f0"
+      },
+      {
+        "soname": "libgmp.so.10",
+        "sha256": "40533eb4a19852385d6a3200e74acc10d44e6dee6ff3f987c8f5f32c6ffe7ffe"
+      },
+      {
+        "soname": "libgmpxx.so.4",
+        "sha256": "893dad3eb87efa28820c673d0e99dd7acadb4e4ab27748815ade74c3f08450f2"
+      },
+      {
+        "soname": "liblzma.so.5",
+        "sha256": "ed30ca9426f2fbafb1ca33b5847629b3bdb993d90027c2d03d4915a8aba9676a"
+      },
+      {
+        "soname": "libsodium.so.23",
+        "sha256": "03e83e2f6d626e64739077eb2a3bd02267e9753480040e915f181aa4fba9a6b0"
+      },
+      {
+        "soname": "libssl.so.3",
+        "sha256": "2148a742dcf7b1dd620e4b84e4b8f25a8274952edcdc2dcf2214ae6f3104235b"
+      },
+      {
+        "soname": "libstdc++.so.6",
+        "sha256": "11754c422164c322c1281d7f9751f911f5edd6a96c5496736491884821baa781"
+      },
+      {
+        "soname": "libz.so.1",
+        "sha256": "9a3ba0e5ea7de3d9235322d607d0c73543040dab2419e0e0a800b8ac3c8862dc"
+      },
+      {
+        "soname": "libzstd.so.1",
+        "sha256": "6f3b0b5549b0d8604b2d4302265296627b25158b8bd3a765a9aef2c3d6ec5279"
+      }
+    ],
+    "field_prime": "52435875175126190479447740508185965837690552500527637822603658699938581184513",
+    "compiler_field_bits": 253,
+    "security_parameter": 128,
+    "program_name": "saib_fmatch-16",
+    "fixed_capacity": 16,
+    "algorithm_version": "fixed-capacity-oblivious-fmatch/1"
+  },
+  "party": {
+    "schema_version": "saib-retf-s3.0.3.2-party-profile/2",
+    "party_id": 2,
+    "node_id": "committee-2",
+    "internal_ip": "172.31.34.12",
+    "coordinator_ip": "172.31.34.10",
+    "port": 24800,
+    "tls_certificate_digest": "08f9392e3d5fd2622ee828cc1190269d25d50247dbbc99742a04ec7b4a064ac0",
+    "tls_ca_digest": "29d47d7e1c113cdb8ccc52230caa1d0baf7107f82baf694fa22bbeb8d48eadce",
+    "input_directory": "/sessions/P2/Player-Data",
+    "working_directory": "/sessions/P2",
+    "cpu_quota_milli": 1000,
+    "memory_limit_bytes": 536870912,
+    "allowed_environment": [
+      "LANG=C.UTF-8",
+      "TZ=UTC"
+    ]
+  },
+  "session": {
+    "schema_version": "saib-retf-s3.0.3.2-session-runtime-root/1",
+    "task_id": "s3.4-fmatch-live-cdaea345cc6c-audit-cdaea34",
+    "session_id": "s34-fdd83a81d07307a832caa818",
+    "committee_epoch": 2,
+    "nonce": "725db93cd1be6e34803336312c7176e2c29c8fa8faf2fbf3b796207f58e25b8f",
+    "expires_at_unix": 1785072808,
+    "mpc_input_binding_digest": "",
+    "mpc_input_binding_set_digest": "8fc1efc0a8e37a15b88140c54b6d40782b91b5931ae649b8bfd00bc295d67550",
+    "mpc_program_digest": "3fb80d6c88c30c8b24bfe312094037f925a01cd8566a2c491ae3ec0d883a37cd",
+    "party_runtime_digests": [
+      "ad9f0edb4bb81322fa0952d2b65db54e5bd9f4e347db8c3e8e7c3fe2cdc571d8",
+      "fb0d878cef9c7c14ef574521e181b7ef6c4e05afdf4d1605a6544de4073d5e03",
+      "6e5cc6f6eee4114fb13e7d20f5687daa0585ee1ad708154a19242c12d54f8614"
+    ],
+    "committee_policy_digest": "322a299d9841e1155922beb8f5d26032a119ca50886d036c026f2a6378843147"
+  },
+  "batch_launch_id": "c84dd495850e845e3d6c943429caec1f6e1cf1c532385c66c92fdd70e91d8268",
+  "verified_input_digest": "8d99ded7a6b20b46fc4249a0bc056fd3f7fec4c24890c6fd415a6d9cd223174e",
+  "input_commitment_root": "e653e314ba95c77c4af0b8f677196d32e3dfcd71045b49abb854c87cb32cba0e",
+  "binding_set_digest": "8fc1efc0a8e37a15b88140c54b6d40782b91b5931ae649b8bfd00bc295d67550"
+}

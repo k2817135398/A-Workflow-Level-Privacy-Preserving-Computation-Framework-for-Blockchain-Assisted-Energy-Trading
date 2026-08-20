@@ -1,0 +1,186 @@
+command=/mnt/g/paperexper/retf/saib-retf/experiments/v2/runners/run-s3.0.3-rust-asan.sh /mnt/g/paperexper/retf/benchmarks/results/expand/s3.0.3-binding-closure-evidence-final-074def2/sanitizer
+started_at_utc=2026-07-22T15:07:00Z
+rust_version=rustc 1.85.1 (4eb161250 2025-03-15)
+   Compiling proc-macro2 v1.0.106
+   Compiling unicode-ident v1.0.24
+   Compiling quote v1.0.46
+   Compiling libc v0.2.186
+   Compiling cfg-if v1.0.4
+   Compiling typenum v1.20.1
+   Compiling version_check v0.9.5
+   Compiling serde_core v1.0.228
+   Compiling subtle v2.6.1
+   Compiling serde v1.0.228
+   Compiling zerocopy v0.8.54
+   Compiling autocfg v1.5.1
+   Compiling radium v0.7.0
+   Compiling tap v1.0.1
+   Compiling funty v2.0.0
+   Compiling base16ct v0.2.0
+   Compiling wyz v0.5.1
+   Compiling rustversion v1.0.23
+   Compiling byteorder v1.5.0
+   Compiling foldhash v0.2.0
+   Compiling find-msvc-tools v0.1.9
+   Compiling hashbrown v0.16.1
+   Compiling shlex v2.0.1
+   Compiling crossbeam-utils v0.8.22
+   Compiling generic-array v0.14.9
+   Compiling cc v1.2.67
+   Compiling spin v0.10.1
+   Compiling num-traits v0.2.19
+   Compiling cpufeatures v0.2.17
+   Compiling heapless v0.8.0
+   Compiling getrandom v0.4.3
+   Compiling hash32 v0.3.1
+   Compiling stable_deref_trait v1.2.1
+   Compiling crossbeam-epoch v0.9.20
+   Compiling keccak v0.1.6
+   Compiling memchr v2.8.3
+   Compiling bitvec v1.1.1
+   Compiling regex-syntax v0.8.11
+   Compiling crossbeam-deque v0.8.7
+   Compiling blst v0.3.12
+   Compiling hex v0.4.3
+   Compiling aho-corasick v1.1.4
+   Compiling rayon-core v1.13.0
+   Compiling arrayref v0.3.9
+   Compiling opaque-debug v0.3.1
+   Compiling thiserror v1.0.69
+   Compiling syn v2.0.118
+   Compiling anyhow v1.0.103
+   Compiling thiserror v2.0.18
+   Compiling getrandom v0.2.17
+   Compiling num_cpus v1.17.0
+   Compiling rand_core v0.6.4
+   Compiling threadpool v1.8.1
+   Compiling rand_xorshift v0.3.0
+   Compiling ff v0.13.1
+   Compiling regex-automata v0.4.15
+   Compiling serde_json v1.0.145
+   Compiling itoa v1.0.18
+   Compiling ryu v1.0.23
+   Compiling equivalent v1.0.2
+   Compiling iana-time-zone v0.1.65
+   Compiling num-integer v0.1.46
+   Compiling rmp v0.8.15
+   Compiling either v1.16.0
+   Compiling uint-zigzag v0.2.0
+   Compiling num-iter v0.1.46
+   Compiling rayon v1.12.0
+   Compiling chrono v0.4.45
+   Compiling indexmap v2.11.4
+   Compiling uuid v1.23.5
+   Compiling log v0.4.33
+   Compiling base64 v0.22.1
+   Compiling maplit v1.0.2
+   Compiling rustix v1.1.4
+   Compiling linux-raw-sys v0.12.1
+   Compiling bitflags v2.13.0
+   Compiling ppv-lite86 v0.2.21
+   Compiling once_cell v1.21.4
+   Compiling regex v1.13.0
+   Compiling fastrand v2.4.1
+   Compiling wait-timeout v0.2.1
+   Compiling std-shims v0.1.5
+   Compiling generic-array v1.4.4
+   Compiling quick-error v1.2.3
+   Compiling fnv v1.0.7
+   Compiling bit-vec v0.8.0
+   Compiling unarray v0.1.4
+   Compiling lazy_static v1.5.0
+   Compiling bit-set v0.8.0
+   Compiling rand_chacha v0.3.1
+   Compiling rand v0.8.5
+   Compiling group v0.13.0
+   Compiling zeroize_derive v1.5.0
+   Compiling serde_derive v1.0.228
+   Compiling thiserror-impl v1.0.69
+   Compiling thiserror-impl v2.0.18
+   Compiling pairing v0.23.0
+   Compiling tempfile v3.27.0
+   Compiling rusty-fork v0.3.1
+   Compiling proptest v1.6.0
+   Compiling zeroize v1.8.2
+   Compiling multiexp v0.4.0
+   Compiling merlin v3.0.0
+   Compiling crypto-common v0.1.6
+   Compiling block-buffer v0.10.4
+   Compiling inout v0.1.4
+   Compiling cipher v0.4.4
+   Compiling universal-hash v0.5.1
+   Compiling aead v0.5.2
+   Compiling digest v0.10.7
+   Compiling polyval v0.6.2
+   Compiling hmac v0.12.1
+   Compiling sha3 v0.10.9
+   Compiling sha2 v0.10.9
+   Compiling ctr v0.9.2
+   Compiling aes v0.8.4
+   Compiling ghash v0.5.1
+   Compiling hkdf v0.12.4
+   Compiling aes-gcm v0.10.3
+   Compiling serdect v0.2.0
+   Compiling num-bigint v0.4.8
+   Compiling num-complex v0.4.6
+   Compiling serdect v0.3.0
+   Compiling hybrid-array v0.4.13
+   Compiling serde_bare v0.5.0
+   Compiling serde_regex v1.2.0
+   Compiling rmp-serde v1.3.1
+   Compiling crypto-bigint v0.5.5
+   Compiling crypto-bigint v0.6.1
+   Compiling num-rational v0.4.2
+   Compiling num v0.4.3
+   Compiling elliptic-curve v0.13.8
+   Compiling elliptic-curve-tools v0.2.0
+   Compiling blstrs_plus v0.8.18
+   Compiling elliptic-curve-tools v0.1.2
+   Compiling vsss-rs v5.4.0
+   Compiling bulletproofs-bls v4.0.0
+   Compiling blsful v3.0.0-pre8
+   Compiling credx v0.2.1 (/mnt/g/paperexper/retf/saib-retf/prototype/anoncred-rust/vendor/credx-0.2.1-saib)
+warning: use of deprecated associated function `elliptic_curve::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> vendor/credx-0.2.1-saib/src/presentation/verifiable_encryption_decryption.rs:164:46
+    |
+164 |         let key = aes_gcm::Key::<Aes128Gcm>::from_slice(&okm[..16]);
+    |                                              ^^^^^^^^^^
+    |
+    = note: `#[warn(deprecated)]` on by default
+
+warning: use of deprecated associated function `elliptic_curve::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> vendor/credx-0.2.1-saib/src/presentation/verifiable_encryption_decryption.rs:235:28
+    |
+235 |         let nonce = Nonce::from_slice(&self.ciphertext[..12]);
+    |                            ^^^^^^^^^^
+
+warning: use of deprecated associated function `elliptic_curve::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> vendor/credx-0.2.1-saib/src/presentation/verifiable_encryption_decryption.rs:243:46
+    |
+243 |         let key = aes_gcm::Key::<Aes128Gcm>::from_slice(&okm[..16]);
+    |                                              ^^^^^^^^^^
+
+warning: `credx` (lib) generated 3 warnings
+   Compiling saib-anoncred v0.1.0 (/mnt/g/paperexper/retf/saib-retf/prototype/anoncred-rust)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 3m 46s
+     Running tests/s3_committed_input.rs (target/s3.0.3-asan/x86_64-unknown-linux-gnu/debug/deps/s3_committed_input-a47922200b38979a)
+
+running 6 tests
+test complete_submitter_chosen_generator_attack_is_rejected ... ok
+
+thread 'component_substitution_range_mutation_and_policy_substitution_fail' panicked at /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs:701:9:
+assertion `left == right` failed
+  left: 0
+ right: 1
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+test malformed_field_profile_registry_and_credential_commitment_fail ... ok
+test component_substitution_range_mutation_and_policy_substitution_fail ... ok
+test credx_commitment_vss_ranges_and_all_replica_layouts_verify ... ok
+test alice_s2_context_rejects_bob_s3_proof_and_openings ... ok
+test equal_value_rerandomized_retry_accepts_and_changed_value_retry_rejects ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 7.42s
+
+asan_findings=0
+ended_at_utc=2026-07-22T15:10:54Z
+exit_code=0

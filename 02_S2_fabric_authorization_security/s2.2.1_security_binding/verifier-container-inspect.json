@@ -1,0 +1,319 @@
+[
+    {
+        "Id": "af13e7190aea3066bf1caa5d3eccf6518aa6948a3326b3aa6d1c556025d6d654",
+        "Created": "2026-07-15T13:13:53.019821415Z",
+        "Path": "/usr/local/bin/s2.2.1-verifier-service",
+        "Args": [
+            "--listen",
+            "0.0.0.0:48443",
+            "--attestor-key",
+            "/run/secrets/attestor.pem",
+            "--key-id",
+            "s221-attestor",
+            "--key-version",
+            "1",
+            "--credential-registry",
+            "/run/config/credentials.json",
+            "--policy-registry",
+            "/run/config/policies.json",
+            "--trusted-height",
+            "/run/config/trusted-height.txt",
+            "--tls-cert",
+            "/run/tls/server.pem",
+            "--tls-key",
+            "/run/tls/server.key",
+            "--client-ca",
+            "/run/tls/client-ca.pem"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 23763,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-07-15T13:13:53.178796904Z",
+            "FinishedAt": "0001-01-01T00:00:00Z"
+        },
+        "Image": "sha256:96697a8929e03803682ddc6bf3149e63abf12c5a3eea0e4f697c374bcb39c535",
+        "ResolvConfPath": "/var/lib/docker/containers/af13e7190aea3066bf1caa5d3eccf6518aa6948a3326b3aa6d1c556025d6d654/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/af13e7190aea3066bf1caa5d3eccf6518aa6948a3326b3aa6d1c556025d6d654/hostname",
+        "HostsPath": "/var/lib/docker/containers/af13e7190aea3066bf1caa5d3eccf6518aa6948a3326b3aa6d1c556025d6d654/hosts",
+        "LogPath": "/var/lib/docker/containers/af13e7190aea3066bf1caa5d3eccf6518aa6948a3326b3aa6d1c556025d6d654/af13e7190aea3066bf1caa5d3eccf6518aa6948a3326b3aa6d1c556025d6d654-json.log",
+        "Name": "/s221-verifier",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.1-live/public-config/trusted-credential-registry.json:/run/config/credentials.json:ro",
+                "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.1-live/public-config/task-policy-registry.json:/run/config/policies.json:ro",
+                "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.1-live/trusted-height.txt:/run/config/trusted-height.txt:ro",
+                "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.1-live/public-config/verifier-mtls-cert.pem:/run/tls/server.pem:ro",
+                "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.1-live/runtime-secrets/mtls/verifier.key:/run/tls/server.key:ro",
+                "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.1-live/public-config/relay-verifier-ca.pem:/run/tls/client-ca.pem:ro",
+                "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.1-live/runtime-secrets/attestor-v1-private.pem:/run/secrets/attestor.pem:ro"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "retf_network",
+            "PortBindings": {
+                "48443/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "48443"
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "host",
+            "Dns": null,
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": [],
+            "BlkioDeviceReadBps": [],
+            "BlkioDeviceWriteBps": [],
+            "BlkioDeviceReadIOps": [],
+            "BlkioDeviceWriteIOps": [],
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [],
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": false,
+            "PidsLimit": null,
+            "Ulimits": [],
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/acpi",
+                "/proc/asound",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/sys/devices/virtual/powercap",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "ID": "af13e7190aea3066bf1caa5d3eccf6518aa6948a3326b3aa6d1c556025d6d654",
+                "LowerDir": "/var/lib/docker/overlay2/cc6ac5b08eafd7244779f061fd1f593df8c509312e967eb4e8dadc14b2ebc6a6-init/diff:/var/lib/docker/overlay2/ms46sfk20vzw458jl9x5tyeez/diff:/var/lib/docker/overlay2/gmbqsfn8u8z68f3b4qmzbfjap/diff:/var/lib/docker/overlay2/xhtsm9imb61a8ivqplkjwngft/diff",
+                "MergedDir": "/var/lib/docker/overlay2/cc6ac5b08eafd7244779f061fd1f593df8c509312e967eb4e8dadc14b2ebc6a6/merged",
+                "UpperDir": "/var/lib/docker/overlay2/cc6ac5b08eafd7244779f061fd1f593df8c509312e967eb4e8dadc14b2ebc6a6/diff",
+                "WorkDir": "/var/lib/docker/overlay2/cc6ac5b08eafd7244779f061fd1f593df8c509312e967eb4e8dadc14b2ebc6a6/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [
+            {
+                "Type": "bind",
+                "Source": "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.1-live/public-config/trusted-credential-registry.json",
+                "Destination": "/run/config/credentials.json",
+                "Mode": "ro",
+                "RW": false,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.1-live/public-config/task-policy-registry.json",
+                "Destination": "/run/config/policies.json",
+                "Mode": "ro",
+                "RW": false,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.1-live/trusted-height.txt",
+                "Destination": "/run/config/trusted-height.txt",
+                "Mode": "ro",
+                "RW": false,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.1-live/public-config/verifier-mtls-cert.pem",
+                "Destination": "/run/tls/server.pem",
+                "Mode": "ro",
+                "RW": false,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.1-live/runtime-secrets/mtls/verifier.key",
+                "Destination": "/run/tls/server.key",
+                "Mode": "ro",
+                "RW": false,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.1-live/public-config/relay-verifier-ca.pem",
+                "Destination": "/run/tls/client-ca.pem",
+                "Mode": "ro",
+                "RW": false,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.1-live/runtime-secrets/attestor-v1-private.pem",
+                "Destination": "/run/secrets/attestor.pem",
+                "Mode": "ro",
+                "RW": false,
+                "Propagation": "rprivate"
+            }
+        ],
+        "Config": {
+            "Hostname": "af13e7190aea",
+            "Domainname": "",
+            "User": "65532:65532",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "48443/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LD_LIBRARY_PATH=/usr/local/lib"
+            ],
+            "Cmd": [
+                "--listen",
+                "0.0.0.0:48443",
+                "--attestor-key",
+                "/run/secrets/attestor.pem",
+                "--key-id",
+                "s221-attestor",
+                "--key-version",
+                "1",
+                "--credential-registry",
+                "/run/config/credentials.json",
+                "--policy-registry",
+                "/run/config/policies.json",
+                "--trusted-height",
+                "/run/config/trusted-height.txt",
+                "--tls-cert",
+                "/run/tls/server.pem",
+                "--tls-key",
+                "/run/tls/server.key",
+                "--client-ca",
+                "/run/tls/client-ca.pem"
+            ],
+            "Image": "saib-s2.2.1-verifier:local",
+            "Volumes": null,
+            "WorkingDir": "/",
+            "Entrypoint": [
+                "/usr/local/bin/s2.2.1-verifier-service"
+            ],
+            "Labels": {
+                "desktop.docker.io/wsl-distro": "Ubuntu"
+            },
+            "StopTimeout": 1
+        },
+        "NetworkSettings": {
+            "SandboxID": "8729a247c5abe62a245d1de324666c77053a23565c6f2e1bbbe0c3441c9fa225",
+            "SandboxKey": "/var/run/docker/netns/8729a247c5ab",
+            "Ports": {
+                "48443/tcp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "48443"
+                    },
+                    {
+                        "HostIp": "::",
+                        "HostPort": "48443"
+                    }
+                ]
+            },
+            "Networks": {
+                "retf_network": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "791a52f6b0b8f12ba22fc42b5f69a633501ec410e5a1211b5344259bac150fc2",
+                    "EndpointID": "00f0716f486a0ca179cb69232e59ed1bb0b69f4082bf722fe53fb641d6902782",
+                    "Gateway": "172.18.0.1",
+                    "IPAddress": "172.18.0.26",
+                    "MacAddress": "8e:a7:c9:9e:55:01",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": [
+                        "s221-verifier",
+                        "af13e7190aea"
+                    ]
+                }
+            }
+        }
+    }
+]

@@ -1,0 +1,88 @@
+{
+  "capacity": 16,
+  "compiler_integer_opens": 3285,
+  "compiler_integer_triples": 189597,
+  "compiler_virtual_machine_rounds": 12228,
+  "distribution": "all-non-match",
+  "execution": "three-real-local-mp-spdz-processes",
+  "fixed_public_loop_iterations": 1727,
+  "global_received_bytes_derived": 169350000,
+  "global_sent_bytes_printed": 169350000,
+  "instruction_count": 32360,
+  "logical_message_events": 41670,
+  "party_round_counts": [
+    13890,
+    13890,
+    13890
+  ],
+  "party_sent_bytes_printed": [
+    56556600,
+    56556600,
+    56236600
+  ],
+  "received_bytes_method": "closed three-party session: aggregate received bytes equal aggregate sent bytes; MP-SPDZ prints aggregate sent bytes",
+  "result": "PASS",
+  "result_commitment": "48938915713014630634065651484062348750821170932871890970511158417379319454138",
+  "result_commitment_verified": true,
+  "result_output_length_bytes": 290,
+  "schema_version": "SAIB-RETF/S3.3.2/trace-shape/1",
+  "sorting_network_comparators": 317,
+  "trace_length": 12,
+  "trace_shape_sha256": "3b2029d0968b125ac4aba2ab3e394f29e0b30b26eaa27fc6fd6d490ef1f34706",
+  "trace_type": [
+    [
+      {
+        "rounds": 2912,
+        "type": "Broadcasting"
+      },
+      {
+        "rounds": 10964,
+        "type": "Passing around"
+      },
+      {
+        "rounds": 7,
+        "type": "Receiving directly"
+      },
+      {
+        "rounds": 7,
+        "type": "Sending directly"
+      }
+    ],
+    [
+      {
+        "rounds": 2912,
+        "type": "Broadcasting"
+      },
+      {
+        "rounds": 10963,
+        "type": "Passing around"
+      },
+      {
+        "rounds": 7,
+        "type": "Receiving directly"
+      },
+      {
+        "rounds": 8,
+        "type": "Sending directly"
+      }
+    ],
+    [
+      {
+        "rounds": 2912,
+        "type": "Broadcasting"
+      },
+      {
+        "rounds": 10963,
+        "type": "Passing around"
+      },
+      {
+        "rounds": 8,
+        "type": "Receiving directly"
+      },
+      {
+        "rounds": 7,
+        "type": "Sending directly"
+      }
+    ]
+  ]
+}

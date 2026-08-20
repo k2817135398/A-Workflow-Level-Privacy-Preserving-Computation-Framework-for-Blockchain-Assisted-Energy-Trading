@@ -1,0 +1,69 @@
+command=/mnt/g/paperexper/retf/saib-retf/experiments/v2/runners/run-s3.1-quality.sh /mnt/g/paperexper/retf/benchmarks/results/expand/s3-working/quality
+started_at_utc=2026-07-22T04:17:57Z
+go_version=go version go1.22.2 linux/amd64
+[gate] go test -count=1 -race ./mpc/inputbinding
+ok  	github.com/retf/source/v2/mpc/inputbinding	1.082s
+[gate] go test -count=1 -coverprofile
+ok  	github.com/retf/source/v2/mpc/inputbinding	0.018s	coverage: 91.7% of statements
+github.com/retf/source/v2/mpc/inputbinding/binding.go:120:	NewMemoryReplayStore	100.0%
+github.com/retf/source/v2/mpc/inputbinding/binding.go:124:	UseOnce			100.0%
+github.com/retf/source/v2/mpc/inputbinding/binding.go:161:	ValidateShape		100.0%
+github.com/retf/source/v2/mpc/inputbinding/binding.go:201:	CanonicalBytes		66.7%
+github.com/retf/source/v2/mpc/inputbinding/binding.go:208:	Digest			80.0%
+github.com/retf/source/v2/mpc/inputbinding/binding.go:217:	SigningBytes		80.0%
+github.com/retf/source/v2/mpc/inputbinding/binding.go:226:	Sign			83.3%
+github.com/retf/source/v2/mpc/inputbinding/binding.go:236:	UserShareLeaf		100.0%
+github.com/retf/source/v2/mpc/inputbinding/binding.go:240:	CreditShareLeaf		100.0%
+github.com/retf/source/v2/mpc/inputbinding/binding.go:244:	shareLeaf		75.0%
+github.com/retf/source/v2/mpc/inputbinding/binding.go:257:	MerkleParent		100.0%
+github.com/retf/source/v2/mpc/inputbinding/binding.go:265:	VerifyMerkleProof	93.3%
+github.com/retf/source/v2/mpc/inputbinding/binding.go:289:	Admit			93.2%
+github.com/retf/source/v2/mpc/inputbinding/binding.go:372:	matchesDigest		80.0%
+github.com/retf/source/v2/mpc/inputbinding/binding.go:381:	requireHex		100.0%
+total:								(statements)		91.7%
+[gate] structured fuzz
+fuzz: elapsed: 0s, gathering baseline coverage: 0/27 completed
+fuzz: elapsed: 0s, gathering baseline coverage: 27/27 completed, now fuzzing with 16 workers
+fuzz: elapsed: 3s, execs: 83413 (27795/sec), new interesting: 0 (total: 27)
+fuzz: elapsed: 5s, execs: 126991 (20728/sec), new interesting: 0 (total: 27)
+PASS
+ok  	github.com/retf/source/v2/mpc/inputbinding	5.111s
+[gate] canonical round-trip fuzz
+fuzz: elapsed: 0s, gathering baseline coverage: 0/2 completed
+fuzz: elapsed: 0s, gathering baseline coverage: 2/2 completed, now fuzzing with 16 workers
+fuzz: elapsed: 3s, execs: 66126 (21977/sec), new interesting: 15 (total: 17)
+fuzz: elapsed: 6s, execs: 109948 (14642/sec), new interesting: 24 (total: 26)
+fuzz: elapsed: 6s, execs: 109948 (0/sec), new interesting: 24 (total: 26)
+PASS
+ok  	github.com/retf/source/v2/mpc/inputbinding	6.026s
+[gate] go vet
+[gate] complete production build test
+?   	github.com/retf/source/v2/chaincode/privacy-state	[no test files]
+?   	github.com/retf/source/v2/chaincode/private-finalization	[no test files]
+?   	github.com/retf/source/v2/chaincode/private-task	[no test files]
+?   	github.com/retf/source/v2/cmd/s2.2-privacy-chaincode	[no test files]
+?   	github.com/retf/source/v2/cmd/s2.2.1-block-scan	[no test files]
+?   	github.com/retf/source/v2/cmd/s2.2.1-material-tool	[no test files]
+?   	github.com/retf/source/v2/cmd/s2.2.1-privacy-chaincode	[no test files]
+?   	github.com/retf/source/v2/cmd/s2.2.2-ccaas-mtls-probe	[no test files]
+?   	github.com/retf/source/v2/cmd/s2.2.2-proposal-time-probe	[no test files]
+?   	github.com/retf/source/v2/cmd/s3-binding-vector	[no test files]
+?   	github.com/retf/source/v2/cmd/v2-static-check	[no test files]
+?   	github.com/retf/source/v2/crypto/anoncred	[no test files]
+?   	github.com/retf/source/v2/crypto/anoncred/ffi	[no test files]
+?   	github.com/retf/source/v2/crypto/anoncred/real	[no test files]
+?   	github.com/retf/source/v2/crypto/credit	[no test files]
+?   	github.com/retf/source/v2/crypto/endorsement	[no test files]
+?   	github.com/retf/source/v2/mpc/adapter	[no test files]
+?   	github.com/retf/source/v2/privacy/authstatement	[no test files]
+?   	github.com/retf/source/v2/protocol/canonical	[no test files]
+?   	github.com/retf/source/v2/protocol/messages	[no test files]
+?   	github.com/retf/source/v2/runtime/trace	[no test files]
+ok  	github.com/retf/source/v2/fabric/privacychaincode	0.032s
+ok  	github.com/retf/source/v2/fabric/privacychaincode221	0.038s
+ok  	github.com/retf/source/v2/mpc/inputbinding	0.025s
+ok  	github.com/retf/source/v2/privacy/securitybinding	0.010s
+ok  	github.com/retf/source/v2/protocol/binding	0.010s
+selected=7 viable=7 non_viable=0 killed=7
+ended_at_utc=2026-07-22T04:18:21Z
+exit_code=0

@@ -1,0 +1,107 @@
+started_at_utc=2026-07-28T11:03:40Z
+release_commit=e310a58e5ef96f85d743dc1bd78a3f4a7774c98a
+recovery_reason=frozen_wrapper_precreated_exclusive_blocks_directory
+original_failed_run=privacy-e310a58-01
+[34m2026-07-28 11:03:41.225 UTC 0001 INFO[0m [grpc] [34;1mInfof[0m -> [core] original dial target is: "peer0.nsw.retf.com:7051"
+[34m2026-07-28 11:03:41.225 UTC 0002 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #1]Channel created
+[34m2026-07-28 11:03:41.225 UTC 0003 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #1]parsed dial target is: resolver.Target{URL:url.URL{Scheme:"passthrough", Opaque:"", User:(*url.Userinfo)(nil), Host:"", Path:"/peer0.nsw.retf.com:7051", Fragment:"", RawQuery:"", RawPath:"", RawFragment:"", ForceQuery:false, OmitHost:false}}
+[34m2026-07-28 11:03:41.225 UTC 0004 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #1]Channel authority set to "peer0.nsw.retf.com:7051"
+[34m2026-07-28 11:03:41.226 UTC 0005 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #1]Resolver state updated: {
+  "Addresses": [
+    {
+      "Addr": "peer0.nsw.retf.com:7051",
+      "ServerName": "",
+      "Attributes": null,
+      "BalancerAttributes": null,
+      "Metadata": null
+    }
+  ],
+  "Endpoints": [
+    {
+      "Addresses": [
+        {
+          "Addr": "peer0.nsw.retf.com:7051",
+          "ServerName": "",
+          "Attributes": null,
+          "BalancerAttributes": null,
+          "Metadata": null
+        }
+      ],
+      "Attributes": null
+    }
+  ],
+  "ServiceConfig": null,
+  "Attributes": null
+} (resolver returned new addresses)
+[34m2026-07-28 11:03:41.227 UTC 0006 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #1]Channel switches to new LB policy "pick_first"
+[34m2026-07-28 11:03:41.227 UTC 0007 INFO[0m [grpc] [34;1mInfof[0m -> [pick-first-leaf-lb] [pick-first-leaf-lb 0x16de263983f0] Received new config {
+  "shuffleAddressList": false
+}, resolver state {
+  "Addresses": [
+    {
+      "Addr": "peer0.nsw.retf.com:7051",
+      "ServerName": "",
+      "Attributes": null,
+      "BalancerAttributes": null,
+      "Metadata": null
+    }
+  ],
+  "Endpoints": [
+    {
+      "Addresses": [
+        {
+          "Addr": "peer0.nsw.retf.com:7051",
+          "ServerName": "",
+          "Attributes": null,
+          "BalancerAttributes": null,
+          "Metadata": null
+        }
+      ],
+      "Attributes": null
+    }
+  ],
+  "ServiceConfig": null,
+  "Attributes": null
+}
+[34m2026-07-28 11:03:41.228 UTC 0008 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #1]Channel Connectivity change to CONNECTING
+[34m2026-07-28 11:03:41.228 UTC 0009 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #1 SubChannel #2]Subchannel created
+[34m2026-07-28 11:03:41.228 UTC 000a INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #1]Channel exiting idle mode
+[34m2026-07-28 11:03:41.229 UTC 000b INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #1 SubChannel #2]Subchannel Connectivity change to CONNECTING
+[34m2026-07-28 11:03:41.229 UTC 000c INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #1 SubChannel #2]Subchannel picks a new address "peer0.nsw.retf.com:7051" to connect
+[34m2026-07-28 11:03:41.241 UTC 000d INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #1 SubChannel #2]Subchannel Connectivity change to READY
+[34m2026-07-28 11:03:41.242 UTC 000e INFO[0m [grpc] [34;1mInfof[0m -> [pick-first-leaf-lb] [pick-first-leaf-lb 0x16de263983f0] SubConn 0x16de26352c80 reported connectivity state READY and the health listener is disabled. Transitioning SubConn to READY.
+[34m2026-07-28 11:03:41.243 UTC 000f INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #1]Channel Connectivity change to READY
+[34m2026-07-28 11:03:41.243 UTC 0010 INFO[0m [channelCmd] [34;1mInitCmdFactory[0m -> Endorser and orderer connections initialized
+start_block=545
+end_block=1887
+collected_blocks=100/1343
+collected_blocks=200/1343
+collected_blocks=300/1343
+collected_blocks=400/1343
+collected_blocks=500/1343
+collected_blocks=600/1343
+collected_blocks=700/1343
+collected_blocks=800/1343
+collected_blocks=900/1343
+collected_blocks=1000/1343
+collected_blocks=1100/1343
+collected_blocks=1200/1343
+collected_blocks=1300/1343
+S3.4.1 block scan gate failed
+RECOVERY_START_UTC=2026-07-28T11:10:33.2028266Z
+RECOVERY_REASON=single-relay scanner knew only s2.2.2-privacy-relay; two valid e2e authorizations used the exact live s3.4-governance-relay certificate
+S2_RELAY_ONLY_SCAN_SHA256=3ec569ebe019e08826af9209ae1a3d59d59e0fb41af6c61db4bd60e3282d31cf
+S3_RELAY_ONLY_SCAN_SHA256=89efbfc4b69c451a43ea0f516699c693f1174afa21ef2a2459add0b08f08684c
+DUAL_RELAY_CANONICAL_SCAN_SHA256=b5422af7140d49d0500e986f10499285843db6bb86b8bfa2d0520e86d9af23cd
+CHAIN_PRIVACY_SUMMARY_SHA256=e5185026b17fc4495d870b425300e4bd8fb2f04ae9870f3c1f8f953459bac3d4
+WORLD_STATE_SCAN_SHA256=fcc7dc34d58f4db87f1ab520accee9f2ed2b60e4407b66a49f9502b22f6f082c
+SINGLE_PARTY_POST_CLEANUP_SCAN_SHA256=dbef3f7a9b068463095408b07c5a71eef194ba16054753aa5e058ae9a88c64d2
+AUTHORIZATION_RECORDS_TOTAL=10132
+AUTHORIZATION_RECORDS_VALID=10102
+AUTHORIZATION_RECORDS_INVALID=30
+EXACT_DEDICATED_RELAY_PROFILES=2
+VALID_RECORDS_OUTSIDE_EXACT_ALLOWLIST=0
+SELECTED_SENSITIVE_FIELD_HITS=0
+RECOVERY_END_UTC=2026-07-28T11:14:17.1978928Z
+RECOVERY_RESULT=PASS
+exit_code=0

@@ -1,0 +1,179 @@
+PP-RETF REVISION EXPERIMENT METHODOLOGY
+=======================================
+
+Common statistical rules
+------------------------
+Elapsed time uses Go time.Now/time.Since; Go retains a monotonic clock component
+for elapsed calculations when available. No observation was deleted, winsorized,
+smoothed, or manually replaced. Raw rows retain success/error fields. Fixed seeds
+and deployment identifiers are recorded where applicable.
+
+Statistics report N_total, N_success, success rate, arithmetic mean, median,
+sample standard deviation (N-1), nearest-rank p95, minimum, maximum, and a
+two-sided Student-t 95% confidence interval for the mean. Only successful numeric
+rows enter latency summaries, while failures remain visible in raw counts.
+
+P1 semantic equivalence
+-----------------------
+Ten named edge/scale cases plus 1,000 fixed-seed random differential cases execute
+independent Plain and committee paths on copied identical inputs. Compared fields
+include matched pairs, price, quantity, settlement, penalties, credit updates,
+order transitions, canonical result hash, invariants, and permutation stability.
+Result: 1,010/1,010 passed. A native Go fuzz run exercised another 69,740 inputs
+in ten seconds without failure. These are correctness tests, not latency samples.
+
+P3/P4 security regression
+-------------------------
+Thirty-eight exported acceptance/rejection properties execute 100 repetitions
+each against deterministic mock-ledger contract paths. All 34 malicious cases had
+0/100 acceptance; all four valid controls had 100/100 acceptance. The suite covers
+current/revoked/stale/wrong-scope accumulator proofs, preprocessing field/signature
+tampering and replay, committee forgery/duplication/threshold/epoch/scope/result
+tampering, and production finalization consistency/replay. Scoped audit-token
+tests are absent because private audit retrieval is not implemented.
+
+P5 connected production integration
+-----------------------------------
+One correctness sample runs the real production path with a clean 2048-bit public
+accumulator setup, two registered users, two real orders, fresh task-bound regional
+claims, one signed canonical preprocessing submission, three independent committee
+OS processes, three authentic ECDSA signatures, ledger threshold 2, commit waits,
+and post-commit comparison of MatchingResult/orders/users/trade. This proves
+connected evidence flow and final-state consistency. It is not a latency
+distribution and is not used to calculate an overhead percentage.
+
+E1 authenticated preprocessing (Fig. 3a)
+-----------------------------------------
+Batch sizes: 10, 50, 100, 500, and 1,000 orders.
+Recorded N: 100 per size. Discarded warm-up W: 20 per size.
+Each recorded value averages 20 inner executions to reduce sub-millisecond Windows
+timer quantization. Seed and input are fixed. Calls are local and serial. The raw
+file separates descriptor preparation, batch hashing, ECDSA signature generation,
+ECDSA verification, Build total, and Build-plus-verification. HMAC fields are blank
+because HMAC is not the current production submission authenticator. The plotted
+p95 is never described as an isolated HMAC average.
+
+E2 RSA accumulator (Fig. 3b)
+----------------------------
+Production modulus: 2,048 bits. Hash-to-prime representative: 256 bits.
+Active user counts: 100, 500, 1,000, and 5,000.
+Recorded N: 30 per user count/operation/layer. Warm-up W: 1.
+Execution is local and serial with deterministic user IDs and seed 2026. No
+service restart occurs between local samples. Each timed operation starts from an
+identically prepared state. RSA public setup, setup validation, and initial state
+construction are outside timed operation spans. Prime search is included only in
+hash-to-prime measurements.
+
+Operations include regional/global hash-to-prime, one member addition, witness
+generation, membership verification, revocation, and refresh of ONE selected
+remaining witness after revocation. The benchmark also reports two-layer sums and
+JSON bytes for a two-layer claim and public accumulator state. It does not label
+single-witness refresh as updating all remaining users. Regional and global layers
+are measured separately. The earlier 512/2,048-bit N=30, 100-user comparison is
+retained as a development comparison; the 2,048-bit scale run is the main result.
+
+E3 committee computation (Fig. 3c)
+----------------------------------
+Orders: 50, 100, 500, and 1,000. Committee sizes: 3, 5, and 7. Signature
+thresholds: 2, 3, and 4. Recorded N: 30 per configuration. Warm-up W: 5.
+Per-run seeds are deterministic. Every committee member is an independent OS
+process contacted by concurrent loopback HTTP. Application payload bytes include
+all request copies and responses but exclude TCP/IP and HTTP headers.
+
+Every process receives plaintext orders, recomputes the same result, and signs its
+canonical digest. t_priv, additive sharing, reconstruction, and secure sorting are
+not implemented and are marked not_applicable/blank. The measured total includes
+input encoding, process HTTP/computation/signing, response collection, canonical
+parsing, and ECDSA verification. These data are described as an independent-process
+committee-side plaintext comparison prototype, not MPC performance.
+
+E4 Fabric operation costs (Fig. 4)
+----------------------------------
+Nine operations have N=50 recorded samples and W=5 discarded warm-ups each,
+yielding 450/450 successful, business-valid rows. Each prepared case has distinct
+IDs. Evaluate calls verify true results. Submit calls wait for commit and then
+verify committed state. The Gateway timings separately record proposal build,
+endorsement/evaluate, orderer submit, commit-event wait, and total. Calls are
+serial within an operation. No outliers are removed.
+
+The regional/global membership values are complete Gateway query latencies, not
+the local RSA primitive from E2. Submit latency includes the fixed block-cutting
+path; approximately two seconds must be attributed primarily to BatchTimeout when
+blocks are not filled.
+
+E5 paired controlled ablation (Fig. 5)
+--------------------------------------
+Variants: Plain_RETF, RETF_H, RETF_A, RETF_C, and PP_RETF.
+Recorded N: 30 paired blocks per variant (150 rows total).
+Contexts: three freshly reinitialized non-overlapping application contexts on one
+retained Fabric ledger, ten recorded blocks each. Historical ledger keys are not
+deleted; every context resets accumulator state and uses fresh users, signers,
+committee epoch, task IDs, receipt IDs, and inputs.
+Warm-up: W=1 paired block per context. The five-variant order is independently
+shuffled for every block using fixed seed 2026.
+
+Every paired block uses the same serialized ten-user/ten-order input, task scope,
+random seed, public accumulator state, and semantic result. Chaincode verifies
+equal input, semantic, and canonical result hashes. All 150 rows passed. H/PP use
+real canonical ECDSA preprocessing; A/PP query ten fresh task-bound claims; C/PP
+use three independent committee processes and authentic signatures. Plain/H/A use
+the same independent plaintext matching engine where committee endorsement is not
+enabled.
+
+All variants use one identical admin-gated Fabric receipt commit and receipt query.
+The endpoint writes only BenchmarkWorkflow receipts and never production business
+state. This controls the Fabric transaction skeleton and makes component deltas
+auditable, but it is a controlled receipt-workflow ablation, not the production P5
+four-submit workflow. Reported paired mean deltas are against the Plain row from
+the same block. No 3.59% value is reused.
+
+E6 concurrency, throughput, blocks, and resources
+-------------------------------------------------
+Variants: Plain_RETF and PP_RETF. Concurrency: 1, 5, 10, 20. Recorded N: 40
+workflows/configuration; W=5/configuration; 320/320 recorded rows succeeded. The
+eight configurations are shuffled with fixed seed 2026. Input construction occurs
+outside timed batches. Recorded PP timing includes ten claim queries, preprocessing,
+three-process committee execution, receipt commit/commit wait, and receipt query.
+
+Per-workflow total latency uses time.Now/time.Since. Throughput is successful
+workflows divided by recorded batch wall-clock duration. After timing, QSCC
+GetBlockByTxID supplies block number and transaction count; block utilization is
+transactions_in_block / MaxMessageCount(10). Identical run IDs have identical input
+and semantic hashes across all eight configurations.
+
+Docker stats are captured immediately before and after each recorded batch for all
+20 running containers. CPU and memory columns are instantaneous boundary snapshots,
+not time averages. Network columns are deltas of cumulative Docker counters. These
+resource observations must not be described as average CPU or peak memory.
+
+E7 storage and communication
+----------------------------
+The P5 JSON records compact proof/evidence DER/digest sizes and production final
+application-state values. The E3 raw file supplies per-round committee application
+payload bytes. The E6 NSW CouchDB database supplies 160 recorded PP receipt
+documents (N=40 for each concurrency). For every persisted receipt, the artifact
+records UTF-8 key bytes, compact application-value bytes, their logical sum,
+per-order allocation for ten orders, and compact CouchDB-document JSON bytes.
+
+These are logical persisted state sizes. CouchDB physical files, indexes,
+append/compaction effects, Fabric block files, protobuf envelopes, and transport
+headers are excluded and are not inferred. Fabric private-data growth is exactly
+zero because the current prototype defines/writes no private-data collection. This
+zero is a limitation, not evidence of confidential storage.
+
+Figure conventions
+------------------
+Fig. 3 and Fig. 4 show means with 95% Student-t confidence intervals; Fig. 3(a)
+also shows nearest-rank p95 as hollow markers. Fig. 5(a) shows mean, median, and
+mean 95% CI. Fig. 5(b) shows paired mean delta and its 95% CI plus mean paired
+percentage. Axes use the observed ranges; no broken axis is used.
+
+Claim boundary
+--------------
+The final experiments support authenticated/current-state authorization,
+ledger-enforced distinct ECDSA committee endorsement, deterministic semantic
+preservation for the tested suite, controlled receipt-workflow component overhead,
+and block-cutting scalability observations. They do not support full MPC,
+oblivious sorting, ledger-level anonymity/confidentiality, private-data storage,
+or scoped audit-token functionality. Those limitations must be reflected in the
+manuscript before submission.

@@ -1,0 +1,72 @@
+Default bit length for compilation: 63
+Default security parameter for compilation: 40
+Compiling file Programs/Source/tutorial.mpc
+WARNING: Order of memory instructions not preserved, errors possible
+Writing to Programs/Bytecode/tutorial-FPDiv(1)_31_15-1.bc
+Writing to Programs/Bytecode/tutorial-Trunc(1)_30_15_True-3.bc
+Writing to Programs/Bytecode/tutorial-EQZ(2)_63-5.bc
+Writing to Programs/Bytecode/tutorial-LTZ(5)_64-7.bc
+WARNING: Probabilistic truncation leaks some information, see https://eprint.iacr.org/2024/1127 for discussion. Use 'sfix.round_nearest = True' to deactivate this for fixed-point operations.
+Writing to Programs/Bytecode/tutorial-TruncPr(1)_47_16-9.bc
+Writing to Programs/Bytecode/tutorial-FPDiv(1)_31_16-11.bc
+Writing to Programs/Bytecode/tutorial-EQZ(2)_31-13.bc
+Writing to Programs/Bytecode/tutorial-LTZ(5)_32-15.bc
+Writing to Programs/Bytecode/tutorial-TruncPr(3)_47_16-17.bc
+Writing to Programs/Bytecode/tutorial-EQZ(1)_31-18.bc
+Writing to Programs/Bytecode/tutorial-TruncPr(6)_47_16-19.bc
+Writing to Programs/Schedules/tutorial.sch
+Writing to Programs/Bytecode/tutorial-0.bc
+Hash: 73c4b0de51b8a4c9de320571c45ea95f92d969b2cf7a10e640144a98718d21d7
+Program requires at most:
+           4 integer inputs from player 0
+           4 integer inputs from player 1
+        3402 integer triples
+        3390 integer simple multiplications
+         110 integer opens
+        3297 integer bits
+           1 matrix multiplications (3x2 * 2x2)
+           6 integer dot products
+         384 virtual machine rounds
+Running /tmp/saib-s3.1.1-sanitizer-9qs03c/candidate-patched-v2-clang-asan-ubsan/MP-SPDZ-0.4.3/Scripts/../malicious-rep-ring-party.x 0 tutorial -pn 19790 -h localhost
+Running /tmp/saib-s3.1.1-sanitizer-9qs03c/candidate-patched-v2-clang-asan-ubsan/MP-SPDZ-0.4.3/Scripts/../malicious-rep-ring-party.x 1 tutorial -pn 19790 -h localhost
+Running /tmp/saib-s3.1.1-sanitizer-9qs03c/candidate-patched-v2-clang-asan-ubsan/MP-SPDZ-0.4.3/Scripts/../malicious-rep-ring-party.x 2 tutorial -pn 19790 -h localhost
+Using statistical security parameter 40
+Trying to run 64-bit computation
+got 0 from player 0
+got 0 from player 1
+expected 3, got 3
+expected 2, got 2
+expected -1, got -1
+expected 2, got 2
+expected 1, got 1
+expected 1, got 1
+expected 0, got 0
+expected 0, got 0
+expected 0, got 0
+expected 1, got 1
+expected 2, got 2
+expected 9702, got 9702
+expected 1.9, got 1.9
+expected 2.1, got 2.1
+expected -0.2, got -0.2
+expected -20, got -20
+expected 0, got 0
+expected 0, got 0
+expected 1, got 1
+expected 1, got 1
+expected 0, got 0
+expected 1, got 1
+expected -0.1, got -0.1
+Party 0: please input three numbers not adding up to zero
+Party 1: please input any three numbers
+weighted average: 2.333
+expected 1, got 1
+expected 2, got 2
+The following benchmarks are including preprocessing (offline phase).
+Time = 0.284352 seconds 
+Data sent = 0.363903 MB in ~505 rounds (party 0 only; use '-v' for more details)
+Global data sent = 1.09168 MB (all parties)
+This program might benefit from some protocol options.
+Consider adding the following at the beginning of your code:
+	program.use_edabit(True)
+upstream_tutorial_exit_code=0 findings=0

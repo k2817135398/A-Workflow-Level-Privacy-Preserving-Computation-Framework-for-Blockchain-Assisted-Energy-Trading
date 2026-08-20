@@ -1,0 +1,10 @@
+﻿docker : 2026-07-15T18:20:19.735032988Z 2026/07/15 18:20:19 s2.2.2 verifier listening with mandatory mTLS on 0.0.0.0:48
+443 key_id=s222-attestor key_version=2 abi=saib-anoncred-verifier-ffi/1 time_source=system_clock
+At line:2 char:1
++ docker logs --timestamps s222-verifier 2>&1 | Out-File -LiteralPath e ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (2026-07-15T18:2...ce=system_clock:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+2026-07-16T00:55:01.971500434Z 2026/07/16 00:55:01 s2.2.2 verifier listening with mandatory mTLS on 0.0.0.0:48443 key_i
+d=s222-attestor key_version=2 abi=saib-anoncred-verifier-ffi/1 time_source=system_clock

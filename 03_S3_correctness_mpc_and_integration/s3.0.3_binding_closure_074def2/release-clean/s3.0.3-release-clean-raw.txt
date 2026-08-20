@@ -1,0 +1,48 @@
+command=/mnt/g/paperexper/retf/saib-retf/experiments/v2/runners/run-s3.0.3-release-clean.sh /mnt/g/paperexper/retf/third_party/MP-SPDZ-s3.1.1-patched /mnt/g/paperexper/retf/benchmarks/results/expand/s3.0.3-binding-closure-evidence-final-074def2/release-clean
+started_at_utc=2026-07-22T15:11:07Z
+release_commit=074def2ffe251761a3254d0f78e643633f24576d
+release_tag=s3.0.3-s3.2.1-binding-closure-audit
+old_tag_commit=a085a352e8404ed1140466fa201108a8f9f31cdb
+git_status_porcelain_count=0
+warning: use of deprecated associated function `elliptic_curve::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> vendor/credx-0.2.1-saib/src/presentation/verifiable_encryption_decryption.rs:164:46
+    |
+164 |         let key = aes_gcm::Key::<Aes128Gcm>::from_slice(&okm[..16]);
+    |                                              ^^^^^^^^^^
+    |
+    = note: `#[warn(deprecated)]` on by default
+
+warning: use of deprecated associated function `elliptic_curve::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> vendor/credx-0.2.1-saib/src/presentation/verifiable_encryption_decryption.rs:235:28
+    |
+235 |         let nonce = Nonce::from_slice(&self.ciphertext[..12]);
+    |                            ^^^^^^^^^^
+
+warning: use of deprecated associated function `elliptic_curve::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> vendor/credx-0.2.1-saib/src/presentation/verifiable_encryption_decryption.rs:243:46
+    |
+243 |         let key = aes_gcm::Key::<Aes128Gcm>::from_slice(&okm[..16]);
+    |                                              ^^^^^^^^^^
+
+warning: `credx` (lib) generated 3 warnings
+   Compiling saib-anoncred v0.1.0 (/mnt/g/paperexper/retf/saib-retf/prototype/anoncred-rust)
+error[E0432]: unresolved import `saib_anoncred::bootstrap`
+   --> src/bin/s3_committed_input_vector.rs:9:21
+    |
+9   | use saib_anoncred::{bootstrap, prove_for_committed_input};
+    |                     ^^^^^^^^^ no `bootstrap` in the root
+    |
+note: found an item that was configured out
+   --> /mnt/g/paperexper/retf/saib-retf/prototype/anoncred-rust/src/lib.rs:386:8
+    |
+386 | pub fn bootstrap() -> Result<BootstrapResponse, ApiError> {
+    |        ^^^^^^^^^
+note: the item is gated behind the `full-ffi` feature
+   --> /mnt/g/paperexper/retf/saib-retf/prototype/anoncred-rust/src/lib.rs:385:7
+    |
+385 | #[cfg(feature = "full-ffi")]
+    |       ^^^^^^^^^^^^^^^^^^^^
+
+For more information about this error, try `rustc --explain E0432`.
+error: could not compile `saib-anoncred` (bin "s3_committed_input_vector") due to 1 previous error
+warning: build failed, waiting for other jobs to finish...

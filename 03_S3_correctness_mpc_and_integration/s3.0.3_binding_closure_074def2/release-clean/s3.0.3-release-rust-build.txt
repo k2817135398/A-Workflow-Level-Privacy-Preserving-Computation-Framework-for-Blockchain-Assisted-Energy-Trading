@@ -1,0 +1,42 @@
+warning: use of deprecated associated function `elliptic_curve::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> vendor/credx-0.2.1-saib/src/presentation/verifiable_encryption_decryption.rs:164:46
+    |
+164 |         let key = aes_gcm::Key::<Aes128Gcm>::from_slice(&okm[..16]);
+    |                                              ^^^^^^^^^^
+    |
+    = note: `#[warn(deprecated)]` on by default
+
+warning: use of deprecated associated function `elliptic_curve::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> vendor/credx-0.2.1-saib/src/presentation/verifiable_encryption_decryption.rs:235:28
+    |
+235 |         let nonce = Nonce::from_slice(&self.ciphertext[..12]);
+    |                            ^^^^^^^^^^
+
+warning: use of deprecated associated function `elliptic_curve::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> vendor/credx-0.2.1-saib/src/presentation/verifiable_encryption_decryption.rs:243:46
+    |
+243 |         let key = aes_gcm::Key::<Aes128Gcm>::from_slice(&okm[..16]);
+    |                                              ^^^^^^^^^^
+
+warning: `credx` (lib) generated 3 warnings
+   Compiling saib-anoncred v0.1.0 (/mnt/g/paperexper/retf/saib-retf/prototype/anoncred-rust)
+error[E0432]: unresolved import `saib_anoncred::bootstrap`
+   --> src/bin/s3_committed_input_vector.rs:9:21
+    |
+9   | use saib_anoncred::{bootstrap, prove_for_committed_input};
+    |                     ^^^^^^^^^ no `bootstrap` in the root
+    |
+note: found an item that was configured out
+   --> /mnt/g/paperexper/retf/saib-retf/prototype/anoncred-rust/src/lib.rs:386:8
+    |
+386 | pub fn bootstrap() -> Result<BootstrapResponse, ApiError> {
+    |        ^^^^^^^^^
+note: the item is gated behind the `full-ffi` feature
+   --> /mnt/g/paperexper/retf/saib-retf/prototype/anoncred-rust/src/lib.rs:385:7
+    |
+385 | #[cfg(feature = "full-ffi")]
+    |       ^^^^^^^^^^^^^^^^^^^^
+
+For more information about this error, try `rustc --explain E0432`.
+error: could not compile `saib-anoncred` (bin "s3_committed_input_vector") due to 1 previous error
+warning: build failed, waiting for other jobs to finish...

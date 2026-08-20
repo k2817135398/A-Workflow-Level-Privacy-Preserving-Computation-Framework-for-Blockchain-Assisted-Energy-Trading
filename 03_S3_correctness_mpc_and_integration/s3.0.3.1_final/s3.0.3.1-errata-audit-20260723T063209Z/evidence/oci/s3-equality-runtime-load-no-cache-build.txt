@@ -1,0 +1,38 @@
+command=docker buildx build --builder saib-s3-audit --no-cache --progress=plain --load
+#0 building with "saib-s3-audit" instance using docker-container driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 597B done
+#1 DONE 0.0s
+
+#2 [internal] load .dockerignore
+#2 transferring context: 2B done
+#2 DONE 0.0s
+
+#3 [internal] load build context
+#3 transferring context: 144B done
+#3 DONE 0.0s
+
+#4 [1/3] ADD debian-bookworm-slim-rootfs.tar /
+#4 DONE 0.5s
+
+#5 [2/3] COPY --chmod=0555 s3_equality_verifier /usr/local/bin/s3_equality_verifier
+#5 DONE 0.2s
+
+#6 [3/3] COPY --chmod=0555 s3.0.3.1-equality-attestor /usr/local/bin/s3.0.3.1-equality-attestor
+#6 DONE 0.0s
+
+#7 exporting to docker image format
+#7 exporting layers
+#7 exporting layers 4.1s done
+#7 exporting manifest sha256:90cbe5a7bdafdf2a8f3c32568dc93f92f7055ad0caa727862459af45ed45b61a 0.0s done
+#7 exporting config sha256:e30441f2592e59fe657c537f5b7f4399037bc4ee442a830fbda2ce24a9f33160 0.0s done
+#7 sending tarball
+#7 sending tarball 2.6s done
+#7 DONE 6.7s
+
+#8 importing to docker
+#8 loading layer 06bb8de039c3 29.15MB / 29.15MB 2.0s done
+#8 loading layer a330a3b3c9df 317.85kB / 317.85kB 0.1s done
+#8 loading layer cf537b8851c3 1.99MB / 1.99MB 0.1s done
+#8 DONE 2.0s

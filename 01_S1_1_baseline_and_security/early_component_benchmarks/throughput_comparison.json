@@ -1,0 +1,41 @@
+{
+  "benchmark": "throughput_comparison",
+  "concurrency": 1,
+  "implementation_notes": {
+    "committee_computation": "Off-chain local computation calling committee-service functions: (1) additive secret sharing (n-of-n, not Shamir), (2) plaintext reconstruction + sort.Slice + AP_buy \u003e= AP_sell comparison (not oblivious sort or secure comparison), (3) settlement Δ/FP/CS update, (4) ECDSA P-256+SHA256 signing by 3 nodes. 30 orders per run.",
+    "finalization": "Fabric invoke SubmitMatchingResult with --waitForEvent. Includes Docker exec IPC + TLS + peer endorsement + orderer ordering + block commit + event delivery. Chaincode performs: idempotency check, threshold signature check (base64 format + count \u003e= 2; NOT full ECDSA cryptographic verification), computation verification (trivially passes for empty pairs), writes MatchingResult state to ledger.",
+    "measurement_approach": "true workflow measurement",
+    "membership_verification": "Fabric query VerifyMembershipProof. Chaincode loads RSA accumulator state from CouchDB and computes witness^H(userID) mod N (real 1024-bit RSA modexp). witnessA = accumulator A value; verification returns false (invalid witness) but compute cost identical to valid verification. Prototype limitation: AccumulatorState does not persist per-user witnesses.",
+    "preprocessing": "Local HMAC-SHA256 batch proof via order-service preprocessing.GenerateBatchProofWithPhaseTimings(). Not a zero-knowledge proof; provides integrity verification only.",
+    "submission": "Fabric invoke CreateBuyOrder with --waitForEvent. Includes Docker exec IPC + TLS + peer endorsement + orderer ordering + block commit + event delivery.",
+    "throughput": "Complete workflow throughput. Each 'transaction' is a complete variant workflow, not just a single Fabric invoke.",
+    "total_latency_method": "Wall-clock elapsed time from workflowStart to workflowEnd for each run. NOT the arithmetic sum of per-stage averages."
+  },
+  "measurement_approach": "true workflow measurement",
+  "results": [
+    {
+      "variant": "Plain RETF",
+      "throughput_tps": 0.2288,
+      "successful_transactions": 30,
+      "failed_transactions": 0,
+      "total_workflows": 30,
+      "total_duration_seconds": 131.0925,
+      "concurrency": 1,
+      "measurement_scope": "True complete workflow throughput. Each workflow = Fabric invoke CreateBuyOrder (--waitForEvent) + Fabric invoke SubmitMatchingResult (--waitForEvent). Includes Docker exec IPC overhead.",
+      "implementation_note": "Sequential submission. No preprocessing, membership verification, or committee computation."
+    },
+    {
+      "variant": "PP-RETF",
+      "throughput_tps": 0.2234,
+      "successful_transactions": 30,
+      "failed_transactions": 0,
+      "total_workflows": 30,
+      "total_duration_seconds": 134.2731,
+      "concurrency": 1,
+      "measurement_scope": "True complete workflow throughput. Each workflow = HMAC preprocessing + Fabric invoke CreateBuyOrder (--waitForEvent) + Fabric query VerifyMembershipProof + off-chain committee computation + Fabric invoke SubmitMatchingResult (--waitForEvent). Includes Docker exec IPC overhead.",
+      "implementation_note": "Sequential submission. Preprocessing=HMAC-SHA256 integrity (not ZKP). Membership=RSA 1024-bit modexp via Fabric query. Committee=additive sharing + sort.Slice + ECDSA signing ×3 nodes (30 orders). Finalization=SubmitMatchingResult (base64+threshold check, not full ECDSA verification)."
+    }
+  ],
+  "seed": 2026,
+  "total_workflows": 30
+}

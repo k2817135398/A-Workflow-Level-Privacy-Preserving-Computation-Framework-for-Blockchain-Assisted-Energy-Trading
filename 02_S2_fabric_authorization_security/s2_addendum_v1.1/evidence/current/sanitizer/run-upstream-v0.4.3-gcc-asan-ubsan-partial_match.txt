@@ -1,0 +1,28 @@
+Running /tmp/saib-s3.1.1-sanitizer-9qs03c/upstream-v0.4.3-gcc-asan-ubsan/MP-SPDZ-0.4.3/Scripts/../malicious-rep-ring-party.x 0 saib_match_smoke -pn 19460 -h localhost
+Running /tmp/saib-s3.1.1-sanitizer-9qs03c/upstream-v0.4.3-gcc-asan-ubsan/MP-SPDZ-0.4.3/Scripts/../malicious-rep-ring-party.x 1 saib_match_smoke -pn 19460 -h localhost
+Running /tmp/saib-s3.1.1-sanitizer-9qs03c/upstream-v0.4.3-gcc-asan-ubsan/MP-SPDZ-0.4.3/Scripts/../malicious-rep-ring-party.x 2 saib_match_smoke -pn 19460 -h localhost
+Using statistical security parameter 40
+Tools/avx_memcpy.h:51:20: runtime error: store to misaligned address 0x506000003159 for type 'int64_t', which requires 8 byte alignment
+0x506000003159: note: pointer points here
+ 2e 30 2e  31 be be be be be be be  be be be be be be be be  be be be be be be be be  be be 00 00 00
+              ^ 
+    #0 0x5583228fde07 in short_memcpy(void*, void*, unsigned long) (/tmp/saib-s3.1.1-sanitizer-9qs03c/upstream-v0.4.3-gcc-asan-ubsan/MP-SPDZ-0.4.3/malicious-rep-ring-party.x+0x2a56e07) (BuildId: 61d8dd9b480078aeb7af935498e6647f9f44bf95)
+    #1 0x5583228fe159 in encode_length(unsigned char*, unsigned long, unsigned long) (/tmp/saib-s3.1.1-sanitizer-9qs03c/upstream-v0.4.3-gcc-asan-ubsan/MP-SPDZ-0.4.3/malicious-rep-ring-party.x+0x2a57159) (BuildId: 61d8dd9b480078aeb7af935498e6647f9f44bf95)
+    #2 0x7f06efc55db8 in octetStream::store_int(unsigned long, int) Tools/octetStream.h:410
+    #3 0x7f06efc55db8 in octetStream::store(unsigned long) Tools/octetStream.h:177
+    #4 0x7f06efc55db8 in octetStream::store(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) Tools/octetStream.cpp:213
+    #5 0x7f06efd3e6e4 in void octetStream::store<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) Tools/octetStream.h:578
+    #6 0x7f06efd32746 in Server::send_names() Networking/Server.cpp:64
+    #7 0x7f06efd3a729 in Server::start() Networking/Server.cpp:150
+    #8 0x7f06efd3aeba in Server::start_in_thread(void*) Networking/Server.cpp:158
+    #9 0x7f06f1708a41 in asan_thread_start ../../../../src/libsanitizer/asan/asan_interceptors.cpp:234
+    #10 0x7f06ecfe5aa3  (/lib/x86_64-linux-gnu/libc.so.6+0x9caa3) (BuildId: 8e9fd827446c24067541ac5390e6f527fb5947bb)
+    #11 0x7f06ed072c6b  (/lib/x86_64-linux-gnu/libc.so.6+0x129c6b) (BuildId: 8e9fd827446c24067541ac5390e6f527fb5947bb)
+
+=== Party 1
+Using statistical security parameter 40
+error in network setup: Connection closed down. This is most likely due to a problem on the other side. If there's no error message on the other side, it might be due to a lack of memory. See https://mp-spdz.readthedocs.io/en/latest/troubleshooting.html#crash-without-error-message-killed-or-bad-alloc for possible remedies.
+=== Party 2
+Using statistical security parameter 40
+error in network setup: Connection closed down. This is most likely due to a problem on the other side. If there's no error message on the other side, it might be due to a lack of memory. See https://mp-spdz.readthedocs.io/en/latest/troubleshooting.html#crash-without-error-message-killed-or-bad-alloc for possible remedies.
+vector=partial_match exit_code=1 sanitizer_findings=2

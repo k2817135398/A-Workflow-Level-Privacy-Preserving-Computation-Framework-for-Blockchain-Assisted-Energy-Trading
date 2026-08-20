@@ -1,0 +1,46 @@
+    Blocking waiting for file lock on build directory
+warning: use of deprecated associated function `elliptic_curve::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> vendor/credx-0.2.1-saib/src/presentation/verifiable_encryption_decryption.rs:164:46
+    |
+164 |         let key = aes_gcm::Key::<Aes128Gcm>::from_slice(&okm[..16]);
+    |                                              ^^^^^^^^^^
+    |
+    = note: `#[warn(deprecated)]` on by default
+
+warning: use of deprecated associated function `elliptic_curve::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> vendor/credx-0.2.1-saib/src/presentation/verifiable_encryption_decryption.rs:235:28
+    |
+235 |         let nonce = Nonce::from_slice(&self.ciphertext[..12]);
+    |                            ^^^^^^^^^^
+
+warning: use of deprecated associated function `elliptic_curve::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> vendor/credx-0.2.1-saib/src/presentation/verifiable_encryption_decryption.rs:243:46
+    |
+243 |         let key = aes_gcm::Key::<Aes128Gcm>::from_slice(&okm[..16]);
+    |                                              ^^^^^^^^^^
+
+warning: `credx` (lib) generated 3 warnings
+   Compiling saib-anoncred v0.1.0 (/mnt/g/paperexper/retf/saib-retf/prototype/anoncred-rust)
+error[E0502]: cannot borrow `proof` as immutable because it is also borrowed as mutable
+  --> tests/s3_committed_input.rs:84:11
+   |
+84 |     proof[proof.len() / 2] ^= 0x01;
+   |     ------^^^^^-----------
+   |     |    ||
+   |     |    |immutable borrow occurs here
+   |     |    mutable borrow later used here
+   |     mutable borrow occurs here
+   |
+help: try adding a local storing this...
+  --> tests/s3_committed_input.rs:84:11
+   |
+84 |     proof[proof.len() / 2] ^= 0x01;
+   |           ^^^^^^^^^^^
+help: ...and then using that local here
+  --> tests/s3_committed_input.rs:84:10
+   |
+84 |     proof[proof.len() / 2] ^= 0x01;
+   |          ^^^^^^^^^^^^^^^^^
+
+For more information about this error, try `rustc --explain E0502`.
+error: could not compile `saib-anoncred` (test "s3_committed_input") due to 1 previous error

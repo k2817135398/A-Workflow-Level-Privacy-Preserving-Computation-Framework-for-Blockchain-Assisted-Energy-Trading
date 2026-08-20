@@ -1,0 +1,54 @@
+{
+  "benchmark": "onchain_verification_cost",
+  "runs_per_operation": 50,
+  "measurement_scope": "Mixed: Invoke operations use --waitForEvent (full endorsement+ordering+commit path); Query operations measure peer evaluation only. Both include Docker exec IPC overhead (~2-5ms on WSL2/Windows).",
+  "implementation_notes": {
+    "query_finalized_state": "GetOrder(orderID): single GetState CouchDB lookup returning committed order JSON.",
+    "submit_result": "SubmitMatchingResult with empty matchedPairs + 2 valid base64 signatures. Idempotency key unique per run. Chaincode: idempotency check + threshold sig check + computation verify (trivial for empty pairs) + state write.",
+    "submit_task": "CreateBuyOrder: validates user exists (consumer type), writes new order UUID to ledger. Maps to SubmitTask. Does not include HMAC preprocessing proof in this benchmark (uses basic CreateBuyOrder).",
+    "verify_committee_signatures": "VerifyCommitteeSignatures: measures signature-format checking and threshold-count checking rather than full cryptographic ECDSA verification. Chaincode checks base64 decodability and count \u003e= threshold only.",
+    "verify_membership": "VerifyMembershipProof(userID, layerID, witnessA, accumulatorStr): loads RSA accumulator state from CouchDB, deserializes 1024-bit N and A, computes H(userID), evaluates witness^H(userID) mod N (real 1024-bit RSA modular exponentiation). witnessA = accumulator A value; verification returns false (invalid witness) but compute cost is identical to valid verification. Prototype limitation: AccumulatorState does not persist per-user witnesses or member list; valid witnesses cannot be retrieved after the block commit transaction completes."
+  },
+  "results": [
+    {
+      "operation": "VerifyMembership",
+      "avg_latency_ms": 136.691,
+      "p95_latency_ms": 146.1557,
+      "runs": 50,
+      "measurement_scope": "Fabric peer query end-to-end: Docker IPC + TLS + peer evaluation (chaincode exec). No ordering or commit.",
+      "implementation_note": "Calls VerifyMembershipProof(userID, layerID, witnessA, accumulatorStr). Chaincode loads RSA accumulator state from CouchDB, deserializes 1024-bit N and A, computes H(userID) = hash_to_group(userID), then evaluates witness^H(userID) mod N (real RSA 1024-bit modular exponentiation) and compares with A. witnessA is set to the current A value to trigger a full-size RSA exp; verification returns false (invalid witness) but the compute cost is identical to a successful verification. Prototype limitation: AccumulatorState does not persist per-user witnesses; a valid witness requires RSA secrets (p,q) or per-transaction computation which is discarded after block commit."
+    },
+    {
+      "operation": "SubmitTask",
+      "avg_latency_ms": 2184.2776,
+      "p95_latency_ms": 2213.4979,
+      "runs": 50,
+      "measurement_scope": "Fabric invoke end-to-end with --waitForEvent: Docker IPC + TLS + peer endorsement + orderer ordering + block commit + event delivery.",
+      "implementation_note": "Calls CreateBuyOrder(userID, msp, region, timeSlot, ap, cs, qty). Chaincode verifies user exists and is a consumer, allocates order UUID, writes order state to CouchDB ledger. Maps to paper's SubmitTask (submit order with membership-protected identity)."
+    },
+    {
+      "operation": "SubmitResult",
+      "avg_latency_ms": 2183.6153,
+      "p95_latency_ms": 2198.6335,
+      "runs": 50,
+      "measurement_scope": "Fabric invoke end-to-end with --waitForEvent: Docker IPC + TLS + peer endorsement + orderer ordering + block commit + event delivery.",
+      "implementation_note": "Calls SubmitMatchingResult(submissionJSON) with empty matchedPairs and valid base64 signatures. Chaincode performs: idempotency check, threshold signature check (base64 format + count \u003e= 2), computation verification (trivially passes for empty pairs), writes MatchingResult state to ledger. Each run uses a unique roundId to bypass idempotency."
+    },
+    {
+      "operation": "VerifyCommitteeSignatures",
+      "avg_latency_ms": 129.9565,
+      "p95_latency_ms": 145.4651,
+      "runs": 50,
+      "measurement_scope": "Fabric peer query end-to-end: Docker IPC + TLS + peer evaluation (chaincode exec). No ordering or commit.",
+      "implementation_note": "Calls VerifyCommitteeSignaturesReadonly(submissionJSON). IMPORTANT IMPLEMENTATION NOTE: This operation measures signature-format checking and threshold-count checking rather than full cryptographic ECDSA verification. The chaincode checks: (1) each signature field is non-empty, (2) base64.StdEncoding.DecodeString succeeds, (3) validCount \u003e= threshold. No ECDSA public key fetch or cryptographic verify is performed."
+    },
+    {
+      "operation": "QueryFinalizedState",
+      "avg_latency_ms": 129.3553,
+      "p95_latency_ms": 139.9995,
+      "runs": 50,
+      "measurement_scope": "Fabric peer query end-to-end: Docker IPC + TLS + peer evaluation (chaincode exec). No ordering or commit.",
+      "implementation_note": "Calls GetOrder(orderID). Chaincode performs a single GetState(\"Order:\"+id) lookup from CouchDB ledger and returns JSON. Represents query of a finalized/committed order state."
+    }
+  ]
+}

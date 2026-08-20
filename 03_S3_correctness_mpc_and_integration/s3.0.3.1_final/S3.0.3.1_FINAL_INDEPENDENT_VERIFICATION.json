@@ -1,0 +1,113 @@
+{
+  "schema_version": "saib-retf-s3.0.3.1-final-independent-verification/1",
+  "verified_at_utc": "2026-07-23T07:35:00Z",
+  "release_commit": "d4d4ccb3e59b181ac10466ed8bb842c2d461b0f3",
+  "release_tag": "s3.0.3.1-errata-audit-v1.1",
+  "annotated_tag": true,
+  "git_status_clean": true,
+  "frozen_base_tag_commit": "2ecc21216f7e2b7b0877e90e47e683d6375394ca",
+  "superseded_tag_commit": "32a6d5768acb777c85ea59e71d1ee61ad92b7015",
+  "merge_base": "2ecc21216f7e2b7b0877e90e47e683d6375394ca",
+  "zip_sha256": "4778a2dc30ab251c7da7a53cf9142e7bffa446126b5e517bedbceeea88c93852",
+  "zip_declared_hash_matches": true,
+  "artifact_manifest": {
+    "files": 196,
+    "verified": 196,
+    "missing": 0,
+    "hash_mismatch": 0
+  },
+  "source_manifest": {
+    "files": 428,
+    "verified": 428,
+    "missing": 0,
+    "size_mismatch": 0,
+    "hash_mismatch": 0
+  },
+  "git_bundle": {
+    "complete_history": true,
+    "refs": 4,
+    "contains_final_tag": true,
+    "contains_superseded_tag": true,
+    "contains_frozen_base_tag": true
+  },
+  "security_tests": {
+    "total": 21,
+    "passed": 21,
+    "accept": 2,
+    "reject": 18,
+    "abort": 1
+  },
+  "mutation": {
+    "selected": 10,
+    "viable": 10,
+    "non_viable": 0,
+    "killed_by_executed_security_test": 10,
+    "go": 5,
+    "rust": 5,
+    "infrastructure_failures_counted_as_kills": 0
+  },
+  "fuzz": {
+    "go_targets": 4,
+    "observed_executions": 830216,
+    "passed": true
+  },
+  "critical_rust_coverage": {
+    "file": "prototype/anoncred-rust/src/s3_committed_input.rs",
+    "lines_percent": 91.80722891566266,
+    "regions_percent": 88.82402001668058,
+    "functions_percent": 66.12903225806451,
+    "branches_covered": 119,
+    "branches_total": 144,
+    "branches_percent": 82.63888888888889,
+    "mismatched_profile_warnings": 0
+  },
+  "sanitizers": {
+    "rust_asan": "PASS; findings=0",
+    "rust_ubsan_claimed": false,
+    "mpspdz_asan_only": "PASS; findings=0",
+    "mpspdz_ubsan_only": "PASS; findings=0",
+    "mpspdz_asan_ubsan": "PASS; findings=0"
+  },
+  "oci_manifest_digests": {
+    "s3-equality-runtime": "sha256:5a914b13aabb68258844b21448dd927790ad61c5e72c285ebfec84eaf7b16628",
+    "s3-mpspdz-party-runtime": "sha256:d40972a5d566873830d1c515c6da9cbfb32e9d4f8c7475d990c6b967992f2a18"
+  },
+  "runtime_trace": {
+    "signature": "VALID",
+    "algorithm": "Ed25519",
+    "key_scope": "ephemeral test-only release key",
+    "payload_sha256": "44bacd8fb78c50e29c506a56fe5cee274c122c2b17678b7532a47d113bc27599",
+    "file_sha256": "7433a2239a3bdb038b14a0f5ed5724bca4cbaceb97d2f22a873724c8c20ab0a9",
+    "evidence_references_resolved": 5,
+    "evidence_hash_mismatch": 0
+  },
+  "all_security_jsonl_references": {
+    "references": 21,
+    "resolved": 21,
+    "missing": 0,
+    "hash_mismatch": 0,
+    "marker_missing": 0
+  },
+  "external_recursive_scan": {
+    "runs": 2,
+    "different_parent_directories": true,
+    "canonical_reports_byte_identical": true,
+    "files_inspected_including_nested": 14153,
+    "archives_expanded": 26,
+    "git_history_scans": 2,
+    "forbidden_private_material_hits": 0,
+    "opaque_git_bundles": 0,
+    "report_sha256": "3d115f3bc6bd5f6cfd6936762a0e8c1a906ec6f0fbfbffe02d5605375c508a77",
+    "passed": true
+  },
+  "bounded_claim_status": {
+    "s3_0_3_1_admission_to_launch_binding": "GO",
+    "same_host_three_process_committed_input": "PASS (bounded)",
+    "complete_fixed_capacity_oblivious_f_match": "NOT IMPLEMENTED",
+    "three_independently_administered_hosts": "NOT ESTABLISHED",
+    "complete_s3_distributed_mpc": "NO-GO",
+    "formal_performance_experiments": "STILL NO-GO",
+    "tdsc_submission_readiness": "NO-GO"
+  },
+  "passed": true
+}

@@ -1,0 +1,44 @@
+[
+    {
+        "Id": "sha256:d39ea6215f9ee74346c5af0896cc1f5bfaea0b1378002a8590d9118579a61ef0",
+        "RepoTags": [
+            "saib-s4-reference-chaincode:559e0bb531b3"
+        ],
+        "RepoDigests": [],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-08-02T11:14:55.319268397Z",
+        "Config": {
+            "User": "65532:65532",
+            "ExposedPorts": {
+                "7052/tcp": {}
+            },
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Entrypoint": [
+                "/chaincode"
+            ],
+            "WorkingDir": "/"
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 13111448,
+        "GraphDriver": {
+            "Data": {
+                "MergedDir": "/var/lib/docker/overlay2/1lcchge7ewddu43cgwngzneoe/merged",
+                "UpperDir": "/var/lib/docker/overlay2/1lcchge7ewddu43cgwngzneoe/diff",
+                "WorkDir": "/var/lib/docker/overlay2/1lcchge7ewddu43cgwngzneoe/work"
+            },
+            "Name": "overlay2"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:50ff033bdf2963fc935aa72d6237838bf0c4b63f5bd2d620477c320fcfc0ffa1"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-08-02T11:14:55.406097581Z"
+        }
+    }
+]

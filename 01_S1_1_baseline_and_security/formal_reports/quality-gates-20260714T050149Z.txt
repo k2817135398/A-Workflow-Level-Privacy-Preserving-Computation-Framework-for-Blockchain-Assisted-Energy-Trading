@@ -1,0 +1,99 @@
+﻿SAIB-RETF v2 quality gates 20260714T050149Z
+
+=== production tests (mocks excluded) ===
+?   	github.com/retf/source/v2/chaincode/privacy-state	[no test files]
+?   	github.com/retf/source/v2/chaincode/private-finalization	[no test files]
+?   	github.com/retf/source/v2/chaincode/private-task	[no test files]
+?   	github.com/retf/source/v2/cmd/v2-static-check	[no test files]
+?   	github.com/retf/source/v2/crypto/anoncred	[no test files]
+?   	github.com/retf/source/v2/crypto/endorsement	[no test files]
+?   	github.com/retf/source/v2/mpc/adapter	[no test files]
+?   	github.com/retf/source/v2/crypto/credit	[no test files]
+?   	github.com/retf/source/v2/protocol/canonical	[no test files]
+?   	github.com/retf/source/v2/runtime/trace	[no test files]
+?   	github.com/retf/source/v2/protocol/messages	[no test files]
+ok  	github.com/retf/source/v2/protocol/binding	0.329s
+
+=== tagged S1 security tests ===
+?   	github.com/retf/source/v2/chaincode/privacy-state	[no test files]
+?   	github.com/retf/source/v2/chaincode/private-finalization	[no test files]
+?   	github.com/retf/source/v2/chaincode/private-task	[no test files]
+?   	github.com/retf/source/v2/cmd/v2-static-check	[no test files]
+?   	github.com/retf/source/v2/crypto/anoncred	[no test files]
+?   	github.com/retf/source/v2/crypto/credit	[no test files]
+?   	github.com/retf/source/v2/crypto/endorsement	[no test files]
+?   	github.com/retf/source/v2/mpc/adapter	[no test files]
+?   	github.com/retf/source/v2/protocol/canonical	[no test files]
+?   	github.com/retf/source/v2/protocol/messages	[no test files]
+?   	github.com/retf/source/v2/runtime/trace	[no test files]
+ok  	github.com/retf/source/v2/protocol/binding	0.370s
+ok  	github.com/retf/source/v2/securitytests	0.502s
+
+=== Go vet ===
+
+=== production static boundary ===
+v2 production static boundary: PASS
+
+=== binding fuzz 10 seconds ===
+fuzz: elapsed: 0s, gathering baseline coverage: 0/123 completed
+fuzz: elapsed: 0s, gathering baseline coverage: 123/123 completed, now fuzzing with 16 workers
+fuzz: elapsed: 3s, execs: 172153 (57152/sec), new interesting: 3 (total: 126)
+fuzz: elapsed: 6s, execs: 291015 (39639/sec), new interesting: 6 (total: 129)
+fuzz: elapsed: 9s, execs: 490237 (66421/sec), new interesting: 6 (total: 129)
+fuzz: elapsed: 11s, execs: 524106 (16815/sec), new interesting: 6 (total: 129)
+PASS
+ok  	github.com/retf/source/v2/protocol/binding	11.413s
+
+=== formal gate unit tests ===
+test_false_production_path_is_rejected (test_validate_formal_input.FormalInputValidationTests.test_false_production_path_is_rejected) ... ok
+test_mock_row_is_rejected_even_if_production_flag_is_true (test_validate_formal_input.FormalInputValidationTests.test_mock_row_is_rejected_even_if_production_flag_is_true) ... ok
+test_valid_real_row_is_accepted (test_validate_formal_input.FormalInputValidationTests.test_valid_real_row_is_accepted) ... ok
+System.Management.Automation.RemoteException
+----------------------------------------------------------------------
+Ran 3 tests in 0.013s
+System.Management.Automation.RemoteException
+OK
+
+=== pinned Linux Docker build including race detector ===
+#0 building with "desktop-linux" instance using docker driver
+System.Management.Automation.RemoteException
+#1 [internal] load build definition from Dockerfile.ci
+#1 transferring dockerfile: 761B done
+#1 DONE 0.0s
+System.Management.Automation.RemoteException
+#2 [internal] load metadata for docker.io/hyperledger/fabric-ccenv@sha256:29cce493a269d3f8e7ccafc35060e82c0a9c13e1768ffe8031e7b9f586f5a5e7
+#2 DONE 0.0s
+System.Management.Automation.RemoteException
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+System.Management.Automation.RemoteException
+#4 [verification 1/4] FROM docker.io/hyperledger/fabric-ccenv@sha256:29cce493a269d3f8e7ccafc35060e82c0a9c13e1768ffe8031e7b9f586f5a5e7
+#4 DONE 0.0s
+System.Management.Automation.RemoteException
+#5 [internal] load build context
+#5 transferring context: 1.98kB 0.0s done
+#5 DONE 0.0s
+System.Management.Automation.RemoteException
+#6 [verification 4/4] RUN go test -count=1 ./...     && go test -count=1 -race -tags=saib_mock ./...     && go run ./cmd/v2-static-check -root .     && CGO_ENABLED=0 go build -trimpath -ldflags="-s -w" -o /workspace/v2-static-check ./cmd/v2-static-check
+#6 CACHED
+System.Management.Automation.RemoteException
+#7 [verification 2/4] WORKDIR /workspace
+#7 CACHED
+System.Management.Automation.RemoteException
+#8 [verification 3/4] COPY . .
+#8 CACHED
+System.Management.Automation.RemoteException
+#9 [stage-1 1/1] COPY --from=verification /workspace/v2-static-check /v2-static-check
+#9 CACHED
+System.Management.Automation.RemoteException
+#10 exporting to image
+#10 exporting layers done
+#10 writing image sha256:a4a57279d5c530e0516082e179c46d4bb6789ae0683eac6d639bbefd69cfcdf9 done
+#10 naming to docker.io/library/saib-retf-v2-ci:local done
+#10 DONE 0.0s
+System.Management.Automation.RemoteException
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/ibia85jbgi1suv08k4yagelg4
+
+=== verification image metadata ===
+sha256:a4a57279d5c530e0516082e179c46d4bb6789ae0683eac6d639bbefd69cfcdf9 2535586

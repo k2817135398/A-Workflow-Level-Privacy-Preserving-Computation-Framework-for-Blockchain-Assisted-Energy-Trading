@@ -1,0 +1,51 @@
+release_commit=6e4eb94c695632413820a5716ae76da05054ac79
+registry=localhost:5000
+started_at_utc=2026-07-16T02:44:42Z
+command=docker tag saib-s2.2.2-holder:local localhost:5000/saib/s2.2.2-holder:audit
+command=docker push localhost:5000/saib/s2.2.2-holder:audit
+The push refers to repository [localhost:5000/saib/s2.2.2-holder]
+2ba5db3611fb: Preparing
+53326a101eb6: Preparing
+99b1e652efc7: Preparing
+2ba5db3611fb: Pushed
+53326a101eb6: Pushed
+99b1e652efc7: Pushed
+audit: digest: sha256:f440e1e9754a2fc506a4d6e0aa89a5d50d64e88c22b07ed2cc7d074ca94bcba6 size: 945
+command=docker tag saib-s2.2.2-global-issuer:local localhost:5000/saib/s2.2.2-global-issuer:audit
+command=docker push localhost:5000/saib/s2.2.2-global-issuer:audit
+The push refers to repository [localhost:5000/saib/s2.2.2-global-issuer]
+b46583910c86: Preparing
+510bb60857a2: Preparing
+99b1e652efc7: Preparing
+99b1e652efc7: Mounted from saib/s2.2.2-holder
+b46583910c86: Pushed
+510bb60857a2: Pushed
+audit: digest: sha256:b5b5e150f02ad3648fa04f1eec939a912a693d3787baa77605db1d7ef9c9344d size: 945
+command=docker tag saib-s2.2.2-regional-issuer:local localhost:5000/saib/s2.2.2-regional-issuer:audit
+command=docker push localhost:5000/saib/s2.2.2-regional-issuer:audit
+The push refers to repository [localhost:5000/saib/s2.2.2-regional-issuer]
+00a4fe3d3354: Preparing
+b4aebc25ef59: Preparing
+99b1e652efc7: Preparing
+99b1e652efc7: Mounted from saib/s2.2.2-global-issuer
+00a4fe3d3354: Pushed
+b4aebc25ef59: Pushed
+audit: digest: sha256:b03acd7cf1b7bb4e8e3d4b4e93005c24f927421b05723cb856010672a2fe53d7 size: 945
+command=docker tag saib-s2.2.2-verifier:local localhost:5000/saib/s2.2.2-verifier:audit
+command=docker push localhost:5000/saib/s2.2.2-verifier:audit
+The push refers to repository [localhost:5000/saib/s2.2.2-verifier]
+d322ab757946: Preparing
+ae63886a9a03: Preparing
+99b1e652efc7: Preparing
+99b1e652efc7: Mounted from saib/s2.2.2-regional-issuer
+d322ab757946: Pushed
+ae63886a9a03: Pushed
+audit: digest: sha256:b11ddb2f9541a41bd8a7d874f2e86a84cea249bd570fa1b12575149d653135c4 size: 949
+command=docker tag saib-s2.2.2-fabric-chaincode:local localhost:5000/saib/s2.2.2-fabric-chaincode:audit
+command=docker push localhost:5000/saib/s2.2.2-fabric-chaincode:audit
+The push refers to repository [localhost:5000/saib/s2.2.2-fabric-chaincode]
+c5d41c7ba56b: Preparing
+c5d41c7ba56b: Layer already exists
+audit: digest: sha256:c0b48c3fd26b6ae2bda103ff6f473cfba51c0c7c184c62126812d890e15f3dcf size: 527
+ended_at_utc=2026-07-16T02:44:44Z
+exit_code=0

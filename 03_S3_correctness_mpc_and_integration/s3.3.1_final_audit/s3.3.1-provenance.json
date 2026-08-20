@@ -1,0 +1,44 @@
+{
+  "schema_version": "SAIB-RETF/S3.3.1/provenance/1",
+  "release_commit": "6f18f396e63e354047384484e1bf9dd4688145df",
+  "release_tag": "s3.3.1-fmatch-implementation-audit-v1.2",
+  "tested_commit": "8cdff5ec207d0ab104462434e90d1144e213fd16",
+  "superseded_tags": {
+    "s3.3.1-fmatch-implementation-audit": "8cdff5ec207d0ab104462434e90d1144e213fd16",
+    "s3.3.1-fmatch-implementation-audit-v1.1": "bd3f4387a96d9b234423e67c9280ba862659710b"
+  },
+  "packaging_only_delta": [
+    "experiments/v2/runners/generate-s3.3.1-release.py"
+  ],
+  "branch": "s3.3.1-fmatch-implementation",
+  "base_tag": "s3.3-fmatch-design-freeze",
+  "base_commit": "4d84a0b1e014b2bef9f9b28cf46a1320fad3223d",
+  "merge_base": "4d84a0b1e014b2bef9f9b28cf46a1320fad3223d",
+  "git_dirty": false,
+  "git_status": [],
+  "backend_commit": "a6cda6eaa03d65b8ad8a655b46a575ed8341d930",
+  "deployment_model": "three real MPC processes on one physical host",
+  "runtime_trace_payload_sha256": "9026771990ddfbc1700fea0d66cfe26c779c66f9ee80bb197bb436f0a4b5d787",
+  "runtime_trace_file_sha256": "c26939aef726f3db39410a4dca71445a24465ab4346f1b952ad9b1a00ff12c4f",
+  "runtime_trace_attestation": "Ed25519 ephemeral release-evidence key; not an authorization key",
+  "tests": {
+    "golden_real_mpc": 10,
+    "randomized_real_mpc": 500,
+    "negative": 10,
+    "production_output_profiles": 5,
+    "sanitizer_modes": 3,
+    "capacities": [
+      16,
+      32,
+      64,
+      128,
+      256
+    ]
+  },
+  "s3_3_1_fixed_capacity_fmatch": "GO",
+  "s3_3_2_obliviousness_closure": "NOT STARTED",
+  "s3_4_single_host_production_integration": "NOT COMPLETED",
+  "formal_performance_experiments": "NO-GO",
+  "tdsc_experiment_readiness": "NO-GO",
+  "generated_at_utc": "2026-07-25T08:06:19.491688+00:00"
+}

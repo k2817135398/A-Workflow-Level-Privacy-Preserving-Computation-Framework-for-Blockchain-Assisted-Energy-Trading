@@ -1,0 +1,39 @@
+test_case,repetitions,accepted,rejected,expected_result,actual_result,security_property_met,notes
+valid_current_regional_witness,100,100,0,accept,accept,true,A current regional witness is verified against ledger state.
+invalid_regional_witness,100,0,100,reject,reject,true,Tampered but syntactically valid witness value.
+invalid_global_witness,100,0,100,reject,reject,true,Tampered but syntactically valid witness value.
+revoked_member_old_witness,100,0,100,reject,reject,true,Uses the revoked member's old witness together with its old client-supplied accumulator value.
+stale_epoch_witness_after_membership_change,100,0,100,reject,reject,true,Adding another member advances current state; the earlier witness/epoch is rejected.
+witness_bound_to_wrong_region,100,0,100,reject,reject,true,"Changes layer1:NSW to layer1:QLD while preserving owner, witness, and accumulator."
+witness_bound_to_wrong_task,100,0,100,reject,reject,true,A current regional witness is evaluated against a different task identifier.
+modified_batch_hash_with_original_signature,100,0,100,reject,reject,true,The canonical batch digest is changed after the ECDSA signature is produced.
+modified_preprocessing_task,100,0,100,reject,reject,true,Task ID is changed after the preprocessing signature is produced.
+modified_preprocessing_chain,100,0,100,reject,reject,true,Chain binding is changed after signing.
+modified_preprocessing_policy,100,0,100,reject,reject,true,Policy version is changed after signing.
+modified_preprocessing_semantic_tag,100,0,100,reject,reject,true,Formula semantic tag is changed after signing.
+modified_preprocessing_nonce,100,0,100,reject,reject,true,Nonce is changed after signing.
+modified_tau_pre,100,0,100,reject,reject,true,The ASN.1 ECDSA preprocessing signature is replaced after signing.
+forged_preprocessing_signature,100,0,100,reject,reject,true,A registered signer ID is supplied with signature bytes not produced by its ECDSA private key.
+replayed_preprocessing_evidence,100,0,100,reject,reject,true,The exact valid signed preprocessing batch is submitted twice.
+valid_preprocessing_signature,100,100,0,accept,accept,true,A current registered signer authenticates the complete canonical v2 structure.
+fewer_than_threshold_committee_signatures,100,0,100,reject,reject,true,One valid registered ECDSA signature is supplied while the ledger threshold is two.
+valid_distinct_2_of_3_committee_signatures,100,100,0,accept,accept,true,Two distinct current-epoch registered members sign the bound canonical result.
+duplicate_committee_member_id,100,0,100,reject,reject,true,The same valid member signature is supplied twice and counts only once toward the ledger threshold.
+forged_committee_signature,100,0,100,reject,reject,true,One registered member signature is replaced with random Base64 bytes; chaincode performs ECDSA verification.
+unknown_committee_member,100,0,100,reject,reject,true,A signature entry names a member absent from the current ledger registry.
+stale_committee_epoch,100,0,100,reject,reject,true,A result names an epoch different from the current ledger committee epoch.
+payload_threshold_override,100,0,100,reject,reject,true,The caller attempts to lower threshold below the ledger configuration.
+empty_committee_signature,100,0,100,reject,reject,true,A registered member entry carries an empty signature.
+modify_result_after_committee_signature,100,0,100,reject,reject,true,Matched quantity is changed after two valid ECDSA signatures; the canonical result hash check fails.
+modify_task_after_committee_signature,100,0,100,reject,reject,true,Task ID is changed after two valid signatures are created.
+modify_preprocessing_hash_after_committee_signature,100,0,100,reject,reject,true,The accepted preprocessing digest is changed after signing.
+replay_same_matching_round,100,0,100,reject,reject,true,MatchingResult idempotency is keyed by region and roundId.
+duplicate_matched_pair,100,0,100,reject,reject,true,The same buy/sell pair is listed twice under otherwise valid signatures.
+matched_quantity_exceeds_order,100,0,100,reject,reject,true,A signed pair consumes more than the current buy and sell quantity.
+wrong_pair_owner,100,0,100,reject,reject,true,The signed result replaces the ledger buyer identity with an attacker identity.
+wrong_final_price_formula,100,0,100,reject,reject,true,A validly signed result uses a final price inconsistent with the RETF formula.
+empty_result_bypass_when_match_exists,100,0,100,reject,reject,true,The committee signs an empty result even though the accepted task contains an eligible pair.
+omitted_task_order,100,0,100,reject,reject,true,A signed result omits one order from the accepted task order index.
+replay_same_tid_task_request,100,0,100,reject,reject,true,The second authenticated SubmitBuyTask uses the same taskId and client requestId; the ledger idempotency record rejects it.
+cross_region_with_regional_witness_only,100,0,100,reject,reject,true,A cross-region policy explicitly requires a current global proof.
+legal_cross_region_global_authorization,100,100,0,accept,accept,true,A current context-bound global witness satisfies the explicit cross-region policy even when L1 is invalid.

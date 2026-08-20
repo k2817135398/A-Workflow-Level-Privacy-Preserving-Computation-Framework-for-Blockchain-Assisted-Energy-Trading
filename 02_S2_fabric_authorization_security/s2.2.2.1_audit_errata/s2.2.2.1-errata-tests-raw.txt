@@ -1,0 +1,738 @@
+S2.2.2.1 AUDIT ERRATA LIVE TESTS
+START 2026-07-16T03:43:27.704826Z
+COMMAND ["docker", "exec", "peer0.nsw.retf.com", "rm", "-rf", "/tmp/s2.2.2-relay-msp"]
+START 2026-07-16T03:43:27.707711Z
+END 2026-07-16T03:43:27.855572Z
+EXIT_CODE 0
+COMMAND ["docker", "cp", "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.2-live/runtime-secrets/relay-msp", "peer0.nsw.retf.com:/tmp/s2.2.2-relay-msp"]
+START 2026-07-16T03:43:27.858066Z
+END 2026-07-16T03:43:28.057165Z
+EXIT_CODE 0
+COMMAND ["docker", "cp", "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.2-live/s2.2.2.1-proposal-time-probe", "peer0.nsw.retf.com:/tmp/s2.2.2.1-proposal-time-probe"]
+START 2026-07-16T03:43:28.060156Z
+END 2026-07-16T03:43:28.329075Z
+EXIT_CODE 0
+COMMAND ["docker", "cp", "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.2-live/s2.2.2.1-ccaas-mtls-probe", "peer0.nsw.retf.com:/tmp/s2.2.2.1-ccaas-mtls-probe"]
+START 2026-07-16T03:43:28.334250Z
+END 2026-07-16T03:43:28.497195Z
+EXIT_CODE 0
+COMMAND ["docker", "exec", "peer0.nsw.retf.com", "/tmp/s2.2.2.1-proposal-time-probe", "--address", "peer0.nsw.retf.com:7051", "--server-name", "peer0.nsw.retf.com", "--tls-ca", "/tmp/s222-nsw-peer-tls-ca.crt", "--msp-id", "NSWMSP", "--sign-cert", "/tmp/s2.2.2-relay-msp/signcerts/cert.pem", "--sign-key", "/tmp/s2.2.2-relay-msp/keystore/key.pem", "--channel", "extra-channel", "--chaincode", "s2-privacy-222", "--timestamp-unix", "1784173383"]
+START 2026-07-16T03:43:28.500161Z
+{"schema_version":"saib-retf-s2.2.2-timewindow-probe/1","peer":"peer0.nsw.retf.com","timestamp_unix":1784173383,"function":"Health","accepted":true,"status":200,"message":"","payload":"SAIB-RETF/S2.2.2","tx_id":"c62a3e8ffcaba0c1768411bfdbebb3b2524150161348fdd2996d772a2779e48c"}
+END 2026-07-16T03:43:30.503555Z
+EXIT_CODE 0
+COMMAND ["docker", "exec", "peer0.nsw.retf.com", "/tmp/s2.2.2.1-proposal-time-probe", "--address", "peer0.qld.retf.com:7051", "--server-name", "peer0.qld.retf.com", "--tls-ca", "/tmp/s222-qld-peer-tls-ca.crt", "--msp-id", "NSWMSP", "--sign-cert", "/tmp/s2.2.2-relay-msp/signcerts/cert.pem", "--sign-key", "/tmp/s2.2.2-relay-msp/keystore/key.pem", "--channel", "extra-channel", "--chaincode", "s2-privacy-222", "--timestamp-unix", "1784173385"]
+START 2026-07-16T03:43:30.506405Z
+{"schema_version":"saib-retf-s2.2.2-timewindow-probe/1","peer":"peer0.qld.retf.com","timestamp_unix":1784173385,"function":"Health","accepted":true,"status":200,"message":"","payload":"SAIB-RETF/S2.2.2","tx_id":"699d64b0f4a0f402e9f5d4cf995b34db5b0e862181b9ab01478f2f7f7bdd3a58"}
+END 2026-07-16T03:43:32.314027Z
+EXIT_CODE 0
+COMMAND ["docker", "exec", "peer0.nsw.retf.com", "/tmp/s2.2.2.1-proposal-time-probe", "--address", "peer0.sa.retf.com:7051", "--server-name", "peer0.sa.retf.com", "--tls-ca", "/tmp/s222-sa-peer-tls-ca.crt", "--msp-id", "NSWMSP", "--sign-cert", "/tmp/s2.2.2-relay-msp/signcerts/cert.pem", "--sign-key", "/tmp/s2.2.2-relay-msp/keystore/key.pem", "--channel", "extra-channel", "--chaincode", "s2-privacy-222", "--timestamp-unix", "1784173387"]
+START 2026-07-16T03:43:32.316327Z
+{"schema_version":"saib-retf-s2.2.2-timewindow-probe/1","peer":"peer0.sa.retf.com","timestamp_unix":1784173387,"function":"Health","accepted":true,"status":200,"message":"","payload":"SAIB-RETF/S2.2.2","tx_id":"352784c08c18d63f4bce2f8d0bc42fde8be306438a14e4cc717a9144966258cc"}
+END 2026-07-16T03:43:33.780304Z
+EXIT_CODE 0
+COMMAND ["docker", "exec", "peer0.nsw.retf.com", "/tmp/s2.2.2.1-proposal-time-probe", "--address", "peer0.nsw.retf.com:7051", "--server-name", "peer0.nsw.retf.com", "--tls-ca", "/tmp/s222-nsw-peer-tls-ca.crt", "--msp-id", "NSWMSP", "--sign-cert", "/tmp/s2.2.2-relay-msp/signcerts/cert.pem", "--sign-key", "/tmp/s2.2.2-relay-msp/keystore/key.pem", "--channel", "extra-channel", "--chaincode", "s2-privacy-222", "--timestamp-unix", "1784173438"]
+START 2026-07-16T03:43:33.782169Z
+{"schema_version":"saib-retf-s2.2.2-timewindow-probe/1","peer":"peer0.nsw.retf.com","timestamp_unix":1784173438,"function":"Health","accepted":true,"status":200,"message":"","payload":"SAIB-RETF/S2.2.2","tx_id":"5a574f0ec1cb75638c68b5b1017fb37af1ac65c4a89a0db6e9d4c410f69ac13c"}
+END 2026-07-16T03:43:33.863237Z
+EXIT_CODE 0
+COMMAND ["docker", "exec", "peer0.nsw.retf.com", "/tmp/s2.2.2.1-proposal-time-probe", "--address", "peer0.qld.retf.com:7051", "--server-name", "peer0.qld.retf.com", "--tls-ca", "/tmp/s222-qld-peer-tls-ca.crt", "--msp-id", "NSWMSP", "--sign-cert", "/tmp/s2.2.2-relay-msp/signcerts/cert.pem", "--sign-key", "/tmp/s2.2.2-relay-msp/keystore/key.pem", "--channel", "extra-channel", "--chaincode", "s2-privacy-222", "--timestamp-unix", "1784173438"]
+START 2026-07-16T03:43:33.865069Z
+{"schema_version":"saib-retf-s2.2.2-timewindow-probe/1","peer":"peer0.qld.retf.com","timestamp_unix":1784173438,"function":"Health","accepted":true,"status":200,"message":"","payload":"SAIB-RETF/S2.2.2","tx_id":"38a0831f3f44daa63a84f701f80bc5bc6a53c383f636a743d3dc50a73c74b674"}
+END 2026-07-16T03:43:33.941167Z
+EXIT_CODE 0
+COMMAND ["docker", "exec", "peer0.nsw.retf.com", "/tmp/s2.2.2.1-proposal-time-probe", "--address", "peer0.sa.retf.com:7051", "--server-name", "peer0.sa.retf.com", "--tls-ca", "/tmp/s222-sa-peer-tls-ca.crt", "--msp-id", "NSWMSP", "--sign-cert", "/tmp/s2.2.2-relay-msp/signcerts/cert.pem", "--sign-key", "/tmp/s2.2.2-relay-msp/keystore/key.pem", "--channel", "extra-channel", "--chaincode", "s2-privacy-222", "--timestamp-unix", "1784173438"]
+START 2026-07-16T03:43:33.942703Z
+{"schema_version":"saib-retf-s2.2.2-timewindow-probe/1","peer":"peer0.sa.retf.com","timestamp_unix":1784173438,"function":"Health","accepted":true,"status":200,"message":"","payload":"SAIB-RETF/S2.2.2","tx_id":"9288d5ccc4fc451fbdc49ead761a44e27e39fa0ec4bd2a2e10dd709b4a2253f9"}
+END 2026-07-16T03:43:34.399144Z
+EXIT_CODE 0
+COMMAND ["docker", "exec", "peer0.nsw.retf.com", "/tmp/s2.2.2.1-proposal-time-probe", "--address", "peer0.nsw.retf.com:7051", "--server-name", "peer0.nsw.retf.com", "--tls-ca", "/tmp/s222-nsw-peer-tls-ca.crt", "--msp-id", "NSWMSP", "--sign-cert", "/tmp/s2.2.2-relay-msp/signcerts/cert.pem", "--sign-key", "/tmp/s2.2.2-relay-msp/keystore/key.pem", "--channel", "extra-channel", "--chaincode", "s2-privacy-222", "--timestamp-unix", "1784173379"]
+START 2026-07-16T03:43:34.400550Z
+{"schema_version":"saib-retf-s2.2.2-timewindow-probe/1","peer":"peer0.nsw.retf.com","timestamp_unix":1784173379,"function":"Health","accepted":false,"message":"rpc error: code = Unknown desc = request unauthorized due to incorrect timestamp 2026-07-16T03:42:59Z, peer time 2026-07-16T03:43:36Z, peer.authentication.timewindow 30s","tx_id":"e888a85e5fec1d68b3405be67f58c945909f2dd7856fe10133c4e075d0a6dd99"}
+END 2026-07-16T03:43:36.108802Z
+EXIT_CODE 0
+COMMAND ["docker", "exec", "peer0.nsw.retf.com", "/tmp/s2.2.2.1-proposal-time-probe", "--address", "peer0.qld.retf.com:7051", "--server-name", "peer0.qld.retf.com", "--tls-ca", "/tmp/s222-qld-peer-tls-ca.crt", "--msp-id", "NSWMSP", "--sign-cert", "/tmp/s2.2.2-relay-msp/signcerts/cert.pem", "--sign-key", "/tmp/s2.2.2-relay-msp/keystore/key.pem", "--channel", "extra-channel", "--chaincode", "s2-privacy-222", "--timestamp-unix", "1784173381"]
+START 2026-07-16T03:43:36.110257Z
+{"schema_version":"saib-retf-s2.2.2-timewindow-probe/1","peer":"peer0.qld.retf.com","timestamp_unix":1784173381,"function":"Health","accepted":false,"message":"rpc error: code = Unknown desc = request unauthorized due to incorrect timestamp 2026-07-16T03:43:01Z, peer time 2026-07-16T03:43:36Z, peer.authentication.timewindow 30s","tx_id":"60bfd3e1b3308372e0ea2df544d14ea3266c412e009da35c54697456b131632b"}
+END 2026-07-16T03:43:36.207178Z
+EXIT_CODE 0
+COMMAND ["docker", "exec", "peer0.nsw.retf.com", "/tmp/s2.2.2.1-proposal-time-probe", "--address", "peer0.sa.retf.com:7051", "--server-name", "peer0.sa.retf.com", "--tls-ca", "/tmp/s222-sa-peer-tls-ca.crt", "--msp-id", "NSWMSP", "--sign-cert", "/tmp/s2.2.2-relay-msp/signcerts/cert.pem", "--sign-key", "/tmp/s2.2.2-relay-msp/keystore/key.pem", "--channel", "extra-channel", "--chaincode", "s2-privacy-222", "--timestamp-unix", "1784173381"]
+START 2026-07-16T03:43:36.208646Z
+{"schema_version":"saib-retf-s2.2.2-timewindow-probe/1","peer":"peer0.sa.retf.com","timestamp_unix":1784173381,"function":"Health","accepted":false,"message":"rpc error: code = Unknown desc = request unauthorized due to incorrect timestamp 2026-07-16T03:43:01Z, peer time 2026-07-16T03:43:36Z, peer.authentication.timewindow 30s","tx_id":"be4665ad28d3e253b79ec2a341961549c8952a31ec2260808c7156ed87c1fa5b"}
+END 2026-07-16T03:43:36.561871Z
+EXIT_CODE 0
+COMMAND ["docker", "exec", "peer0.nsw.retf.com", "/tmp/s2.2.2.1-proposal-time-probe", "--address", "peer0.nsw.retf.com:7051", "--server-name", "peer0.nsw.retf.com", "--tls-ca", "/tmp/s222-nsw-peer-tls-ca.crt", "--msp-id", "NSWMSP", "--sign-cert", "/tmp/s2.2.2-relay-msp/signcerts/cert.pem", "--sign-key", "/tmp/s2.2.2-relay-msp/keystore/key.pem", "--channel", "extra-channel", "--chaincode", "s2-privacy-222", "--timestamp-unix", "1784173451"]
+START 2026-07-16T03:43:36.563409Z
+{"schema_version":"saib-retf-s2.2.2-timewindow-probe/1","peer":"peer0.nsw.retf.com","timestamp_unix":1784173451,"function":"Health","accepted":false,"message":"rpc error: code = Unknown desc = request unauthorized due to incorrect timestamp 2026-07-16T03:44:11Z, peer time 2026-07-16T03:43:36Z, peer.authentication.timewindow 30s","tx_id":"37e21b4053a3c62fa0921372b598267d6e670abfd72a8bd01ba1ae4e2b8f3c2b"}
+END 2026-07-16T03:43:36.638311Z
+EXIT_CODE 0
+COMMAND ["docker", "exec", "peer0.nsw.retf.com", "/tmp/s2.2.2.1-proposal-time-probe", "--address", "peer0.qld.retf.com:7051", "--server-name", "peer0.qld.retf.com", "--tls-ca", "/tmp/s222-qld-peer-tls-ca.crt", "--msp-id", "NSWMSP", "--sign-cert", "/tmp/s2.2.2-relay-msp/signcerts/cert.pem", "--sign-key", "/tmp/s2.2.2-relay-msp/keystore/key.pem", "--channel", "extra-channel", "--chaincode", "s2-privacy-222", "--timestamp-unix", "1784173451"]
+START 2026-07-16T03:43:36.639983Z
+{"schema_version":"saib-retf-s2.2.2-timewindow-probe/1","peer":"peer0.qld.retf.com","timestamp_unix":1784173451,"function":"Health","accepted":false,"message":"rpc error: code = Unknown desc = request unauthorized due to incorrect timestamp 2026-07-16T03:44:11Z, peer time 2026-07-16T03:43:36Z, peer.authentication.timewindow 30s","tx_id":"fec9eaf943ce83a9cefab03cd887ed57619ad9ca07f015e92bfea79fb489242c"}
+END 2026-07-16T03:43:36.709210Z
+EXIT_CODE 0
+COMMAND ["docker", "exec", "peer0.nsw.retf.com", "/tmp/s2.2.2.1-proposal-time-probe", "--address", "peer0.sa.retf.com:7051", "--server-name", "peer0.sa.retf.com", "--tls-ca", "/tmp/s222-sa-peer-tls-ca.crt", "--msp-id", "NSWMSP", "--sign-cert", "/tmp/s2.2.2-relay-msp/signcerts/cert.pem", "--sign-key", "/tmp/s2.2.2-relay-msp/keystore/key.pem", "--channel", "extra-channel", "--chaincode", "s2-privacy-222", "--timestamp-unix", "1784173451"]
+START 2026-07-16T03:43:36.710580Z
+{"schema_version":"saib-retf-s2.2.2-timewindow-probe/1","peer":"peer0.sa.retf.com","timestamp_unix":1784173451,"function":"Health","accepted":false,"message":"rpc error: code = Unknown desc = request unauthorized due to incorrect timestamp 2026-07-16T03:44:11Z, peer time 2026-07-16T03:43:36Z, peer.authentication.timewindow 30s","tx_id":"9570babd9e4fbd834a65e759a026ab3bdaa8b9124b5e8efbb9c1411f59fa2bbe"}
+END 2026-07-16T03:43:36.783615Z
+EXIT_CODE 0
+COMMAND ["/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.2-live/s2.2.1-material-tool", "policy", "--registry", "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.2-live/public-config/registry-epoch2.json", "--registry-id", "trusted-registry-epoch2", "--policy-draft", "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.2-live/s2.2.2.1-errata/backdate-policy-draft.json", "--credential-output", "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.2-live/s2.2.2.1-errata/backdate-credential-registry.json", "--policy-output", "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.2-live/s2.2.2.1-errata/backdate-policy-registry.json", "--derivation-output", "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.2-live/s2.2.2.1-errata/backdate-policy-derivation.json"]
+START 2026-07-16T03:43:36.788641Z
+END 2026-07-16T03:43:37.390151Z
+EXIT_CODE 0
+COMMAND ["/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.2-live/s2.2.1-material-tool", "envelope", "--private-key", "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.2-live/runtime-secrets/governance-private.pem", "--key-id", "s222-governance-root", "--nonce", "15", "--action", "put_task_policy", "--payload", "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.2-live/s2.2.2.1-errata/backdate-policy-payload.json", "--envelope-output", "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.2-live/governance/envelopes/main-15-put_task_policy.json", "--signature-output", "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.2-live/governance/envelopes/main-15-put_task_policy.sig.b64"]
+START 2026-07-16T03:43:37.404401Z
+END 2026-07-16T03:43:37.735468Z
+EXIT_CODE 0
+COMMAND ["docker", "exec", "-e", "CORE_PEER_LOCALMSPID=NSWMSP", "-e", "CORE_PEER_MSPCONFIGPATH=/tmp/s2.2.2-admin-msp", "-e", "CORE_PEER_ADDRESS=peer0.nsw.retf.com:7051", "-e", "CORE_PEER_TLS_ROOTCERT_FILE=/tmp/s222-nsw-peer-tls-ca.crt", "peer0.nsw.retf.com", "peer", "chaincode", "invoke", "-o", "orderer.orderer.retf.com:7050", "--ordererTLSHostnameOverride", "orderer.orderer.retf.com", "--tls", "--cafile", "/var/hyperledger/orderer/tls/ca.crt", "-C", "extra-channel", "-n", "s2-privacy-222", "--peerAddresses", "peer0.nsw.retf.com:7051", "--tlsRootCertFiles", "/tmp/s222-nsw-peer-tls-ca.crt", "--peerAddresses", "peer0.qld.retf.com:7051", "--tlsRootCertFiles", "/tmp/s222-qld-peer-tls-ca.crt", "--peerAddresses", "peer0.sa.retf.com:7051", "--tlsRootCertFiles", "/tmp/s222-sa-peer-tls-ca.crt", "--waitForEvent", "--waitForEventTimeout", "90s", "-c", "{\"Args\":[\"ApplyGovernance\",\"{\\\"schema_version\\\":\\\"saib-retf-s2.2.2-governance/1\\\",\\\"action\\\":\\\"put_task_policy\\\",\\\"payload\\\":{\\\"schema_version\\\":\\\"saib-retf-task-policy/2\\\",\\\"task_id\\\":\\\"task-s2221-wall-expiry-backdate\\\",\\\"network_id\\\":\\\"retf-network\\\",\\\"channel_id\\\":\\\"extra-channel\\\",\\\"chaincode_name\\\":\\\"s2-privacy-222\\\",\\\"chaincode_version\\\":\\\"2.2.2\\\",\\\"chaincode_sequence\\\":1,\\\"deployment_id\\\":\\\"s2.2.2-freshness-closure\\\",\\\"credential_registry_id\\\":\\\"trusted-registry-epoch2\\\",\\\"required_scope\\\":\\\"global\\\",\\\"region\\\":\\\"NSW\\\",\\\"minimum_credit\\\":700,\\\"committee_epoch\\\":2,\\\"maximum_validity_seconds\\\":3,\\\"allowed_clock_skew_seconds\\\":1,\\\"status\\\":\\\"active\\\",\\\"policy_digest\\\":\\\"cdf7fb91d5c0a13d774f14d508640a953ee5155568496dd6ff8144b2124d7887\\\"},\\\"governance_key_id\\\":\\\"s222-governance-root\\\",\\\"nonce\\\":15}\",\"RrzytEvTjKSlcJFLr0GSqoM7/V+Ht8/vSU7h9sRIzW/9DmfwP/Dl8hy8rmh545Z2DJVifVaez409ulc2jVIgAQ==\"]}"]
+START 2026-07-16T03:43:37.749113Z
+[34m2026-07-16 03:43:37.854 UTC 0001 INFO[0m [chaincodeCmd] [34;1mInitCmdFactory[0m -> InitCmdFactory: Entry: invoke, true, true
+[34m2026-07-16 03:43:37.854 UTC 0002 INFO[0m [grpc] [34;1mInfof[0m -> [core] original dial target is: "peer0.nsw.retf.com:7051"
+[34m2026-07-16 03:43:37.854 UTC 0003 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #1]Channel created
+[34m2026-07-16 03:43:37.854 UTC 0004 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #1]parsed dial target is: resolver.Target{URL:url.URL{Scheme:"passthrough", Opaque:"", User:(*url.Userinfo)(nil), Host:"", Path:"/peer0.nsw.retf.com:7051", Fragment:"", RawQuery:"", RawPath:"", RawFragment:"", ForceQuery:false, OmitHost:false}}
+[34m2026-07-16 03:43:37.854 UTC 0005 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #1]Channel authority set to "peer0.nsw.retf.com:7051"
+[34m2026-07-16 03:43:37.854 UTC 0006 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #1]Resolver state updated: {
+  "Addresses": [
+    {
+      "Addr": "peer0.nsw.retf.com:7051",
+      "ServerName": "",
+      "Attributes": null,
+      "BalancerAttributes": null,
+      "Metadata": null
+    }
+  ],
+  "Endpoints": [
+    {
+      "Addresses": [
+        {
+          "Addr": "peer0.nsw.retf.com:7051",
+          "ServerName": "",
+          "Attributes": null,
+          "BalancerAttributes": null,
+          "Metadata": null
+        }
+      ],
+      "Attributes": null
+    }
+  ],
+  "ServiceConfig": null,
+  "Attributes": null
+} (resolver returned new addresses)
+[34m2026-07-16 03:43:37.854 UTC 0007 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #1]Channel switches to new LB policy "pick_first"
+[34m2026-07-16 03:43:37.855 UTC 0008 INFO[0m [grpc] [34;1mInfof[0m -> [pick-first-leaf-lb] [pick-first-leaf-lb 0x16dae8a10480] Received new config {
+  "shuffleAddressList": false
+}, resolver state {
+  "Addresses": [
+    {
+      "Addr": "peer0.nsw.retf.com:7051",
+      "ServerName": "",
+      "Attributes": null,
+      "BalancerAttributes": null,
+      "Metadata": null
+    }
+  ],
+  "Endpoints": [
+    {
+      "Addresses": [
+        {
+          "Addr": "peer0.nsw.retf.com:7051",
+          "ServerName": "",
+          "Attributes": null,
+          "BalancerAttributes": null,
+          "Metadata": null
+        }
+      ],
+      "Attributes": null
+    }
+  ],
+  "ServiceConfig": null,
+  "Attributes": null
+}
+[34m2026-07-16 03:43:37.855 UTC 0009 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #1]Channel Connectivity change to CONNECTING
+[34m2026-07-16 03:43:37.855 UTC 000a INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #1 SubChannel #2]Subchannel created
+[34m2026-07-16 03:43:37.855 UTC 000b INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #1]Channel exiting idle mode
+[34m2026-07-16 03:43:37.855 UTC 000c INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #1 SubChannel #2]Subchannel Connectivity change to CONNECTING
+[34m2026-07-16 03:43:37.855 UTC 000d INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #1 SubChannel #2]Subchannel picks a new address "peer0.nsw.retf.com:7051" to connect
+[34m2026-07-16 03:43:37.858 UTC 000e INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #1 SubChannel #2]Subchannel Connectivity change to READY
+[34m2026-07-16 03:43:37.858 UTC 000f INFO[0m [grpc] [34;1mInfof[0m -> [pick-first-leaf-lb] [pick-first-leaf-lb 0x16dae8a10480] SubConn 0x16dae8bbb810 reported connectivity state READY and the health listener is disabled. Transitioning SubConn to READY.
+[34m2026-07-16 03:43:37.859 UTC 0010 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #1]Channel Connectivity change to READY
+[34m2026-07-16 03:43:37.859 UTC 0011 INFO[0m [grpc] [34;1mInfof[0m -> [core] original dial target is: "peer0.nsw.retf.com:7051"
+[34m2026-07-16 03:43:37.859 UTC 0012 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #4]Channel created
+[34m2026-07-16 03:43:37.859 UTC 0013 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #4]parsed dial target is: resolver.Target{URL:url.URL{Scheme:"passthrough", Opaque:"", User:(*url.Userinfo)(nil), Host:"", Path:"/peer0.nsw.retf.com:7051", Fragment:"", RawQuery:"", RawPath:"", RawFragment:"", ForceQuery:false, OmitHost:false}}
+[34m2026-07-16 03:43:37.859 UTC 0014 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #4]Channel authority set to "peer0.nsw.retf.com:7051"
+[34m2026-07-16 03:43:37.859 UTC 0015 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #4]Resolver state updated: {
+  "Addresses": [
+    {
+      "Addr": "peer0.nsw.retf.com:7051",
+      "ServerName": "",
+      "Attributes": null,
+      "BalancerAttributes": null,
+      "Metadata": null
+    }
+  ],
+  "Endpoints": [
+    {
+      "Addresses": [
+        {
+          "Addr": "peer0.nsw.retf.com:7051",
+          "ServerName": "",
+          "Attributes": null,
+          "BalancerAttributes": null,
+          "Metadata": null
+        }
+      ],
+      "Attributes": null
+    }
+  ],
+  "ServiceConfig": null,
+  "Attributes": null
+} (resolver returned new addresses)
+[34m2026-07-16 03:43:37.859 UTC 0016 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #4]Channel switches to new LB policy "pick_first"
+[34m2026-07-16 03:43:37.859 UTC 0017 INFO[0m [grpc] [34;1mInfof[0m -> [pick-first-leaf-lb] [pick-first-leaf-lb 0x16dae8a10870] Received new config {
+  "shuffleAddressList": false
+}, resolver state {
+  "Addresses": [
+    {
+      "Addr": "peer0.nsw.retf.com:7051",
+      "ServerName": "",
+      "Attributes": null,
+      "BalancerAttributes": null,
+      "Metadata": null
+    }
+  ],
+  "Endpoints": [
+    {
+      "Addresses": [
+        {
+          "Addr": "peer0.nsw.retf.com:7051",
+          "ServerName": "",
+          "Attributes": null,
+          "BalancerAttributes": null,
+          "Metadata": null
+        }
+      ],
+      "Attributes": null
+    }
+  ],
+  "ServiceConfig": null,
+  "Attributes": null
+}
+[34m2026-07-16 03:43:37.859 UTC 0018 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #4]Channel Connectivity change to CONNECTING
+[34m2026-07-16 03:43:37.859 UTC 0019 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #4 SubChannel #5]Subchannel created
+[34m2026-07-16 03:43:37.859 UTC 001a INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #4]Channel exiting idle mode
+[34m2026-07-16 03:43:37.859 UTC 001b INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #4 SubChannel #5]Subchannel Connectivity change to CONNECTING
+[34m2026-07-16 03:43:37.859 UTC 001c INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #4 SubChannel #5]Subchannel picks a new address "peer0.nsw.retf.com:7051" to connect
+[34m2026-07-16 03:43:37.862 UTC 001d INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #4 SubChannel #5]Subchannel Connectivity change to READY
+[34m2026-07-16 03:43:37.862 UTC 001e INFO[0m [grpc] [34;1mInfof[0m -> [pick-first-leaf-lb] [pick-first-leaf-lb 0x16dae8a10870] SubConn 0x16dae8bba460 reported connectivity state READY and the health listener is disabled. Transitioning SubConn to READY.
+[34m2026-07-16 03:43:37.862 UTC 001f INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #4]Channel Connectivity change to READY
+[34m2026-07-16 03:43:37.862 UTC 0020 INFO[0m [grpc] [34;1mInfof[0m -> [core] original dial target is: "peer0.qld.retf.com:7051"
+[34m2026-07-16 03:43:37.862 UTC 0021 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #7]Channel created
+[34m2026-07-16 03:43:37.862 UTC 0022 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #7]parsed dial target is: resolver.Target{URL:url.URL{Scheme:"passthrough", Opaque:"", User:(*url.Userinfo)(nil), Host:"", Path:"/peer0.qld.retf.com:7051", Fragment:"", RawQuery:"", RawPath:"", RawFragment:"", ForceQuery:false, OmitHost:false}}
+[34m2026-07-16 03:43:37.862 UTC 0023 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #7]Channel authority set to "peer0.qld.retf.com:7051"
+[34m2026-07-16 03:43:37.862 UTC 0024 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #7]Resolver state updated: {
+  "Addresses": [
+    {
+      "Addr": "peer0.qld.retf.com:7051",
+      "ServerName": "",
+      "Attributes": null,
+      "BalancerAttributes": null,
+      "Metadata": null
+    }
+  ],
+  "Endpoints": [
+    {
+      "Addresses": [
+        {
+          "Addr": "peer0.qld.retf.com:7051",
+          "ServerName": "",
+          "Attributes": null,
+          "BalancerAttributes": null,
+          "Metadata": null
+        }
+      ],
+      "Attributes": null
+    }
+  ],
+  "ServiceConfig": null,
+  "Attributes": null
+} (resolver returned new addresses)
+[34m2026-07-16 03:43:37.862 UTC 0025 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #7]Channel switches to new LB policy "pick_first"
+[34m2026-07-16 03:43:37.863 UTC 0026 INFO[0m [grpc] [34;1mInfof[0m -> [pick-first-leaf-lb] [pick-first-leaf-lb 0x16dae8a10c60] Received new config {
+  "shuffleAddressList": false
+}, resolver state {
+  "Addresses": [
+    {
+      "Addr": "peer0.qld.retf.com:7051",
+      "ServerName": "",
+      "Attributes": null,
+      "BalancerAttributes": null,
+      "Metadata": null
+    }
+  ],
+  "Endpoints": [
+    {
+      "Addresses": [
+        {
+          "Addr": "peer0.qld.retf.com:7051",
+          "ServerName": "",
+          "Attributes": null,
+          "BalancerAttributes": null,
+          "Metadata": null
+        }
+      ],
+      "Attributes": null
+    }
+  ],
+  "ServiceConfig": null,
+  "Attributes": null
+}
+[34m2026-07-16 03:43:37.863 UTC 0027 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #7]Channel Connectivity change to CONNECTING
+[34m2026-07-16 03:43:37.863 UTC 0028 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #7 SubChannel #8]Subchannel created
+[34m2026-07-16 03:43:37.863 UTC 0029 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #7]Channel exiting idle mode
+[34m2026-07-16 03:43:37.863 UTC 002a INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #7 SubChannel #8]Subchannel Connectivity change to CONNECTING
+[34m2026-07-16 03:43:37.863 UTC 002b INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #7 SubChannel #8]Subchannel picks a new address "peer0.qld.retf.com:7051" to connect
+[34m2026-07-16 03:43:37.865 UTC 002c INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #7 SubChannel #8]Subchannel Connectivity change to READY
+[34m2026-07-16 03:43:37.865 UTC 002d INFO[0m [grpc] [34;1mInfof[0m -> [pick-first-leaf-lb] [pick-first-leaf-lb 0x16dae8a10c60] SubConn 0x16dae8bba870 reported connectivity state READY and the health listener is disabled. Transitioning SubConn to READY.
+[34m2026-07-16 03:43:37.865 UTC 002e INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #7]Channel Connectivity change to READY
+[34m2026-07-16 03:43:37.866 UTC 002f INFO[0m [grpc] [34;1mInfof[0m -> [core] original dial target is: "peer0.qld.retf.com:7051"
+[34m2026-07-16 03:43:37.866 UTC 0030 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #10]Channel created
+[34m2026-07-16 03:43:37.866 UTC 0031 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #10]parsed dial target is: resolver.Target{URL:url.URL{Scheme:"passthrough", Opaque:"", User:(*url.Userinfo)(nil), Host:"", Path:"/peer0.qld.retf.com:7051", Fragment:"", RawQuery:"", RawPath:"", RawFragment:"", ForceQuery:false, OmitHost:false}}
+[34m2026-07-16 03:43:37.866 UTC 0032 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #10]Channel authority set to "peer0.qld.retf.com:7051"
+[34m2026-07-16 03:43:37.866 UTC 0033 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #10]Resolver state updated: {
+  "Addresses": [
+    {
+      "Addr": "peer0.qld.retf.com:7051",
+      "ServerName": "",
+      "Attributes": null,
+      "BalancerAttributes": null,
+      "Metadata": null
+    }
+  ],
+  "Endpoints": [
+    {
+      "Addresses": [
+        {
+          "Addr": "peer0.qld.retf.com:7051",
+          "ServerName": "",
+          "Attributes": null,
+          "BalancerAttributes": null,
+          "Metadata": null
+        }
+      ],
+      "Attributes": null
+    }
+  ],
+  "ServiceConfig": null,
+  "Attributes": null
+} (resolver returned new addresses)
+[34m2026-07-16 03:43:37.866 UTC 0034 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #10]Channel switches to new LB policy "pick_first"
+[34m2026-07-16 03:43:37.866 UTC 0035 INFO[0m [grpc] [34;1mInfof[0m -> [pick-first-leaf-lb] [pick-first-leaf-lb 0x16dae8aacd80] Received new config {
+  "shuffleAddressList": false
+}, resolver state {
+  "Addresses": [
+    {
+      "Addr": "peer0.qld.retf.com:7051",
+      "ServerName": "",
+      "Attributes": null,
+      "BalancerAttributes": null,
+      "Metadata": null
+    }
+  ],
+  "Endpoints": [
+    {
+      "Addresses": [
+        {
+          "Addr": "peer0.qld.retf.com:7051",
+          "ServerName": "",
+          "Attributes": null,
+          "BalancerAttributes": null,
+          "Metadata": null
+        }
+      ],
+      "Attributes": null
+    }
+  ],
+  "ServiceConfig": null,
+  "Attributes": null
+}
+[34m2026-07-16 03:43:37.866 UTC 0036 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #10]Channel Connectivity change to CONNECTING
+[34m2026-07-16 03:43:37.866 UTC 0037 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #10 SubChannel #11]Subchannel created
+[34m2026-07-16 03:43:37.866 UTC 0038 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #10]Channel exiting idle mode
+[34m2026-07-16 03:43:37.866 UTC 0039 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #10 SubChannel #11]Subchannel Connectivity change to CONNECTING
+[34m2026-07-16 03:43:37.866 UTC 003a INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #10 SubChannel #11]Subchannel picks a new address "peer0.qld.retf.com:7051" to connect
+[34m2026-07-16 03:43:37.868 UTC 003b INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #10 SubChannel #11]Subchannel Connectivity change to READY
+[34m2026-07-16 03:43:37.868 UTC 003c INFO[0m [grpc] [34;1mInfof[0m -> [pick-first-leaf-lb] [pick-first-leaf-lb 0x16dae8aacd80] SubConn 0x16dae8da4320 reported connectivity state READY and the health listener is disabled. Transitioning SubConn to READY.
+[34m2026-07-16 03:43:37.868 UTC 003d INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #10]Channel Connectivity change to READY
+[34m2026-07-16 03:43:37.868 UTC 003e INFO[0m [grpc] [34;1mInfof[0m -> [core] original dial target is: "peer0.sa.retf.com:7051"
+[34m2026-07-16 03:43:37.868 UTC 003f INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #13]Channel created
+[34m2026-07-16 03:43:37.868 UTC 0040 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #13]parsed dial target is: resolver.Target{URL:url.URL{Scheme:"passthrough", Opaque:"", User:(*url.Userinfo)(nil), Host:"", Path:"/peer0.sa.retf.com:7051", Fragment:"", RawQuery:"", RawPath:"", RawFragment:"", ForceQuery:false, OmitHost:false}}
+[34m2026-07-16 03:43:37.868 UTC 0041 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #13]Channel authority set to "peer0.sa.retf.com:7051"
+[34m2026-07-16 03:43:37.868 UTC 0042 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #13]Resolver state updated: {
+  "Addresses": [
+    {
+      "Addr": "peer0.sa.retf.com:7051",
+      "ServerName": "",
+      "Attributes": null,
+      "BalancerAttributes": null,
+      "Metadata": null
+    }
+  ],
+  "Endpoints": [
+    {
+      "Addresses": [
+        {
+          "Addr": "peer0.sa.retf.com:7051",
+          "ServerName": "",
+          "Attributes": null,
+          "BalancerAttributes": null,
+          "Metadata": null
+        }
+      ],
+      "Attributes": null
+    }
+  ],
+  "ServiceConfig": null,
+  "Attributes": null
+} (resolver returned new addresses)
+[34m2026-07-16 03:43:37.868 UTC 0043 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #13]Channel switches to new LB policy "pick_first"
+[34m2026-07-16 03:43:37.868 UTC 0044 INFO[0m [grpc] [34;1mInfof[0m -> [pick-first-leaf-lb] [pick-first-leaf-lb 0x16dae8afa2d0] Received new config {
+  "shuffleAddressList": false
+}, resolver state {
+  "Addresses": [
+    {
+      "Addr": "peer0.sa.retf.com:7051",
+      "ServerName": "",
+      "Attributes": null,
+      "BalancerAttributes": null,
+      "Metadata": null
+    }
+  ],
+  "Endpoints": [
+    {
+      "Addresses": [
+        {
+          "Addr": "peer0.sa.retf.com:7051",
+          "ServerName": "",
+          "Attributes": null,
+          "BalancerAttributes": null,
+          "Metadata": null
+        }
+      ],
+      "Attributes": null
+    }
+  ],
+  "ServiceConfig": null,
+  "Attributes": null
+}
+[34m2026-07-16 03:43:37.868 UTC 0045 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #13]Channel Connectivity change to CONNECTING
+[34m2026-07-16 03:43:37.868 UTC 0046 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #13 SubChannel #14]Subchannel created
+[34m2026-07-16 03:43:37.868 UTC 0047 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #13]Channel exiting idle mode
+[34m2026-07-16 03:43:37.869 UTC 0048 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #13 SubChannel #14]Subchannel Connectivity change to CONNECTING
+[34m2026-07-16 03:43:37.869 UTC 0049 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #13 SubChannel #14]Subchannel picks a new address "peer0.sa.retf.com:7051" to connect
+[34m2026-07-16 03:43:37.870 UTC 004a INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #13 SubChannel #14]Subchannel Connectivity change to READY
+[34m2026-07-16 03:43:37.870 UTC 004b INFO[0m [grpc] [34;1mInfof[0m -> [pick-first-leaf-lb] [pick-first-leaf-lb 0x16dae8afa2d0] SubConn 0x16dae8a28eb0 reported connectivity state READY and the health listener is disabled. Transitioning SubConn to READY.
+[34m2026-07-16 03:43:37.870 UTC 004c INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #13]Channel Connectivity change to READY
+[34m2026-07-16 03:43:37.871 UTC 004d INFO[0m [grpc] [34;1mInfof[0m -> [core] original dial target is: "peer0.sa.retf.com:7051"
+[34m2026-07-16 03:43:37.871 UTC 004e INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #16]Channel created
+[34m2026-07-16 03:43:37.871 UTC 004f INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #16]parsed dial target is: resolver.Target{URL:url.URL{Scheme:"passthrough", Opaque:"", User:(*url.Userinfo)(nil), Host:"", Path:"/peer0.sa.retf.com:7051", Fragment:"", RawQuery:"", RawPath:"", RawFragment:"", ForceQuery:false, OmitHost:false}}
+[34m2026-07-16 03:43:37.871 UTC 0050 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #16]Channel authority set to "peer0.sa.retf.com:7051"
+[34m2026-07-16 03:43:37.871 UTC 0051 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #16]Resolver state updated: {
+  "Addresses": [
+    {
+      "Addr": "peer0.sa.retf.com:7051",
+      "ServerName": "",
+      "Attributes": null,
+      "BalancerAttributes": null,
+      "Metadata": null
+    }
+  ],
+  "Endpoints": [
+    {
+      "Addresses": [
+        {
+          "Addr": "peer0.sa.retf.com:7051",
+          "ServerName": "",
+          "Attributes": null,
+          "BalancerAttributes": null,
+          "Metadata": null
+        }
+      ],
+      "Attributes": null
+    }
+  ],
+  "ServiceConfig": null,
+  "Attributes": null
+} (resolver returned new addresses)
+[34m2026-07-16 03:43:37.871 UTC 0052 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #16]Channel switches to new LB policy "pick_first"
+[34m2026-07-16 03:43:37.871 UTC 0053 INFO[0m [grpc] [34;1mInfof[0m -> [pick-first-leaf-lb] [pick-first-leaf-lb 0x16dae8aaddd0] Received new config {
+  "shuffleAddressList": false
+}, resolver state {
+  "Addresses": [
+    {
+      "Addr": "peer0.sa.retf.com:7051",
+      "ServerName": "",
+      "Attributes": null,
+      "BalancerAttributes": null,
+      "Metadata": null
+    }
+  ],
+  "Endpoints": [
+    {
+      "Addresses": [
+        {
+          "Addr": "peer0.sa.retf.com:7051",
+          "ServerName": "",
+          "Attributes": null,
+          "BalancerAttributes": null,
+          "Metadata": null
+        }
+      ],
+      "Attributes": null
+    }
+  ],
+  "ServiceConfig": null,
+  "Attributes": null
+}
+[34m2026-07-16 03:43:37.871 UTC 0054 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #16]Channel Connectivity change to CONNECTING
+[34m2026-07-16 03:43:37.871 UTC 0055 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #16 SubChannel #17]Subchannel created
+[34m2026-07-16 03:43:37.871 UTC 0056 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #16]Channel exiting idle mode
+[34m2026-07-16 03:43:37.871 UTC 0057 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #16 SubChannel #17]Subchannel Connectivity change to CONNECTING
+[34m2026-07-16 03:43:37.871 UTC 0058 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #16 SubChannel #17]Subchannel picks a new address "peer0.sa.retf.com:7051" to connect
+[34m2026-07-16 03:43:37.873 UTC 0059 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #16 SubChannel #17]Subchannel Connectivity change to READY
+[34m2026-07-16 03:43:37.873 UTC 005a INFO[0m [grpc] [34;1mInfof[0m -> [pick-first-leaf-lb] [pick-first-leaf-lb 0x16dae8aaddd0] SubConn 0x16dae8da45f0 reported connectivity state READY and the health listener is disabled. Transitioning SubConn to READY.
+[34m2026-07-16 03:43:37.874 UTC 005b INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #16]Channel Connectivity change to READY
+[33m2026-07-16 03:43:37.874 UTC 005c WARN[0m [grpc] [33;1mWarningf[0m -> [core] Adjusting keepalive ping interval to minimum period of 10s
+[34m2026-07-16 03:43:37.874 UTC 005d INFO[0m [grpc] [34;1mInfof[0m -> [core] original dial target is: "orderer.orderer.retf.com:7050"
+[34m2026-07-16 03:43:37.874 UTC 005e INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #19]Channel created
+[34m2026-07-16 03:43:37.874 UTC 005f INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #19]parsed dial target is: resolver.Target{URL:url.URL{Scheme:"passthrough", Opaque:"", User:(*url.Userinfo)(nil), Host:"", Path:"/orderer.orderer.retf.com:7050", Fragment:"", RawQuery:"", RawPath:"", RawFragment:"", ForceQuery:false, OmitHost:false}}
+[34m2026-07-16 03:43:37.874 UTC 0060 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #19]Channel authority set to "orderer.orderer.retf.com"
+[34m2026-07-16 03:43:37.874 UTC 0061 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #19]Resolver state updated: {
+  "Addresses": [
+    {
+      "Addr": "orderer.orderer.retf.com:7050",
+      "ServerName": "",
+      "Attributes": null,
+      "BalancerAttributes": null,
+      "Metadata": null
+    }
+  ],
+  "Endpoints": [
+    {
+      "Addresses": [
+        {
+          "Addr": "orderer.orderer.retf.com:7050",
+          "ServerName": "",
+          "Attributes": null,
+          "BalancerAttributes": null,
+          "Metadata": null
+        }
+      ],
+      "Attributes": null
+    }
+  ],
+  "ServiceConfig": null,
+  "Attributes": null
+} (resolver returned new addresses)
+[34m2026-07-16 03:43:37.874 UTC 0062 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #19]Channel switches to new LB policy "pick_first"
+[34m2026-07-16 03:43:37.874 UTC 0063 INFO[0m [grpc] [34;1mInfof[0m -> [pick-first-leaf-lb] [pick-first-leaf-lb 0x16dae8a10a20] Received new config {
+  "shuffleAddressList": false
+}, resolver state {
+  "Addresses": [
+    {
+      "Addr": "orderer.orderer.retf.com:7050",
+      "ServerName": "",
+      "Attributes": null,
+      "BalancerAttributes": null,
+      "Metadata": null
+    }
+  ],
+  "Endpoints": [
+    {
+      "Addresses": [
+        {
+          "Addr": "orderer.orderer.retf.com:7050",
+          "ServerName": "",
+          "Attributes": null,
+          "BalancerAttributes": null,
+          "Metadata": null
+        }
+      ],
+      "Attributes": null
+    }
+  ],
+  "ServiceConfig": null,
+  "Attributes": null
+}
+[34m2026-07-16 03:43:37.874 UTC 0064 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #19]Channel Connectivity change to CONNECTING
+[34m2026-07-16 03:43:37.874 UTC 0065 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #19 SubChannel #20]Subchannel created
+[34m2026-07-16 03:43:37.874 UTC 0066 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #19]Channel exiting idle mode
+[34m2026-07-16 03:43:37.874 UTC 0067 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #19 SubChannel #20]Subchannel Connectivity change to CONNECTING
+[34m2026-07-16 03:43:37.874 UTC 0068 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #19 SubChannel #20]Subchannel picks a new address "orderer.orderer.retf.com:7050" to connect
+[34m2026-07-16 03:43:37.878 UTC 0069 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #19 SubChannel #20]Subchannel Connectivity change to READY
+[34m2026-07-16 03:43:37.878 UTC 006a INFO[0m [grpc] [34;1mInfof[0m -> [pick-first-leaf-lb] [pick-first-leaf-lb 0x16dae8a10a20] SubConn 0x16dae8bbadc0 reported connectivity state READY and the health listener is disabled. Transitioning SubConn to READY.
+[34m2026-07-16 03:43:37.878 UTC 006b INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #19]Channel Connectivity change to READY
+[34m2026-07-16 03:43:39.985 UTC 006c INFO[0m [chaincodeCmd] [34;1mClientWait[0m -> txid [17f074ac0447bbf3d9f5c2f69b0b0055f33ee49bb6d8acd0b327fd4c50b99ab9] committed with status (VALID) at peer0.qld.retf.com:7051
+[34m2026-07-16 03:43:39.985 UTC 006d INFO[0m [chaincodeCmd] [34;1mClientWait[0m -> txid [17f074ac0447bbf3d9f5c2f69b0b0055f33ee49bb6d8acd0b327fd4c50b99ab9] committed with status (VALID) at peer0.nsw.retf.com:7051
+[34m2026-07-16 03:43:39.987 UTC 006e INFO[0m [chaincodeCmd] [34;1mClientWait[0m -> txid [17f074ac0447bbf3d9f5c2f69b0b0055f33ee49bb6d8acd0b327fd4c50b99ab9] committed with status (VALID) at peer0.sa.retf.com:7051
+[34m2026-07-16 03:43:39.988 UTC 006f INFO[0m [chaincodeCmd] [34;1mchaincodeInvokeOrQuery[0m -> Chaincode invoke successful. result: status:200 payload:"s2.2.2/task-policy/task-s2221-wall-expiry-backdate"
+END 2026-07-16T03:43:40.007645Z
+EXIT_CODE 0
+COMMAND ["/mnt/g/paperexper/retf/saib-retf/prototype/anoncred-rust/target/release/s2_2_holder", "prove", "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.2-live/roles/private/wallet-B-epoch2.json", "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.2-live/public-config/registry-epoch2.json", "SAIB-RETF/v2/task-pseudonym/s2.2.2/ed51926561603816f0f55c619a582b6d99cb9df525710be0386a1eb3c7fadc08", "d1d84bf0215ad5818e1cc389315f6698442974abcfd04ad9c3028ec38af57d2d", "global", "NSW", "700", "1", "2", "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.2-live/s2.2.2.1-errata/proof-wall-expiry-backdate.json"]
+START 2026-07-16T03:43:40.021720Z
+END 2026-07-16T03:43:40.569335Z
+EXIT_CODE 0
+COMMAND ["docker", "rm", "-f", "s222-verifier"]
+START 2026-07-16T03:43:40.570620Z
+s222-verifier
+END 2026-07-16T03:43:41.152506Z
+EXIT_CODE 0
+COMMAND ["docker", "run", "-d", "--name", "s222-verifier", "--network", "retf_network", "-p", "48443:48443", "-v", "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.2-live/runtime-secrets/attestor-v2-private.pem:/run/secrets/attestor.pem:ro", "-v", "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.2-live/public-config/trusted-credential-registry.json:/run/config/credentials.json:ro", "-v", "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.2-live/public-config/task-policy-registry.json:/run/config/policies.json:ro", "-v", "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.2-live/public-config/verifier-mtls-cert.pem:/run/tls/server.pem:ro", "-v", "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.2-live/runtime-secrets/mtls/verifier.key:/run/tls/server.key:ro", "-v", "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.2-live/public-config/relay-verifier-ca.pem:/run/tls/client-ca.pem:ro", "saib-s2.2.2-verifier:local", "--listen", "0.0.0.0:48443", "--attestor-key", "/run/secrets/attestor.pem", "--key-id", "s222-attestor", "--key-version", "2", "--credential-registry", "/run/config/credentials.json", "--policy-registry", "/run/config/policies.json", "--tls-cert", "/run/tls/server.pem", "--tls-key", "/run/tls/server.key", "--client-ca", "/run/tls/client-ca.pem"]
+START 2026-07-16T03:43:41.156055Z
+f5415a0bb190b9c19f9873b070af071e2729b3e73e3a30ff29545a82ae20f65a
+END 2026-07-16T03:43:41.626459Z
+EXIT_CODE 0
+VERIFIER_REQUEST {"proof_b64": "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", "task_id": "task-s2221-wall-expiry-backdate", "task_pseudonym": "83e4addcf0ea42e3edc99e8aa0eb8a92115de687d77c82bc35bc95119118a92a60aeec0701d4407ce4a84262c707fd9c"}
+VERIFIER_STATUS 200
+VERIFIER_RESPONSE {"signature_b64": "QWusqODOWo4juewKhLSfkOi2gkDeUwlu/ciVK7iRMbHSU3Yu0bGsFDWY6x07hrowejShmJ9BdThTK9tLPaKdDg==", "statement": {"attestation_nonce": "a0c256c4fd8dd0dfc285663eb79fed19b39ae174312619027caabc16ef82ce6b", "canonical_task_domain": "SAIB-RETF/v2/task-pseudonym/s2.2.2/ed51926561603816f0f55c619a582b6d99cb9df525710be0386a1eb3c7fadc08", "chaincode_name": "s2-privacy-222", "chaincode_sequence": 1, "chaincode_version": "2.2.2", "channel_id": "extra-channel", "committee_epoch": 2, "credential_registry_digest": "11597177ad90a36b88fca1e0f8ccc8e80ff8882123951d1be8901698eb27fd72", "deployment_id": "s2.2.2-freshness-closure", "expires_at_unix": 1784173424, "global_issuer_id": "2f27a59dcdd048e38b20915b48cad72d", "global_registry_epoch": 1, "issued_at_unix": 1784173421, "network_id": "retf-network", "policy_digest": "cdf7fb91d5c0a13d774f14d508640a953ee5155568496dd6ff8144b2124d7887", "proof_digest": "97cf7641bcc0e3902f3a1f1e8476b502ba9f848ea512b7861301150a4dd219c7", "protocol_version": "SAIB-RETF/S2.2.2", "regional_issuer_id": "89c69e85a896e6b7d47270b41df1ed0f", "regional_registry_epoch": 2, "schema_version": "saib-retf-canonical-auth-statement/2", "task_id": "task-s2221-wall-expiry-backdate", "task_pseudonym": "83e4addcf0ea42e3edc99e8aa0eb8a92115de687d77c82bc35bc95119118a92a60aeec0701d4407ce4a84262c707fd9c", "verifier_key_id": "s222-attestor", "verifier_key_version": 2}, "statement_json": "{\"schema_version\":\"saib-retf-canonical-auth-statement/2\",\"protocol_version\":\"SAIB-RETF/S2.2.2\",\"network_id\":\"retf-network\",\"channel_id\":\"extra-channel\",\"chaincode_name\":\"s2-privacy-222\",\"chaincode_version\":\"2.2.2\",\"chaincode_sequence\":1,\"deployment_id\":\"s2.2.2-freshness-closure\",\"task_id\":\"task-s2221-wall-expiry-backdate\",\"canonical_task_domain\":\"SAIB-RETF/v2/task-pseudonym/s2.2.2/ed51926561603816f0f55c619a582b6d99cb9df525710be0386a1eb3c7fadc08\",\"policy_digest\":\"cdf7fb91d5c0a13d774f14d508640a953ee5155568496dd6ff8144b2124d7887\",\"credential_registry_digest\":\"11597177ad90a36b88fca1e0f8ccc8e80ff8882123951d1be8901698eb27fd72\",\"global_issuer_id\":\"2f27a59dcdd048e38b20915b48cad72d\",\"regional_issuer_id\":\"89c69e85a896e6b7d47270b41df1ed0f\",\"global_registry_epoch\":1,\"regional_registry_epoch\":2,\"committee_epoch\":2,\"task_pseudonym\":\"83e4addcf0ea42e3edc99e8aa0eb8a92115de687d77c82bc35bc95119118a92a60aeec0701d4407ce4a84262c707fd9c\",\"proof_digest\":\"97cf7641bcc0e3902f3a1f1e8476b502ba9f848ea512b7861301150a4dd219c7\",\"verifier_key_id\":\"s222-attestor\",\"verifier_key_version\":2,\"issued_at_unix\":1784173421,\"expires_at_unix\":1784173424,\"attestation_nonce\":\"a0c256c4fd8dd0dfc285663eb79fed19b39ae174312619027caabc16ef82ce6b\"}", "valid": true, "verifier_abi": "saib-anoncred-verifier-ffi/1"}
+COMMAND ["docker", "exec", "peer0.nsw.retf.com", "/tmp/s2.2.2.1-proposal-time-probe", "--address", "peer0.nsw.retf.com:7051", "--server-name", "peer0.nsw.retf.com", "--tls-ca", "/tmp/s222-nsw-peer-tls-ca.crt", "--msp-id", "NSWMSP", "--sign-cert", "/tmp/s2.2.2-relay-msp/signcerts/cert.pem", "--sign-key", "/tmp/s2.2.2-relay-msp/keystore/key.pem", "--channel", "extra-channel", "--chaincode", "s2-privacy-222", "--timestamp-unix", "1784173423", "--function", "SubmitAuthorization", "--arg", "{\"schema_version\":\"saib-retf-canonical-auth-statement/2\",\"protocol_version\":\"SAIB-RETF/S2.2.2\",\"network_id\":\"retf-network\",\"channel_id\":\"extra-channel\",\"chaincode_name\":\"s2-privacy-222\",\"chaincode_version\":\"2.2.2\",\"chaincode_sequence\":1,\"deployment_id\":\"s2.2.2-freshness-closure\",\"task_id\":\"task-s2221-wall-expiry-backdate\",\"canonical_task_domain\":\"SAIB-RETF/v2/task-pseudonym/s2.2.2/ed51926561603816f0f55c619a582b6d99cb9df525710be0386a1eb3c7fadc08\",\"policy_digest\":\"cdf7fb91d5c0a13d774f14d508640a953ee5155568496dd6ff8144b2124d7887\",\"credential_registry_digest\":\"11597177ad90a36b88fca1e0f8ccc8e80ff8882123951d1be8901698eb27fd72\",\"global_issuer_id\":\"2f27a59dcdd048e38b20915b48cad72d\",\"regional_issuer_id\":\"89c69e85a896e6b7d47270b41df1ed0f\",\"global_registry_epoch\":1,\"regional_registry_epoch\":2,\"committee_epoch\":2,\"task_pseudonym\":\"83e4addcf0ea42e3edc99e8aa0eb8a92115de687d77c82bc35bc95119118a92a60aeec0701d4407ce4a84262c707fd9c\",\"proof_digest\":\"97cf7641bcc0e3902f3a1f1e8476b502ba9f848ea512b7861301150a4dd219c7\",\"verifier_key_id\":\"s222-attestor\",\"verifier_key_version\":2,\"issued_at_unix\":1784173421,\"expires_at_unix\":1784173424,\"attestation_nonce\":\"a0c256c4fd8dd0dfc285663eb79fed19b39ae174312619027caabc16ef82ce6b\"}", "--arg", "QWusqODOWo4juewKhLSfkOi2gkDeUwlu/ciVK7iRMbHSU3Yu0bGsFDWY6x07hrowejShmJ9BdThTK9tLPaKdDg=="]
+START 2026-07-16T03:43:46.820815Z
+{"schema_version":"saib-retf-s2.2.2-timewindow-probe/1","peer":"peer0.nsw.retf.com","timestamp_unix":1784173423,"function":"SubmitAuthorization","accepted":true,"status":200,"message":"","payload":"{\"schema_version\":\"saib-retf-canonical-auth-statement/2\",\"protocol_version\":\"SAIB-RETF/S2.2.2\",\"task_id\":\"task-s2221-wall-expiry-backdate\",\"canonical_task_domain\":\"SAIB-RETF/v2/task-pseudonym/s2.2.2/ed51926561603816f0f55c619a582b6d99cb9df525710be0386a1eb3c7fadc08\",\"task_pseudonym\":\"83e4addcf0ea42e3edc99e8aa0eb8a92115de687d77c82bc35bc95119118a92a60aeec0701d4407ce4a84262c707fd9c\",\"policy_digest\":\"cdf7fb91d5c0a13d774f14d508640a953ee5155568496dd6ff8144b2124d7887\",\"credential_registry_digest\":\"11597177ad90a36b88fca1e0f8ccc8e80ff8882123951d1be8901698eb27fd72\",\"proof_digest\":\"97cf7641bcc0e3902f3a1f1e8476b502ba9f848ea512b7861301150a4dd219c7\",\"verifier_key_id\":\"s222-attestor\",\"verifier_key_version\":2,\"issued_at_unix\":1784173421,\"expires_at_unix\":1784173424,\"attestation_nonce\":\"a0c256c4fd8dd0dfc285663eb79fed19b39ae174312619027caabc16ef82ce6b\",\"channel_id\":\"extra-channel\",\"transaction_id\":\"faf65887234e4b4a0b8d70d0ceaa723017b2db73413d9d9956ce2fad2877bfc7\"}","tx_id":"faf65887234e4b4a0b8d70d0ceaa723017b2db73413d9d9956ce2fad2877bfc7"}
+END 2026-07-16T03:43:46.998234Z
+EXIT_CODE 0
+COMMAND ["docker", "exec", "peer0.nsw.retf.com", "/tmp/s2.2.2.1-proposal-time-probe", "--address", "peer0.qld.retf.com:7051", "--server-name", "peer0.qld.retf.com", "--tls-ca", "/tmp/s222-qld-peer-tls-ca.crt", "--msp-id", "NSWMSP", "--sign-cert", "/tmp/s2.2.2-relay-msp/signcerts/cert.pem", "--sign-key", "/tmp/s2.2.2-relay-msp/keystore/key.pem", "--channel", "extra-channel", "--chaincode", "s2-privacy-222", "--timestamp-unix", "1784173423", "--function", "SubmitAuthorization", "--arg", "{\"schema_version\":\"saib-retf-canonical-auth-statement/2\",\"protocol_version\":\"SAIB-RETF/S2.2.2\",\"network_id\":\"retf-network\",\"channel_id\":\"extra-channel\",\"chaincode_name\":\"s2-privacy-222\",\"chaincode_version\":\"2.2.2\",\"chaincode_sequence\":1,\"deployment_id\":\"s2.2.2-freshness-closure\",\"task_id\":\"task-s2221-wall-expiry-backdate\",\"canonical_task_domain\":\"SAIB-RETF/v2/task-pseudonym/s2.2.2/ed51926561603816f0f55c619a582b6d99cb9df525710be0386a1eb3c7fadc08\",\"policy_digest\":\"cdf7fb91d5c0a13d774f14d508640a953ee5155568496dd6ff8144b2124d7887\",\"credential_registry_digest\":\"11597177ad90a36b88fca1e0f8ccc8e80ff8882123951d1be8901698eb27fd72\",\"global_issuer_id\":\"2f27a59dcdd048e38b20915b48cad72d\",\"regional_issuer_id\":\"89c69e85a896e6b7d47270b41df1ed0f\",\"global_registry_epoch\":1,\"regional_registry_epoch\":2,\"committee_epoch\":2,\"task_pseudonym\":\"83e4addcf0ea42e3edc99e8aa0eb8a92115de687d77c82bc35bc95119118a92a60aeec0701d4407ce4a84262c707fd9c\",\"proof_digest\":\"97cf7641bcc0e3902f3a1f1e8476b502ba9f848ea512b7861301150a4dd219c7\",\"verifier_key_id\":\"s222-attestor\",\"verifier_key_version\":2,\"issued_at_unix\":1784173421,\"expires_at_unix\":1784173424,\"attestation_nonce\":\"a0c256c4fd8dd0dfc285663eb79fed19b39ae174312619027caabc16ef82ce6b\"}", "--arg", "QWusqODOWo4juewKhLSfkOi2gkDeUwlu/ciVK7iRMbHSU3Yu0bGsFDWY6x07hrowejShmJ9BdThTK9tLPaKdDg=="]
+START 2026-07-16T03:43:47.000451Z
+{"schema_version":"saib-retf-s2.2.2-timewindow-probe/1","peer":"peer0.qld.retf.com","timestamp_unix":1784173423,"function":"SubmitAuthorization","accepted":true,"status":200,"message":"","payload":"{\"schema_version\":\"saib-retf-canonical-auth-statement/2\",\"protocol_version\":\"SAIB-RETF/S2.2.2\",\"task_id\":\"task-s2221-wall-expiry-backdate\",\"canonical_task_domain\":\"SAIB-RETF/v2/task-pseudonym/s2.2.2/ed51926561603816f0f55c619a582b6d99cb9df525710be0386a1eb3c7fadc08\",\"task_pseudonym\":\"83e4addcf0ea42e3edc99e8aa0eb8a92115de687d77c82bc35bc95119118a92a60aeec0701d4407ce4a84262c707fd9c\",\"policy_digest\":\"cdf7fb91d5c0a13d774f14d508640a953ee5155568496dd6ff8144b2124d7887\",\"credential_registry_digest\":\"11597177ad90a36b88fca1e0f8ccc8e80ff8882123951d1be8901698eb27fd72\",\"proof_digest\":\"97cf7641bcc0e3902f3a1f1e8476b502ba9f848ea512b7861301150a4dd219c7\",\"verifier_key_id\":\"s222-attestor\",\"verifier_key_version\":2,\"issued_at_unix\":1784173421,\"expires_at_unix\":1784173424,\"attestation_nonce\":\"a0c256c4fd8dd0dfc285663eb79fed19b39ae174312619027caabc16ef82ce6b\",\"channel_id\":\"extra-channel\",\"transaction_id\":\"94ac723bf35715b29ef50b9a97f92313764bf9f4c87e53087980892f022e0fa4\"}","tx_id":"94ac723bf35715b29ef50b9a97f92313764bf9f4c87e53087980892f022e0fa4"}
+END 2026-07-16T03:43:47.445724Z
+EXIT_CODE 0
+COMMAND ["docker", "exec", "peer0.nsw.retf.com", "/tmp/s2.2.2.1-proposal-time-probe", "--address", "peer0.sa.retf.com:7051", "--server-name", "peer0.sa.retf.com", "--tls-ca", "/tmp/s222-sa-peer-tls-ca.crt", "--msp-id", "NSWMSP", "--sign-cert", "/tmp/s2.2.2-relay-msp/signcerts/cert.pem", "--sign-key", "/tmp/s2.2.2-relay-msp/keystore/key.pem", "--channel", "extra-channel", "--chaincode", "s2-privacy-222", "--timestamp-unix", "1784173423", "--function", "SubmitAuthorization", "--arg", "{\"schema_version\":\"saib-retf-canonical-auth-statement/2\",\"protocol_version\":\"SAIB-RETF/S2.2.2\",\"network_id\":\"retf-network\",\"channel_id\":\"extra-channel\",\"chaincode_name\":\"s2-privacy-222\",\"chaincode_version\":\"2.2.2\",\"chaincode_sequence\":1,\"deployment_id\":\"s2.2.2-freshness-closure\",\"task_id\":\"task-s2221-wall-expiry-backdate\",\"canonical_task_domain\":\"SAIB-RETF/v2/task-pseudonym/s2.2.2/ed51926561603816f0f55c619a582b6d99cb9df525710be0386a1eb3c7fadc08\",\"policy_digest\":\"cdf7fb91d5c0a13d774f14d508640a953ee5155568496dd6ff8144b2124d7887\",\"credential_registry_digest\":\"11597177ad90a36b88fca1e0f8ccc8e80ff8882123951d1be8901698eb27fd72\",\"global_issuer_id\":\"2f27a59dcdd048e38b20915b48cad72d\",\"regional_issuer_id\":\"89c69e85a896e6b7d47270b41df1ed0f\",\"global_registry_epoch\":1,\"regional_registry_epoch\":2,\"committee_epoch\":2,\"task_pseudonym\":\"83e4addcf0ea42e3edc99e8aa0eb8a92115de687d77c82bc35bc95119118a92a60aeec0701d4407ce4a84262c707fd9c\",\"proof_digest\":\"97cf7641bcc0e3902f3a1f1e8476b502ba9f848ea512b7861301150a4dd219c7\",\"verifier_key_id\":\"s222-attestor\",\"verifier_key_version\":2,\"issued_at_unix\":1784173421,\"expires_at_unix\":1784173424,\"attestation_nonce\":\"a0c256c4fd8dd0dfc285663eb79fed19b39ae174312619027caabc16ef82ce6b\"}", "--arg", "QWusqODOWo4juewKhLSfkOi2gkDeUwlu/ciVK7iRMbHSU3Yu0bGsFDWY6x07hrowejShmJ9BdThTK9tLPaKdDg=="]
+START 2026-07-16T03:43:47.447736Z
+{"schema_version":"saib-retf-s2.2.2-timewindow-probe/1","peer":"peer0.sa.retf.com","timestamp_unix":1784173423,"function":"SubmitAuthorization","accepted":true,"status":200,"message":"","payload":"{\"schema_version\":\"saib-retf-canonical-auth-statement/2\",\"protocol_version\":\"SAIB-RETF/S2.2.2\",\"task_id\":\"task-s2221-wall-expiry-backdate\",\"canonical_task_domain\":\"SAIB-RETF/v2/task-pseudonym/s2.2.2/ed51926561603816f0f55c619a582b6d99cb9df525710be0386a1eb3c7fadc08\",\"task_pseudonym\":\"83e4addcf0ea42e3edc99e8aa0eb8a92115de687d77c82bc35bc95119118a92a60aeec0701d4407ce4a84262c707fd9c\",\"policy_digest\":\"cdf7fb91d5c0a13d774f14d508640a953ee5155568496dd6ff8144b2124d7887\",\"credential_registry_digest\":\"11597177ad90a36b88fca1e0f8ccc8e80ff8882123951d1be8901698eb27fd72\",\"proof_digest\":\"97cf7641bcc0e3902f3a1f1e8476b502ba9f848ea512b7861301150a4dd219c7\",\"verifier_key_id\":\"s222-attestor\",\"verifier_key_version\":2,\"issued_at_unix\":1784173421,\"expires_at_unix\":1784173424,\"attestation_nonce\":\"a0c256c4fd8dd0dfc285663eb79fed19b39ae174312619027caabc16ef82ce6b\",\"channel_id\":\"extra-channel\",\"transaction_id\":\"5930be7d68c8bc0edd14166a673ffb89029f9b12ce0aa33d92e61d1f85fd5254\"}","tx_id":"5930be7d68c8bc0edd14166a673ffb89029f9b12ce0aa33d92e61d1f85fd5254"}
+END 2026-07-16T03:43:47.592680Z
+EXIT_CODE 0
+COMMAND ["docker", "exec", "peer0.nsw.retf.com", "/tmp/s2.2.2.1-proposal-time-probe", "--address", "peer0.nsw.retf.com:7051", "--server-name", "peer0.nsw.retf.com", "--tls-ca", "/tmp/s222-nsw-peer-tls-ca.crt", "--msp-id", "NSWMSP", "--sign-cert", "/tmp/s2.2.2-relay-msp/signcerts/cert.pem", "--sign-key", "/tmp/s2.2.2-relay-msp/keystore/key.pem", "--channel", "extra-channel", "--chaincode", "s2-privacy-222", "--timestamp-unix", "1784173423", "--function", "SubmitAuthorization", "--arg", "{\"schema_version\":\"saib-retf-canonical-auth-statement/2\",\"protocol_version\":\"SAIB-RETF/S2.2.2\",\"network_id\":\"retf-network\",\"channel_id\":\"extra-channel\",\"chaincode_name\":\"s2-privacy-222\",\"chaincode_version\":\"2.2.2\",\"chaincode_sequence\":1,\"deployment_id\":\"s2.2.2-freshness-closure\",\"task_id\":\"task-s2221-wall-expiry-backdate\",\"canonical_task_domain\":\"SAIB-RETF/v2/task-pseudonym/s2.2.2/ed51926561603816f0f55c619a582b6d99cb9df525710be0386a1eb3c7fadc08\",\"policy_digest\":\"cdf7fb91d5c0a13d774f14d508640a953ee5155568496dd6ff8144b2124d7887\",\"credential_registry_digest\":\"11597177ad90a36b88fca1e0f8ccc8e80ff8882123951d1be8901698eb27fd72\",\"global_issuer_id\":\"2f27a59dcdd048e38b20915b48cad72d\",\"regional_issuer_id\":\"89c69e85a896e6b7d47270b41df1ed0f\",\"global_registry_epoch\":1,\"regional_registry_epoch\":2,\"committee_epoch\":2,\"task_pseudonym\":\"83e4addcf0ea42e3edc99e8aa0eb8a92115de687d77c82bc35bc95119118a92a60aeec0701d4407ce4a84262c707fd9c\",\"proof_digest\":\"97cf7641bcc0e3902f3a1f1e8476b502ba9f848ea512b7861301150a4dd219c7\",\"verifier_key_id\":\"s222-attestor\",\"verifier_key_version\":2,\"issued_at_unix\":1784173421,\"expires_at_unix\":1784173424,\"attestation_nonce\":\"a0c256c4fd8dd0dfc285663eb79fed19b39ae174312619027caabc16ef82ce6b\"}", "--arg", "QWusqODOWo4juewKhLSfkOi2gkDeUwlu/ciVK7iRMbHSU3Yu0bGsFDWY6x07hrowejShmJ9BdThTK9tLPaKdDg=="]
+START 2026-07-16T03:44:20.593921Z
+{"schema_version":"saib-retf-s2.2.2-timewindow-probe/1","peer":"peer0.nsw.retf.com","timestamp_unix":1784173423,"function":"SubmitAuthorization","accepted":false,"message":"rpc error: code = Unknown desc = request unauthorized due to incorrect timestamp 2026-07-16T03:43:43Z, peer time 2026-07-16T03:44:20Z, peer.authentication.timewindow 30s","tx_id":"0c05761f1e96e0b450c628ba04b3f9da12a5f2de1f140bc2e18b4919b3562402"}
+END 2026-07-16T03:44:20.749911Z
+EXIT_CODE 0
+COMMAND ["docker", "exec", "peer0.nsw.retf.com", "/tmp/s2.2.2.1-proposal-time-probe", "--address", "peer0.qld.retf.com:7051", "--server-name", "peer0.qld.retf.com", "--tls-ca", "/tmp/s222-qld-peer-tls-ca.crt", "--msp-id", "NSWMSP", "--sign-cert", "/tmp/s2.2.2-relay-msp/signcerts/cert.pem", "--sign-key", "/tmp/s2.2.2-relay-msp/keystore/key.pem", "--channel", "extra-channel", "--chaincode", "s2-privacy-222", "--timestamp-unix", "1784173423", "--function", "SubmitAuthorization", "--arg", "{\"schema_version\":\"saib-retf-canonical-auth-statement/2\",\"protocol_version\":\"SAIB-RETF/S2.2.2\",\"network_id\":\"retf-network\",\"channel_id\":\"extra-channel\",\"chaincode_name\":\"s2-privacy-222\",\"chaincode_version\":\"2.2.2\",\"chaincode_sequence\":1,\"deployment_id\":\"s2.2.2-freshness-closure\",\"task_id\":\"task-s2221-wall-expiry-backdate\",\"canonical_task_domain\":\"SAIB-RETF/v2/task-pseudonym/s2.2.2/ed51926561603816f0f55c619a582b6d99cb9df525710be0386a1eb3c7fadc08\",\"policy_digest\":\"cdf7fb91d5c0a13d774f14d508640a953ee5155568496dd6ff8144b2124d7887\",\"credential_registry_digest\":\"11597177ad90a36b88fca1e0f8ccc8e80ff8882123951d1be8901698eb27fd72\",\"global_issuer_id\":\"2f27a59dcdd048e38b20915b48cad72d\",\"regional_issuer_id\":\"89c69e85a896e6b7d47270b41df1ed0f\",\"global_registry_epoch\":1,\"regional_registry_epoch\":2,\"committee_epoch\":2,\"task_pseudonym\":\"83e4addcf0ea42e3edc99e8aa0eb8a92115de687d77c82bc35bc95119118a92a60aeec0701d4407ce4a84262c707fd9c\",\"proof_digest\":\"97cf7641bcc0e3902f3a1f1e8476b502ba9f848ea512b7861301150a4dd219c7\",\"verifier_key_id\":\"s222-attestor\",\"verifier_key_version\":2,\"issued_at_unix\":1784173421,\"expires_at_unix\":1784173424,\"attestation_nonce\":\"a0c256c4fd8dd0dfc285663eb79fed19b39ae174312619027caabc16ef82ce6b\"}", "--arg", "QWusqODOWo4juewKhLSfkOi2gkDeUwlu/ciVK7iRMbHSU3Yu0bGsFDWY6x07hrowejShmJ9BdThTK9tLPaKdDg=="]
+START 2026-07-16T03:44:20.752135Z
+{"schema_version":"saib-retf-s2.2.2-timewindow-probe/1","peer":"peer0.qld.retf.com","timestamp_unix":1784173423,"function":"SubmitAuthorization","accepted":false,"message":"rpc error: code = Unknown desc = request unauthorized due to incorrect timestamp 2026-07-16T03:43:43Z, peer time 2026-07-16T03:44:20Z, peer.authentication.timewindow 30s","tx_id":"c06b8e67c809a1574adcf1bf15d72f41f5855da385648eab6bf1246dcf3f8057"}
+END 2026-07-16T03:44:20.870853Z
+EXIT_CODE 0
+COMMAND ["docker", "exec", "peer0.nsw.retf.com", "/tmp/s2.2.2.1-proposal-time-probe", "--address", "peer0.sa.retf.com:7051", "--server-name", "peer0.sa.retf.com", "--tls-ca", "/tmp/s222-sa-peer-tls-ca.crt", "--msp-id", "NSWMSP", "--sign-cert", "/tmp/s2.2.2-relay-msp/signcerts/cert.pem", "--sign-key", "/tmp/s2.2.2-relay-msp/keystore/key.pem", "--channel", "extra-channel", "--chaincode", "s2-privacy-222", "--timestamp-unix", "1784173423", "--function", "SubmitAuthorization", "--arg", "{\"schema_version\":\"saib-retf-canonical-auth-statement/2\",\"protocol_version\":\"SAIB-RETF/S2.2.2\",\"network_id\":\"retf-network\",\"channel_id\":\"extra-channel\",\"chaincode_name\":\"s2-privacy-222\",\"chaincode_version\":\"2.2.2\",\"chaincode_sequence\":1,\"deployment_id\":\"s2.2.2-freshness-closure\",\"task_id\":\"task-s2221-wall-expiry-backdate\",\"canonical_task_domain\":\"SAIB-RETF/v2/task-pseudonym/s2.2.2/ed51926561603816f0f55c619a582b6d99cb9df525710be0386a1eb3c7fadc08\",\"policy_digest\":\"cdf7fb91d5c0a13d774f14d508640a953ee5155568496dd6ff8144b2124d7887\",\"credential_registry_digest\":\"11597177ad90a36b88fca1e0f8ccc8e80ff8882123951d1be8901698eb27fd72\",\"global_issuer_id\":\"2f27a59dcdd048e38b20915b48cad72d\",\"regional_issuer_id\":\"89c69e85a896e6b7d47270b41df1ed0f\",\"global_registry_epoch\":1,\"regional_registry_epoch\":2,\"committee_epoch\":2,\"task_pseudonym\":\"83e4addcf0ea42e3edc99e8aa0eb8a92115de687d77c82bc35bc95119118a92a60aeec0701d4407ce4a84262c707fd9c\",\"proof_digest\":\"97cf7641bcc0e3902f3a1f1e8476b502ba9f848ea512b7861301150a4dd219c7\",\"verifier_key_id\":\"s222-attestor\",\"verifier_key_version\":2,\"issued_at_unix\":1784173421,\"expires_at_unix\":1784173424,\"attestation_nonce\":\"a0c256c4fd8dd0dfc285663eb79fed19b39ae174312619027caabc16ef82ce6b\"}", "--arg", "QWusqODOWo4juewKhLSfkOi2gkDeUwlu/ciVK7iRMbHSU3Yu0bGsFDWY6x07hrowejShmJ9BdThTK9tLPaKdDg=="]
+START 2026-07-16T03:44:20.872394Z
+{"schema_version":"saib-retf-s2.2.2-timewindow-probe/1","peer":"peer0.sa.retf.com","timestamp_unix":1784173423,"function":"SubmitAuthorization","accepted":false,"message":"rpc error: code = Unknown desc = request unauthorized due to incorrect timestamp 2026-07-16T03:43:43Z, peer time 2026-07-16T03:44:20Z, peer.authentication.timewindow 30s","tx_id":"c2972f4c761871e44fa3449996aab38984bdfe36f8bebe6c1faf21f861a446f8"}
+END 2026-07-16T03:44:20.989583Z
+EXIT_CODE 0
+COMMAND ["docker", "cp", "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.2-live/public-config/ccaas-nsw-ca.pem", "peer0.nsw.retf.com:/tmp/s2221-nsw-ca.pem"]
+START 2026-07-16T03:44:20.991570Z
+END 2026-07-16T03:44:21.031985Z
+EXIT_CODE 0
+COMMAND ["docker", "cp", "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.2-live/public-config/ccaas-nsw-client-cert.pem", "peer0.nsw.retf.com:/tmp/s2221-nsw-client-cert.pem"]
+START 2026-07-16T03:44:21.034538Z
+END 2026-07-16T03:44:21.076126Z
+EXIT_CODE 0
+COMMAND ["docker", "cp", "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.2-live/runtime-secrets/ccaas-tls-s2.2.2.1/nsw-client.key", "peer0.nsw.retf.com:/tmp/s2221-nsw-client.key"]
+START 2026-07-16T03:44:21.077902Z
+END 2026-07-16T03:44:21.121647Z
+EXIT_CODE 0
+COMMAND ["docker", "cp", "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.2-live/public-config/ccaas-qld-ca.pem", "peer0.nsw.retf.com:/tmp/s2221-qld-ca.pem"]
+START 2026-07-16T03:44:21.123787Z
+END 2026-07-16T03:44:21.166169Z
+EXIT_CODE 0
+COMMAND ["docker", "cp", "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.2-live/public-config/ccaas-qld-client-cert.pem", "peer0.nsw.retf.com:/tmp/s2221-qld-client-cert.pem"]
+START 2026-07-16T03:44:21.168683Z
+END 2026-07-16T03:44:21.212848Z
+EXIT_CODE 0
+COMMAND ["docker", "cp", "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.2-live/runtime-secrets/ccaas-tls-s2.2.2.1/qld-client.key", "peer0.nsw.retf.com:/tmp/s2221-qld-client.key"]
+START 2026-07-16T03:44:21.214734Z
+END 2026-07-16T03:44:21.262259Z
+EXIT_CODE 0
+COMMAND ["docker", "cp", "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.2-live/public-config/ccaas-sa-ca.pem", "peer0.nsw.retf.com:/tmp/s2221-sa-ca.pem"]
+START 2026-07-16T03:44:21.264308Z
+END 2026-07-16T03:44:21.313901Z
+EXIT_CODE 0
+COMMAND ["docker", "cp", "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.2-live/public-config/ccaas-sa-client-cert.pem", "peer0.nsw.retf.com:/tmp/s2221-sa-client-cert.pem"]
+START 2026-07-16T03:44:21.316357Z
+END 2026-07-16T03:44:21.370145Z
+EXIT_CODE 0
+COMMAND ["docker", "cp", "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.2-live/runtime-secrets/ccaas-tls-s2.2.2.1/sa-client.key", "peer0.nsw.retf.com:/tmp/s2221-sa-client.key"]
+START 2026-07-16T03:44:21.372232Z
+END 2026-07-16T03:44:21.417118Z
+EXIT_CODE 0
+COMMAND ["docker", "exec", "peer0.nsw.retf.com", "/tmp/s2.2.2.1-ccaas-mtls-probe", "--address", "s222-chaincode-nsw:7052", "--server-name", "s222-chaincode-nsw", "--root-ca", "/tmp/s2221-nsw-ca.pem"]
+START 2026-07-16T03:44:21.419095Z
+{"address":"s222-chaincode-nsw:7052","client_certificate_supplied":false,"detail":"remote error: tls: certificate required","handshake":"REJECT","schema_version":"saib-retf-s2.2.2-ccaas-mtls-probe/1","server_name":"s222-chaincode-nsw"}
+END 2026-07-16T03:44:21.499421Z
+EXIT_CODE 0
+COMMAND ["docker", "exec", "peer0.nsw.retf.com", "/tmp/s2.2.2.1-ccaas-mtls-probe", "--address", "s222-chaincode-nsw:7052", "--server-name", "s222-chaincode-nsw", "--root-ca", "/tmp/s2221-nsw-ca.pem", "--client-cert", "/tmp/s2221-nsw-client-cert.pem", "--client-key", "/tmp/s2221-nsw-client.key"]
+START 2026-07-16T03:44:21.501448Z
+{"address":"s222-chaincode-nsw:7052","client_certificate_supplied":true,"handshake":"ACCEPT","schema_version":"saib-retf-s2.2.2-ccaas-mtls-probe/1","server_application_bytes":15,"server_name":"s222-chaincode-nsw","tls_version":"TLS1.3"}
+END 2026-07-16T03:44:21.584201Z
+EXIT_CODE 0
+COMMAND ["docker", "exec", "peer0.nsw.retf.com", "/tmp/s2.2.2.1-ccaas-mtls-probe", "--address", "s222-chaincode-nsw:7052", "--server-name", "s222-chaincode-nsw", "--root-ca", "/tmp/s2221-nsw-ca.pem", "--client-cert", "/tmp/s2221-qld-client-cert.pem", "--client-key", "/tmp/s2221-qld-client.key"]
+START 2026-07-16T03:44:21.586056Z
+{"address":"s222-chaincode-nsw:7052","client_certificate_supplied":true,"detail":"remote error: tls: certificate required","handshake":"REJECT","schema_version":"saib-retf-s2.2.2-ccaas-mtls-probe/1","server_name":"s222-chaincode-nsw"}
+END 2026-07-16T03:44:21.657502Z
+EXIT_CODE 0
+COMMAND ["docker", "exec", "peer0.nsw.retf.com", "/tmp/s2.2.2.1-ccaas-mtls-probe", "--address", "s222-chaincode-nsw:7052", "--server-name", "s222-chaincode-nsw", "--root-ca", "/tmp/s2221-nsw-ca.pem", "--client-cert", "/tmp/s2221-sa-client-cert.pem", "--client-key", "/tmp/s2221-sa-client.key"]
+START 2026-07-16T03:44:21.659243Z
+{"address":"s222-chaincode-nsw:7052","client_certificate_supplied":true,"detail":"remote error: tls: certificate required","handshake":"REJECT","schema_version":"saib-retf-s2.2.2-ccaas-mtls-probe/1","server_name":"s222-chaincode-nsw"}
+END 2026-07-16T03:44:21.733613Z
+EXIT_CODE 0
+COMMAND ["docker", "exec", "peer0.nsw.retf.com", "/tmp/s2.2.2.1-ccaas-mtls-probe", "--address", "s222-chaincode-qld:7052", "--server-name", "s222-chaincode-qld", "--root-ca", "/tmp/s2221-qld-ca.pem"]
+START 2026-07-16T03:44:21.735278Z
+{"address":"s222-chaincode-qld:7052","client_certificate_supplied":false,"detail":"remote error: tls: certificate required","handshake":"REJECT","schema_version":"saib-retf-s2.2.2-ccaas-mtls-probe/1","server_name":"s222-chaincode-qld"}
+END 2026-07-16T03:44:21.810706Z
+EXIT_CODE 0
+COMMAND ["docker", "exec", "peer0.nsw.retf.com", "/tmp/s2.2.2.1-ccaas-mtls-probe", "--address", "s222-chaincode-qld:7052", "--server-name", "s222-chaincode-qld", "--root-ca", "/tmp/s2221-qld-ca.pem", "--client-cert", "/tmp/s2221-nsw-client-cert.pem", "--client-key", "/tmp/s2221-nsw-client.key"]
+START 2026-07-16T03:44:21.812535Z
+{"address":"s222-chaincode-qld:7052","client_certificate_supplied":true,"detail":"remote error: tls: certificate required","handshake":"REJECT","schema_version":"saib-retf-s2.2.2-ccaas-mtls-probe/1","server_name":"s222-chaincode-qld"}
+END 2026-07-16T03:44:21.884749Z
+EXIT_CODE 0
+COMMAND ["docker", "exec", "peer0.nsw.retf.com", "/tmp/s2.2.2.1-ccaas-mtls-probe", "--address", "s222-chaincode-qld:7052", "--server-name", "s222-chaincode-qld", "--root-ca", "/tmp/s2221-qld-ca.pem", "--client-cert", "/tmp/s2221-qld-client-cert.pem", "--client-key", "/tmp/s2221-qld-client.key"]
+START 2026-07-16T03:44:21.886511Z
+{"address":"s222-chaincode-qld:7052","client_certificate_supplied":true,"handshake":"ACCEPT","schema_version":"saib-retf-s2.2.2-ccaas-mtls-probe/1","server_application_bytes":15,"server_name":"s222-chaincode-qld","tls_version":"TLS1.3"}
+END 2026-07-16T03:44:21.982008Z
+EXIT_CODE 0
+COMMAND ["docker", "exec", "peer0.nsw.retf.com", "/tmp/s2.2.2.1-ccaas-mtls-probe", "--address", "s222-chaincode-qld:7052", "--server-name", "s222-chaincode-qld", "--root-ca", "/tmp/s2221-qld-ca.pem", "--client-cert", "/tmp/s2221-sa-client-cert.pem", "--client-key", "/tmp/s2221-sa-client.key"]
+START 2026-07-16T03:44:21.984281Z
+{"address":"s222-chaincode-qld:7052","client_certificate_supplied":true,"detail":"remote error: tls: certificate required","handshake":"REJECT","schema_version":"saib-retf-s2.2.2-ccaas-mtls-probe/1","server_name":"s222-chaincode-qld"}
+END 2026-07-16T03:44:22.056567Z
+EXIT_CODE 0
+COMMAND ["docker", "exec", "peer0.nsw.retf.com", "/tmp/s2.2.2.1-ccaas-mtls-probe", "--address", "s222-chaincode-sa:7052", "--server-name", "s222-chaincode-sa", "--root-ca", "/tmp/s2221-sa-ca.pem"]
+START 2026-07-16T03:44:22.058512Z
+{"address":"s222-chaincode-sa:7052","client_certificate_supplied":false,"detail":"remote error: tls: certificate required","handshake":"REJECT","schema_version":"saib-retf-s2.2.2-ccaas-mtls-probe/1","server_name":"s222-chaincode-sa"}
+END 2026-07-16T03:44:22.133823Z
+EXIT_CODE 0
+COMMAND ["docker", "exec", "peer0.nsw.retf.com", "/tmp/s2.2.2.1-ccaas-mtls-probe", "--address", "s222-chaincode-sa:7052", "--server-name", "s222-chaincode-sa", "--root-ca", "/tmp/s2221-sa-ca.pem", "--client-cert", "/tmp/s2221-nsw-client-cert.pem", "--client-key", "/tmp/s2221-nsw-client.key"]
+START 2026-07-16T03:44:22.135638Z
+{"address":"s222-chaincode-sa:7052","client_certificate_supplied":true,"detail":"remote error: tls: certificate required","handshake":"REJECT","schema_version":"saib-retf-s2.2.2-ccaas-mtls-probe/1","server_name":"s222-chaincode-sa"}
+END 2026-07-16T03:44:22.210031Z
+EXIT_CODE 0
+COMMAND ["docker", "exec", "peer0.nsw.retf.com", "/tmp/s2.2.2.1-ccaas-mtls-probe", "--address", "s222-chaincode-sa:7052", "--server-name", "s222-chaincode-sa", "--root-ca", "/tmp/s2221-sa-ca.pem", "--client-cert", "/tmp/s2221-qld-client-cert.pem", "--client-key", "/tmp/s2221-qld-client.key"]
+START 2026-07-16T03:44:22.211705Z
+{"address":"s222-chaincode-sa:7052","client_certificate_supplied":true,"detail":"remote error: tls: certificate required","handshake":"REJECT","schema_version":"saib-retf-s2.2.2-ccaas-mtls-probe/1","server_name":"s222-chaincode-sa"}
+END 2026-07-16T03:44:22.284746Z
+EXIT_CODE 0
+COMMAND ["docker", "exec", "peer0.nsw.retf.com", "/tmp/s2.2.2.1-ccaas-mtls-probe", "--address", "s222-chaincode-sa:7052", "--server-name", "s222-chaincode-sa", "--root-ca", "/tmp/s2221-sa-ca.pem", "--client-cert", "/tmp/s2221-sa-client-cert.pem", "--client-key", "/tmp/s2221-sa-client.key"]
+START 2026-07-16T03:44:22.286680Z
+{"address":"s222-chaincode-sa:7052","client_certificate_supplied":true,"handshake":"ACCEPT","schema_version":"saib-retf-s2.2.2-ccaas-mtls-probe/1","server_application_bytes":15,"server_name":"s222-chaincode-sa","tls_version":"TLS1.3"}
+END 2026-07-16T03:44:22.371287Z
+EXIT_CODE 0
+COMMAND ["docker", "exec", "peer0.nsw.retf.com", "rm", "/tmp/s2221-nsw-client.key"]
+START 2026-07-16T03:44:22.373176Z
+END 2026-07-16T03:44:22.444614Z
+EXIT_CODE 0
+COMMAND ["docker", "exec", "peer0.nsw.retf.com", "rm", "/tmp/s2221-qld-client.key"]
+START 2026-07-16T03:44:22.446629Z
+END 2026-07-16T03:44:22.519652Z
+EXIT_CODE 0
+COMMAND ["docker", "exec", "peer0.nsw.retf.com", "rm", "/tmp/s2221-sa-client.key"]
+START 2026-07-16T03:44:22.521353Z
+END 2026-07-16T03:44:22.599041Z
+EXIT_CODE 0
+TIME_BOUNDARY_PASS 6/6
+MTLS_MATRIX_PASS 12/12
+END 2026-07-16T03:44:22.604892Z
+EXIT_CODE 0

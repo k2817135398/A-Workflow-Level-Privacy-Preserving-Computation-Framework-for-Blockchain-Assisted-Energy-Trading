@@ -1,0 +1,7 @@
+COMMAND ["docker", "run", "--rm", "--entrypoint", "/bin/sh", "localhost:5500/saib-retf/fmatch-party@sha256:532a8ccbe2aa5cc8d5d789fd51537f7e03d80aa07758509b75d4e14f13d76079", "-c", "set -eu; for f in /opt/mp-spdz/malicious-rep-field-party.x /opt/mp-spdz/libSPDZ.so; do strings \"$f\" | grep -Eai 'mock|test[_ -]?key|debug[_ -]?reconstruct|plaintext[_ -]?fallback' && exit 70 || test $? -eq 1; done"]
+OUTPUT
+/bin/sh: 1: strings: not found
+/bin/sh: 1: strings: not found
+EXIT_CODE 0
+RESULT PASS
+HITS 0

@@ -1,0 +1,19 @@
+=== RUN   TestRealRustEqualityVerifierToGoRegistryRebind
+=== RUN   TestRealRustEqualityVerifierToGoRegistryRebind/child_commitment_substitution
+=== RUN   TestRealRustEqualityVerifierToGoRegistryRebind/proof_mutation
+=== RUN   TestRealRustEqualityVerifierToGoRegistryRebind/verifier_crash_timeout_and_malformed_output
+=== RUN   TestRealRustEqualityVerifierToGoRegistryRebind/verifier_crash_timeout_and_malformed_output/crash
+=== RUN   TestRealRustEqualityVerifierToGoRegistryRebind/verifier_crash_timeout_and_malformed_output/timeout
+=== RUN   TestRealRustEqualityVerifierToGoRegistryRebind/verifier_crash_timeout_and_malformed_output/malformed
+=== NAME  TestRealRustEqualityVerifierToGoRegistryRebind
+    equality_process_integration_test.go:237: attack=equality_receipt_replacement result=REJECT
+    equality_process_integration_test.go:243: real_process_chain=RustVerifier->IsolatedAttestor->GoRegistry result=ACCEPT rust_sha256=2257c78ff2167870481da8e2c316dc912588633650562c40013bb849e495ac35 attestor_sha256=674bbdd53cb65479dd2f66eee76a9aa1816fa505d252afe8218e9a5fc5f279a5 request_sha256=ab72d4f1a7b4cda44982afe6fcb637af5da958f8c054837920134e69a05b691b
+--- PASS: TestRealRustEqualityVerifierToGoRegistryRebind (1.18s)
+    --- PASS: TestRealRustEqualityVerifierToGoRegistryRebind/child_commitment_substitution (0.21s)
+    --- PASS: TestRealRustEqualityVerifierToGoRegistryRebind/proof_mutation (0.20s)
+    --- PASS: TestRealRustEqualityVerifierToGoRegistryRebind/verifier_crash_timeout_and_malformed_output (0.48s)
+        --- PASS: TestRealRustEqualityVerifierToGoRegistryRebind/verifier_crash_timeout_and_malformed_output/crash (0.16s)
+        --- PASS: TestRealRustEqualityVerifierToGoRegistryRebind/verifier_crash_timeout_and_malformed_output/timeout (0.13s)
+        --- PASS: TestRealRustEqualityVerifierToGoRegistryRebind/verifier_crash_timeout_and_malformed_output/malformed (0.18s)
+PASS
+ok  	github.com/retf/source/v2/fabric/mpcinputregistry	1.185s

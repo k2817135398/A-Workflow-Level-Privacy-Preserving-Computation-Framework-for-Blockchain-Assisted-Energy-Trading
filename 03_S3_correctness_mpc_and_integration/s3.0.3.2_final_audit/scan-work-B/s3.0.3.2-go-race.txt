@@ -1,0 +1,10 @@
+started_at_utc=2026-07-24T11:26:35Z
+release_commit=07301dd8e0037a2fb889ace957d30f50587974c5
+git_status=0
+command=GOTOOLCHAIN=local CGO_ENABLED=1 go test -count=1 ./mpc/inputbinding
+ok  	github.com/retf/source/v2/mpc/inputbinding	5.832s
+command=GOTOOLCHAIN=local CGO_ENABLED=1 go vet ./mpc/inputbinding
+command=GOTOOLCHAIN=local CGO_ENABLED=1 go test -count=1 -race ./mpc/inputbinding
+ok  	github.com/retf/source/v2/mpc/inputbinding	12.472s
+ended_at_utc=2026-07-24T11:26:58Z
+exit_code=0

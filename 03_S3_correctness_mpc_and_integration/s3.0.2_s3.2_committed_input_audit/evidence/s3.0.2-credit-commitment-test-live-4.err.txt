@@ -1,0 +1,37 @@
+   Compiling credx v0.2.1 (/mnt/g/paperexper/retf/saib-retf/prototype/anoncred-rust/vendor/credx-0.2.1-saib)
+warning: use of deprecated associated function `elliptic_curve::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> vendor/credx-0.2.1-saib/src/presentation/verifiable_encryption_decryption.rs:164:46
+    |
+164 |         let key = aes_gcm::Key::<Aes128Gcm>::from_slice(&okm[..16]);
+    |                                              ^^^^^^^^^^
+    |
+    = note: `#[warn(deprecated)]` on by default
+
+warning: use of deprecated associated function `elliptic_curve::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> vendor/credx-0.2.1-saib/src/presentation/verifiable_encryption_decryption.rs:235:28
+    |
+235 |         let nonce = Nonce::from_slice(&self.ciphertext[..12]);
+    |                            ^^^^^^^^^^
+
+warning: use of deprecated associated function `elliptic_curve::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> vendor/credx-0.2.1-saib/src/presentation/verifiable_encryption_decryption.rs:243:46
+    |
+243 |         let key = aes_gcm::Key::<Aes128Gcm>::from_slice(&okm[..16]);
+    |                                              ^^^^^^^^^^
+
+warning: field `message_randomizer` is never read
+  --> vendor/credx-0.2.1-saib/src/presentation/commitment.rs:17:16
+   |
+13 | pub(crate) struct CommitmentBuilder<'a> {
+   |                   ----------------- field in this struct
+...
+17 |     pub(crate) message_randomizer: Scalar,
+   |                ^^^^^^^^^^^^^^^^^^
+   |
+   = note: `CommitmentBuilder` has a derived impl for the trait `Debug`, but this is intentionally ignored during dead code analysis
+   = note: `#[warn(dead_code)]` on by default
+
+warning: `credx` (lib) generated 4 warnings
+   Compiling saib-anoncred v0.1.0 (/mnt/g/paperexper/retf/saib-retf/prototype/anoncred-rust)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1m 54s
+     Running tests/s3_credit_commitment.rs (target/debug/deps/s3_credit_commitment-65b4ffa6ec96b31a)

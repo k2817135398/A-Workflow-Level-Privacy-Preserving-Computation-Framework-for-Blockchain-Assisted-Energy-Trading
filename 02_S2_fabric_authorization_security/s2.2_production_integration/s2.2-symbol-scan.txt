@@ -1,0 +1,8 @@
+image=saib-s2.2-verifier:local image_id=sha256:792aefaa4b246c64bc498b6eae63abb5f73129d39e4f642b1941b99f5193c200 verifier_export_allowlist=PASS
+image=saib-s2.2-regional-issuer:local image_id=sha256:d466d0dfd0e63b5a6e5af71e394b9887997409e4f2900af9e1000bef48cb0b64 verifier_export_allowlist=PASS
+image=saib-s2.2-holder:local image_id=sha256:9c1b89a7a1b37919d2b39c556694a1fd6abd9ae211114dd76f2e339bf93e556b verifier_export_allowlist=PASS
+image=saib-s2.2-global-issuer:local image_id=sha256:b34cba92ffa943b225873a606505d296a6812f6dbcd8767a7cbf5a25b8330748 verifier_export_allowlist=PASS
+image=saib-s2.2-fabric-chaincode:local image_id=sha256:eae79009d1c8468dadfd05ecf195c73646d38332b896e0cbe64e41cfd1fb77e0 verifier_export_allowlist=PASS
+operation_allowlist=verify,free,version
+forbidden_operations=bootstrap,prove,blind_issue,revoke,witness_update
+result=PASS

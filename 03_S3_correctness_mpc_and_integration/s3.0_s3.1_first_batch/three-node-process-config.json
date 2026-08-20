@@ -1,0 +1,42 @@
+{
+  "schema_version": "saib-retf-s3.1-three-node-process-config/1",
+  "deployment_kind": "three independent processes on one WSL2 host",
+  "administrative_isolation_proven": false,
+  "backend": "MP-SPDZ v0.4.3 mal-rep-ring",
+  "parties": 3,
+  "maximum_corruptions": 1,
+  "encrypted_channels_required": true,
+  "program": "saib_match_smoke",
+  "program_digest": "69374ce9e6f086b9920d3d87870856fc64742e6445182160ba3f7f7516e0afc2",
+  "nodes": [
+    {
+      "organization": "NSWMSP",
+      "node_id": "committee-0",
+      "party_number": 0,
+      "share_index": 0,
+      "local_input_file": "Player-Data/Input-P0-0",
+      "local_tls_key_runtime_only": "Player-Data/P0.key"
+    },
+    {
+      "organization": "QLDMSP",
+      "node_id": "committee-1",
+      "party_number": 1,
+      "share_index": 1,
+      "local_input_file": "Player-Data/Input-P1-0",
+      "local_tls_key_runtime_only": "Player-Data/P1.key"
+    },
+    {
+      "organization": "SAMSP",
+      "node_id": "committee-2",
+      "party_number": 2,
+      "share_index": 2,
+      "local_input_file": "Player-Data/Input-P2-0",
+      "local_tls_key_runtime_only": "Player-Data/P2.key"
+    }
+  ],
+  "prototype_limitations": [
+    "all processes run under one WSL2 host and UID",
+    "runtime TLS keys are ephemeral test keys and are never packaged",
+    "complete F_match and live Fabric input gate are not integrated"
+  ]
+}

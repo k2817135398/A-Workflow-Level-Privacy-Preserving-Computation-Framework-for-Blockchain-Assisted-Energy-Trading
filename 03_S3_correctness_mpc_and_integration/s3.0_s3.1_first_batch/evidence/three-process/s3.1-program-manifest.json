@@ -1,0 +1,35 @@
+{
+  "schema_version": "saib-retf-s3-mpc-program-manifest/1",
+  "backend": "MP-SPDZ",
+  "backend_version": "v0.4.3",
+  "backend_commit": "26a605368e40fed3a7e9cee78c9a3f4390b85eb5",
+  "protocol": "mal-rep-ring",
+  "arithmetic_domain": "Z/(2^64)",
+  "compiler_arguments": [
+    "-R",
+    "64",
+    "saib_match_smoke"
+  ],
+  "source": {
+    "path": "saib_match_smoke.mpc",
+    "sha256": "24c9843e0f911d46a6b9eec7d305f408e8e20295748d2333cb401dbe862eb4c4"
+  },
+  "compiled_artifacts": [
+    {
+      "path": "Programs/Schedules/saib_match_smoke.sch",
+      "sha256": "40fa40b41677921b294f51207472a94b56f742a0a5e3af144605986794685e0a",
+      "size": 151
+    },
+    {
+      "path": "Programs/Bytecode/saib_match_smoke-0.bc",
+      "sha256": "98325d13408d547eb4fcf144b3afb6e21cb1ef7e7823bf8e85bae2d0e6cfedb3",
+      "size": 1564
+    },
+    {
+      "path": "Programs/Bytecode/saib_match_smoke-LTZ(4)_64-1.bc",
+      "sha256": "255b0bf001185aea21c0349db900e1f2561024584abc89c46bae8faab15e4e26",
+      "size": 15064
+    }
+  ],
+  "mpc_program_digest": "69374ce9e6f086b9920d3d87870856fc64742e6445182160ba3f7f7516e0afc2"
+}

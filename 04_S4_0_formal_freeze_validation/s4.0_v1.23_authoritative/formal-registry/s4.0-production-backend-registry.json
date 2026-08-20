@@ -1,0 +1,153 @@
+{
+  "schema_version": "saib-retf-backend-registry/2",
+  "registry_id": "saib-retf-s4-formal-benchmark",
+  "enabled": true,
+  "release": {
+    "code_commit": "559e0bb531b3e4330c532e624d546d616c7849eb",
+    "code_digest": "a5463a90b3c1b48813560e77a89b438c2cc33d8d57c23bed868a6ca72b05a218",
+    "image_digest": "sha256:532a8ccbe2aa5cc8d5d789fd51537f7e03d80aa07758509b75d4e14f13d76079",
+    "config_digest": "e5e4ec199eb709e456588807df0c03443fe175c2f5ba00ff7987dd78f2de279f",
+    "mpc_program_digest": "ca57a71d52244c7519483049ef2385f072f05ca69ea7e3cde06c31f37294f866"
+  },
+  "trace_auth": {
+    "algorithm": "ed25519",
+    "signing_keys": [
+      {
+        "key_id": "s4-benchmark-trace-attestor",
+        "version": 1,
+        "algorithm": "ed25519",
+        "public_key_path": "keys/s4-benchmark-trace-attestor-public.pem",
+        "not_before_utc": "2026-07-01T00:00:00Z",
+        "not_after_utc": "2027-07-01T00:00:00Z",
+        "status": "active",
+        "revoked": false
+      }
+    ]
+  },
+  "variant_profiles": {
+    "B0": {
+      "proof_backend": "none",
+      "mpc_backend": "saib-retf-integer-reference",
+      "image_digest": "sha256:6f27a5c389fa142774de7a02870d52b61babada7539aa9da59e418a8bee71537",
+      "runtime_image_digests": ["sha256:6f27a5c389fa142774de7a02870d52b61babada7539aa9da59e418a8bee71537"],
+      "runtime_profile_verified": true,
+      "real_anoncred": false,
+      "real_mpc": false
+    },
+    "B1": {
+      "proof_backend": "credx-bbs-bls12-381-real",
+      "mpc_backend": "saib-retf-integer-reference",
+      "image_digest": "sha256:6f27a5c389fa142774de7a02870d52b61babada7539aa9da59e418a8bee71537",
+      "runtime_image_digests": ["sha256:789d134105f6b040bb6c7a7b278b09e6fcdcbe55501f5be5f037046f90596cef", "sha256:6f27a5c389fa142774de7a02870d52b61babada7539aa9da59e418a8bee71537"],
+      "runtime_profile_verified": true,
+      "real_anoncred": true,
+      "real_mpc": false
+    },
+    "B2": {
+      "proof_backend": "credx-bbs-bls12-381-real",
+      "mpc_backend": "saib-retf-integer-reference",
+      "image_digest": "sha256:6f27a5c389fa142774de7a02870d52b61babada7539aa9da59e418a8bee71537",
+      "runtime_image_digests": ["sha256:789d134105f6b040bb6c7a7b278b09e6fcdcbe55501f5be5f037046f90596cef", "sha256:6f27a5c389fa142774de7a02870d52b61babada7539aa9da59e418a8bee71537"],
+      "runtime_profile_verified": true,
+      "real_anoncred": true,
+      "real_mpc": false
+    },
+    "B3": {
+      "proof_backend": "credx-bbs-bls12-381-real",
+      "mpc_backend": "mp-spdz-malicious-rep-field",
+      "image_digest": "sha256:532a8ccbe2aa5cc8d5d789fd51537f7e03d80aa07758509b75d4e14f13d76079",
+      "runtime_image_digests": ["sha256:532a8ccbe2aa5cc8d5d789fd51537f7e03d80aa07758509b75d4e14f13d76079"],
+      "runtime_profile_verified": true,
+      "real_anoncred": true,
+      "real_mpc": true
+    },
+    "B4": {
+      "proof_backend": "credx-bbs-bls12-381-real",
+      "mpc_backend": "mp-spdz-malicious-rep-field",
+      "image_digest": "sha256:532a8ccbe2aa5cc8d5d789fd51537f7e03d80aa07758509b75d4e14f13d76079",
+      "runtime_image_digests": ["sha256:532a8ccbe2aa5cc8d5d789fd51537f7e03d80aa07758509b75d4e14f13d76079"],
+      "runtime_profile_verified": true,
+      "real_anoncred": true,
+      "real_mpc": true
+    },
+    "C_ANONCRED": {
+      "proof_backend": "credx-bbs-bls12-381-real",
+      "mpc_backend": "none",
+      "image_digest": "sha256:789d134105f6b040bb6c7a7b278b09e6fcdcbe55501f5be5f037046f90596cef",
+      "runtime_image_digests": ["sha256:789d134105f6b040bb6c7a7b278b09e6fcdcbe55501f5be5f037046f90596cef"],
+      "runtime_profile_verified": true,
+      "real_anoncred": true,
+      "real_mpc": false
+    },
+    "C_FABRIC": {
+      "proof_backend": "credx-bbs-bls12-381-real",
+      "mpc_backend": "mp-spdz-malicious-rep-field",
+      "image_digest": "sha256:532a8ccbe2aa5cc8d5d789fd51537f7e03d80aa07758509b75d4e14f13d76079",
+      "runtime_image_digests": ["sha256:532a8ccbe2aa5cc8d5d789fd51537f7e03d80aa07758509b75d4e14f13d76079"],
+      "runtime_profile_verified": true,
+      "real_anoncred": true,
+      "real_mpc": true
+    },
+    "C_MPC": {
+      "proof_backend": "credx-bbs-bls12-381-real",
+      "mpc_backend": "mp-spdz-malicious-rep-field",
+      "image_digest": "sha256:532a8ccbe2aa5cc8d5d789fd51537f7e03d80aa07758509b75d4e14f13d76079",
+      "runtime_image_digests": ["sha256:532a8ccbe2aa5cc8d5d789fd51537f7e03d80aa07758509b75d4e14f13d76079"],
+      "runtime_profile_verified": true,
+      "real_anoncred": true,
+      "real_mpc": true
+    }
+  },
+  "required_sequences": {
+    "B0": [
+      {"component": "reference-matching", "backend": "saib-retf-integer-reference", "version": "S4.0", "operation": "fixed-capacity-match"},
+      {"component": "fabric-finalization", "backend": "hyperledger-fabric-gateway", "version": "3.1.4", "operation": "endorse-order-commit"}
+    ],
+    "B1": [
+      {"component": "anonymous-credential", "backend": "credx-bbs-bls12-381-real", "version": "0.2.1-saib", "operation": "issue-prove-verify"},
+      {"component": "reference-matching", "backend": "saib-retf-integer-reference", "version": "S4.0", "operation": "fixed-capacity-match"},
+      {"component": "fabric-finalization", "backend": "hyperledger-fabric-gateway", "version": "3.1.4", "operation": "endorse-order-commit"}
+    ],
+    "B2": [
+      {"component": "anonymous-credential", "backend": "credx-bbs-bls12-381-real", "version": "0.2.1-saib", "operation": "issue-prove-verify"},
+      {"component": "committed-input", "backend": "saib-retf-process-consistency-verifier", "version": "S3.4.1", "operation": "verify-six-share-openings"},
+      {"component": "reference-matching", "backend": "saib-retf-integer-reference", "version": "S4.0", "operation": "fixed-capacity-match"},
+      {"component": "fabric-finalization", "backend": "hyperledger-fabric-gateway", "version": "3.1.4", "operation": "endorse-order-commit"}
+    ],
+    "B3": [
+      {"component": "anonymous-credential", "backend": "credx-bbs-bls12-381-real", "version": "0.2.1-saib", "operation": "prove-and-verify"},
+      {"component": "fabric-admission", "backend": "hyperledger-fabric-gateway", "version": "3.1.4", "operation": "endorse-order-commit"},
+      {"component": "committed-input", "backend": "saib-retf-admit-and-launch", "version": "S3.4.1", "operation": "verify-bind-reserve"},
+      {"component": "mpc", "backend": "mp-spdz-malicious-rep-field", "version": "s3.1.1-patched", "operation": "fixed-capacity-fmatch"},
+      {"component": "result-verification", "backend": "saib-retf-committee-verifier", "version": "S3.4.1", "operation": "verify-result-commitment"},
+      {"component": "fabric-finalization", "backend": "hyperledger-fabric-gateway", "version": "3.1.4", "operation": "endorse-order-commit"}
+    ],
+    "B4": [
+      {"component": "anonymous-credential", "backend": "credx-bbs-bls12-381-real", "version": "0.2.1-saib", "operation": "prove-and-verify"},
+      {"component": "fabric-admission", "backend": "hyperledger-fabric-gateway", "version": "3.1.4", "operation": "endorse-order-commit"},
+      {"component": "committed-input", "backend": "saib-retf-admit-and-launch", "version": "S3.4.1", "operation": "verify-bind-reserve"},
+      {"component": "mpc", "backend": "mp-spdz-malicious-rep-field", "version": "s3.1.1-patched", "operation": "fixed-capacity-fmatch"},
+      {"component": "result-verification", "backend": "saib-retf-committee-verifier", "version": "S3.4.1", "operation": "verify-result-commitment"},
+      {"component": "fabric-finalization", "backend": "hyperledger-fabric-gateway", "version": "3.1.4", "operation": "endorse-order-commit"}
+    ],
+    "C_ANONCRED": [
+      {"component": "anonymous-credential", "backend": "credx-bbs-bls12-381-real", "version": "0.2.1-saib", "operation": "component-benchmark"}
+    ],
+    "C_FABRIC": [
+      {"component": "anonymous-credential", "backend": "credx-bbs-bls12-381-real", "version": "0.2.1-saib", "operation": "prove-and-verify"},
+      {"component": "fabric-admission", "backend": "hyperledger-fabric-gateway", "version": "3.1.4", "operation": "endorse-order-commit"},
+      {"component": "committed-input", "backend": "saib-retf-admit-and-launch", "version": "S3.4.1", "operation": "verify-bind-reserve"},
+      {"component": "mpc", "backend": "mp-spdz-malicious-rep-field", "version": "s3.1.1-patched", "operation": "fixed-capacity-fmatch"},
+      {"component": "result-verification", "backend": "saib-retf-committee-verifier", "version": "S3.4.1", "operation": "verify-result-commitment"},
+      {"component": "fabric-finalization", "backend": "hyperledger-fabric-gateway", "version": "3.1.4", "operation": "endorse-order-commit"}
+    ],
+    "C_MPC": [
+      {"component": "anonymous-credential", "backend": "credx-bbs-bls12-381-real", "version": "0.2.1-saib", "operation": "prove-and-verify"},
+      {"component": "fabric-admission", "backend": "hyperledger-fabric-gateway", "version": "3.1.4", "operation": "endorse-order-commit"},
+      {"component": "committed-input", "backend": "saib-retf-admit-and-launch", "version": "S3.4.1", "operation": "verify-bind-reserve"},
+      {"component": "mpc", "backend": "mp-spdz-malicious-rep-field", "version": "s3.1.1-patched", "operation": "fixed-capacity-fmatch"},
+      {"component": "result-verification", "backend": "saib-retf-committee-verifier", "version": "S3.4.1", "operation": "verify-result-commitment"},
+      {"component": "fabric-finalization", "backend": "hyperledger-fabric-gateway", "version": "3.1.4", "operation": "endorse-order-commit"}
+    ]
+  }
+}

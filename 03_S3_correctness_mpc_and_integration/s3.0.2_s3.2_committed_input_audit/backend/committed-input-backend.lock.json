@@ -1,0 +1,37 @@
+{
+  "schema_version": "saib-retf-s3.0.2-committed-input-backend-lock/1",
+  "backend": "MP-SPDZ",
+  "upstream_version": "v0.4.3",
+  "upstream_commit": "26a605368e40fed3a7e9cee78c9a3f4390b85eb5",
+  "local_fork_commit": "8ec865f19ee3d114c3fa1410ef68acb257850094",
+  "local_fork_tag": "saib-retf-s3.0.2-patched-v0.4.3",
+  "local_patch_series": [
+    "cdc999e5c75f6eff0923d4af7c0bfa85c9322b66b4f3df1f2cec58a971826db7",
+    "3932b330a30ff25718ca4e90d0d64371eb70d3c3232ade1dcc237283ccaee5dd",
+    "0ce5222499ecad09c5cb872c8ca724b71ae42243893e05fa1e2a72106d534330"
+  ],
+  "protocol": "malicious-replicated-prime-field",
+  "machine": "malicious-rep-field-party.x",
+  "parties": 3,
+  "maximum_corruptions": 1,
+  "security_model": "malicious security with honest majority and abort",
+  "scalar_field": "BLS12-381 scalar",
+  "scalar_prime": "52435875175126190479447740508185965837690552500527637822603658699938581184513",
+  "compiler_arguments": [
+    "-F",
+    "64",
+    "-P",
+    "52435875175126190479447740508185965837690552500527637822603658699938581184513",
+    "saib_committed_input"
+  ],
+  "program_source_sha256": "b1bc7cfa91d8726d4fffb662b6b1c60430dc2e9ed73ee1d81fdcc933ce71172e",
+  "program_bytecode_sha256": "be15f8d8ee4c710ea86ead8d1aeeb402a53fb66f447dc4871c34e15bfe462083",
+  "program_schedule_sha256": "e7d3405d489858453891885ec2e6434100d3ac608443dec7e421f2e0ed3f2458",
+  "backend_binary_sha256": "097e3e6bcf301a9f0ee791ad1f1bb3c851c1dcf83df41d29a4a98df2fd54146b",
+  "rust_consistency_verifier_hash_scope": "recorded by the clean release gate because the verifier is built from the final release commit",
+  "qualification_scope": "bounded same-host three-process committed-input honest and one-party input-substitution tests",
+  "exact_prime_efficiency_warning": "MP-SPDZ reports that the selected exact prime is particularly inefficient compared with its preferred prime shapes.",
+  "upstream_security_review_disclaimer": "Protocol availability is not evidence of a production security review.",
+  "production_backend_approved": false,
+  "formal_performance_experiments": "STILL NO-GO"
+}

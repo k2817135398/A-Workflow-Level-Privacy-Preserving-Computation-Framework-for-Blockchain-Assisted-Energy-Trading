@@ -1,0 +1,184 @@
+{
+  "schema_version": "saib-retf-s3.0.2-bounded-mutation-report/1",
+  "scope": "explicitly selected committed-input admission, replay-journal and Fabric uniqueness mutants; not a whole-program mutation score",
+  "selected_mutants": 9,
+  "viable_mutants": 9,
+  "non_viable_mutants": 0,
+  "killed_mutants": 9,
+  "all_viable_killed": true,
+  "mutants": [
+    {
+      "mutant_id": 1,
+      "name": "channel_binding_removed",
+      "source_file": "mpc/inputbinding/binding.go",
+      "source_anchor": "binding.ChannelID != gate.ChannelID",
+      "replacement": "false",
+      "viable": true,
+      "killed": true,
+      "exit_code": 1,
+      "test_output": [
+        "--- FAIL: TestIndependentAdmissionChecksCannotBeBypassedByMatchingRequesterFields (0.00s)",
+        "    --- FAIL: TestIndependentAdmissionChecksCannotBeBypassedByMatchingRequesterFields/local_channel_configuration (0.00s)",
+        "        binding_test.go:363: requester-aligned channel substitution bypassed local channel configuration",
+        "FAIL",
+        "FAIL\tgithub.com/retf/source/v2/mpc/inputbinding\t0.209s",
+        "ok  \tgithub.com/retf/source/v2/fabric/mpcinputregistry\t0.002s",
+        "FAIL"
+      ]
+    },
+    {
+      "mutant_id": 2,
+      "name": "input_record_digest_check_removed",
+      "source_file": "mpc/inputbinding/binding.go",
+      "source_anchor": "inputRecord.ValidateDigest() != nil",
+      "replacement": "false",
+      "viable": true,
+      "killed": true,
+      "exit_code": 1,
+      "test_output": [
+        "--- FAIL: TestIndependentAdmissionChecksCannotBeBypassedByMatchingRequesterFields (0.00s)",
+        "    --- FAIL: TestIndependentAdmissionChecksCannotBeBypassedByMatchingRequesterFields/record_digest (0.00s)",
+        "        binding_test.go:392: input record with invalid canonical digest was accepted",
+        "FAIL",
+        "FAIL\tgithub.com/retf/source/v2/mpc/inputbinding\t0.282s",
+        "ok  \tgithub.com/retf/source/v2/fabric/mpcinputregistry\t0.006s",
+        "FAIL"
+      ]
+    },
+    {
+      "mutant_id": 3,
+      "name": "authorization_record_link_removed",
+      "source_file": "mpc/inputbinding/binding.go",
+      "source_anchor": "inputRecord.AuthorizationRecordDigest != binding.AuthorizationRecordDigest",
+      "replacement": "false",
+      "viable": true,
+      "killed": true,
+      "exit_code": 1,
+      "test_output": [
+        "--- FAIL: TestIndependentAdmissionChecksCannotBeBypassedByMatchingRequesterFields (0.00s)",
+        "    --- FAIL: TestIndependentAdmissionChecksCannotBeBypassedByMatchingRequesterFields/S2_link (0.00s)",
+        "        binding_test.go:372: input record not linked to the requested S2 authorization was accepted",
+        "FAIL",
+        "FAIL\tgithub.com/retf/source/v2/mpc/inputbinding\t0.247s",
+        "ok  \tgithub.com/retf/source/v2/fabric/mpcinputregistry\t0.003s",
+        "FAIL"
+      ]
+    },
+    {
+      "mutant_id": 4,
+      "name": "order_commitment_check_removed",
+      "source_file": "mpc/inputbinding/binding.go",
+      "source_anchor": "inputRecord.OrderCommitment != binding.OrderCommitment",
+      "replacement": "false",
+      "viable": true,
+      "killed": true,
+      "exit_code": 1,
+      "test_output": [
+        "--- FAIL: TestGateRejectsSubstitutionAndStaleContext (0.01s)",
+        "    --- FAIL: TestGateRejectsSubstitutionAndStaleContext/order_commitment (0.00s)",
+        "        binding_test.go:461: order commitment attack accepted",
+        "FAIL",
+        "FAIL\tgithub.com/retf/source/v2/mpc/inputbinding\t0.196s",
+        "ok  \tgithub.com/retf/source/v2/fabric/mpcinputregistry\t0.002s",
+        "FAIL"
+      ]
+    },
+    {
+      "mutant_id": 5,
+      "name": "attestor_signature_verification_removed",
+      "source_file": "mpc/inputbinding/binding.go",
+      "source_anchor": "!ed25519.Verify(key.PublicKey, message, envelope.Signature)",
+      "replacement": "ed25519.Verify(key.PublicKey, message, envelope.Signature) && false",
+      "viable": true,
+      "killed": true,
+      "exit_code": 1,
+      "test_output": [
+        "--- FAIL: TestGateRejectsSubstitutionAndStaleContext (0.01s)",
+        "    --- FAIL: TestGateRejectsSubstitutionAndStaleContext/signature (0.00s)",
+        "        binding_test.go:461: signature attack accepted",
+        "FAIL",
+        "FAIL\tgithub.com/retf/source/v2/mpc/inputbinding\t0.239s",
+        "ok  \tgithub.com/retf/source/v2/fabric/mpcinputregistry\t0.003s",
+        "FAIL"
+      ]
+    },
+    {
+      "mutant_id": 6,
+      "name": "consistency_verifier_result_ignored",
+      "source_file": "mpc/inputbinding/binding.go",
+      "source_anchor": "if err := gate.Consistency.Verify(ConsistencyContext{Authorization: record,",
+      "replacement": "if err := gate.Consistency.Verify(ConsistencyContext{Authorization: record,",
+      "viable": true,
+      "killed": true,
+      "exit_code": 1,
+      "test_output": [
+        "--- FAIL: TestIndependentAdmissionChecksCannotBeBypassedByMatchingRequesterFields (0.00s)",
+        "    --- FAIL: TestIndependentAdmissionChecksCannotBeBypassedByMatchingRequesterFields/consistency_verifier (0.00s)",
+        "        binding_test.go:399: cryptographic consistency verifier rejection was ignored",
+        "FAIL",
+        "FAIL\tgithub.com/retf/source/v2/mpc/inputbinding\t0.206s",
+        "ok  \tgithub.com/retf/source/v2/fabric/mpcinputregistry\t0.002s",
+        "FAIL"
+      ]
+    },
+    {
+      "mutant_id": 7,
+      "name": "journal_trailing_json_check_removed",
+      "source_file": "mpc/inputbinding/persistent_replay.go",
+      "source_anchor": "if err := decoder.Decode(&trailing); !errors.Is(err, io.EOF) {",
+      "replacement": "if err := decoder.Decode(&trailing); err != nil && !errors.Is(err, io.EOF) {",
+      "viable": true,
+      "killed": true,
+      "exit_code": 1,
+      "test_output": [
+        "--- FAIL: TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal (0.02s)",
+        "    --- FAIL: TestPersistentReplayStoreRejectsInvalidConfigurationAndJournal/trailing_JSON (0.01s)",
+        "        binding_test.go:691: invalid journal accepted=true err=<nil>",
+        "FAIL",
+        "FAIL\tgithub.com/retf/source/v2/mpc/inputbinding\t0.235s",
+        "ok  \tgithub.com/retf/source/v2/fabric/mpcinputregistry\t0.002s",
+        "FAIL"
+      ]
+    },
+    {
+      "mutant_id": 8,
+      "name": "fabric_authorization_unique_index_removed",
+      "source_file": "fabric/mpcinputregistry/registry.go",
+      "source_anchor": "if len(existing) != 0 {\n\t\treturn errors.New(\"S2 authorization already has an S3 input record\")\n\t}",
+      "replacement": "if len(existing) != 0 && false {\n\t\treturn errors.New(\"S2 authorization already has an S3 input record\")\n\t}",
+      "viable": true,
+      "killed": true,
+      "exit_code": 1,
+      "test_output": [
+        "ok  \tgithub.com/retf/source/v2/mpc/inputbinding\t0.219s",
+        "--- FAIL: TestAuthorizationCanCreateOnlyOneInputAcrossSessionHandleAndNonceChanges (0.00s)",
+        "    --- FAIL: TestAuthorizationCanCreateOnlyOneInputAcrossSessionHandleAndNonceChanges/second_record (0.00s)",
+        "        registry_test.go:100: second S3 input record consumed the same S2 authorization",
+        "    --- FAIL: TestAuthorizationCanCreateOnlyOneInputAcrossSessionHandleAndNonceChanges/changed_handle (0.00s)",
+        "        registry_test.go:100: second S3 input record consumed the same S2 authorization",
+        "FAIL",
+        "FAIL\tgithub.com/retf/source/v2/fabric/mpcinputregistry\t0.002s",
+        "FAIL"
+      ]
+    },
+    {
+      "mutant_id": 9,
+      "name": "governed_rebind_handle_binding_removed",
+      "source_file": "fabric/mpcinputregistry/registry.go",
+      "source_anchor": "next.OrderHandle != current.OrderHandle {",
+      "replacement": "false {",
+      "viable": true,
+      "killed": true,
+      "exit_code": 1,
+      "test_output": [
+        "ok  \tgithub.com/retf/source/v2/mpc/inputbinding\t0.193s",
+        "--- FAIL: TestAbortRetryRequiresGovernedMonotonicRebind (0.00s)",
+        "    registry_test.go:131: attack=unauthorized_rebind attempt=2 result=REJECT reason=\"S3 input rebind requires governance authorization\"",
+        "    registry_test.go:137: governed rebind changed the order identity",
+        "FAIL",
+        "FAIL\tgithub.com/retf/source/v2/fabric/mpcinputregistry\t0.002s",
+        "FAIL"
+      ]
+    }
+  ]
+}

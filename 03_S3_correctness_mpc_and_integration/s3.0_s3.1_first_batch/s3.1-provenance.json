@@ -1,0 +1,40 @@
+{
+  "schema_version": "saib-retf-s3.1-first-batch-provenance/1",
+  "generated_at_utc": "2026-07-22T04:40:12.051782+00:00",
+  "release_commit": "b440622ecbe22d5faa1ea3dda6fb4cda37073ed3",
+  "release_tag": "s3.1-prototype-audit",
+  "release_tag_type": "annotated",
+  "branch": "s3-distributed-mpc-prototype",
+  "base_tag": "s2.2.2.1-audit",
+  "base_commit": "724095cc35da4dad5d73e7605891c60418c7be34",
+  "merge_base": "724095cc35da4dad5d73e7605891c60418c7be34",
+  "git_status_porcelain_v1": [],
+  "source_archive_sha256": "c69177f2257fd4df669061122ce614a7053ed0ca5a8d6342f6fdb2af70134a79",
+  "git_bundle_sha256": "d487db52ed3cf389b81f1b470280a58b9487f6cd0db5239ef56994a0bb8710c7",
+  "backend": "MP-SPDZ v0.4.3 mal-rep-ring",
+  "backend_commit": "26a605368e40fed3a7e9cee78c9a3f4390b85eb5",
+  "backend_source_archive_sha256": "386399a869fd53d99402614c0c39954c092cfac7b4e18fa453024664083a4ab7",
+  "mpc_program_digest": "69374ce9e6f086b9920d3d87870856fc64742e6445182160ba3f7f7516e0afc2",
+  "runtime_trace_payload_sha256": "051bca7bf5e2325043ba4e5b3958f1fa2971f06481bccd2b201f9be344bc22ba",
+  "runtime_trace_file_sha256": "9741e21bcaa497a4e5b7c1f1b8697be2149a1931d167850c0b8d720fd54019e4",
+  "runtime_trace_attestation": "Ed25519 ephemeral test-only release evidence key",
+  "runtime_trace_key_id": "s3.1-ephemeral-release-trace-test-only-8b385db83b4c1ba5",
+  "runtime_trace_public_key_sha256": "8b385db83b4c1ba5295a98cdde8892e095412bb9548d732c715b1ea8255a5073",
+  "authorization_attestor_key_reused_for_trace": false,
+  "tests": {
+    "bounded_correctness": "4/4 PASS",
+    "bounded_node_views": "12/12 PASS",
+    "missing_node_abort": "PASS",
+    "missing_tls_key": "PASS",
+    "go_inputbinding_coverage_statements": "91.7%",
+    "bounded_mutants": "7/7 killed",
+    "sanitizer": "FAIL: UBSan Tools/octetStream.h:364"
+  },
+  "status": {
+    "s2.2.2.1_security_mechanism": "GO",
+    "s2.2.2.1_publication_artifact": "GO after history-scan addendum",
+    "s3_distributed_mpc": "STARTED — S3.0 frozen, S3.1 prototype PARTIAL/NO-GO",
+    "end_to_end_privacy_claim": "NOT YET ESTABLISHED",
+    "formal_performance_experiments": "STILL NO-GO"
+  }
+}

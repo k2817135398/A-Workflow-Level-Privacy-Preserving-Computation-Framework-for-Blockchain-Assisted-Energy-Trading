@@ -1,0 +1,45 @@
+command=/mnt/g/paperexper/retf/saib-retf/experiments/v2/runners/run-s3.0.2-exact-field-sanitizers.sh /mnt/g/paperexper/retf/third_party/MP-SPDZ-s3.1.1-patched /mnt/g/paperexper/retf/saib-retf/experiments/v2/evidence/s3.0.2-committed-input-golden-vector.json /mnt/g/paperexper/retf/saib-retf/experiments/v2/evidence/s3.0.2-exact-field-sanitizers-live
+started_at_utc=2026-07-22T11:32:25Z
+backend_commit=1126007badb9b9f2cd4820fb8675d1fb5918c072
+clang_version=Ubuntu clang version 18.1.3 (1ubuntu1)
+scalar_prime=52435875175126190479447740508185965837690552500527637822603658699938581184513
+command=/mnt/g/paperexper/retf/saib-retf/experiments/v2/runners/run-s3.0.2-committed-input.sh /tmp/saib-s3.0.2-exact-sanitizers-ixPpKS/backend-asan-only /mnt/g/paperexper/retf/saib-retf/experiments/v2/evidence/s3.0.2-committed-input-golden-vector.json /mnt/g/paperexper/retf/saib-retf/experiments/v2/evidence/s3.0.2-exact-field-sanitizers-live/asan-only
+started_at_utc=2026-07-22T11:36:02Z
+backend_commit=1126007badb9b9f2cd4820fb8675d1fb5918c072
+prime=52435875175126190479447740508185965837690552500527637822603658699938581184513
+security_model=malicious-three-party-prime-field-with-abort
+maximum_corruptions=1
+program_source_sha256=b1bc7cfa91d8726d4fffb662b6b1c60430dc2e9ed73ee1d81fdcc933ce71172e
+program_bytecode_sha256=be15f8d8ee4c710ea86ead8d1aeeb402a53fb66f447dc4871c34e15bfe462083
+program_schedule_sha256=e7d3405d489858453891885ec2e6434100d3ac608443dec7e421f2e0ed3f2458
+backend_binary_sha256=fbcc0a8feb7432e756b1eabd7df38c99f56815ca376646a9b52fd4c4ad6998c1
+ended_at_utc=2026-07-22T11:36:22Z
+exit_code=0
+mode=asan-only build_exit_code=0 run_exit_code=0 sanitizer_findings=0 result=PASS
+command=/mnt/g/paperexper/retf/saib-retf/experiments/v2/runners/run-s3.0.2-committed-input.sh /tmp/saib-s3.0.2-exact-sanitizers-ixPpKS/backend-ubsan-only /mnt/g/paperexper/retf/saib-retf/experiments/v2/evidence/s3.0.2-committed-input-golden-vector.json /mnt/g/paperexper/retf/saib-retf/experiments/v2/evidence/s3.0.2-exact-field-sanitizers-live/ubsan-only
+started_at_utc=2026-07-22T11:41:35Z
+backend_commit=1126007badb9b9f2cd4820fb8675d1fb5918c072
+prime=52435875175126190479447740508185965837690552500527637822603658699938581184513
+security_model=malicious-three-party-prime-field-with-abort
+maximum_corruptions=1
+program_source_sha256=b1bc7cfa91d8726d4fffb662b6b1c60430dc2e9ed73ee1d81fdcc933ce71172e
+program_bytecode_sha256=be15f8d8ee4c710ea86ead8d1aeeb402a53fb66f447dc4871c34e15bfe462083
+program_schedule_sha256=e7d3405d489858453891885ec2e6434100d3ac608443dec7e421f2e0ed3f2458
+backend_binary_sha256=58a7cb4542298302ea94bc853e9247dea1b13917fc2e5e91268eae839737371d
+mode=ubsan-only build_exit_code=0 run_exit_code=1 sanitizer_findings=6 result=FAIL
+command=/mnt/g/paperexper/retf/saib-retf/experiments/v2/runners/run-s3.0.2-committed-input.sh /tmp/saib-s3.0.2-exact-sanitizers-ixPpKS/backend-asan-ubsan /mnt/g/paperexper/retf/saib-retf/experiments/v2/evidence/s3.0.2-committed-input-golden-vector.json /mnt/g/paperexper/retf/saib-retf/experiments/v2/evidence/s3.0.2-exact-field-sanitizers-live/asan-ubsan
+started_at_utc=2026-07-22T11:48:09Z
+backend_commit=1126007badb9b9f2cd4820fb8675d1fb5918c072
+prime=52435875175126190479447740508185965837690552500527637822603658699938581184513
+security_model=malicious-three-party-prime-field-with-abort
+maximum_corruptions=1
+program_source_sha256=b1bc7cfa91d8726d4fffb662b6b1c60430dc2e9ed73ee1d81fdcc933ce71172e
+program_bytecode_sha256=be15f8d8ee4c710ea86ead8d1aeeb402a53fb66f447dc4871c34e15bfe462083
+program_schedule_sha256=ba4dc34db2282ea3c834f3d48b2a8836a708760b9023571a1dca5b263d4fd2e0
+backend_binary_sha256=e51e45b3bb6499447c01b7c7e5b32f200074e0828a0c1f4980554e8252041125
+/mnt/g/paperexper/retf/saib-retf/experiments/v2/runners/run-s3.0.2-committed-input.sh: line 84: 13052 Aborted                 ( cd "$node_root"; echo "$BASHPID" > "$evidence/node-$node.pid"; export LD_LIBRARY_PATH="$BACKEND_ROOT${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"; exec "$BACKEND_ROOT/malicious-rep-field-party.x" "$node" "$PROGRAM" -pn "$port" -h localhost -P "$PRIME" ) > "$evidence/node-$node.log" 2>&1
+/mnt/g/paperexper/retf/saib-retf/experiments/v2/runners/run-s3.0.2-committed-input.sh: line 84: 13070 Aborted                 ( cd "$node_root"; echo "$BASHPID" > "$evidence/node-$node.pid"; export LD_LIBRARY_PATH="$BACKEND_ROOT${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"; exec "$BACKEND_ROOT/malicious-rep-field-party.x" "$node" "$PROGRAM" -pn "$port" -h localhost -P "$PRIME" ) > "$evidence/node-$node.log" 2>&1
+/mnt/g/paperexper/retf/saib-retf/experiments/v2/runners/run-s3.0.2-committed-input.sh: line 84: 13089 Aborted                 ( cd "$node_root"; echo "$BASHPID" > "$evidence/node-$node.pid"; export LD_LIBRARY_PATH="$BACKEND_ROOT${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"; exec "$BACKEND_ROOT/malicious-rep-field-party.x" "$node" "$PROGRAM" -pn "$port" -h localhost -P "$PRIME" ) > "$evidence/node-$node.log" 2>&1
+mode=asan-ubsan build_exit_code=0 run_exit_code=1 sanitizer_findings=6 result=FAIL
+ended_at_utc=2026-07-22T11:48:30Z
+exit_code=1

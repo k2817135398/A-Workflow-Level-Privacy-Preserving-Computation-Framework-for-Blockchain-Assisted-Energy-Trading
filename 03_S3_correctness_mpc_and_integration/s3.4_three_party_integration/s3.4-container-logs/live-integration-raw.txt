@@ -1,0 +1,11 @@
+started_at_utc=2026-07-26T13:23:21Z
+release_commit=cdaea345cc6ca012c37ace2d8f19e69d56c51fea
+run_id=audit-cdaea34
+production_path=true
+single_physical_host=true
+party_containers=3
+coordinator_binary_format=ELF
+COMMAND python3 /mnt/g/paperexper/retf/saib-retf/experiments/v2/runners/prepare-s3.4-live-authorizations.py authorize /mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.2-live /mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s3.4-live-v2
+COMMAND /mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s3.4-live-v2/runtime-secrets/bin/s3.4-live-production-integration --run-dir /mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s3.4-live-v2/runtime-secrets/integration-audit-cdaea34 --key-root /mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s3.4-live-v2/runtime-secrets --authorizations /mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s3.4-live-v2/authorization-public/fresh-s2-authorizations.json --buy-vector /mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s3.4-live-v2/authorization-private/vector-buy-placeholder.json --sell-vector /mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s3.4-live-v2/authorization-private/vector-sell-placeholder.json --program-profile /mnt/g/paperexper/retf/benchmarks/results/expand/s3.4-oci-memorder-hosted-20260726T103715Z/oci/s3.4-program-profile-16.json --rust-verifier /mnt/g/paperexper/retf/saib-retf/prototype/anoncred-rust/target/release/s3_consistency_verifier --image-repository localhost:5500/saib-retf/fmatch-party --mpc-tls-root /mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s3.4-live-v2/runtime-secrets/mpc-tls --workspace-root /mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s3.4-live-v2/runtime-secrets/mpc-workspaces-audit-cdaea34 --docker-network saib-s34-mpc --fabric-cert /mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s3.4-live-v2/runtime-secrets/relay-msp/signcerts/cert.pem --fabric-key /mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s3.4-live-v2/runtime-secrets/relay-msp/keystore/key.pem --fabric-tls-root /mnt/g/paperexper/retf/saib-retf/../docker/fabric/crypto-material/peerOrganizations/nsw.retf.com/peers/peer0.nsw.retf.com/tls/ca.crt --peer-endpoint localhost:7051 --peer-server-name peer0.nsw.retf.com --channel extra-channel --chaincode s3-fmatch --release-commit cdaea345cc6ca012c37ace2d8f19e69d56c51fea
+ended_at_utc=2026-07-26T13:25:28Z
+exit_code=0

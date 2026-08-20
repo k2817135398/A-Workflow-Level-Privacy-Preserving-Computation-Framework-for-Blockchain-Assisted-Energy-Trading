@@ -1,0 +1,126 @@
+{
+  "schemaVersion": "PP-RETF-real-e2e-v2",
+  "startedAt": "2026-07-13T12:07:58.3337221Z",
+  "completedAt": "2026-07-13T12:08:18.2941564Z",
+  "success": true,
+  "deploymentId": "p5-20260713T120758.333722100",
+  "taskId": "task-20260713T120758.333722100",
+  "roundId": "round-20260713T120758.333722100",
+  "region": "NSW",
+  "timeSlot": "slot-20260713T120758.333722100",
+  "committeeEpoch": 1783944478333722100,
+  "committeeProcesses": 3,
+  "committeeThreshold": 2,
+  "committeeMode": "three independent OS processes; committee-side plaintext comparison prototype (not MPC)",
+  "buyerId": "98d0e7e0-bbe6-47cb-bf57-f6d23cc82b3e",
+  "sellerId": "f42ab886-3ed3-4fa1-8423-9c675b098b60",
+  "buyOrderId": "03db43e24d1cb6976db48216bec6d6d1478d7037483b906f18b70dcebb01bb07",
+  "sellOrderId": "3eb1ecfd2c2c998451d5fd7ee88b14eab0bde0a5dd23fad6ae86ab1032196481",
+  "resultHash": "b5fe11ca7a8a9910b412f890cf5ea7109c7bc447fbe2b7d6326aee85af301694",
+  "matchedPairs": 1,
+  "signaturesCollected": 3,
+  "checks": {
+    "chaincode_readonly_committee_checks_pass": true,
+    "committee_result_bound_to_chain_task_and_preprocessing_digest": true,
+    "fresh_task_bound_regional_membership_verified": true,
+    "ledger_normalization_equals_signed_submission": true,
+    "new_users_use_paper_cs_scale": true,
+    "order_trade_and_credit_state_verified": true,
+    "orders_committed_with_real_membership_evidence": true,
+    "persisted_result_equals_committee_result": true,
+    "preprocessing_bound_to_chain_task_policy_tag_and_nonce": true,
+    "real_preprocessing_ecdsa_signature_verified": true,
+    "three_independent_committee_processes_ready": true,
+    "three_real_committee_ecdsa_signatures_verified_locally": true
+  },
+  "evidenceBytes": {
+    "committee_result_digest_raw": 32,
+    "committee_signatures_der_total": 212,
+    "committee_submission_json": 2298,
+    "ledger_final_buy_order_json": 1535,
+    "ledger_final_buyer_json": 300,
+    "ledger_final_sell_order_json": 1567,
+    "ledger_final_seller_json": 301,
+    "ledger_matching_result_json": 2362,
+    "ledger_observed_final_entities_json_total": 6639,
+    "ledger_trade_json": 574,
+    "preprocessing_digest_raw": 32,
+    "preprocessing_signature_der": 70,
+    "preprocessing_submission_json": 1208,
+    "private_data_collection_bytes": 0,
+    "regional_membership_proof_buy_json": 983,
+    "regional_membership_proof_sell_json": 983
+  },
+  "stages": [
+    {
+      "stage": "reset_clean_2048_accumulator",
+      "kind": "fabric_submit_commit",
+      "latencyMs": 2130.2358,
+      "success": true,
+      "detail": "verified"
+    },
+    {
+      "stage": "register_preprocessing_signer",
+      "kind": "fabric_submit_commit",
+      "latencyMs": 2070.6229,
+      "success": true,
+      "detail": "verified"
+    },
+    {
+      "stage": "configure_committee_epoch_keys_threshold",
+      "kind": "fabric_submit_commit",
+      "latencyMs": 2054.9327,
+      "success": true,
+      "detail": "verified"
+    },
+    {
+      "stage": "register_buyer_membership",
+      "kind": "fabric_submit_commit",
+      "latencyMs": 2071.6681,
+      "success": true,
+      "detail": "verified"
+    },
+    {
+      "stage": "register_seller_membership",
+      "kind": "fabric_submit_commit",
+      "latencyMs": 2067.8957,
+      "success": true,
+      "detail": "verified"
+    },
+    {
+      "stage": "submit_real_buy_task",
+      "kind": "fabric_submit_commit",
+      "latencyMs": 2078.5535,
+      "success": true,
+      "detail": "verified"
+    },
+    {
+      "stage": "submit_real_sell_task",
+      "kind": "fabric_submit_commit",
+      "latencyMs": 2075.3477,
+      "success": true,
+      "detail": "verified"
+    },
+    {
+      "stage": "submit_signed_preprocessing",
+      "kind": "fabric_submit_commit",
+      "latencyMs": 2079.7182,
+      "success": true,
+      "detail": "verified"
+    },
+    {
+      "stage": "three_process_committee_compute_and_sign",
+      "kind": "three_process_http",
+      "latencyMs": 4.2752,
+      "success": true,
+      "detail": "verified"
+    },
+    {
+      "stage": "submit_real_committee_result",
+      "kind": "fabric_submit_commit",
+      "latencyMs": 2073.7821,
+      "success": true,
+      "detail": "verified"
+    }
+  ]
+}

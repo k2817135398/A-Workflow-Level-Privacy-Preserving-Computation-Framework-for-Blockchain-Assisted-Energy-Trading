@@ -1,0 +1,75 @@
+command=experiments/v2/runners/run-s3.0.1-quality.sh /mnt/g/paperexper/retf/benchmarks/results/expand/s3.0.1-s3.1.1-working/quality
+started_at_utc=2026-07-22T08:27:34Z
+git_commit=b8ec6876b5d4acdfd74a3cc21808f2bce57fe366
+git_status_porcelain_count=0
+go_version=go version go1.22.2 linux/amd64
+ok  	github.com/retf/source/v2/mpc/inputbinding	6.631s
+ok  	github.com/retf/source/v2/mpc/inputbinding	0.178s	coverage: 80.8% of statements
+github.com/retf/source/v2/mpc/inputbinding/binding.go:180:			canonicalMaterial		100.0%
+github.com/retf/source/v2/mpc/inputbinding/binding.go:204:			CanonicalBytes			61.5%
+github.com/retf/source/v2/mpc/inputbinding/binding.go:243:			ComputeDigest			80.0%
+github.com/retf/source/v2/mpc/inputbinding/binding.go:252:			ValidateDigest			83.3%
+github.com/retf/source/v2/mpc/inputbinding/binding.go:289:			NewMemoryReplayStore		100.0%
+github.com/retf/source/v2/mpc/inputbinding/binding.go:293:			UseOnce				100.0%
+github.com/retf/source/v2/mpc/inputbinding/binding.go:351:			ValidateShape			100.0%
+github.com/retf/source/v2/mpc/inputbinding/binding.go:400:			CanonicalBytes			66.7%
+github.com/retf/source/v2/mpc/inputbinding/binding.go:407:			Digest				80.0%
+github.com/retf/source/v2/mpc/inputbinding/binding.go:416:			SigningBytes			80.0%
+github.com/retf/source/v2/mpc/inputbinding/binding.go:425:			Sign				85.7%
+github.com/retf/source/v2/mpc/inputbinding/binding.go:437:			UserShareLeaf			100.0%
+github.com/retf/source/v2/mpc/inputbinding/binding.go:441:			CreditShareLeaf			100.0%
+github.com/retf/source/v2/mpc/inputbinding/binding.go:445:			shareLeaf			75.0%
+github.com/retf/source/v2/mpc/inputbinding/binding.go:458:			MerkleParent			100.0%
+github.com/retf/source/v2/mpc/inputbinding/binding.go:466:			VerifyMerkleProof		93.3%
+github.com/retf/source/v2/mpc/inputbinding/binding.go:490:			Admit				90.6%
+github.com/retf/source/v2/mpc/inputbinding/binding.go:612:			matchesDigest			80.0%
+github.com/retf/source/v2/mpc/inputbinding/binding.go:621:			requireHex			100.0%
+github.com/retf/source/v2/mpc/inputbinding/input_record_state.go:17:		ValidateInputRecordTransition	90.0%
+github.com/retf/source/v2/mpc/inputbinding/persistent_replay.go:35:		UseOnce				50.0%
+github.com/retf/source/v2/mpc/inputbinding/persistent_replay.go:104:		readReplayJournal		82.9%
+github.com/retf/source/v2/mpc/inputbinding/persistent_replay.go:155:		replayKeyDigest			100.0%
+github.com/retf/source/v2/mpc/inputbinding/persistent_replay_lock_unix.go:16:	acquireReplayFileLock		80.0%
+github.com/retf/source/v2/mpc/inputbinding/persistent_replay_lock_unix.go:39:	release				100.0%
+total:										(statements)			80.8%
+fuzz: elapsed: 0s, gathering baseline coverage: 0/44 completed
+fuzz: elapsed: 0s, gathering baseline coverage: 44/44 completed, now fuzzing with 16 workers
+fuzz: elapsed: 3s, execs: 34179 (11387/sec), new interesting: 0 (total: 44)
+fuzz: elapsed: 5s, execs: 56989 (10825/sec), new interesting: 1 (total: 45)
+PASS
+ok  	github.com/retf/source/v2/mpc/inputbinding	5.143s
+fuzz: elapsed: 0s, gathering baseline coverage: 0/77 completed
+fuzz: elapsed: 0s, gathering baseline coverage: 77/77 completed, now fuzzing with 16 workers
+fuzz: elapsed: 3s, execs: 57057 (19016/sec), new interesting: 2 (total: 79)
+fuzz: elapsed: 6s, execs: 82439 (8461/sec), new interesting: 2 (total: 79)
+fuzz: elapsed: 6s, execs: 82439 (0/sec), new interesting: 2 (total: 79)
+PASS
+ok  	github.com/retf/source/v2/mpc/inputbinding	6.057s
+?   	github.com/retf/source/v2/chaincode/privacy-state	[no test files]
+?   	github.com/retf/source/v2/chaincode/private-finalization	[no test files]
+?   	github.com/retf/source/v2/chaincode/private-task	[no test files]
+?   	github.com/retf/source/v2/cmd/s2.2-privacy-chaincode	[no test files]
+?   	github.com/retf/source/v2/cmd/s2.2.1-block-scan	[no test files]
+?   	github.com/retf/source/v2/cmd/s2.2.1-material-tool	[no test files]
+?   	github.com/retf/source/v2/cmd/s2.2.1-privacy-chaincode	[no test files]
+?   	github.com/retf/source/v2/cmd/s2.2.2-ccaas-mtls-probe	[no test files]
+?   	github.com/retf/source/v2/cmd/s2.2.2-proposal-time-probe	[no test files]
+?   	github.com/retf/source/v2/cmd/s3-binding-vector	[no test files]
+?   	github.com/retf/source/v2/cmd/v2-static-check	[no test files]
+?   	github.com/retf/source/v2/crypto/anoncred	[no test files]
+?   	github.com/retf/source/v2/crypto/anoncred/ffi	[no test files]
+?   	github.com/retf/source/v2/crypto/anoncred/real	[no test files]
+?   	github.com/retf/source/v2/crypto/credit	[no test files]
+?   	github.com/retf/source/v2/crypto/endorsement	[no test files]
+?   	github.com/retf/source/v2/mpc/adapter	[no test files]
+ok  	github.com/retf/source/v2/fabric/privacychaincode	0.025s
+?   	github.com/retf/source/v2/privacy/authstatement	[no test files]
+?   	github.com/retf/source/v2/protocol/canonical	[no test files]
+?   	github.com/retf/source/v2/protocol/messages	[no test files]
+?   	github.com/retf/source/v2/runtime/trace	[no test files]
+ok  	github.com/retf/source/v2/fabric/privacychaincode221	0.025s
+ok  	github.com/retf/source/v2/mpc/inputbinding	0.217s
+ok  	github.com/retf/source/v2/privacy/securitybinding	0.007s
+ok  	github.com/retf/source/v2/protocol/binding	0.008s
+selected=10 viable=10 non_viable=0 killed=10
+ended_at_utc=2026-07-22T08:28:15Z
+exit_code=0

@@ -1,0 +1,55 @@
+command=experiments/v2/runners/run-s3.3.2-obliviousness-suite.sh /mnt/g/paperexper/retf/third_party/MP-SPDZ-s3.1.1-patched /mnt/g/paperexper/retf/benchmarks/results/expand/s3.3.2-release-gates-20260725T083204Z
+started_at_utc=2026-07-25T08:32:04Z
+candidate_commit=6ad977f06774387d0d59489751fabb8dd89d624e
+deployment_model=three-real-mpc-processes-on-one-physical-host
+network_scope=localhost-process-transport
+message_count_definition=MP-SPDZ-logical-communication-operation-events
+received_bytes_definition=aggregate-received-equals-aggregate-sent-in-closed-session
+capacity=16 distribution=all-match result=PASS
+capacity=16 distribution=all-non-match result=PASS
+capacity=16 distribution=sparse-match result=PASS
+capacity=16 distribution=dense-match result=PASS
+capacity=16 distribution=equal-price result=PASS
+capacity=16 distribution=extreme-price result=PASS
+capacity=16 distribution=random-price result=PASS
+capacity=16 distribution=low-dummy result=PASS
+capacity=16 distribution=high-dummy result=PASS
+capacity=32 distribution=all-match result=PASS
+capacity=32 distribution=all-non-match result=PASS
+capacity=32 distribution=sparse-match result=PASS
+capacity=32 distribution=dense-match result=PASS
+capacity=32 distribution=equal-price result=PASS
+capacity=32 distribution=extreme-price result=PASS
+capacity=32 distribution=random-price result=PASS
+capacity=32 distribution=low-dummy result=PASS
+capacity=32 distribution=high-dummy result=PASS
+capacity=64 distribution=all-match result=PASS
+capacity=64 distribution=all-non-match result=PASS
+capacity=64 distribution=sparse-match result=PASS
+capacity=64 distribution=dense-match result=PASS
+capacity=64 distribution=equal-price result=PASS
+capacity=64 distribution=extreme-price result=PASS
+capacity=64 distribution=random-price result=PASS
+capacity=64 distribution=low-dummy result=PASS
+capacity=64 distribution=high-dummy result=PASS
+capacity=128 distribution=all-match result=PASS
+capacity=128 distribution=all-non-match result=PASS
+capacity=128 distribution=sparse-match result=PASS
+capacity=128 distribution=dense-match result=PASS
+capacity=128 distribution=equal-price result=PASS
+capacity=128 distribution=extreme-price result=PASS
+capacity=128 distribution=random-price result=PASS
+capacity=128 distribution=low-dummy result=PASS
+capacity=128 distribution=high-dummy result=PASS
+capacity=256 distribution=all-match result=PASS
+capacity=256 distribution=all-non-match result=PASS
+capacity=256 distribution=sparse-match result=PASS
+capacity=256 distribution=dense-match result=PASS
+capacity=256 distribution=equal-price result=PASS
+capacity=256 distribution=extreme-price result=PASS
+capacity=256 distribution=random-price result=PASS
+capacity=256 distribution=low-dummy result=PASS
+capacity=256 distribution=high-dummy result=PASS
+{"schema_version":"SAIB-RETF/S3.3.2/suite-summary/1","capacities":[16,32,64,128,256],"distributions":["all-match","all-non-match","sparse-match","dense-match","equal-price","extreme-price","random-price","low-dummy","high-dummy"],"real_mpc_executions":45,"real_mpc_processes":135,"shape_groups_passed":5,"shape_groups_total":5,"input_jsonl_sha256":"165fb110be9b376edf88ce2b90b2cd720e39530eee36b10393bec49adfdc79a8","result":"PASS"}
+ended_at_utc=2026-07-25T08:53:42Z
+exit_code=0

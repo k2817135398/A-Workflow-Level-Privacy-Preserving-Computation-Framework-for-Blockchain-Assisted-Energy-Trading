@@ -1,0 +1,7 @@
+schema_version=SAIB-RETF/S4.0/netem-kernel-smoke/1
+netem_controller=localhost:5500/saib-retf/netem-controller@sha256:6218c691715eddfcded7e78403be20355649ee8faad2c602303277ce2319b77d
+helper_container=c9b1320362f218a0eec3e9c7a0fdafb8e1899d117d0915dbab16b8e69dbed5df
+helper_image_id=sha256:cae69e86e0b024efa293e7ae0c5760d765422473437056e03d7d941fdf24dd8e
+active_qdisc=qdisc netem 8007: root refcnt 17 limit 1000 delay 5ms  1ms
+post_cleanup_qdisc=qdisc noqueue 0: root refcnt 2
+result=PASS

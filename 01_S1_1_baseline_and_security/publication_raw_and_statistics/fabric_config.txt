@@ -1,0 +1,74 @@
+PP-RETF REVISION FABRIC CONFIGURATION
+Verified: 2026-07-13
+====================================
+
+Consensus and block cutting
+---------------------------
+Consensus: etcdraft (Raft)
+Orderers: 1 (orderer.orderer.retf.com)
+BatchTimeout: 2 s
+BatchSize.MaxMessageCount: 10
+BatchSize.AbsoluteMaxBytes: 10 MB
+BatchSize.PreferredMaxBytes: 512 KB
+
+Organizations, peers, channels, and database
+--------------------------------------------
+Organizations: NSWMSP, QLDMSP, SAMSP
+Peers: 3 per organization, 9 total
+CouchDB: one CouchDB 3.3.3 container per peer, 9 total
+Application channels: 2 (intra-channel and extra-channel)
+Measured channel: intra-channel
+All 20 network/chaincode containers use Docker bridge network retf_network.
+
+Chaincode deployment and endorsement
+------------------------------------
+Chaincode: retf-core, chaincode as a service (CCaaS)
+Measured intra-channel version/sequence: 1.0.0 / sequence 7
+Measured endorsement rule: OR('NSWMSP.member')
+extra-channel remained at sequence 1 and was not used for the revision E4-E7 data.
+
+The E5/E6 controlled ablation entry point is admin-gated and writes only
+BenchmarkWorkflow receipt keys. It never writes production User, Order, Trade,
+or MatchingResult state. Production P5 uses the real state-mutating workflow.
+
+Query type
+----------
+The chaincode uses CouchDB rich queries for listing/search operations and direct
+GetState reads for key-addressed verification/state calls. It is inaccurate to
+describe every operation as a rich query. E6 additionally evaluates QSCC
+GetBlockByTxID after timing to obtain each commit's block number and transaction
+count; this block lookup is outside workflow latency and throughput timing.
+
+Fabric Gateway paths
+--------------------
+All current E4, E5, and E6 network measurements use Fabric Gateway Go SDK v1.7.1.
+
+Evaluate path:
+  Windows Go benchmark -> Gateway evaluate -> peer proposal evaluation ->
+  CCaaS chaincode -> CouchDB/direct state and/or cryptographic verification ->
+  response. Evaluate does not enter ordering or wait for block commit.
+
+Submit path:
+  Windows Go benchmark -> proposal construction -> endorsement -> orderer
+  submission -> block cutting -> peer validation/CouchDB commit -> commit status.
+  Every recorded submit waits for commit status.
+
+E4 exposes proposal construction, endorsement, orderer submission, event/commit
+wait, and total wall-clock spans. The nine measured operations are:
+  evaluate: regional membership verification, global membership verification,
+  preprocessing signature verification, committee signature-set verification,
+  full result consistency verification, and finalized-state query;
+  submit: task submission, preprocessing evidence submission, and result
+  finalization.
+
+All E4 query samples validate a true business result, and every submit sample
+checks committed state. E4 contains 50 recorded samples plus five discarded
+warm-ups for each operation. SubmitTask and SubmitResult both wait for commit.
+
+Block-time interpretation
+-------------------------
+With serial or sub-MaxMessageCount traffic, the fixed 2-second BatchTimeout is the
+dominant submit cost. E6 shows the expected discontinuity: concurrency 1 and 5
+produce blocks containing 1 and 5 transactions, while concurrency 10/20 fill the
+configured 10-message blocks. This is reported as a Fabric block-cutting effect,
+not as a cryptographic-computation speedup.

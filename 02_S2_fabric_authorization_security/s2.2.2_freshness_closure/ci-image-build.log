@@ -1,0 +1,126 @@
+command=bash experiments/v2/runners/build-s2.2.1-production-images.sh experiments/v2/raw/s2.2.2-live
+release_commit=6e4eb94c695632413820a5716ae76da05054ac79
+docker_build_option=--no-cache
+docker_layer_cached=false
+started_at_utc=2026-07-16T02:42:23Z
+   Compiling saib-anoncred v0.1.0 (/mnt/g/paperexper/retf/saib-retf/prototype/anoncred-rust)
+    Finished `release` profile [optimized] target(s) in 52.81s
+   Compiling saib-anoncred v0.1.0 (/mnt/g/paperexper/retf/saib-retf/prototype/anoncred-rust)
+   Compiling saib-anoncred-verifier-ffi v0.2.0 (/mnt/g/paperexper/retf/saib-retf/prototype/anoncred-rust/verifier-ffi)
+    Finished `release` profile [optimized] target(s) in 24.25s
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile.holder
+#1 transferring dockerfile: 191B 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load .dockerignore
+#2 transferring context: 2B 0.0s done
+#2 DONE 0.0s
+
+#3 [internal] load build context
+#3 transferring context: 6.54MB 0.1s done
+#3 DONE 0.1s
+
+#4 [1/3] COPY rootfs/ /
+#4 DONE 0.0s
+
+#5 [2/3] COPY s2_2_holder /usr/local/bin/s2_2_holder
+#5 DONE 0.1s
+
+#6 [3/3] WORKDIR /data
+#6 DONE 0.0s
+
+#7 exporting to image
+#7 exporting layers 0.0s done
+#7 writing image sha256:9a5dc0a37b8937fb9d94dafd385db4aa81bc2d211c5f4b4e42f7d73fd8bddd55 done
+#7 naming to docker.io/library/saib-s2.2.2-holder:local done
+#7 DONE 0.1s
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile.global-issuer
+#1 transferring dockerfile: 219B 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load .dockerignore
+#2 transferring context: 2B 0.0s done
+#2 DONE 0.0s
+
+#3 [internal] load build context
+#3 transferring context: 2.51MB 0.1s done
+#3 DONE 0.1s
+
+#4 [1/3] COPY rootfs/ /
+#4 DONE 0.0s
+
+#5 [2/3] COPY s2_2_global_issuer /usr/local/bin/s2_2_global_issuer
+#5 DONE 0.0s
+
+#6 [3/3] WORKDIR /data
+#6 DONE 0.0s
+
+#7 exporting to image
+#7 exporting layers
+#7 exporting layers 0.0s done
+#7 writing image sha256:0f5bfea2899daa63a0fa1e83e91a27aab1857a0755c75d52bf2a8e418680937f done
+#7 naming to docker.io/library/saib-s2.2.2-global-issuer:local done
+#7 DONE 0.1s
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile.regional-issuer
+#1 transferring dockerfile: 227B 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load .dockerignore
+#2 transferring context: 2B 0.0s done
+#2 DONE 0.0s
+
+#3 [internal] load build context
+#3 transferring context: 2.51MB 0.1s done
+#3 DONE 0.1s
+
+#4 [1/3] COPY rootfs/ /
+#4 DONE 0.0s
+
+#5 [2/3] COPY s2_2_regional_issuer /usr/local/bin/s2_2_regional_issuer
+#5 DONE 0.0s
+
+#6 [3/3] WORKDIR /data
+#6 DONE 0.0s
+
+#7 exporting to image
+#7 exporting layers 0.0s done
+#7 writing image sha256:da3f2f272e7fe564cd84c8e9bf1cb672bcd7722689afa5c7e15b61ae66a349e5 done
+#7 naming to docker.io/library/saib-s2.2.2-regional-issuer:local done
+#7 DONE 0.1s
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile.s2.2.1-verifier
+#1 transferring dockerfile: 348B 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load .dockerignore
+#2 transferring context: 2B 0.0s done
+#2 DONE 0.0s
+
+#3 [internal] load build context
+#3 transferring context: 10.10MB 0.1s done
+#3 DONE 0.1s
+
+#4 [1/3] COPY rootfs/ /
+#4 DONE 0.0s
+
+#5 [2/3] COPY s2.2.1-verifier-service /usr/local/bin/s2.2.1-verifier-service
+#5 DONE 0.0s
+
+#6 [3/3] COPY libsaib_anoncred_verifier.so /usr/local/lib/libsaib_anoncred_verifier.so
+#6 DONE 0.0s
+
+#7 exporting to image
+#7 exporting layers 0.0s done
+#7 writing image sha256:1f90d2b1b672522e979a0556d9981fab1e31752da00111d8b994faee1b6767e8 done
+#7 naming to docker.io/library/saib-s2.2.2-verifier:local done
+#7 DONE 0.1s
+S2.2.2 production image build and scans PASS
+ended_at_utc=2026-07-16T02:43:47Z
+exit_code=0

@@ -1,0 +1,53 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "saib-retf-s3.1.1-patched-mp-spdz-source",
+  "documentNamespace": "https://saib-retf.invalid/spdx/s3.1.1/1126007badb9b9f2cd4820fb8675d1fb5918c072",
+  "creationInfo": {
+    "created": "2026-07-22T08:29:07Z",
+    "creators": [
+      "Tool: generate-s3.0.1-s3.1.1-release.py"
+    ]
+  },
+  "packages": [
+    {
+      "name": "MP-SPDZ local S3.1.1 sanitizer candidate",
+      "SPDXID": "SPDXRef-Package-MPSPDZ-S311",
+      "versionInfo": "v0.4.3+saib-s3.1.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-3-Clause",
+      "licenseDeclared": "BSD-3-Clause",
+      "copyrightText": "NOASSERTION",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "246cddee7f6fbe0c0603df88bf502ea0d2252e95c2facefb90e21aa31282b2a4"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PERSISTENT-ID",
+          "referenceType": "gitoid",
+          "referenceLocator": "git:1126007badb9b9f2cd4820fb8675d1fb5918c072"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-Package-MPSPDZ-S311"
+    }
+  ],
+  "annotations": [
+    {
+      "annotationDate": "2026-07-22T08:29:07Z",
+      "annotationType": "OTHER",
+      "annotator": "Tool: generate-s3.0.1-s3.1.1-release.py",
+      "comment": "Source/fork SBOM only; no patched production binary is claimed or analyzed."
+    }
+  ]
+}

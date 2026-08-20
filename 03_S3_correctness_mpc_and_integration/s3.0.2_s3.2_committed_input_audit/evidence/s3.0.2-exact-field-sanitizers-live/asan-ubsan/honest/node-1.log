@@ -1,0 +1,14 @@
+Using statistical security parameter 40
+Trying to run 255-bit computation (256-bit representation)
+Math/Integer.h:154:57: runtime error: signed integer overflow: 2147483648 * 4294967296 cannot be represented in type 'long'
+    #0 0x7f588d863ddf in Integer::operator*(Integer const&) const /tmp/saib-s3.0.2-exact-sanitizers-ixPpKS/backend-asan-ubsan/./Math/Integer.h:154:57
+    #1 0x7f588d863ddf in Instruction::execute_regint(ArithmeticProcessor&, MemoryPart<Integer>&) const /tmp/saib-s3.0.2-exact-sanitizers-ixPpKS/backend-asan-ubsan/Processor/Instruction.cpp:69:9
+    #2 0x55b39c1fee50 in void Program::execute_with_errors<MaliciousRep3Share<gfp_<0, 4>>, MaliciousRep3Share<gf2n_long>>(Processor<MaliciousRep3Share<gfp_<0, 4>>, MaliciousRep3Share<gf2n_long>>&) const /tmp/saib-s3.0.2-exact-sanitizers-ixPpKS/backend-asan-ubsan/./Processor/Instruction.hpp:1571:21
+    #3 0x55b39c1ceeb9 in void Program::execute<MaliciousRep3Share<gfp_<0, 4>>, MaliciousRep3Share<gf2n_long>>(Processor<MaliciousRep3Share<gfp_<0, 4>>, MaliciousRep3Share<gf2n_long>>&) const /tmp/saib-s3.0.2-exact-sanitizers-ixPpKS/backend-asan-ubsan/./Processor/Instruction.hpp:1501:11
+    #4 0x55b39c1bdc3c in thread_info<MaliciousRep3Share<gfp_<0, 4>>, MaliciousRep3Share<gf2n_long>>::Sub_Main_Func() /tmp/saib-s3.0.2-exact-sanitizers-ixPpKS/backend-asan-ubsan/./Processor/Online-Thread.hpp:289:26
+    #5 0x55b39c1b746d in thread_info<MaliciousRep3Share<gfp_<0, 4>>, MaliciousRep3Share<gf2n_long>>::Main_Func(void*) /tmp/saib-s3.0.2-exact-sanitizers-ixPpKS/backend-asan-ubsan/./Processor/Online-Thread.hpp:430:14
+    #6 0x55b39baad7ac in asan_thread_start(void*) asan_interceptors.cpp.o
+    #7 0x7f588c9c7aa3  (/lib/x86_64-linux-gnu/libc.so.6+0x9caa3) (BuildId: 8e9fd827446c24067541ac5390e6f527fb5947bb)
+    #8 0x7f588ca54c6b  (/lib/x86_64-linux-gnu/libc.so.6+0x129c6b) (BuildId: 8e9fd827446c24067541ac5390e6f527fb5947bb)
+
+SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior Math/Integer.h:154:57 

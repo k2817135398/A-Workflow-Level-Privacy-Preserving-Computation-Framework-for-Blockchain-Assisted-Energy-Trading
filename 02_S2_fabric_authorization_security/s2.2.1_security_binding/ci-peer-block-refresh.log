@@ -1,0 +1,102 @@
+S2.2.1 PEER BLOCK REFRESH
+START 2026-07-15T13:29:28.620026Z
+PEER_BLOCK_REFRESH_START 2026-07-15T13:29:28.622473Z
+COMMAND ["docker", "exec", "-e", "CORE_PEER_LOCALMSPID=NSWMSP", "-e", "CORE_PEER_MSPCONFIGPATH=/tmp/s2.2.1-relay-msp", "-e", "CORE_PEER_ADDRESS=peer0.nsw.retf.com:7051", "-e", "CORE_PEER_TLS_ENABLED=true", "-e", "CORE_PEER_TLS_ROOTCERT_FILE=/tmp/s221-nsw-peer-tls-ca.crt", "peer0.nsw.retf.com", "peer", "channel", "getinfo", "-c", "extra-channel"]
+START 2026-07-15T13:29:28.630624Z
+[34m2026-07-15 13:29:28.777 UTC 0001 INFO[0m [channelCmd] [34;1mInitCmdFactory[0m -> Endorser and orderer connections initialized
+Blockchain info: {"height":59,"currentBlockHash":"2/2aPR08K6ZrL4949pv0IV9U07BXh66cSLySgd1jBAM=","previousBlockHash":"UpNq+rt0i0QSPpqWXITfKPaAGq00v46Fbto9nJT67BE="}
+END 2026-07-15T13:29:28.794035Z
+EXIT_CODE 0
+COMMAND ["docker", "exec", "-e", "CORE_PEER_LOCALMSPID=NSWMSP", "-e", "CORE_PEER_MSPCONFIGPATH=/tmp/s2.2.1-relay-msp", "-e", "CORE_PEER_ADDRESS=peer0.nsw.retf.com:7051", "-e", "CORE_PEER_TLS_ENABLED=true", "-e", "CORE_PEER_TLS_ROOTCERT_FILE=/tmp/s221-nsw-peer-tls-ca.crt", "peer0.nsw.retf.com", "sh", "-c", "CTOR=$(printf '%s' 'eyJBcmdzIjpbIkdldEJsb2NrQnlOdW1iZXIiLCJleHRyYS1jaGFubmVsIiwiNDgiXX0=' | base64 -d); peer chaincode query -C extra-channel -n qscc --hex -c \"$CTOR\" > /tmp/s221-peer-48.hex"]
+START 2026-07-15T13:29:28.800752Z
+END 2026-07-15T13:29:28.966878Z
+EXIT_CODE 0
+COMMAND ["docker", "cp", "peer0.nsw.retf.com:/tmp/s221-peer-48.hex", "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.1-live/fabric-peer-blocks/00000000000000000048.hex"]
+START 2026-07-15T13:29:28.971961Z
+END 2026-07-15T13:29:29.053038Z
+EXIT_CODE 0
+COMMAND ["docker", "exec", "-e", "CORE_PEER_LOCALMSPID=NSWMSP", "-e", "CORE_PEER_MSPCONFIGPATH=/tmp/s2.2.1-relay-msp", "-e", "CORE_PEER_ADDRESS=peer0.nsw.retf.com:7051", "-e", "CORE_PEER_TLS_ENABLED=true", "-e", "CORE_PEER_TLS_ROOTCERT_FILE=/tmp/s221-nsw-peer-tls-ca.crt", "peer0.nsw.retf.com", "sh", "-c", "CTOR=$(printf '%s' 'eyJBcmdzIjpbIkdldEJsb2NrQnlOdW1iZXIiLCJleHRyYS1jaGFubmVsIiwiNDkiXX0=' | base64 -d); peer chaincode query -C extra-channel -n qscc --hex -c \"$CTOR\" > /tmp/s221-peer-49.hex"]
+START 2026-07-15T13:29:29.101101Z
+END 2026-07-15T13:29:29.292522Z
+EXIT_CODE 0
+COMMAND ["docker", "cp", "peer0.nsw.retf.com:/tmp/s221-peer-49.hex", "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.1-live/fabric-peer-blocks/00000000000000000049.hex"]
+START 2026-07-15T13:29:29.297728Z
+END 2026-07-15T13:29:29.363591Z
+EXIT_CODE 0
+COMMAND ["docker", "exec", "-e", "CORE_PEER_LOCALMSPID=NSWMSP", "-e", "CORE_PEER_MSPCONFIGPATH=/tmp/s2.2.1-relay-msp", "-e", "CORE_PEER_ADDRESS=peer0.nsw.retf.com:7051", "-e", "CORE_PEER_TLS_ENABLED=true", "-e", "CORE_PEER_TLS_ROOTCERT_FILE=/tmp/s221-nsw-peer-tls-ca.crt", "peer0.nsw.retf.com", "sh", "-c", "CTOR=$(printf '%s' 'eyJBcmdzIjpbIkdldEJsb2NrQnlOdW1iZXIiLCJleHRyYS1jaGFubmVsIiwiNTAiXX0=' | base64 -d); peer chaincode query -C extra-channel -n qscc --hex -c \"$CTOR\" > /tmp/s221-peer-50.hex"]
+START 2026-07-15T13:29:29.398077Z
+END 2026-07-15T13:29:29.596619Z
+EXIT_CODE 0
+COMMAND ["docker", "cp", "peer0.nsw.retf.com:/tmp/s221-peer-50.hex", "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.1-live/fabric-peer-blocks/00000000000000000050.hex"]
+START 2026-07-15T13:29:29.602263Z
+END 2026-07-15T13:29:29.660564Z
+EXIT_CODE 0
+COMMAND ["docker", "exec", "-e", "CORE_PEER_LOCALMSPID=NSWMSP", "-e", "CORE_PEER_MSPCONFIGPATH=/tmp/s2.2.1-relay-msp", "-e", "CORE_PEER_ADDRESS=peer0.nsw.retf.com:7051", "-e", "CORE_PEER_TLS_ENABLED=true", "-e", "CORE_PEER_TLS_ROOTCERT_FILE=/tmp/s221-nsw-peer-tls-ca.crt", "peer0.nsw.retf.com", "sh", "-c", "CTOR=$(printf '%s' 'eyJBcmdzIjpbIkdldEJsb2NrQnlOdW1iZXIiLCJleHRyYS1jaGFubmVsIiwiNTEiXX0=' | base64 -d); peer chaincode query -C extra-channel -n qscc --hex -c \"$CTOR\" > /tmp/s221-peer-51.hex"]
+START 2026-07-15T13:29:29.689777Z
+END 2026-07-15T13:29:29.863580Z
+EXIT_CODE 0
+COMMAND ["docker", "cp", "peer0.nsw.retf.com:/tmp/s221-peer-51.hex", "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.1-live/fabric-peer-blocks/00000000000000000051.hex"]
+START 2026-07-15T13:29:29.868712Z
+END 2026-07-15T13:29:29.926711Z
+EXIT_CODE 0
+COMMAND ["docker", "exec", "-e", "CORE_PEER_LOCALMSPID=NSWMSP", "-e", "CORE_PEER_MSPCONFIGPATH=/tmp/s2.2.1-relay-msp", "-e", "CORE_PEER_ADDRESS=peer0.nsw.retf.com:7051", "-e", "CORE_PEER_TLS_ENABLED=true", "-e", "CORE_PEER_TLS_ROOTCERT_FILE=/tmp/s221-nsw-peer-tls-ca.crt", "peer0.nsw.retf.com", "sh", "-c", "CTOR=$(printf '%s' 'eyJBcmdzIjpbIkdldEJsb2NrQnlOdW1iZXIiLCJleHRyYS1jaGFubmVsIiwiNTIiXX0=' | base64 -d); peer chaincode query -C extra-channel -n qscc --hex -c \"$CTOR\" > /tmp/s221-peer-52.hex"]
+START 2026-07-15T13:29:29.953260Z
+END 2026-07-15T13:29:30.137039Z
+EXIT_CODE 0
+COMMAND ["docker", "cp", "peer0.nsw.retf.com:/tmp/s221-peer-52.hex", "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.1-live/fabric-peer-blocks/00000000000000000052.hex"]
+START 2026-07-15T13:29:30.144029Z
+END 2026-07-15T13:29:30.218201Z
+EXIT_CODE 0
+COMMAND ["docker", "exec", "-e", "CORE_PEER_LOCALMSPID=NSWMSP", "-e", "CORE_PEER_MSPCONFIGPATH=/tmp/s2.2.1-relay-msp", "-e", "CORE_PEER_ADDRESS=peer0.nsw.retf.com:7051", "-e", "CORE_PEER_TLS_ENABLED=true", "-e", "CORE_PEER_TLS_ROOTCERT_FILE=/tmp/s221-nsw-peer-tls-ca.crt", "peer0.nsw.retf.com", "sh", "-c", "CTOR=$(printf '%s' 'eyJBcmdzIjpbIkdldEJsb2NrQnlOdW1iZXIiLCJleHRyYS1jaGFubmVsIiwiNTMiXX0=' | base64 -d); peer chaincode query -C extra-channel -n qscc --hex -c \"$CTOR\" > /tmp/s221-peer-53.hex"]
+START 2026-07-15T13:29:30.254800Z
+END 2026-07-15T13:29:30.428010Z
+EXIT_CODE 0
+COMMAND ["docker", "cp", "peer0.nsw.retf.com:/tmp/s221-peer-53.hex", "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.1-live/fabric-peer-blocks/00000000000000000053.hex"]
+START 2026-07-15T13:29:30.433089Z
+END 2026-07-15T13:29:30.495121Z
+EXIT_CODE 0
+COMMAND ["docker", "exec", "-e", "CORE_PEER_LOCALMSPID=NSWMSP", "-e", "CORE_PEER_MSPCONFIGPATH=/tmp/s2.2.1-relay-msp", "-e", "CORE_PEER_ADDRESS=peer0.nsw.retf.com:7051", "-e", "CORE_PEER_TLS_ENABLED=true", "-e", "CORE_PEER_TLS_ROOTCERT_FILE=/tmp/s221-nsw-peer-tls-ca.crt", "peer0.nsw.retf.com", "sh", "-c", "CTOR=$(printf '%s' 'eyJBcmdzIjpbIkdldEJsb2NrQnlOdW1iZXIiLCJleHRyYS1jaGFubmVsIiwiNTQiXX0=' | base64 -d); peer chaincode query -C extra-channel -n qscc --hex -c \"$CTOR\" > /tmp/s221-peer-54.hex"]
+START 2026-07-15T13:29:30.522977Z
+END 2026-07-15T13:29:30.690457Z
+EXIT_CODE 0
+COMMAND ["docker", "cp", "peer0.nsw.retf.com:/tmp/s221-peer-54.hex", "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.1-live/fabric-peer-blocks/00000000000000000054.hex"]
+START 2026-07-15T13:29:30.695846Z
+END 2026-07-15T13:29:30.762747Z
+EXIT_CODE 0
+COMMAND ["docker", "exec", "-e", "CORE_PEER_LOCALMSPID=NSWMSP", "-e", "CORE_PEER_MSPCONFIGPATH=/tmp/s2.2.1-relay-msp", "-e", "CORE_PEER_ADDRESS=peer0.nsw.retf.com:7051", "-e", "CORE_PEER_TLS_ENABLED=true", "-e", "CORE_PEER_TLS_ROOTCERT_FILE=/tmp/s221-nsw-peer-tls-ca.crt", "peer0.nsw.retf.com", "sh", "-c", "CTOR=$(printf '%s' 'eyJBcmdzIjpbIkdldEJsb2NrQnlOdW1iZXIiLCJleHRyYS1jaGFubmVsIiwiNTUiXX0=' | base64 -d); peer chaincode query -C extra-channel -n qscc --hex -c \"$CTOR\" > /tmp/s221-peer-55.hex"]
+START 2026-07-15T13:29:30.793889Z
+END 2026-07-15T13:29:30.951780Z
+EXIT_CODE 0
+COMMAND ["docker", "cp", "peer0.nsw.retf.com:/tmp/s221-peer-55.hex", "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.1-live/fabric-peer-blocks/00000000000000000055.hex"]
+START 2026-07-15T13:29:30.956708Z
+END 2026-07-15T13:29:31.032397Z
+EXIT_CODE 0
+COMMAND ["docker", "exec", "-e", "CORE_PEER_LOCALMSPID=NSWMSP", "-e", "CORE_PEER_MSPCONFIGPATH=/tmp/s2.2.1-relay-msp", "-e", "CORE_PEER_ADDRESS=peer0.nsw.retf.com:7051", "-e", "CORE_PEER_TLS_ENABLED=true", "-e", "CORE_PEER_TLS_ROOTCERT_FILE=/tmp/s221-nsw-peer-tls-ca.crt", "peer0.nsw.retf.com", "sh", "-c", "CTOR=$(printf '%s' 'eyJBcmdzIjpbIkdldEJsb2NrQnlOdW1iZXIiLCJleHRyYS1jaGFubmVsIiwiNTYiXX0=' | base64 -d); peer chaincode query -C extra-channel -n qscc --hex -c \"$CTOR\" > /tmp/s221-peer-56.hex"]
+START 2026-07-15T13:29:31.051529Z
+END 2026-07-15T13:29:31.206665Z
+EXIT_CODE 0
+COMMAND ["docker", "cp", "peer0.nsw.retf.com:/tmp/s221-peer-56.hex", "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.1-live/fabric-peer-blocks/00000000000000000056.hex"]
+START 2026-07-15T13:29:31.211332Z
+END 2026-07-15T13:29:31.254702Z
+EXIT_CODE 0
+COMMAND ["docker", "exec", "-e", "CORE_PEER_LOCALMSPID=NSWMSP", "-e", "CORE_PEER_MSPCONFIGPATH=/tmp/s2.2.1-relay-msp", "-e", "CORE_PEER_ADDRESS=peer0.nsw.retf.com:7051", "-e", "CORE_PEER_TLS_ENABLED=true", "-e", "CORE_PEER_TLS_ROOTCERT_FILE=/tmp/s221-nsw-peer-tls-ca.crt", "peer0.nsw.retf.com", "sh", "-c", "CTOR=$(printf '%s' 'eyJBcmdzIjpbIkdldEJsb2NrQnlOdW1iZXIiLCJleHRyYS1jaGFubmVsIiwiNTciXX0=' | base64 -d); peer chaincode query -C extra-channel -n qscc --hex -c \"$CTOR\" > /tmp/s221-peer-57.hex"]
+START 2026-07-15T13:29:31.283616Z
+END 2026-07-15T13:29:31.442386Z
+EXIT_CODE 0
+COMMAND ["docker", "cp", "peer0.nsw.retf.com:/tmp/s221-peer-57.hex", "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.1-live/fabric-peer-blocks/00000000000000000057.hex"]
+START 2026-07-15T13:29:31.447351Z
+END 2026-07-15T13:29:31.503485Z
+EXIT_CODE 0
+COMMAND ["docker", "exec", "-e", "CORE_PEER_LOCALMSPID=NSWMSP", "-e", "CORE_PEER_MSPCONFIGPATH=/tmp/s2.2.1-relay-msp", "-e", "CORE_PEER_ADDRESS=peer0.nsw.retf.com:7051", "-e", "CORE_PEER_TLS_ENABLED=true", "-e", "CORE_PEER_TLS_ROOTCERT_FILE=/tmp/s221-nsw-peer-tls-ca.crt", "peer0.nsw.retf.com", "sh", "-c", "CTOR=$(printf '%s' 'eyJBcmdzIjpbIkdldEJsb2NrQnlOdW1iZXIiLCJleHRyYS1jaGFubmVsIiwiNTgiXX0=' | base64 -d); peer chaincode query -C extra-channel -n qscc --hex -c \"$CTOR\" > /tmp/s221-peer-58.hex"]
+START 2026-07-15T13:29:31.529001Z
+END 2026-07-15T13:29:31.681650Z
+EXIT_CODE 0
+COMMAND ["docker", "cp", "peer0.nsw.retf.com:/tmp/s221-peer-58.hex", "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.1-live/fabric-peer-blocks/00000000000000000058.hex"]
+START 2026-07-15T13:29:31.687166Z
+END 2026-07-15T13:29:31.733725Z
+EXIT_CODE 0
+COMMAND ["/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.1-live/s2.2.1-block-scan", "--blocks", "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.1-live/fabric-peer-blocks", "--relay-cert", "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.1-live/public-config/relay-certificate.pem", "--output", "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.1-live/s2.2.1-fabric-block-scan-peer-source.jsonl", "--markers", "UserID,OwnerID,wallet,link_secret,issuer_state,BEGIN PRIVATE KEY,Admin@nsw.retf.com"]
+START 2026-07-15T13:29:31.770630Z
+END 2026-07-15T13:29:32.279361Z
+EXIT_CODE 0
+PEER_BLOCK_REFRESH_END 2026-07-15T13:29:32.319353Z RANGE 48-58 BLOCK_RECORDS 21 VALID 8 INVALID 13 TESTS 31/31

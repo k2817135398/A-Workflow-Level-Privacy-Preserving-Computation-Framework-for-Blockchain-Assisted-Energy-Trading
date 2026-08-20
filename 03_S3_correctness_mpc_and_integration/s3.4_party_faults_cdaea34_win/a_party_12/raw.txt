@@ -1,0 +1,16 @@
+attack_id=A-PARTY-12
+started_at_utc=2026-07-26T13:34:39.717865Z
+release_commit=cdaea345cc6ca012c37ace2d8f19e69d56c51fea
+oci_digest=sha256:532a8ccbe2aa5cc8d5d789fd51537f7e03d80aa07758509b75d4e14f13d76079
+production_gate=true
+COMMAND ["go", "test", "-count=1", "-run", "TestGateRejectsSubstitutionAndStaleContext/session", "./mpc/inputbinding"]
+START 2026-07-26T13:34:39.717865Z
+STDOUT
+ok  	github.com/retf/source/v2/mpc/inputbinding	0.179s
+
+STDERR
+
+END 2026-07-26T13:34:42.810548Z
+EXIT_CODE 0
+actual_result=REJECT
+ended_at_utc=2026-07-26T13:34:42.810548Z

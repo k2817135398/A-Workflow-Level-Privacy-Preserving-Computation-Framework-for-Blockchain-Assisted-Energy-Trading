@@ -1,0 +1,53 @@
+{
+  "schema_version": "saib-retf-s3.0.1-s3.1.1-provenance/1",
+  "generated_at_utc": "2026-07-22T08:29:09.234588+00:00",
+  "release_commit": "b8ec6876b5d4acdfd74a3cc21808f2bce57fe366",
+  "release_tag": "s3.1.1-binding-qualification-audit",
+  "release_tag_type": "annotated",
+  "branch": "s3.0.1-s3.1.1-binding-qualification",
+  "s2_base_tag": "s2.2.2.1-audit",
+  "s2_base_commit": "724095cc35da4dad5d73e7605891c60418c7be34",
+  "merge_base": "724095cc35da4dad5d73e7605891c60418c7be34",
+  "git_status_porcelain_v1": [],
+  "source_archive_sha256": "ca1cb0798b9073163941f6eed9b8587c4c40733862371a216b0a5c9e17dcbc6c",
+  "git_bundle_sha256": "3ad2aa8b42a754950d15aa7a7a1ae333e91a791c3045272cc10ccba3c92170d7",
+  "backend": "MP-SPDZ v0.4.3 malicious-rep-ring bounded smoke",
+  "backend_commit": "26a605368e40fed3a7e9cee78c9a3f4390b85eb5",
+  "backend_source_archive_sha256": "386399a869fd53d99402614c0c39954c092cfac7b4e18fa453024664083a4ab7",
+  "local_backend_fork_commit": "1126007badb9b9f2cd4820fb8675d1fb5918c072",
+  "local_backend_fork_tag": "saib-retf-s3.1.1-patched-v0.4.3",
+  "local_backend_fork_bundle_sha256": "8b19b0340120b7ddef8fa3e36a4f43d29e6ef3754297d703172e83541b8e4ffb",
+  "local_backend_fork_diff_sha256": "bcc06760966f92084bf5658b25c2b78fa026a67568af4ca5b657fad8292766f6",
+  "local_backend_fork_source_archive_sha256": "246cddee7f6fbe0c0603df88bf502ea0d2252e95c2facefb90e21aa31282b2a4",
+  "patches": [
+    {
+      "path": "G:/paperexper/retf/saib-retf/prototype/mp-spdz/patches/0001-octetstream-null-safe-first-append.patch",
+      "sha256": "cdc999e5c75f6eff0923d4af7c0bfa85c9322b66b4f3df1f2cec58a971826db7"
+    },
+    {
+      "path": "G:/paperexper/retf/saib-retf/prototype/mp-spdz/patches/0002-avx-memcpy-use-unaligned-safe-byte-cursors.patch",
+      "sha256": "3932b330a30ff25718ca4e90d0d64371eb70d3c3232ade1dcc237283ccaee5dd"
+    }
+  ],
+  "runtime_trace_payload_sha256": "fcd0ee5e0e49ea240c71a15eebf4a3f5316891562f057e1fb38565a7c8bc98c3",
+  "runtime_trace_file_sha256": "2c14d047ec9c98fa9b7a6761a1bd6f0ffd99a4cb7b9b5f4da524c5135a029002",
+  "runtime_trace_attestation": "Ed25519 ephemeral test-only release evidence key",
+  "authorization_or_input_attestor_key_reused_for_trace": false,
+  "tests": {
+    "registered_go_events": "92/92 PASS",
+    "dual_replay": "7/7 PASS",
+    "concurrent_replay": "1 ACCEPT, 31 REJECT",
+    "go_statement_coverage": "80.8%",
+    "bounded_mutants": "10/10 killed, 0 non-viable",
+    "patched_sanitizer_matrix": "6/6 PASS, zero findings",
+    "unpatched_upstream_ubsan": "FAIL reproduced and retained"
+  },
+  "status": {
+    "s2_publication_artifact": "GO after addendum v1.1",
+    "s3_0_1_cross_layer_design": "FROZEN",
+    "s3_1_1_bounded_sanitizer_qualification": "PASS FOR LOCAL PATCH SERIES",
+    "s3_distributed_mpc": "PARTIAL / NO-GO",
+    "end_to_end_privacy_claim": "NOT YET ESTABLISHED",
+    "formal_performance_experiments": "STILL NO-GO"
+  }
+}

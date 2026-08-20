@@ -1,0 +1,58 @@
+{
+  "schema_version": "S3.3/input-output-classification/1",
+  "protocol_version": "SAIB-RETF/F_MATCH/1",
+  "supported_capacities_per_side": [16, 32, 64, 128, 256],
+  "classifications": [
+    "public",
+    "secret-shared",
+    "commitment-only",
+    "on-chain",
+    "off-chain-only",
+    "final-output-permitted"
+  ],
+  "input_fields": [
+    {"name": "task_id", "type": "string", "classification": ["public", "on-chain"]},
+    {"name": "session_id", "type": "string", "classification": ["public", "on-chain"]},
+    {"name": "epoch", "type": "uint64", "classification": ["public", "on-chain"]},
+    {"name": "capacity", "type": "uint16", "classification": ["public", "on-chain"]},
+    {"name": "domain", "type": "derived digest", "classification": ["public", "commitment-only", "on-chain"]},
+    {"name": "role", "type": "buy|sell", "classification": ["public", "off-chain-only"]},
+    {"name": "price", "type": "uint64 fixed point", "classification": ["secret-shared", "off-chain-only"]},
+    {"name": "quantity", "type": "uint64 fixed point", "classification": ["secret-shared", "off-chain-only"]},
+    {"name": "credit_score", "type": "uint64 fixed point", "classification": ["secret-shared", "off-chain-only"]},
+    {"name": "credit_constraint", "type": "uint64 fixed point", "classification": ["secret-shared", "off-chain-only"]},
+    {"name": "order_nonce", "type": "32-byte digest", "classification": ["secret-shared", "off-chain-only"]},
+    {"name": "expiry", "type": "int64 unix seconds", "classification": ["public", "commitment-only", "on-chain"]},
+    {"name": "task_pseudonym", "type": "48-byte compressed point", "classification": ["commitment-only", "off-chain-only", "final-output-permitted"]},
+    {"name": "order_handle", "type": "32-byte digest", "classification": ["public", "commitment-only", "on-chain"]},
+    {"name": "order_commitment", "type": "32-byte digest", "classification": ["public", "commitment-only", "on-chain"]},
+    {"name": "input_commitment_root", "type": "32-byte digest", "classification": ["public", "commitment-only", "on-chain"]},
+    {"name": "mpc_program_digest", "type": "32-byte digest", "classification": ["public", "on-chain"]},
+    {"name": "session_runtime_root", "type": "32-byte digest", "classification": ["public", "on-chain"]}
+  ],
+  "output_fields": [
+    {"name": "clearing_or_matching_price", "type": "uint64 fixed point", "classification": ["off-chain-only", "final-output-permitted"]},
+    {"name": "matched_quantity", "type": "uint64 fixed point", "classification": ["off-chain-only", "final-output-permitted"]},
+    {"name": "buyer_task_pseudonym", "type": "48-byte compressed point", "classification": ["off-chain-only", "final-output-permitted"]},
+    {"name": "seller_task_pseudonym", "type": "48-byte compressed point", "classification": ["off-chain-only", "final-output-permitted"]},
+    {"name": "matched_pairs", "type": "fixed array[2*capacity-1]", "classification": ["off-chain-only", "final-output-permitted"]},
+    {"name": "aggregate_volume", "type": "uint64", "classification": ["commitment-only", "off-chain-only", "final-output-permitted"]},
+    {"name": "unmatched_quantity", "type": "fixed residual array[2*capacity]", "classification": ["off-chain-only", "final-output-permitted"]},
+    {"name": "result_commitment", "type": "32-byte digest", "classification": ["public", "commitment-only", "on-chain"]},
+    {"name": "result_digest", "type": "32-byte digest", "classification": ["public", "commitment-only", "on-chain"]},
+    {"name": "committee_signature_input", "type": "32-byte digest", "classification": ["public", "commitment-only", "on-chain"]}
+  ],
+  "forbidden_on_chain": [
+    "UserID",
+    "OwnerID",
+    "holder enrollment identity",
+    "wallet",
+    "link secret",
+    "stable cross-task identifier",
+    "plaintext price",
+    "plaintext quantity",
+    "plaintext credit",
+    "raw share",
+    "complete private matching table"
+  ]
+}

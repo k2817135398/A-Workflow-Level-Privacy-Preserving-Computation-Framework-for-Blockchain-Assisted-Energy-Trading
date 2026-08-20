@@ -1,0 +1,183 @@
+{
+  "schema_version": "saib-retf-s3.0.1-bounded-mutation-report/1",
+  "scope": "explicitly selected S2/S3 binding, dual-replay and proof-gate mutants; not a whole-program mutation score",
+  "selected_mutants": 10,
+  "viable_mutants": 10,
+  "non_viable_mutants": 0,
+  "killed_mutants": 10,
+  "all_viable_killed": true,
+  "mutants": [
+    {
+      "mutant_id": 1,
+      "name": "channel_binding_removed",
+      "source_anchor": "binding.ChannelID != gate.ChannelID",
+      "replacement": "false",
+      "viable": true,
+      "killed": true,
+      "exit_code": 1,
+      "test_output": [
+        "--- FAIL: TestIndependentAdmissionChecksCannotBeBypassedByMatchingRequesterFields (0.00s)",
+        "    --- FAIL: TestIndependentAdmissionChecksCannotBeBypassedByMatchingRequesterFields/local_channel_configuration (0.00s)",
+        "        binding_test.go:333: requester-aligned channel substitution bypassed local channel configuration",
+        "FAIL",
+        "FAIL\tgithub.com/retf/source/v2/mpc/inputbinding\t0.902s",
+        "FAIL"
+      ]
+    },
+    {
+      "mutant_id": 2,
+      "name": "input_record_digest_check_removed",
+      "source_anchor": "inputRecord.ValidateDigest() != nil",
+      "replacement": "false",
+      "viable": true,
+      "killed": true,
+      "exit_code": 1,
+      "test_output": [
+        "--- FAIL: TestIndependentAdmissionChecksCannotBeBypassedByMatchingRequesterFields (0.00s)",
+        "    --- FAIL: TestIndependentAdmissionChecksCannotBeBypassedByMatchingRequesterFields/record_digest (0.00s)",
+        "        binding_test.go:362: input record with invalid canonical digest was accepted",
+        "FAIL",
+        "FAIL\tgithub.com/retf/source/v2/mpc/inputbinding\t1.444s",
+        "FAIL"
+      ]
+    },
+    {
+      "mutant_id": 3,
+      "name": "input_record_link_removed",
+      "source_anchor": "inputRecord.AuthorizationRecordDigest != binding.AuthorizationRecordDigest",
+      "replacement": "false",
+      "viable": true,
+      "killed": true,
+      "exit_code": 1,
+      "test_output": [
+        "--- FAIL: TestIndependentAdmissionChecksCannotBeBypassedByMatchingRequesterFields (0.00s)",
+        "    --- FAIL: TestIndependentAdmissionChecksCannotBeBypassedByMatchingRequesterFields/S2_link (0.00s)",
+        "        binding_test.go:342: input record not linked to the requested S2 authorization was accepted",
+        "FAIL",
+        "FAIL\tgithub.com/retf/source/v2/mpc/inputbinding\t0.791s",
+        "FAIL"
+      ]
+    },
+    {
+      "mutant_id": 4,
+      "name": "input_uniqueness_replaced_by_nonce",
+      "source_anchor": "binding.MPCSessionID, binding.OrderHandle,",
+      "replacement": "binding.MPCSessionID, binding.Nonce,",
+      "viable": true,
+      "killed": true,
+      "exit_code": 1,
+      "test_output": [
+        "--- FAIL: TestDualReplayKeysRejectChangedNonceAndNonceReuse (0.00s)",
+        "    --- FAIL: TestDualReplayKeysRejectChangedNonceAndNonceReuse/same_order_different_nonce (0.00s)",
+        "        binding_test.go:466: same session/order/node/share index was accepted with a new nonce",
+        "FAIL",
+        "FAIL\tgithub.com/retf/source/v2/mpc/inputbinding\t0.714s",
+        "FAIL"
+      ]
+    },
+    {
+      "mutant_id": 5,
+      "name": "nonce_uniqueness_replaced_by_order",
+      "source_anchor": "fmt.Sprint(binding.AttestorKeyVersion), binding.Nonce}",
+      "replacement": "fmt.Sprint(binding.AttestorKeyVersion), binding.OrderHandle}",
+      "viable": true,
+      "killed": true,
+      "exit_code": 1,
+      "test_output": [
+        "--- FAIL: TestDualReplayKeysRejectChangedNonceAndNonceReuse (0.00s)",
+        "    --- FAIL: TestDualReplayKeysRejectChangedNonceAndNonceReuse/different_order_reused_nonce (0.00s)",
+        "        binding_test.go:483: attestor nonce reuse was accepted for a different order",
+        "FAIL",
+        "FAIL\tgithub.com/retf/source/v2/mpc/inputbinding\t0.770s",
+        "FAIL"
+      ]
+    },
+    {
+      "mutant_id": 6,
+      "name": "order_commitment_check_removed",
+      "source_anchor": "inputRecord.OrderCommitment != binding.OrderCommitment",
+      "replacement": "false",
+      "viable": true,
+      "killed": true,
+      "exit_code": 1,
+      "test_output": [
+        "--- FAIL: TestGateRejectsSubstitutionAndStaleContext (0.00s)",
+        "    --- FAIL: TestGateRejectsSubstitutionAndStaleContext/order_commitment (0.00s)",
+        "        binding_test.go:431: order commitment attack accepted",
+        "FAIL",
+        "FAIL\tgithub.com/retf/source/v2/mpc/inputbinding\t0.721s",
+        "FAIL"
+      ]
+    },
+    {
+      "mutant_id": 7,
+      "name": "signature_verification_removed",
+      "source_anchor": "!ed25519.Verify(key.PublicKey, message, envelope.Signature)",
+      "replacement": "ed25519.Verify(key.PublicKey, message, envelope.Signature) && false",
+      "viable": true,
+      "killed": true,
+      "exit_code": 1,
+      "test_output": [
+        "--- FAIL: TestGateRejectsSubstitutionAndStaleContext (0.00s)",
+        "    --- FAIL: TestGateRejectsSubstitutionAndStaleContext/signature (0.00s)",
+        "        binding_test.go:431: signature attack accepted",
+        "FAIL",
+        "FAIL\tgithub.com/retf/source/v2/mpc/inputbinding\t0.762s",
+        "FAIL"
+      ]
+    },
+    {
+      "mutant_id": 8,
+      "name": "merkle_root_compare_removed",
+      "source_anchor": "subtle.ConstantTimeCompare(provided, current[:]) != 1",
+      "replacement": "false",
+      "viable": true,
+      "killed": true,
+      "exit_code": 1,
+      "test_output": [
+        "--- FAIL: TestGateRejectsSubstitutionAndStaleContext (0.01s)",
+        "    --- FAIL: TestGateRejectsSubstitutionAndStaleContext/user_Merkle_proof (0.00s)",
+        "        binding_test.go:431: user Merkle proof attack accepted",
+        "    --- FAIL: TestGateRejectsSubstitutionAndStaleContext/credit_Merkle_proof (0.00s)",
+        "        binding_test.go:431: credit Merkle proof attack accepted",
+        "FAIL",
+        "FAIL\tgithub.com/retf/source/v2/mpc/inputbinding\t1.301s",
+        "FAIL"
+      ]
+    },
+    {
+      "mutant_id": 9,
+      "name": "binding_set_check_removed",
+      "source_anchor": "session.BindingSetDigest != binding.BindingSetDigest",
+      "replacement": "false",
+      "viable": true,
+      "killed": true,
+      "exit_code": 1,
+      "test_output": [
+        "--- FAIL: TestIndependentAdmissionChecksCannotBeBypassedByMatchingRequesterFields (0.00s)",
+        "    --- FAIL: TestIndependentAdmissionChecksCannotBeBypassedByMatchingRequesterFields/session_binding_set (0.00s)",
+        "        binding_test.go:352: session with a different binding set was accepted",
+        "FAIL",
+        "FAIL\tgithub.com/retf/source/v2/mpc/inputbinding\t0.750s",
+        "FAIL"
+      ]
+    },
+    {
+      "mutant_id": 10,
+      "name": "consistency_verifier_removed",
+      "source_anchor": "if err := gate.Consistency.Verify(inputRecord, binding, envelope); err != nil {",
+      "replacement": "if err := gate.Consistency.Verify(inputRecord, binding, envelope); err != nil && false {",
+      "viable": true,
+      "killed": true,
+      "exit_code": 1,
+      "test_output": [
+        "--- FAIL: TestIndependentAdmissionChecksCannotBeBypassedByMatchingRequesterFields (0.00s)",
+        "    --- FAIL: TestIndependentAdmissionChecksCannotBeBypassedByMatchingRequesterFields/consistency_verifier (0.00s)",
+        "        binding_test.go:369: cryptographic consistency verifier rejection was ignored",
+        "FAIL",
+        "FAIL\tgithub.com/retf/source/v2/mpc/inputbinding\t0.869s",
+        "FAIL"
+      ]
+    }
+  ]
+}

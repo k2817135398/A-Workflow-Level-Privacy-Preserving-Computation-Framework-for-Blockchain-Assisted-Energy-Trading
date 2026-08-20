@@ -1,0 +1,189 @@
+{
+  "schema_version": "saib-retf-s2.2.2.1-recursive-private-material-scan/1",
+  "root": "G:\\paperexper\\retf\\benchmarks\\results\\expand\\s3.0-s3.1-first-batch-20260722T044000Z",
+  "files_inspected_including_nested": 1430,
+  "archives_expanded": 3,
+  "allowed_fixture_hits": [
+    {
+      "path": "s3.1-source.tar.gz::saib-retf/experiments/v2/statistics/test_validate_formal_input.py",
+      "inner_path": "experiments/v2/statistics/test_validate_formal_input.py",
+      "sha256": "73739a16006ece7272aaf40d0f4894ac44462a085c465e2030152a2491efbff4"
+    },
+    {
+      "path": "s3.1-source.tar.gz::saib-retf/experiments/v2/testdata/trace-attestor-s2-test-private.pem",
+      "inner_path": "experiments/v2/testdata/trace-attestor-s2-test-private.pem",
+      "sha256": "53b5b4e09a81feec8442b91a5d082d1069b10e35e453bb329dd9e94f96677684"
+    }
+  ],
+  "forbidden_private_material_hits": [],
+  "opaque_git_bundles": [],
+  "git_history_scans": [
+    {
+      "path": "s3.1-git.bundle",
+      "report": {
+        "schema_version": "saib-retf-s2.2.2.1-git-history-private-scan/1",
+        "bundle_path": "G:\\paperexper\\retf\\benchmarks\\results\\expand\\s3.0-s3.1-first-batch-20260722T044000Z\\s3.1-git.bundle",
+        "bundle_sha256": "d487db52ed3cf389b81f1b470280a58b9487f6cd0db5239ef56994a0bb8710c7",
+        "bundle_verify_passed": true,
+        "bundle_verify_output": [
+          "The bundle contains these 2 refs:",
+          "b19ab4e52987353e44f3b7962cf1468a7dae0554 refs/tags/s3.1-prototype-audit",
+          "55343587a57c2f3d733e43d60b32d3113e8ef76a refs/tags/s2.2.2.1-audit",
+          "The bundle records a complete history.",
+          "The bundle uses this hash algorithm: sha1",
+          "G:/paperexper/retf/benchmarks/results/expand/s3.0-s3.1-first-batch-20260722T044000Z/s3.1-git.bundle is okay"
+        ],
+        "bundle_list_heads": [
+          {
+            "object_id": "b19ab4e52987353e44f3b7962cf1468a7dae0554",
+            "ref": "refs/tags/s3.1-prototype-audit"
+          },
+          {
+            "object_id": "55343587a57c2f3d733e43d60b32d3113e8ef76a",
+            "ref": "refs/tags/s2.2.2.1-audit"
+          }
+        ],
+        "refs_count": 2,
+        "refs": [
+          {
+            "name": "refs/tags/s2.2.2.1-audit",
+            "object_id": "55343587a57c2f3d733e43d60b32d3113e8ef76a",
+            "object_type": "tag"
+          },
+          {
+            "name": "refs/tags/s3.1-prototype-audit",
+            "object_id": "b19ab4e52987353e44f3b7962cf1468a7dae0554",
+            "object_type": "tag"
+          }
+        ],
+        "reachable_commits": 23,
+        "reachable_objects": 621,
+        "object_type_counts": {
+          "blob": 330,
+          "commit": 23,
+          "tag": 2,
+          "tree": 266
+        },
+        "reachable_blobs": 330,
+        "scanned_unique_blobs": 330,
+        "scanned_blob_bytes": 2012462,
+        "private_key_blocks": 3,
+        "private_key_findings": [
+          {
+            "blob_oid": "0defe39c7762dfc3a7d74e077ec686f9b1faec39",
+            "blob_sha256": "73739a16006ece7272aaf40d0f4894ac44462a085c465e2030152a2491efbff4",
+            "blob_size": 15743,
+            "historical_paths": [
+              "experiments/v2/statistics/test_validate_formal_input.py"
+            ],
+            "key_public_spki_sha256": "44ca0cf355aa2087a6e328a63978b5aa873cff3079691b9f1f8e74bb2e80953c",
+            "approved_test_fixture": true,
+            "approvals": [
+              {
+                "path": "experiments/v2/statistics/test_validate_formal_input.py",
+                "purpose": "embedded deterministic formal-admission test fixture only; historical file hashes may differ"
+              }
+            ],
+            "parse_error": ""
+          },
+          {
+            "blob_oid": "27f45a2550ea9c5b0f5cf7d5c3321ef1fec522d8",
+            "blob_sha256": "1abb498ce237276390845ae9466fbe8216a515bec64c09f0ec732def79f36179",
+            "blob_size": 15531,
+            "historical_paths": [
+              "experiments/v2/statistics/test_validate_formal_input.py"
+            ],
+            "key_public_spki_sha256": "44ca0cf355aa2087a6e328a63978b5aa873cff3079691b9f1f8e74bb2e80953c",
+            "approved_test_fixture": true,
+            "approvals": [
+              {
+                "path": "experiments/v2/statistics/test_validate_formal_input.py",
+                "purpose": "embedded deterministic formal-admission test fixture only; historical file hashes may differ"
+              }
+            ],
+            "parse_error": ""
+          },
+          {
+            "blob_oid": "5a86a57d1b2a3ef1cfb609442ae9a9be945768ae",
+            "blob_sha256": "53b5b4e09a81feec8442b91a5d082d1069b10e35e453bb329dd9e94f96677684",
+            "blob_size": 119,
+            "historical_paths": [
+              "experiments/v2/testdata/trace-attestor-s2-test-private.pem"
+            ],
+            "key_public_spki_sha256": "44ca0cf355aa2087a6e328a63978b5aa873cff3079691b9f1f8e74bb2e80953c",
+            "approved_test_fixture": true,
+            "approvals": [
+              {
+                "path": "experiments/v2/testdata/trace-attestor-s2-test-private.pem",
+                "purpose": "formal-admission test fixture only; never a production attestor"
+              }
+            ],
+            "parse_error": ""
+          }
+        ],
+        "approved_test_fixture_key_blocks": 3,
+        "production_private_key_findings": 0,
+        "malformed_private_key_blocks": 0,
+        "certificate_blocks": 0,
+        "certificate_findings": [],
+        "sensitive_path_findings": [
+          {
+            "path": "experiments/v2/testdata/trace-attestor-s2-test-private.pem",
+            "blob_oid": "5a86a57d1b2a3ef1cfb609442ae9a9be945768ae",
+            "blob_sha256": "53b5b4e09a81feec8442b91a5d082d1069b10e35e453bb329dd9e94f96677684",
+            "classification": "approved_test_private_fixture",
+            "contains_private_key": true
+          },
+          {
+            "path": "docs/TRUSTED_CREDENTIAL_REGISTRY.md",
+            "blob_oid": "756ed6253f3525de188072e107ffe8cecea7ee0d",
+            "blob_sha256": "42e22101951b4009434e2ae1decdb4d19073676be9beee6210f638bd6e870fdb",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "experiments/v2/configs/s2.2.2.1-private-fixture-allowlist.json",
+            "blob_oid": "9606fdd217e84d9e300dbb2d7bc5f5d38b6ab2c8",
+            "blob_sha256": "282f0f05e1f34d712f5669c58a8abc8782ae6137a84aad93fb3e959701036026",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "experiments/v2/statistics/recursive_private_material_scan.py",
+            "blob_oid": "9d444879c3cd95b44bf4a0c6f7df0c617fb79176",
+            "blob_sha256": "0dde8456cfd4dbb047d69a379430e652778b07db21976d0e98cf6dacbc8c2b96",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "experiments/v2/configs/s2.2.2.1-private-fixture-allowlist.json",
+            "blob_oid": "aef1aa21d0af4f86a60debd76c693b00bb062cf9",
+            "blob_sha256": "faa393e6a043d40c744bd512a9573a1100b9b55158aad9ba89c04ce25c411451",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "experiments/v2/statistics/git_history_private_scan.py",
+            "blob_oid": "b595a576744525005dd756d0908784b32098e1e1",
+            "blob_sha256": "a443e49d1e8e417aa292645b87d360c726c6a24ac30951ac4be2db6e91c35a07",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          },
+          {
+            "path": "experiments/v2/statistics/recursive_private_material_scan.py",
+            "blob_oid": "f60b84effb225219dbf8eb915f122aa6c4fc2141",
+            "blob_sha256": "56fc522acf263e237171cfa1712e5e3c41181fc6c681835b392cd257ca192e8c",
+            "classification": "source_or_document_reference",
+            "contains_private_key": false
+          }
+        ],
+        "unreviewed_sensitive_path_findings": [],
+        "fixture_admission": "historical path + public-key SPKI SHA-256 fingerprint + declared test purpose",
+        "all_reachable_blobs_scanned": true,
+        "passed": true
+      }
+    }
+  ],
+  "allowlist_mode": "working/archive files: exact path + file SHA-256; Git history keys: path + public-key SPKI SHA-256 + test purpose",
+  "passed": true
+}

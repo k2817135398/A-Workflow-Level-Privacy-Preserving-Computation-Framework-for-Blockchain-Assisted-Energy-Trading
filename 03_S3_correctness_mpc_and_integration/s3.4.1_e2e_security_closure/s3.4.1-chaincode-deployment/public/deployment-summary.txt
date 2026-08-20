@@ -1,0 +1,11 @@
+chaincode=s2-privacy-222
+channel=extra-channel
+version=3.4.1
+sequence=2
+endorsement_policy=AND('NSWMSP.member','QLDMSP.member','SAMS.member')
+instances=3
+ccaas_mutual_tls=true
+state_preserved_from_sequence=1
+image=saib-s3.4.1-authorization-chaincode:local
+image_id=sha256:b690a5dd3d717f793050f8fa9d81f65bc0c2acf7472b7c4cc5eebc0af2a23503
+release_commit=e310a58e5ef96f85d743dc1bd78a3f4a7774c98a

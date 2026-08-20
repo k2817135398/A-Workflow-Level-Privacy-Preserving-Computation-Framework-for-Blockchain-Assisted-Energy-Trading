@@ -1,0 +1,54 @@
+structured_public_statement_property_cases=256
+structured_ffi_request_property_cases=512
+=== GATE rust_structured_property_cases ===
+command=cargo test --manifest-path /mnt/g/paperexper/retf/saib-retf/prototype/anoncred-rust/Cargo.toml --locked --test structured_fuzz -- --test-threads=1 
+started_at_utc=2026-07-16T04:00:19Z
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 2.50s
+     Running tests/structured_fuzz.rs (prototype/anoncred-rust/target/debug/deps/structured_fuzz-373abb66aa1eb35c)
+
+running 2 tests
+test structured_ffi_request_fuzz_never_panics_or_accepts_invalid_shape ... ok
+test structured_public_statement_fuzz_fails_closed ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.84s
+
+ended_at_utc=2026-07-16T04:00:23Z
+exit_code=0
+
+=== GATE go_task_domain_fuzz ===
+command=bash -lc cd\ \'/mnt/g/paperexper/retf/saib-retf/source/v2\'\ \&\&\ go\ test\ ./privacy/securitybinding\ -run=\'\^\$\'\ -fuzz=FuzzCanonicalTaskDomainChangesWithTask\ -fuzztime=5s 
+started_at_utc=2026-07-16T04:00:24Z
+fuzz: elapsed: 0s, gathering baseline coverage: 0/7 completed
+fuzz: elapsed: 0s, gathering baseline coverage: 7/7 completed, now fuzzing with 16 workers
+fuzz: elapsed: 3s, execs: 143329 (47680/sec), new interesting: 0 (total: 7)
+fuzz: elapsed: 5s, execs: 252454 (51482/sec), new interesting: 0 (total: 7)
+PASS
+ok  	github.com/retf/source/v2/privacy/securitybinding	5.135s
+ended_at_utc=2026-07-16T04:00:29Z
+exit_code=0
+
+=== GATE go_statement_fuzz ===
+command=bash -lc cd\ \'/mnt/g/paperexper/retf/saib-retf/source/v2\'\ \&\&\ go\ test\ ./fabric/privacychaincode221\ -run=\'\^\$\'\ -fuzz=FuzzSignedStatementMutationFailsClosed\ -fuzztime=5s 
+started_at_utc=2026-07-16T04:00:29Z
+fuzz: elapsed: 0s, gathering baseline coverage: 0/39 completed
+fuzz: elapsed: 0s, gathering baseline coverage: 39/39 completed, now fuzzing with 16 workers
+fuzz: elapsed: 3s, execs: 27321 (9090/sec), new interesting: 2 (total: 41)
+fuzz: elapsed: 5s, execs: 49545 (10526/sec), new interesting: 2 (total: 41)
+PASS
+ok  	github.com/retf/source/v2/fabric/privacychaincode221	5.164s
+ended_at_utc=2026-07-16T04:00:36Z
+exit_code=0
+
+=== GATE go_ffi_fuzz ===
+command=bash -lc cd\ \'/mnt/g/paperexper/retf/saib-retf/source/v2\'\ \&\&\ go\ test\ -tags=saib_real\ ./crypto/anoncred/ffi\ -run=\'\^\$\'\ -fuzz=FuzzRustVerifierStructuredRequestNeverReturnsInvalidSuccess\ -fuzztime=5s 
+started_at_utc=2026-07-16T04:00:36Z
+fuzz: elapsed: 0s, gathering baseline coverage: 0/89 completed
+fuzz: elapsed: 0s, gathering baseline coverage: 89/89 completed, now fuzzing with 16 workers
+fuzz: elapsed: 3s, execs: 81172 (27054/sec), new interesting: 8 (total: 97)
+fuzz: elapsed: 6s, execs: 296287 (71694/sec), new interesting: 14 (total: 103)
+fuzz: elapsed: 6s, execs: 296287 (0/sec), new interesting: 14 (total: 103)
+PASS
+ok  	github.com/retf/source/v2/crypto/anoncred/ffi	6.073s
+ended_at_utc=2026-07-16T04:00:43Z
+exit_code=0
+

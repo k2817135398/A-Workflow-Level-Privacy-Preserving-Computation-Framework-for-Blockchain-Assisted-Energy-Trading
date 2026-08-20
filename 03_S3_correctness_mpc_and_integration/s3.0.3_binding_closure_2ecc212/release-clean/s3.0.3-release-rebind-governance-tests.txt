@@ -1,0 +1,15 @@
+=== RUN   TestAuthorizationCanCreateOnlyOneInputAcrossSessionHandleAndNonceChanges
+=== RUN   TestAuthorizationCanCreateOnlyOneInputAcrossSessionHandleAndNonceChanges/second_record
+    registry_test.go:164: attack=second record authorization=e838116b087382d4b201ad789f0a0813f08d6da2c42b7cade0dd660e91ffb856 candidate_session=session-2 candidate_handle=ef1e5814a8ca0b9d0463ecd5b25b01e3158b7794bc78a278aeacc70ca9710d44 result=REJECT reason="S2 authorization already has an S3 input record"
+=== RUN   TestAuthorizationCanCreateOnlyOneInputAcrossSessionHandleAndNonceChanges/changed_handle
+    registry_test.go:164: attack=changed handle authorization=e838116b087382d4b201ad789f0a0813f08d6da2c42b7cade0dd660e91ffb856 candidate_session=session-3 candidate_handle=dadc3d20e485a15be2638c3decda24004e4f0aed69fd136c77603c73ef8d6e36 result=REJECT reason="S2 authorization already has an S3 input record"
+--- PASS: TestAuthorizationCanCreateOnlyOneInputAcrossSessionHandleAndNonceChanges (0.00s)
+    --- PASS: TestAuthorizationCanCreateOnlyOneInputAcrossSessionHandleAndNonceChanges/second_record (0.00s)
+    --- PASS: TestAuthorizationCanCreateOnlyOneInputAcrossSessionHandleAndNonceChanges/changed_handle (0.00s)
+=== RUN   TestAbortRetryRequiresGovernedMonotonicRebind
+    registry_test.go:196: attack=unsigned_rebind attempt=2 result=REJECT reason="governance authorization signature is invalid"
+    registry_test.go:227: attack=governed_handle_substitution attempt=2 result=REJECT reason="governed rebind violates the monotonic authorization/order identity"
+    registry_test.go:232: transition=governed_rebind attempt=2 parent=e880a594fecffd28a8790d3fe84237875e8bf4935978925554aea0d04a38503a result=ACCEPT
+--- PASS: TestAbortRetryRequiresGovernedMonotonicRebind (0.00s)
+PASS
+ok  	github.com/retf/source/v2/fabric/mpcinputregistry	0.006s

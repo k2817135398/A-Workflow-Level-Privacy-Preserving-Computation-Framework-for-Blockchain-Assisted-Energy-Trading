@@ -1,0 +1,106 @@
+{
+  "program": {
+    "schema_version": "saib-retf-s3.0.3.2-program-profile/1",
+    "mp_spdz_version": "v0.4.3",
+    "upstream_commit": "26a605368e40fed3a7e9cee78c9a3f4390b85eb5",
+    "patch_set_digest": "84bc30cb430659b4c25ce28b34dd239d2855d4c8cb8e8bec4bfe1c84b5bbfae4",
+    "oci_manifest_digest": "sha256:60398b53cdc74e1ab06dbe3cb76ecb39b66e3d8ea3f1b0512c53003fb3d67389",
+    "executable_digest": "d6e0218a8ab831f2d4ef849ff37c8cf8195c220df55bb8d946a9aa4edd348769",
+    "bytecode_digest": "354f0d2ba1456f9399763baec610168f6d9ba044929978600eb758816ae81d7e",
+    "schedule_digest": "9068ec7c51db31f73c544182d6ee2052a1ff86b07491733341e68173faf3a7d3",
+    "libspdz_digest": "fb88d472bc10a5515281d526d05d6ccfa7c1101077c781580629f13f2ffa55b4",
+    "dependencies": [
+      {
+        "soname": "libboost_filesystem.so.1.74.0",
+        "sha256": "a10dfbe2887ce546c4c2deceb87406d7d01691a9678f3c137576ab0d790c12c4"
+      },
+      {
+        "soname": "libboost_iostreams.so.1.74.0",
+        "sha256": "155ca5949e25eb125c8c694e6572c161357ee3ec23cae88fe3f0168070920fff"
+      },
+      {
+        "soname": "libbz2.so.1.0",
+        "sha256": "167c55ec73ba39583b716cd81fd5d98372ec30653d8fdd7eeaa4755a14b167d0"
+      },
+      {
+        "soname": "libcrypto.so.3",
+        "sha256": "454132002fc1b6b33e5b3bfae27a3a926c32f47f510aa5dd0aae237d15e07c90"
+      },
+      {
+        "soname": "libgcc_s.so.1",
+        "sha256": "1ef1ac69781aa698ccda6fa6c9a4ece50414120dd3c2f7cf94071cff88aa29f0"
+      },
+      {
+        "soname": "libgmp.so.10",
+        "sha256": "40533eb4a19852385d6a3200e74acc10d44e6dee6ff3f987c8f5f32c6ffe7ffe"
+      },
+      {
+        "soname": "libgmpxx.so.4",
+        "sha256": "893dad3eb87efa28820c673d0e99dd7acadb4e4ab27748815ade74c3f08450f2"
+      },
+      {
+        "soname": "liblzma.so.5",
+        "sha256": "ed30ca9426f2fbafb1ca33b5847629b3bdb993d90027c2d03d4915a8aba9676a"
+      },
+      {
+        "soname": "libsodium.so.23",
+        "sha256": "03e83e2f6d626e64739077eb2a3bd02267e9753480040e915f181aa4fba9a6b0"
+      },
+      {
+        "soname": "libssl.so.3",
+        "sha256": "2148a742dcf7b1dd620e4b84e4b8f25a8274952edcdc2dcf2214ae6f3104235b"
+      },
+      {
+        "soname": "libstdc++.so.6",
+        "sha256": "11754c422164c322c1281d7f9751f911f5edd6a96c5496736491884821baa781"
+      },
+      {
+        "soname": "libz.so.1",
+        "sha256": "9a3ba0e5ea7de3d9235322d607d0c73543040dab2419e0e0a800b8ac3c8862dc"
+      },
+      {
+        "soname": "libzstd.so.1",
+        "sha256": "6f3b0b5549b0d8604b2d4302265296627b25158b8bd3a765a9aef2c3d6ec5279"
+      }
+    ],
+    "field_prime": "52435875175126190479447740508185965837690552500527637822603658699938581184513",
+    "security_parameter": 128,
+    "program_name": "saib_committed_input",
+    "fixed_capacity": 16,
+    "algorithm_version": "committed-input/2-no-plaintext-output"
+  },
+  "party": {
+    "schema_version": "saib-retf-s3.0.3.2-party-profile/2",
+    "party_id": 0,
+    "node_id": "committee-0",
+    "internal_ip": "172.31.0.10",
+    "coordinator_ip": "172.31.0.10",
+    "port": 24830,
+    "tls_certificate_digest": "51c9d1b7a293e3e30e7ea7dd3e1411ba6a1e28523cf1b6b433d20589386c4121",
+    "tls_ca_digest": "5dfd1ee9e7e0bbd82c1393faa8320a64b34c0e80a07c8520ef532e496a61b975",
+    "input_directory": "/sessions/P0/Player-Data",
+    "working_directory": "/sessions/P0",
+    "cpu_quota_milli": 1000,
+    "memory_limit_bytes": 536870912,
+    "allowed_environment": [
+      "LANG=C.UTF-8",
+      "TZ=UTC"
+    ]
+  },
+  "session": {
+    "schema_version": "saib-retf-s3.0.3.2-session-runtime-root/1",
+    "task_id": "task-real-s3.0.3.1",
+    "session_id": "s3.0.3.2-real-session",
+    "committee_epoch": 11,
+    "nonce": "d305f973cf0b5b1fbde650b8b473d9bc8a45975e9da64e7b26074256d034cda2",
+    "expires_at_unix": 1784895982,
+    "mpc_input_binding_digest": "26fcd0dc1f06f1499da2ad45312df5f52988607664d466cd5564f90b3ddf9a59",
+    "mpc_program_digest": "98450170fdb9895a814a4b9bb2abc25fdb1eeee229bb550749a6fa9de16926db",
+    "party_runtime_digests": [
+      "bed985c5ec1bdf1b4e8348b6faa7d2095fe9fe259649268cc62555222d97f543",
+      "6ea08604cccb762eb49912cde3f166d2b028648ef6594413c6c9ff437a402238",
+      "67de659888eb601189ad489181a4afaaa3d3db255a7ad451c3703dcda3fdd41f"
+    ],
+    "committee_policy_digest": "038943453f1eb1d7ffbed3b38469e0f7b53f7111dff9761355e6a8eff56e65d9"
+  }
+}

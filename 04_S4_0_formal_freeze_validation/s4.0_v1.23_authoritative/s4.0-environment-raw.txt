@@ -1,0 +1,484 @@
+===== git =====
+COMMAND=git status --porcelain=v1
+
+===== git-log =====
+COMMAND=git show -s --format=fuller HEAD
+commit 559e0bb531b3e4330c532e624d546d616c7849eb
+Author:     SAIB-RETF S1.1 Audit <s1.1-audit@localhost>
+AuthorDate: Sun Aug 2 19:10:38 2026 +0800
+Commit:     SAIB-RETF S1.1 Audit <s1.1-audit@localhost>
+CommitDate: Sun Aug 2 19:10:38 2026 +0800
+
+    release(s4.0): bind timeout fix to v1.23 pipeline
+===== ubuntu =====
+COMMAND=bash -lc cat /etc/os-release; uname -a
+PRETTY_NAME="Ubuntu 24.04.4 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.4 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=noble
+LOGO=ubuntu-logo
+Linux ke 6.18.33.2-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Thu Jun 18 21:54:43 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+===== wsl-kernel-netem =====
+COMMAND=bash -lc uname -r; zcat /proc/config.gz | grep '^CONFIG_NET_SCH_NETEM='; modinfo sch_netem
+6.18.33.2-microsoft-standard-WSL2
+CONFIG_NET_SCH_NETEM=m
+filename:       /lib/modules/6.18.33.2-microsoft-standard-WSL2/kernel/net/sched/sch_netem.ko
+description:    Network characteristics emulator qdisc
+license:        GPL
+alias:          net-sch-netem
+depends:        
+intree:         Y
+name:           sch_netem
+retpoline:      Y
+vermagic:       6.18.33.2-microsoft-standard-WSL2 SMP preempt mod_unload modversions
+===== toolchains =====
+COMMAND=bash -lc git --version; python3 --version; go version; rustc --version; cargo --version; openssl version; clang --version | head -1; gcc --version | head -1
+git version 2.43.0
+Python 3.12.3
+go version go1.22.2 linux/amd64
+rustc 1.85.1 (4eb161250 2025-03-15)
+cargo 1.85.1 (d73d2caf9 2024-12-31)
+OpenSSL 3.0.13 30 Jan 2024 (Library: OpenSSL 3.0.13 30 Jan 2024)
+Ubuntu clang version 18.1.3 (1ubuntu1)
+gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+===== cpu-memory =====
+COMMAND=bash -lc lscpu; free -b
+Architecture:                            x86_64
+CPU op-mode(s):                          32-bit, 64-bit
+Address sizes:                           48 bits physical, 48 bits virtual
+Byte Order:                              Little Endian
+CPU(s):                                  16
+On-line CPU(s) list:                     0-15
+Vendor ID:                               AuthenticAMD
+Model name:                              AMD Ryzen 7 5800H with Radeon Graphics
+CPU family:                              25
+Model:                                   80
+Thread(s) per core:                      2
+Core(s) per socket:                      8
+Socket(s):                               1
+Stepping:                                0
+BogoMIPS:                                6387.83
+Flags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology tsc_reliable nonstop_tsc cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext perfctr_core ssbd ibrs ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr arat npt nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold v_vmsave_vmload umip vaes vpclmulqdq rdpid fsrm
+Virtualization:                          AMD-V
+Hypervisor vendor:                       Microsoft
+Virtualization type:                     full
+L1d cache:                               256 KiB (8 instances)
+L1i cache:                               256 KiB (8 instances)
+L2 cache:                                4 MiB (8 instances)
+L3 cache:                                16 MiB (1 instance)
+NUMA node(s):                            1
+NUMA node0 CPU(s):                       0-15
+Vulnerability Gather data sampling:      Not affected
+Vulnerability Ghostwrite:                Not affected
+Vulnerability Indirect target selection: Not affected
+Vulnerability Itlb multihit:             Not affected
+Vulnerability L1tf:                      Not affected
+Vulnerability Mds:                       Not affected
+Vulnerability Meltdown:                  Not affected
+Vulnerability Mmio stale data:           Not affected
+Vulnerability Old microcode:             Not affected
+Vulnerability Reg file data sampling:    Not affected
+Vulnerability Retbleed:                  Not affected
+Vulnerability Spec rstack overflow:      Vulnerable: Safe RET, no microcode
+Vulnerability Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl
+Vulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnerability Spectre v2:                Mitigation; Retpolines; IBPB conditional; IBRS_FW; STIBP always-on; RSB filling; PBRSB-eIBRS Not affected; BHI Not affected
+Vulnerability Srbds:                     Not affected
+Vulnerability Tsa:                       Vulnerable: No microcode
+Vulnerability Tsx async abort:           Not affected
+Vulnerability Vmscape:                   Not affected
+               total        used        free      shared  buff/cache   available
+Mem:      7190773760  3231584256  1061273600   105799680  3074969600  3959189504
+Swap:     2147483648   238944256  1908539392
+===== docker-version =====
+COMMAND=docker version
+Client:
+ Version:           29.4.2
+ API version:       1.54
+ Go version:        go1.26.2
+ Git commit:        055a478
+ Built:             Fri May  1 01:23:32 2026
+ OS/Arch:           linux/amd64
+ Context:           default
+
+Server: Docker Desktop 4.72.0 (225998)
+ Engine:
+  Version:          29.4.2
+  API version:      1.54 (minimum version 1.40)
+  Go version:       go1.26.2
+  Git commit:       d329809
+  Built:            Fri May  1 01:24:36 2026
+  OS/Arch:          linux/amd64
+  Experimental:     false
+ containerd:
+  Version:          v2.2.3
+  GitCommit:        77c84241c7cbdd9b4eca2591793e3d4f4317c590
+ runc:
+  Version:          1.3.5
+  GitCommit:        v1.3.5-0-g488fc13e
+ docker-init:
+  Version:          0.19.0
+  GitCommit:        de40ad0
+===== docker-info =====
+COMMAND=docker info
+Client:
+ Version:    29.4.2
+ Context:    default
+ Debug Mode: false
+ Plugins:
+  agent: Docker AI Agent Runner (Docker Inc.)
+    Version:  v1.50.0
+    Path:     /usr/local/lib/docker/cli-plugins/docker-agent
+  ai: Docker AI Agent - Ask Gordon (Docker Inc.)
+    Version:  v1.20.2
+    Path:     /usr/local/lib/docker/cli-plugins/docker-ai
+  buildx: Docker Buildx (Docker Inc.)
+    Version:  v0.33.0-desktop.1
+    Path:     /usr/local/lib/docker/cli-plugins/docker-buildx
+  compose: Docker Compose (Docker Inc.)
+    Version:  v5.1.3
+    Path:     /usr/local/lib/docker/cli-plugins/docker-compose
+  debug: Get a shell into any image or container (Docker Inc.)
+    Version:  0.0.47
+    Path:     /usr/local/lib/docker/cli-plugins/docker-debug
+  desktop: Docker Desktop commands (Docker Inc.)
+    Version:  v0.3.0
+    Path:     /usr/local/lib/docker/cli-plugins/docker-desktop
+  dhi: CLI for managing Docker Hardened Images (Docker Inc.)
+    Version:  v0.0.3
+    Path:     /usr/local/lib/docker/cli-plugins/docker-dhi
+  extension: Manages Docker extensions (Docker Inc.)
+    Version:  v0.2.31
+    Path:     /usr/local/lib/docker/cli-plugins/docker-extension
+  init: Creates Docker-related starter files for your project (Docker Inc.)
+    Version:  v1.4.0
+    Path:     /usr/local/lib/docker/cli-plugins/docker-init
+  mcp: Docker MCP Plugin (Docker Inc.)
+    Version:  v0.40.4
+    Path:     /usr/local/lib/docker/cli-plugins/docker-mcp
+  model: Docker Model Runner (Docker Inc.)
+    Version:  v1.1.37
+    Path:     /usr/local/lib/docker/cli-plugins/docker-model
+  offload: Docker Offload (Docker Inc.)
+    Version:  v0.5.85
+    Path:     /usr/local/lib/docker/cli-plugins/docker-offload
+  pass: Docker Pass Secrets Manager Plugin (beta) (Docker Inc.)
+    Version:  v0.0.25
+    Path:     /usr/local/lib/docker/cli-plugins/docker-pass
+  sandbox:  (Docker Inc.)
+    Version:  v0.12.0
+    Path:     /usr/local/lib/docker/cli-plugins/docker-sandbox
+  sbom: View the packaged-based Software Bill Of Materials (SBOM) for an image (Anchore Inc.)
+    Version:  0.6.0
+    Path:     /usr/local/lib/docker/cli-plugins/docker-sbom
+  scout: Docker Scout (Docker Inc.)
+    Version:  v1.20.4
+    Path:     /usr/local/lib/docker/cli-plugins/docker-scout
+
+Server:
+ Containers: 39
+  Running: 32
+  Paused: 0
+  Stopped: 7
+ Images: 92
+ Server Version: 29.4.2
+ Storage Driver: overlay2
+  Backing Filesystem: extfs
+  Supports d_type: true
+  Using metacopy: false
+  Native Overlay Diff: true
+  userxattr: false
+ Logging Driver: json-file
+ Cgroup Driver: cgroupfs
+ Cgroup Version: 2
+ Plugins:
+  Volume: local
+  Network: bridge host ipvlan macvlan null overlay
+  Log: awslogs fluentd gcplogs gelf journald json-file local splunk syslog
+ CDI spec directories:
+  /etc/cdi
+  /var/run/cdi
+ Discovered Devices:
+  cdi: docker.com/gpu=webgpu
+ Swarm: inactive
+ Runtimes: io.containerd.runc.v2 nvidia runc
+ Default Runtime: runc
+ Init Binary: docker-init
+ containerd version: 77c84241c7cbdd9b4eca2591793e3d4f4317c590
+ runc version: v1.3.5-0-g488fc13e
+ init version: de40ad0
+ Security Options:
+  seccomp
+   Profile: builtin
+  cgroupns
+ Kernel Version: 6.18.33.2-microsoft-standard-WSL2
+ Operating System: Docker Desktop
+ OSType: linux
+ Architecture: x86_64
+ CPUs: 16
+ Total Memory: 6.697GiB
+ Name: docker-desktop
+ ID: 0c2005b6-9cae-475d-9f41-5db21465050c
+ Docker Root Dir: /var/lib/docker
+ Debug Mode: false
+ HTTP Proxy: http.docker.internal:3128
+ HTTPS Proxy: http.docker.internal:3128
+ No Proxy: hubproxy.docker.internal
+ Labels:
+  com.docker.desktop.address=unix:///var/run/docker-cli.sock
+ Experimental: false
+ Insecure Registries:
+  hubproxy.docker.internal:5555
+  ::1/128
+  127.0.0.0/8
+ Live Restore Enabled: false
+ Firewall Backend: iptables
+===== docker-ps =====
+COMMAND=docker ps --no-trunc
+CONTAINER ID                                                       IMAGE                                            COMMAND                                                                                                                                                                                                                                                                                                                                          CREATED          STATUS          PORTS                                                                                      NAMES
+4e0d1ca82f6a084e811f94567ef0f12e98b579d865362560a065e107bb60aa2f   saib-s2.2.2-verifier:local                       "/usr/local/bin/s2.2.1-verifier-service --listen 0.0.0.0:48443 --attestor-key /run/secrets/attestor.pem --key-id s222-attestor --key-version 3 --credential-registry /run/config/credentials.json --policy-registry /run/config/policies.json --tls-cert /run/tls/server.pem --tls-key /run/tls/server.key --client-ca /run/tls/client-ca.pem"   12 minutes ago   Up 12 minutes   0.0.0.0:48443->48443/tcp, [::]:48443->48443/tcp                                            s222-verifier
+d7c655a930f4ca17307546821f37904a7bcb6fc4cf51d39e101203e15dbadb44   saib-s4-reference-chaincode:559e0bb531b3         "/chaincode"                                                                                                                                                                                                                                                                                                                                     18 minutes ago   Up 18 minutes   7052/tcp                                                                                   s4-reference-chaincode-sa
+15b02e104cc6be3d3ff7bcc74c8281f605e2fc8c5497de755c1d2fb236b5d762   saib-s4-reference-chaincode:559e0bb531b3         "/chaincode"                                                                                                                                                                                                                                                                                                                                     18 minutes ago   Up 18 minutes   7052/tcp                                                                                   s4-reference-chaincode-qld
+21f099d4e12352e65d578784f0454ac9901d6b833034e27e6bbaa2cc3b895f4e   saib-s4-reference-chaincode:559e0bb531b3         "/chaincode"                                                                                                                                                                                                                                                                                                                                     18 minutes ago   Up 18 minutes   7052/tcp                                                                                   s4-reference-chaincode-nsw
+c02621a8bf4288545676f813226b7451c28ef65b68aa873128dc5b8d9452a7ea   saib-s4.0-finalization-chaincode:559e0bb531b3    "/chaincode"                                                                                                                                                                                                                                                                                                                                     19 minutes ago   Up 19 minutes   7052/tcp                                                                                   s34-chaincode-sa
+b3bff6efa62367c2ffc67d13563666b97c620c1170f6355168daa525ee3ee48b   saib-s4.0-finalization-chaincode:559e0bb531b3    "/chaincode"                                                                                                                                                                                                                                                                                                                                     19 minutes ago   Up 19 minutes   7052/tcp                                                                                   s34-chaincode-qld
+77787363bca57999d196a06b80df5001d610cb2f4c9c30dd80112eb30def1a85   saib-s4.0-finalization-chaincode:559e0bb531b3    "/chaincode"                                                                                                                                                                                                                                                                                                                                     19 minutes ago   Up 19 minutes   7052/tcp                                                                                   s34-chaincode-nsw
+b3d31e8344215278393debad218adb350af74db486690fac5b866313c0baccc1   saib-s4.0-authorization-chaincode:559e0bb531b3   "/chaincode"                                                                                                                                                                                                                                                                                                                                     19 minutes ago   Up 19 minutes   7052/tcp                                                                                   s222-chaincode-sa
+5fb631c90e451c2390e7fa2ba7ca8a2a1af9aa327fbad73d5a38c1940caf1b71   saib-s4.0-authorization-chaincode:559e0bb531b3   "/chaincode"                                                                                                                                                                                                                                                                                                                                     19 minutes ago   Up 19 minutes   7052/tcp                                                                                   s222-chaincode-qld
+3014bf11b1884d4c3711032e79e814d4196de7e63822ca7188ccc47e384605a7   saib-s4.0-authorization-chaincode:559e0bb531b3   "/chaincode"                                                                                                                                                                                                                                                                                                                                     19 minutes ago   Up 19 minutes   7052/tcp                                                                                   s222-chaincode-nsw
+035d8ad9a39d8af33d810bbf7c5c6b5f36afa8b1ae5294125486fa388923533f   moby/buildkit:buildx-stable-1                    "/usr/bin/buildkitd-entrypoint --config /etc/buildkit/buildkitd.toml --allow-insecure-entitlement=network.host"                                                                                                                                                                                                                                  9 days ago       Up 22 hours                                                                                                buildx_buildkit_saib-s30320
+566edc693bb8c6999c77fe92f810f36716caa57d72353cfc70e3b8ac4bce6003   registry:2.8.3                                   "/entrypoint.sh /etc/docker/registry/config.yml"                                                                                                                                                                                                                                                                                                 9 days ago       Up 22 hours     0.0.0.0:5500->5000/tcp, [::]:5500->5000/tcp                                                saib-s3032-registry
+c1588c2dda7038df31523d9afe54d8403f1711d5d584c1eab375a6e352d1b715   moby/buildkit:buildx-stable-1                    "/usr/bin/buildkitd-entrypoint --allow-insecure-entitlement=network.host"                                                                                                                                                                                                                                                                        10 days ago      Up 22 hours                                                                                                buildx_buildkit_saib-s3-audit0
+7261de7666654e7ebb69dc21bd7cd91b5e839f14dd21e3927944c8e76337fe8b   hyperledger/fabric-peer:3.1.4                    "/bin/sh -ec 'rm -rf /tmp/s222-fabric-config\ncp -a /var/hyperledger/fabric/config /tmp/s222-fabric-config\nsed -i '/name: ExpirationCheck/a\\          -\\n            name: TimeWindowCheck' /tmp/s222-fabric-config/core.yaml\nexport FABRIC_CFG_PATH=/tmp/s222-fabric-config\nexec peer node start\n'"                                       2 weeks ago      Up 22 hours     0.0.0.0:9051->7051/tcp, [::]:9051->7051/tcp, 0.0.0.0:9061->7061/tcp, [::]:9061->7061/tcp   peer0.sa.retf.com
+20095ec36894e7c751cbfa09d3becb3492a9dcb469a8133f1bf0238e8d2aac6d   hyperledger/fabric-peer:3.1.4                    "/bin/sh -ec 'rm -rf /tmp/s222-fabric-config\ncp -a /var/hyperledger/fabric/config /tmp/s222-fabric-config\nsed -i '/name: ExpirationCheck/a\\          -\\n            name: TimeWindowCheck' /tmp/s222-fabric-config/core.yaml\nexport FABRIC_CFG_PATH=/tmp/s222-fabric-config\nexec peer node start\n'"                                       2 weeks ago      Up 22 hours     0.0.0.0:7051->7051/tcp, [::]:7051->7051/tcp, 0.0.0.0:7061->7061/tcp, [::]:7061->7061/tcp   peer0.nsw.retf.com
+d3338ab9073b6dce00ad5c67c6fcb61b5f221d996ec3a4fd402b1953408d5e9f   hyperledger/fabric-peer:3.1.4                    "/bin/sh -ec 'rm -rf /tmp/s222-fabric-config\ncp -a /var/hyperledger/fabric/config /tmp/s222-fabric-config\nsed -i '/name: ExpirationCheck/a\\          -\\n            name: TimeWindowCheck' /tmp/s222-fabric-config/core.yaml\nexport FABRIC_CFG_PATH=/tmp/s222-fabric-config\nexec peer node start\n'"                                       2 weeks ago      Up 22 hours     0.0.0.0:8051->7051/tcp, [::]:8051->7051/tcp, 0.0.0.0:8061->7061/tcp, [::]:8061->7061/tcp   peer0.qld.retf.com
+175a6f85d0754a1a79b11fdd9c1846946b2ac162f29bc0b4bd20274ade61a568   hyperledger/fabric-peer:2.5.4                    "peer node start"                                                                                                                                                                                                                                                                                                                                2 months ago     Up 22 hours     0.0.0.0:8251->7051/tcp, [::]:8251->7051/tcp, 0.0.0.0:8261->7061/tcp, [::]:8261->7061/tcp   peer2.qld.retf.com
+a47294037f9bc9f3db4b67f4cd9d85c03f0c30ca94c951e11b66f00c22f2366b   hyperledger/fabric-peer:2.5.4                    "peer node start"                                                                                                                                                                                                                                                                                                                                2 months ago     Up 22 hours     0.0.0.0:7251->7051/tcp, [::]:7251->7051/tcp, 0.0.0.0:7261->7061/tcp, [::]:7261->7061/tcp   peer2.nsw.retf.com
+b935a1c0b5e1d2b9d8c93cfd1f3e8f7f7e6eeed345c60f1d1a44144137490493   hyperledger/fabric-peer:2.5.4                    "peer node start"                                                                                                                                                                                                                                                                                                                                2 months ago     Up 22 hours     0.0.0.0:9151->7051/tcp, [::]:9151->7051/tcp, 0.0.0.0:9161->7061/tcp, [::]:9161->7061/tcp   peer1.sa.retf.com
+f9569606f62ad9431a724f5b707bad8736df266dd2b0e7746db0ac5be1025cb7   hyperledger/fabric-peer:2.5.4                    "peer node start"                                                                                                                                                                                                                                                                                                                                2 months ago     Up 22 hours     0.0.0.0:8151->7051/tcp, [::]:8151->7051/tcp, 0.0.0.0:8161->7061/tcp, [::]:8161->7061/tcp   peer1.qld.retf.com
+1bb385c86f949889c04a7c724033d5a09c84f835d4db8a00debb82d163391811   hyperledger/fabric-peer:2.5.4                    "peer node start"                                                                                                                                                                                                                                                                                                                                2 months ago     Up 22 hours     0.0.0.0:7151->7051/tcp, [::]:7151->7051/tcp, 0.0.0.0:7161->7061/tcp, [::]:7161->7061/tcp   peer1.nsw.retf.com
+f80ffd333930f20e5ac05fb92e00fdbfec8725337b6d83fef17d01243181b292   hyperledger/fabric-peer:2.5.4                    "peer node start"                                                                                                                                                                                                                                                                                                                                2 months ago     Up 22 hours     0.0.0.0:9251->7051/tcp, [::]:9251->7051/tcp, 0.0.0.0:9261->7061/tcp, [::]:9261->7061/tcp   peer2.sa.retf.com
+cf899d8a56584b9b3afc1aa520157d11d9dddda7d7b3e68b9a39543ed3637a91   couchdb:3.3                                      "tini -- /docker-entrypoint.sh /opt/couchdb/bin/couchdb"                                                                                                                                                                                                                                                                                         2 months ago     Up 22 hours     0.0.0.0:5986->5984/tcp, [::]:5986->5984/tcp                                                nsw-couchdb2
+6f87047addb2f33e88047d8c3269e302a33a7da6dc6f423d861ef4f2d5b3d25f   couchdb:3.3                                      "tini -- /docker-entrypoint.sh /opt/couchdb/bin/couchdb"                                                                                                                                                                                                                                                                                         2 months ago     Up 22 hours     0.0.0.0:7986->5984/tcp, [::]:7986->5984/tcp                                                sa-couchdb2
+63552f7b45d21218d731d802b04114fe53baa5e88e747fe649a0f70be4fae0b2   couchdb:3.3                                      "tini -- /docker-entrypoint.sh /opt/couchdb/bin/couchdb"                                                                                                                                                                                                                                                                                         2 months ago     Up 22 hours     0.0.0.0:6985->5984/tcp, [::]:6985->5984/tcp                                                qld-couchdb1
+74de8454915f89127a582489fca651d42955bd29ed085228725f0027a9639e5b   couchdb:3.3                                      "tini -- /docker-entrypoint.sh /opt/couchdb/bin/couchdb"                                                                                                                                                                                                                                                                                         2 months ago     Up 22 hours     0.0.0.0:6986->5984/tcp, [::]:6986->5984/tcp                                                qld-couchdb2
+cd55a3026aeac75f28c164bcda002d8eb9b1ffc7456f8133ce19f4af6652a454   couchdb:3.3                                      "tini -- /docker-entrypoint.sh /opt/couchdb/bin/couchdb"                                                                                                                                                                                                                                                                                         2 months ago     Up 22 hours     0.0.0.0:5985->5984/tcp, [::]:5985->5984/tcp                                                nsw-couchdb1
+dc5cd781d1e320ac1ab7a1aefc3945c9355852a9cc37531cda930d70288a3dfc   couchdb:3.3                                      "tini -- /docker-entrypoint.sh /opt/couchdb/bin/couchdb"                                                                                                                                                                                                                                                                                         2 months ago     Up 22 hours     0.0.0.0:7985->5984/tcp, [::]:7985->5984/tcp                                                sa-couchdb1
+bab5b56fd906d8638d6fe358801e5a368b5a0fb3c76bbf84fbed7eaadb7f8220   couchdb:3.3                                      "tini -- /docker-entrypoint.sh /opt/couchdb/bin/couchdb"                                                                                                                                                                                                                                                                                         2 months ago     Up 22 hours     0.0.0.0:6984->5984/tcp, [::]:6984->5984/tcp                                                qld-couchdb0
+d1e68880b102827a48e6c07cb9e1fd8acb32a97564e08315257d5b999ff29641   couchdb:3.3                                      "tini -- /docker-entrypoint.sh /opt/couchdb/bin/couchdb"                                                                                                                                                                                                                                                                                         2 months ago     Up 22 hours     0.0.0.0:5984->5984/tcp, [::]:5984->5984/tcp                                                nsw-couchdb0
+0d2866238f70b9c1a739974877dec1f0fc6dc2f474e72a61b2f516e2fadcba58   couchdb:3.3                                      "tini -- /docker-entrypoint.sh /opt/couchdb/bin/couchdb"                                                                                                                                                                                                                                                                                         2 months ago     Up 22 hours     0.0.0.0:7984->5984/tcp, [::]:7984->5984/tcp                                                sa-couchdb0
+f05e26f2f97d63eea7ad3d4af783788e35a06eb2e9d76d575044f0c949b8245b   hyperledger/fabric-orderer:2.5.4                 "orderer"                                                                                                                                                                                                                                                                                                                                        2 months ago     Up 22 hours     0.0.0.0:7050->7050/tcp, [::]:7050->7050/tcp                                                orderer.retf.com
+===== peer-version =====
+COMMAND=docker exec peer0.nsw.retf.com peer version
+peer:
+ Version: v3.1.4
+ Commit SHA: 57f91e9
+ Go version: go1.26.0
+ OS/Arch: linux/amd64
+ Chaincode:
+  Base Docker Label: org.hyperledger.fabric
+  Docker Namespace: hyperledger
+===== orderer-version =====
+COMMAND=docker exec orderer.retf.com orderer version
+orderer:
+ Version: v2.5.4
+ Commit SHA: e1e8e2e
+ Go version: go1.20.6
+ OS/Arch: linux/amd64
+===== mpc-image =====
+COMMAND=docker image inspect localhost:5500/saib-retf/fmatch-party@sha256:532a8ccbe2aa5cc8d5d789fd51537f7e03d80aa07758509b75d4e14f13d76079
+[
+    {
+        "Id": "sha256:9fbd1438c02b829f51167d935915916d8d3c19b516c38135c085ff781f21622e",
+        "RepoTags": [
+            "localhost:5500/saib-retf/fmatch-party:s3.4-audit"
+        ],
+        "RepoDigests": [
+            "localhost:5500/saib-retf/fmatch-party@sha256:532a8ccbe2aa5cc8d5d789fd51537f7e03d80aa07758509b75d4e14f13d76079"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-07-26T11:15:42.770522094Z",
+        "Config": {
+            "User": "65532:65532",
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Entrypoint": [
+                "/opt/mp-spdz/malicious-rep-field-party.x"
+            ],
+            "WorkingDir": "/sessions/P0",
+            "Labels": {
+                "org.opencontainers.image.description": "Pinned non-root MP-SPDZ F_match runtime",
+                "org.opencontainers.image.revision": "660b4984bc8ee24bcdc3b3d3a7c8e49b295e5b6e",
+                "org.opencontainers.image.title": "SAIB-RETF S3.4 fixed-capacity F_match party",
+                "org.saib-retf.stage": "S3.4"
+            }
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 498858429,
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/ad5d90395c9c2a900037d1c89a1c3958cfee3951d4dde589d0db035445702e01/diff:/var/lib/docker/overlay2/580c2f05a76642943ce5993a49b00d98c1877a410e92195abcead06c04ad5d36/diff:/var/lib/docker/overlay2/abc4c794fad9c0de1b2213b07cfe72dc34249b7394d9fad9af4ba3c0c18257b1/diff",
+                "MergedDir": "/var/lib/docker/overlay2/57f7375d5725692c4af0bc25daba615dc6cb6b0ea5e78077a0a99cca6e9ba7f6/merged",
+                "UpperDir": "/var/lib/docker/overlay2/57f7375d5725692c4af0bc25daba615dc6cb6b0ea5e78077a0a99cca6e9ba7f6/diff",
+                "WorkDir": "/var/lib/docker/overlay2/57f7375d5725692c4af0bc25daba615dc6cb6b0ea5e78077a0a99cca6e9ba7f6/work"
+            },
+            "Name": "overlay2"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:81f823b9617547261c907396f63f770deaa554748ff739bedfa650e3bb74595a",
+                "sha256:9d41015ef21bf281a4417477ca4a750d0eab6b8710e6c267385352407a68ea06",
+                "sha256:2ca54ef79344c7d0f9aaf788f3b715d8a321e6d0f156d64c7308b4b2ac15a279",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "0001-01-01T00:00:00Z"
+        }
+    }
+]
+===== reference-image =====
+COMMAND=docker image inspect localhost:5500/saib-retf/fmatch-reference@sha256:6f27a5c389fa142774de7a02870d52b61babada7539aa9da59e418a8bee71537
+[
+    {
+        "Id": "sha256:8c1c3ae8ff7f2f5136d36dabe57d322d072660660c36568a4ce62f174bd46ba0",
+        "RepoTags": [
+            "localhost:5500/saib-retf/fmatch-reference:be1540485053"
+        ],
+        "RepoDigests": [
+            "localhost:5500/saib-retf/fmatch-reference@sha256:6f27a5c389fa142774de7a02870d52b61babada7539aa9da59e418a8bee71537"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-07-29T02:41:56.622109852Z",
+        "Config": {
+            "User": "65532:65532",
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Entrypoint": [
+                "/runner"
+            ],
+            "WorkingDir": "/"
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 1847448,
+        "GraphDriver": {
+            "Data": {
+                "MergedDir": "/var/lib/docker/overlay2/163a94b5978f2bd8a8a5ff8f37c0e7a2edabaa13aac27f5a06142b287d6f6e0a/merged",
+                "UpperDir": "/var/lib/docker/overlay2/163a94b5978f2bd8a8a5ff8f37c0e7a2edabaa13aac27f5a06142b287d6f6e0a/diff",
+                "WorkDir": "/var/lib/docker/overlay2/163a94b5978f2bd8a8a5ff8f37c0e7a2edabaa13aac27f5a06142b287d6f6e0a/work"
+            },
+            "Name": "overlay2"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:80df152cb526fc40a49cd37ba3f1c9ae4347a3bed30e629fb5179f68911b8505"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "0001-01-01T00:00:00Z"
+        }
+    }
+]
+===== crypto-image =====
+COMMAND=docker image inspect localhost:5500/saib-retf/crypto-benchmark@sha256:789d134105f6b040bb6c7a7b278b09e6fcdcbe55501f5be5f037046f90596cef
+[
+    {
+        "Id": "sha256:7b766f71430de5fd24e4e05a1c7959d91930035e7c6a451497d1533134d82d59",
+        "RepoTags": [],
+        "RepoDigests": [
+            "localhost:5500/saib-retf/crypto-benchmark@sha256:789d134105f6b040bb6c7a7b278b09e6fcdcbe55501f5be5f037046f90596cef"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-07-29T02:41:34.995038193Z",
+        "Config": {
+            "User": "65532:65532",
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Entrypoint": [
+                "/usr/local/bin/s4_anoncred_benchmark"
+            ],
+            "WorkingDir": "/output"
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 8800744,
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/c4e990f03dff5f14161a2dd39ee44d2c64042df754d26d045bc6ee80de1cd9c4/diff:/var/lib/docker/overlay2/7e5019750e7db79500b208e09df6a6fe7270c411404f42644a93bf71556f47f6/diff:/var/lib/docker/overlay2/e20a43d4889afd4e0cc50feb014f22bdf602a82c78f1ff4662d176c77875d9b2/diff",
+                "MergedDir": "/var/lib/docker/overlay2/23cc465c0b3d4cba32871cef508235454c05299856ac2608cb91cc8134274cbb/merged",
+                "UpperDir": "/var/lib/docker/overlay2/23cc465c0b3d4cba32871cef508235454c05299856ac2608cb91cc8134274cbb/diff",
+                "WorkDir": "/var/lib/docker/overlay2/23cc465c0b3d4cba32871cef508235454c05299856ac2608cb91cc8134274cbb/work"
+            },
+            "Name": "overlay2"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:07c4cae8f907b60f5cdf6974e10e24c528b7a90e36c4620e82552eab507a93f9",
+                "sha256:4c0fc4cee4d075bb49f376f0f3bad092650a98a38563afdfc36bdeca19c85453",
+                "sha256:0f5bd7d1e140756ddb8fe6d22fdd3f3c7a1b57818a95ad2d883e7c75bc2b1de0",
+                "sha256:2503ce40f08f22e9ba9d93dbfa57af68e0611e4bf154e61393331ed3b38ed1fb"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "0001-01-01T00:00:00Z"
+        }
+    }
+]
+===== netem-image =====
+COMMAND=docker image inspect localhost:5500/saib-retf/netem-controller@sha256:6218c691715eddfcded7e78403be20355649ee8faad2c602303277ce2319b77d
+[
+    {
+        "Id": "sha256:913af3985027674cabd0779ef0b006f19062549cd62fd01cd3d8b77dbad6515f",
+        "RepoTags": [],
+        "RepoDigests": [
+            "localhost:5500/saib-retf/netem-controller@sha256:6218c691715eddfcded7e78403be20355649ee8faad2c602303277ce2319b77d"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-07-29T02:42:18.451892514Z",
+        "Config": {
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Entrypoint": [
+                "/sbin/tc"
+            ],
+            "WorkingDir": "/"
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 5483880,
+        "GraphDriver": {
+            "Data": {
+                "MergedDir": "/var/lib/docker/overlay2/73e5d3e0ea37c2366701e1fb9073fc1c4605b4258fba7f6d48863cf32d8d2956/merged",
+                "UpperDir": "/var/lib/docker/overlay2/73e5d3e0ea37c2366701e1fb9073fc1c4605b4258fba7f6d48863cf32d8d2956/diff",
+                "WorkDir": "/var/lib/docker/overlay2/73e5d3e0ea37c2366701e1fb9073fc1c4605b4258fba7f6d48863cf32d8d2956/work"
+            },
+            "Name": "overlay2"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:58db9654737aacf9228eb374517b665376c36c277ebc19b7d2e210d939f9d1c2"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "0001-01-01T00:00:00Z"
+        }
+    }
+]

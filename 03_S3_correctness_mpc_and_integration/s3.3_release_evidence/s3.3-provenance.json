@@ -1,0 +1,44 @@
+{
+    "schema_version":  "S3.3/provenance/1",
+    "phase":  "S3.3 F_match Design and Reference Freeze",
+    "verdict":  "GO",
+    "release_commit":  "4d84a0b1e014b2bef9f9b28cf46a1320fad3223d",
+    "release_tag":  "s3.3-fmatch-design-freeze",
+    "parent_commit":  "07301dd8e0037a2fb889ace957d30f50587974c5",
+    "merge_base_s3_0_3_2":  "07301dd8e0037a2fb889ace957d30f50587974c5",
+    "branch":  "s3.3-fmatch-design-reference",
+    "git_dirty":  false,
+    "git_status":  [
+
+                   ],
+    "source_file_count":  461,
+    "source_archive_file_count":  461,
+    "generated_at_utc":  "2026-07-24T13:37:52.8496478Z",
+    "host_os":  "Microsoft Windows NT 10.0.26200.0",
+    "windows_go":  "go version go1.22.4 windows/amd64",
+    "linux_race_go":  "go version go1.22.2 linux/amd64 (GOTOOLCHAIN=local)",
+    "tests":  {
+                  "golden_total":  14,
+                  "golden_accept":  10,
+                  "golden_reject":  4,
+                  "golden_replay_pass":  14,
+                  "property_total":  10000,
+                  "property_pass":  10000,
+                  "property_fail":  0,
+                  "go_test_all":  "PASS",
+                  "go_vet_all":  "PASS",
+                  "go_race_oracle_linux":  "PASS",
+                  "deterministic_regeneration":  "PASS"
+              },
+    "evidence_sha256":  {
+                            "s3.3-golden-vectors.json":  "f49bffaac463d63e9d5dd27e55ab968892a29b6f8b1afe09c3c540c37f815abd",
+                            "s3.3-property-tests.jsonl":  "2efe01cfba144cac172a1ca434594b737d8ad417c841a1bc6b1c80109a9d1a85",
+                            "s3.3-canonical-encoding-vectors.json":  "b26e4f839cfa5e5645bed35313fa7dce0464f1ef06573cb96e5f0bd3dc7fc0f3"
+                        },
+    "limitations":  [
+                        "complete MP-SPDZ F_match is not implemented",
+                        "obliviousness is not established",
+                        "single-host three-party F_match integration is not completed",
+                        "formal performance experiments remain NO-GO"
+                    ]
+}

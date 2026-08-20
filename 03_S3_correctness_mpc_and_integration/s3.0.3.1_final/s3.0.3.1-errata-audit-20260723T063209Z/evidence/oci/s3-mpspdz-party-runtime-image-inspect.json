@@ -1,0 +1,49 @@
+[
+    {
+        "Id": "sha256:371ad10e430c435e136be52afd67d89d76c0bc4ad270b22db3e50d37c9307296",
+        "RepoTags": [
+            "saib-retf-s3-mpspdz-party-runtime:s3.0.3.1-audit"
+        ],
+        "RepoDigests": [],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-07-23T06:30:30.99534183Z",
+        "Config": {
+            "User": "65532:65532",
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Entrypoint": [
+                "/opt/mp-spdz/malicious-rep-field-party.x"
+            ],
+            "WorkingDir": "/opt/mp-spdz",
+            "Labels": {
+                "org.saib-retf.base-image": "debian:bookworm-slim@sha256:7b140f374b289a7c2befc338f42ebe6441b7ea838a042bbd5acbfca6ec875818"
+            }
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 105720617,
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/278c2ec995f5bf29b83e706bbbe3b49d5ef5010296f3e95aaaf2dc527b22c37a/diff:/var/lib/docker/overlay2/fa5cfc622a8d5f75fd71eb618d8f72e2ff8e6fad559651192ea815265cf710fd/diff:/var/lib/docker/overlay2/9122333b451a58315b9c9044d020dfeed0ba81c2c75e0ff741e5d1fd9d918ea2/diff:/var/lib/docker/overlay2/7c31d3e63f6734355fa2c1e5b49e4efd2d80f468bd83533e5a028ee1120eb91a/diff",
+                "MergedDir": "/var/lib/docker/overlay2/c4998222689814aef9212891c545bbd22c81105a21f3ca81918b9ecf773d45d5/merged",
+                "UpperDir": "/var/lib/docker/overlay2/c4998222689814aef9212891c545bbd22c81105a21f3ca81918b9ecf773d45d5/diff",
+                "WorkDir": "/var/lib/docker/overlay2/c4998222689814aef9212891c545bbd22c81105a21f3ca81918b9ecf773d45d5/work"
+            },
+            "Name": "overlay2"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:06bb8de039c3822963e71aa347ebf59e0715bee9b6a5bd408529c8b81c83c81e",
+                "sha256:7b549792efa2e3f3786e3dc09a0b6c2e5ef6775e3746593d10c48bb2dbdeb076",
+                "sha256:2320e279b9b725f2d4d88ad476050c2cc28133c077a72e68e6cc26ef60598de7",
+                "sha256:5769951f9513bd315d75099c48c2b3e835e104959e76b1c08a4f5e7cc9820cae",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "0001-01-01T00:00:00Z"
+        }
+    }
+]

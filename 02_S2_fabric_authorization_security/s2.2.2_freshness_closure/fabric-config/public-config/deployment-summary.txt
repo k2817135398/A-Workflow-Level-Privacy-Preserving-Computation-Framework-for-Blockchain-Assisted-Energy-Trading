@@ -1,0 +1,12 @@
+chaincode=s2-privacy-222
+primary_channel=extra-channel
+cross_channel_target=intra-channel_nsw_only
+version=2.2.2
+sequence=1
+endorsement_policy=AND('NSWMSP.member','QLDMSP.member','SAMS.member')
+instances=3
+ccaas_tls=true
+ccaas_mutual_tls=true
+ccaas_client_auth_required=true
+peer_version=3.1.4
+peer_authentication_timewindow=30s

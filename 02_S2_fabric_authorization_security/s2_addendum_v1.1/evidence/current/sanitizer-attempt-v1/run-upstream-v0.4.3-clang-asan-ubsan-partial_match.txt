@@ -1,0 +1,38 @@
+Running /tmp/saib-s3.1.1-sanitizer-MBB38V/upstream-v0.4.3-clang-asan-ubsan/MP-SPDZ-0.4.3/Scripts/../malicious-rep-ring-party.x 0 saib_match_smoke -pn 19430 -h localhost
+Running /tmp/saib-s3.1.1-sanitizer-MBB38V/upstream-v0.4.3-clang-asan-ubsan/MP-SPDZ-0.4.3/Scripts/../malicious-rep-ring-party.x 1 saib_match_smoke -pn 19430 -h localhost
+Running /tmp/saib-s3.1.1-sanitizer-MBB38V/upstream-v0.4.3-clang-asan-ubsan/MP-SPDZ-0.4.3/Scripts/../malicious-rep-ring-party.x 2 saib_match_smoke -pn 19430 -h localhost
+Using statistical security parameter 40
+Tools/octetStream.h:364:11: runtime error: applying non-zero offset 8 to null pointer
+    #0 0x55aa29cf82d8 in octetStream::append(unsigned long) /tmp/saib-s3.1.1-sanitizer-MBB38V/upstream-v0.4.3-clang-asan-ubsan/MP-SPDZ-0.4.3/./Tools/octetStream.h:364:11
+    #1 0x55aa29cf82d8 in octetStream::store_int(unsigned long, int) /tmp/saib-s3.1.1-sanitizer-MBB38V/upstream-v0.4.3-clang-asan-ubsan/MP-SPDZ-0.4.3/./Tools/octetStream.h:410:17
+    #2 0x7f196ca825d7 in octetStream::store(unsigned long) /tmp/saib-s3.1.1-sanitizer-MBB38V/upstream-v0.4.3-clang-asan-ubsan/MP-SPDZ-0.4.3/./Tools/octetStream.h:177:26
+    #3 0x7f196ca825d7 in void octetStream::store<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>> const&) /tmp/saib-s3.1.1-sanitizer-MBB38V/upstream-v0.4.3-clang-asan-ubsan/MP-SPDZ-0.4.3/./Tools/octetStream.h:576:3
+    #4 0x7f196ca7fa52 in Server::send_names() /tmp/saib-s3.1.1-sanitizer-MBB38V/upstream-v0.4.3-clang-asan-ubsan/MP-SPDZ-0.4.3/Networking/Server.cpp:64:13
+    #5 0x7f196ca815a9 in Server::start() /tmp/saib-s3.1.1-sanitizer-MBB38V/upstream-v0.4.3-clang-asan-ubsan/MP-SPDZ-0.4.3/Networking/Server.cpp:150:3
+    #6 0x7f196ca81b9e in Server::start_in_thread(void*) /tmp/saib-s3.1.1-sanitizer-MBB38V/upstream-v0.4.3-clang-asan-ubsan/MP-SPDZ-0.4.3/Networking/Server.cpp:158:22
+    #7 0x55aa29bf336c in asan_thread_start(void*) asan_interceptors.cpp.o
+    #8 0x7f196ba5faa3  (/lib/x86_64-linux-gnu/libc.so.6+0x9caa3) (BuildId: 8e9fd827446c24067541ac5390e6f527fb5947bb)
+    #9 0x7f196baecc6b  (/lib/x86_64-linux-gnu/libc.so.6+0x129c6b) (BuildId: 8e9fd827446c24067541ac5390e6f527fb5947bb)
+
+SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior Tools/octetStream.h:364:11 
+/tmp/saib-s3.1.1-sanitizer-MBB38V/upstream-v0.4.3-clang-asan-ubsan/MP-SPDZ-0.4.3/Scripts/run-common.sh: line 94: 21168 Aborted                 $my_prefix $SPDZROOT/$bin $i $params 2>&1
+     21169 Done                    | { if test "$BENCH"; then
+    if test $i = $front_player; then
+        tee -a $log;
+    else
+        cat >> $log;
+    fi;
+else
+    if test $i = $front_player; then
+        tee $log;
+    else
+        cat > $log;
+    fi;
+fi; }
+=== Party 1
+Using statistical security parameter 40
+error in network setup: Connection closed down. This is most likely due to a problem on the other side. If there's no error message on the other side, it might be due to a lack of memory. See https://mp-spdz.readthedocs.io/en/latest/troubleshooting.html#crash-without-error-message-killed-or-bad-alloc for possible remedies.
+=== Party 2
+Using statistical security parameter 40
+error in network setup: Connection closed down. This is most likely due to a problem on the other side. If there's no error message on the other side, it might be due to a lack of memory. See https://mp-spdz.readthedocs.io/en/latest/troubleshooting.html#crash-without-error-message-killed-or-bad-alloc for possible remedies.
+vector=partial_match exit_code=1 sanitizer_findings=4

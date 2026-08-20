@@ -1,0 +1,81 @@
+{
+  "schema_version": "s2.2.2-provenance/1",
+  "generated_at_utc": "2026-07-16T02:46:36.553907Z",
+  "release_commit": "6e4eb94c695632413820a5716ae76da05054ac79",
+  "release_tag": "s2.2.2-audit",
+  "git_dirty": false,
+  "git_status": [],
+  "parent_commit": "8de9a78c551c0d9a87076f609b9e70856a133c53",
+  "s2.2_merge_base": "6dba20ec35a86d395b1d8580e78736089d6db19e",
+  "s2.2.1_merge_base": "f0392814765270c57e0bfbb45c43385490c3391b",
+  "s2.2.1_audit_commit": "f0392814765270c57e0bfbb45c43385490c3391b",
+  "s2.1_audit_commit": "ed0fa2cd8030ece0858334492e8940a4ad0d2b00",
+  "source_files": 189,
+  "artifact_files": 371,
+  "source_manifest_sha256": "0d9124ac403dd2d7520a5e6a5c0c16a06ae5bfe7554b1aa382d1ba19fa459c5c",
+  "security_tests": {
+    "passed": 31,
+    "total": 31
+  },
+  "freshness_tests": {
+    "passed": 9,
+    "total": 9
+  },
+  "ccaas_mtls_tests": {
+    "passed": 3,
+    "total": 3
+  },
+  "supplemental_repair_gates": {
+    "passed": 4,
+    "total": 4
+  },
+  "formal_admission_tests": {
+    "passed": 13,
+    "total": 13
+  },
+  "fuzz": {
+    "structured_public_statement_property_cases": 256,
+    "structured_ffi_request_property_cases": 512,
+    "go_fuzz_execution_counts": {
+      "go_task_domain_fuzz": 255052,
+      "go_statement_fuzz": 37577,
+      "go_ffi_fuzz": 310648
+    }
+  },
+  "peer_timewindow": {
+    "peer_count": 3,
+    "timewindow": "30s",
+    "TimeWindowCheck": "enabled"
+  },
+  "fabric_block_scan": {
+    "peer_committed_valid_records": 18,
+    "finite_sample": true
+  },
+  "runtime_trace_payload_sha256": "9a9752f4895c905240ba83f27fb2e288b65893daff231577e095eeda84151734",
+  "runtime_trace_file_sha256": "1d7c8e5480ab99e015fd4f5bbc749208ddf8a285d3712a39749df61fc31a3894",
+  "runtime_trace_attestation": "Ed25519 deployment attestor key version 2; private key excluded",
+  "runtime_trace_events_resolved": 14,
+  "production_registry_enabled": true,
+  "production_registry_scope": "local audit OCI registry plus externally replayable offline layouts",
+  "rust_coverage_summary": [
+    "S2.2.2 Rust coverage",
+    "all_targets_lines=78.63% (1295/1647)",
+    "production_library_lines=89.25% (1295/1451)",
+    "functions=62.03% (98/158)",
+    "regions=56.59% (648/1145)",
+    "branches=NOT_COLLECTED (0/0)",
+    "holder_lines=100.00% (28/28)",
+    "issuer_lines=100.00% (9/9)",
+    "verifier_lines=100.00% (14/14)",
+    "role_process_lines=89.78% (369/411)",
+    "prove_executed=31",
+    "verify_executed=474",
+    "revoke_executed=4",
+    "witness_update_executed=6",
+    "coverage_warning_mismatched_data=false",
+    "binary_entrypoints_included_in_all_targets_but_excluded_from_library_gate=true",
+    "coverage_gate=PASS"
+  ],
+  "s3_distributed_mpc": "NOT STARTED",
+  "formal_performance_experiments": "STILL NO-GO"
+}

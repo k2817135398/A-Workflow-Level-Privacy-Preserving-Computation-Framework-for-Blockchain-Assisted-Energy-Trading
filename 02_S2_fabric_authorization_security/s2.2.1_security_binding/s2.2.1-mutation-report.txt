@@ -1,0 +1,92 @@
+S2.2.1 explicitly selected bounded mutation testing
+scope=ledger authorization trust/domain/key/freshness boundary
+whole_program_mutation_score_claimed=false
+baseline=PASS
+started_at_utc=2026-07-15T16:20:53.125473Z
+
+mutant_1=allow_revoked_verifier_key
+result=KILLED
+test_exit_code=1
+test_output_begin
+--- FAIL: TestFreshnessAndRevocation (0.00s)
+    --- FAIL: TestFreshnessAndRevocation/key_revoked (0.00s)
+        contract_test.go:134: freshness or revocation violation accepted
+FAIL
+FAIL	github.com/retf/source/v2/fabric/privacychaincode221	0.023s
+FAIL
+test_output_end
+
+mutant_2=omit_canonical_task_domain_binding
+result=KILLED
+test_exit_code=1
+test_output_begin
+# github.com/retf/source/v2/fabric/privacychaincode221 [github.com/retf/source/v2/fabric/privacychaincode221.test]
+fabric/privacychaincode221/contract.go:328:2: domain declared and not used
+FAIL	github.com/retf/source/v2/fabric/privacychaincode221 [build failed]
+FAIL
+test_output_end
+
+mutant_3=omit_policy_digest_binding
+result=KILLED
+test_exit_code=1
+test_output_begin
+--- FAIL: TestStatementSubstitutionAndCrossDeploymentRejected (0.00s)
+    --- FAIL: TestStatementSubstitutionAndCrossDeploymentRejected/policy (0.00s)
+        contract_test.go:104: substitution accepted
+FAIL
+FAIL	github.com/retf/source/v2/fabric/privacychaincode221	0.027s
+FAIL
+test_output_end
+
+mutant_4=omit_credential_registry_digest_binding
+result=KILLED
+test_exit_code=1
+test_output_begin
+--- FAIL: TestStatementSubstitutionAndCrossDeploymentRejected (0.00s)
+    --- FAIL: TestStatementSubstitutionAndCrossDeploymentRejected/registry (0.00s)
+        contract_test.go:104: substitution accepted
+FAIL
+FAIL	github.com/retf/source/v2/fabric/privacychaincode221	0.024s
+FAIL
+test_output_end
+
+mutant_5=allow_future_attestation
+result=KILLED
+test_exit_code=1
+test_output_begin
+--- FAIL: TestFreshnessAndRevocation (0.00s)
+    --- FAIL: TestFreshnessAndRevocation/future (0.00s)
+        contract_test.go:134: freshness or revocation violation accepted
+FAIL
+FAIL	github.com/retf/source/v2/fabric/privacychaincode221	0.024s
+FAIL
+test_output_end
+
+mutant_6=allow_expired_attestation
+result=KILLED
+test_exit_code=1
+test_output_begin
+--- FAIL: TestFreshnessAndRevocation (0.00s)
+    --- FAIL: TestFreshnessAndRevocation/expired (0.00s)
+        contract_test.go:134: freshness or revocation violation accepted
+FAIL
+FAIL	github.com/retf/source/v2/fabric/privacychaincode221	0.025s
+FAIL
+test_output_end
+
+mutant_7=skip_attestation_signature_verification
+result=KILLED
+test_exit_code=1
+test_output_begin
+# github.com/retf/source/v2/fabric/privacychaincode221 [github.com/retf/source/v2/fabric/privacychaincode221.test]
+fabric/privacychaincode221/contract.go:324:2: publicKey declared and not used
+fabric/privacychaincode221/contract.go:350:2: signed declared and not used
+FAIL	github.com/retf/source/v2/fabric/privacychaincode221 [build failed]
+FAIL
+test_output_end
+
+mutants_total=7
+mutants_killed=7
+mutants_survived=0
+summary=7 explicitly selected bounded mutants, 7 killed
+ended_at_utc=2026-07-15T16:21:00.740155Z

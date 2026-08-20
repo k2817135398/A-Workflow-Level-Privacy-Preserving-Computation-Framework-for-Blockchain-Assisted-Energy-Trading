@@ -1,0 +1,27 @@
+{
+  "schema_version": "saib-retf-s2.2.2.1-private-fixture-allowlist/1",
+  "entries": [
+    {
+      "path": "experiments/v2/testdata/trace-attestor-s2-test-private.pem",
+      "sha256": "53b5b4e09a81feec8442b91a5d082d1069b10e35e453bb329dd9e94f96677684",
+      "purpose": "formal-admission test fixture only"
+    },
+    {
+      "path": "experiments/v2/statistics/test_validate_formal_input.py",
+      "sha256": "73739a16006ece7272aaf40d0f4894ac44462a085c465e2030152a2491efbff4",
+      "purpose": "embedded deterministic formal-admission test fixture only"
+    }
+  ],
+  "history_entries": [
+    {
+      "path": "experiments/v2/testdata/trace-attestor-s2-test-private.pem",
+      "key_public_spki_sha256": "44ca0cf355aa2087a6e328a63978b5aa873cff3079691b9f1f8e74bb2e80953c",
+      "purpose": "formal-admission test fixture only; never a production attestor"
+    },
+    {
+      "path": "experiments/v2/statistics/test_validate_formal_input.py",
+      "key_public_spki_sha256": "44ca0cf355aa2087a6e328a63978b5aa873cff3079691b9f1f8e74bb2e80953c",
+      "purpose": "embedded deterministic formal-admission test fixture only; historical file hashes may differ"
+    }
+  ]
+}

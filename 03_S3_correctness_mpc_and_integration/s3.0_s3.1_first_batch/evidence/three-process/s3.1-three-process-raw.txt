@@ -1,0 +1,51 @@
+command=/mnt/g/paperexper/retf/saib-retf/experiments/v2/runners/run-s3.1-three-process-prototype.sh /root/.cache/saib-retf-s3/MP-SPDZ-0.4.3 /mnt/g/paperexper/retf/benchmarks/results/expand/s3-working/three-process
+started_at_utc=2026-07-22T04:18:55Z
+backend=MP-SPDZ
+backend_version=v0.4.3
+backend_commit=26a605368e40fed3a7e9cee78c9a3f4390b85eb5
+protocol=mal-rep-ring
+security_model=malicious-honest-majority-with-abort
+parties=3
+maximum_corruptions=1
+backend_source_archive_sha256=386399a869fd53d99402614c0c39954c092cfac7b4e18fa453024664083a4ab7
+backend_binary_sha256=bd749dc59c55a787f11d36fc44ba6e186a967dd58beb674fb4b8baf8c0d6f51b
+backend_license_sha256=058bfbbd7da65ab998620441cddc59caf7593e92caa8a0d9a5c06b1f85356b06
+program_source_sha256=24c9843e0f911d46a6b9eec7d305f408e8e20295748d2333cb401dbe862eb4c4
+Default bit length for compilation: 63
+Default security parameter for compilation: 40
+Compiling file Programs/Source/saib_match_smoke.mpc
+Writing to Programs/Bytecode/saib_match_smoke-LTZ(4)_64-1.bc
+Writing to Programs/Schedules/saib_match_smoke.sch
+Writing to Programs/Bytecode/saib_match_smoke-0.bc
+Hash: 43f57968a69a2cbd51b5bd70d9902d907cf5523551c1351183c87c18f3fb03cf
+Program requires at most:
+           6 integer inputs from player 0
+           6 integer inputs from player 1
+           6 integer inputs from player 2
+         256 integer bits
+           7 integer opens
+         481 integer triples
+         481 integer simple multiplications
+          15 virtual machine rounds
+mpc_program_digest=69374ce9e6f086b9920d3d87870856fc64742e6445182160ba3f7f7516e0afc2
+tls_private_key_count=3
+tls_private_material_packaged=false
+{"matched": 1, "quantity": 5, "settlement_ticks": 500}
+case=partial_match node=0 pid=19423 cwd=/tmp/saib-s3.1-runtime-xi8igD/partial_match/node-0
+case=partial_match node=1 pid=19424 cwd=/tmp/saib-s3.1-runtime-xi8igD/partial_match/node-1
+case=partial_match node=2 pid=19425 cwd=/tmp/saib-s3.1-runtime-xi8igD/partial_match/node-2
+{"matched": 0, "quantity": 0, "settlement_ticks": 0}
+case=price_no_match node=0 pid=19531 cwd=/tmp/saib-s3.1-runtime-xi8igD/price_no_match/node-0
+case=price_no_match node=1 pid=19532 cwd=/tmp/saib-s3.1-runtime-xi8igD/price_no_match/node-1
+case=price_no_match node=2 pid=19533 cwd=/tmp/saib-s3.1-runtime-xi8igD/price_no_match/node-2
+{"matched": 1, "quantity": 3, "settlement_ticks": 300}
+case=credit_boundary node=0 pid=19638 cwd=/tmp/saib-s3.1-runtime-xi8igD/credit_boundary/node-0
+case=credit_boundary node=1 pid=19639 cwd=/tmp/saib-s3.1-runtime-xi8igD/credit_boundary/node-1
+case=credit_boundary node=2 pid=19640 cwd=/tmp/saib-s3.1-runtime-xi8igD/credit_boundary/node-2
+{"matched": 0, "quantity": 0, "settlement_ticks": 0}
+case=credit_below node=0 pid=19743 cwd=/tmp/saib-s3.1-runtime-xi8igD/credit_below/node-0
+case=credit_below node=1 pid=19744 cwd=/tmp/saib-s3.1-runtime-xi8igD/credit_below/node-1
+case=credit_below node=2 pid=19745 cwd=/tmp/saib-s3.1-runtime-xi8igD/credit_below/node-2
+correctness_cases=4 node_views=12 passed=true
+ended_at_utc=2026-07-22T04:19:04Z
+exit_code=0

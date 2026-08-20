@@ -1,0 +1,32 @@
+Using statistical security parameter 40
+Trying to run 255-bit computation (256-bit representation)
+This program might benefit from some protocol options.
+Consider adding the following at the beginning of your code:
+	program.use_edabit(True)
+Setup took 0.0991254 seconds.
+Compiler: ./compile.py -F 255 saib_fmatch 32
+	7555 triples of malicious replicated gfp left
+	2034 bits of malicious replicated gfp left
+Detailed costs:
+           906 integer inputs
+        431084 integer multiplications
+        869005 integer openings
+Spent 4.11622 seconds (28.202 MB, 29961 rounds, 6.03612 CPU seconds) on the online phase and 1.24507 seconds (96.338 MB, 542 rounds, 6.03663 CPU seconds) on the preprocessing/offline phase.
+Communication details:
+Broadcasting 0.191432 MB in 5971 rounds, taking 0.998628 seconds
+Passing around 119.037 MB in 24501 rounds, taking 2.92242 seconds
+Receiving directly 4.8 MB in 15 rounds, taking 0.0111054 seconds
+Sending directly 5.12 MB in 16 rounds, taking 0.00530908 seconds
+CPU time = 6.03893
+The following benchmarks are including preprocessing (offline phase).
+Time = 5.38805 seconds 
+Data sent = 124.54 MB in ~30503 rounds (party 1 only)
+Global data sent = 373.3 MB (all parties)
+Actual preprocessing cost of program:
+  Type int
+        432445        Triples
+        457966           Bits
+This program might benefit from some protocol options.
+Consider adding the following at the beginning of your code:
+	program.use_edabit(True)
+Command line: /mnt/g/paperexper/retf/third_party/MP-SPDZ-s3.1.1-patched/malicious-rep-field-party.x 1 saib_fmatch-32 -pn 27200 -h localhost -P 52435875175126190479447740508185965837690552500527637822603658699938581184513 -v

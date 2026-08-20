@@ -1,0 +1,16 @@
+started_at_utc=2026-08-02T16:01:00Z
+release_commit=559e0bb531b3e4330c532e624d546d616c7849eb
+run_id=s4v123-c32-m28
+production_path=true
+single_physical_host=true
+party_containers=3
+program_profile=/mnt/f/PP_RETF_formal_experiments/s4.0-formal-benchmark-freeze-v1.23-final-20260802T113305Z/mpc-config/s4.0-program-profile-32.json
+security_attacks=false
+party_ip_base=10
+proxy_coordinator_ip=none
+mpc_timeout_seconds=capacity-default
+coordinator_binary_format=ELF
+COMMAND python3 /mnt/f/PP_RETF_formal_experiments/s4.0-freeze-wsl-clone-559e0bb/experiments/v2/runners/prepare-s3.4-live-authorizations.py authorize /mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.2-live /mnt/f/PP_RETF_formal_experiments/s4.1-components-559e0bb/runs/cap32-measured-28
+COMMAND /mnt/f/PP_RETF_formal_experiments/s4.1-components-559e0bb/runs/cap32-measured-28/runtime-secrets/bin/s3.4-live-production-integration --run-dir /mnt/f/PP_RETF_formal_experiments/s4.1-components-559e0bb/runs/cap32-measured-28/runtime-secrets/integration-s4v123-c32-m28 --key-root /mnt/f/PP_RETF_formal_experiments/s4.1-components-559e0bb/runs/cap32-measured-28/runtime-secrets --authorizations /mnt/f/PP_RETF_formal_experiments/s4.1-components-559e0bb/runs/cap32-measured-28/authorization-public/fresh-s2-authorizations.json --buy-vector /mnt/f/PP_RETF_formal_experiments/s4.1-components-559e0bb/runs/cap32-measured-28/authorization-private/vector-buy-placeholder.json --sell-vector /mnt/f/PP_RETF_formal_experiments/s4.1-components-559e0bb/runs/cap32-measured-28/authorization-private/vector-sell-placeholder.json --program-profile /mnt/f/PP_RETF_formal_experiments/s4.0-formal-benchmark-freeze-v1.23-final-20260802T113305Z/mpc-config/s4.0-program-profile-32.json --rust-verifier /mnt/f/PP_RETF_formal_experiments/s4.0-freeze-wsl-clone-559e0bb/prototype/anoncred-rust/target/release/s3_consistency_verifier --image-repository localhost:5500/saib-retf/fmatch-party --mpc-tls-root /mnt/f/PP_RETF_formal_experiments/s4.1-components-559e0bb/runs/cap32-measured-28/runtime-secrets/mpc-tls --workspace-root /mnt/f/PP_RETF_formal_experiments/s4.1-components-559e0bb/runs/cap32-measured-28/runtime-secrets/mpc-workspaces-s4v123-c32-m28 --docker-network saib-s34-mpc --fabric-cert /mnt/f/PP_RETF_formal_experiments/s4.1-components-559e0bb/runs/cap32-measured-28/runtime-secrets/relay-msp/signcerts/cert.pem --fabric-key /mnt/f/PP_RETF_formal_experiments/s4.1-components-559e0bb/runs/cap32-measured-28/runtime-secrets/relay-msp/keystore/key.pem --fabric-tls-root /mnt/f/PP_RETF_formal_experiments/s4.0-freeze-wsl-clone-559e0bb/../docker/fabric/crypto-material/peerOrganizations/nsw.retf.com/peers/peer0.nsw.retf.com/tls/ca.crt --peer-endpoint localhost:7051 --peer-server-name peer0.nsw.retf.com --channel extra-channel --chaincode s3-fmatch --release-commit 559e0bb531b3e4330c532e624d546d616c7849eb --party-ip-base 10 --security-attacks=false
+ended_at_utc=2026-08-02T16:05:00Z
+exit_code=0

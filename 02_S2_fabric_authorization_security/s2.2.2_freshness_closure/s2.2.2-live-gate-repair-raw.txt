@@ -1,0 +1,82 @@
+S2.2.2 SUPPLEMENTAL LIVE GATE REPAIR
+START 2026-07-16T00:55:25.715389Z
+COMMAND ["docker", "cp", "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.2-live/s2.2.2-ccaas-mtls-probe", "peer0.nsw.retf.com:/tmp/s2.2.2-ccaas-mtls-probe"]
+START 2026-07-16T00:55:25.717916Z
+END 2026-07-16T00:55:26.009816Z
+EXIT_CODE 0
+COMMAND ["docker", "cp", "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.2-live/public-config/ccaas-ca.pem", "peer0.nsw.retf.com:/tmp/s222-ccaas-ca.pem"]
+START 2026-07-16T00:55:26.012780Z
+END 2026-07-16T00:55:26.111731Z
+EXIT_CODE 0
+COMMAND ["docker", "cp", "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.2-live/public-config/ccaas-nsw-client-cert.pem", "peer0.nsw.retf.com:/tmp/s222-nsw-client-cert.pem"]
+START 2026-07-16T00:55:26.114945Z
+END 2026-07-16T00:55:26.211575Z
+EXIT_CODE 0
+COMMAND ["docker", "cp", "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.2-live/runtime-secrets/ccaas-tls/nsw-client.key", "peer0.nsw.retf.com:/tmp/s222-nsw-client.key"]
+START 2026-07-16T00:55:26.213906Z
+END 2026-07-16T00:55:26.297882Z
+EXIT_CODE 0
+COMMAND ["docker", "exec", "peer0.nsw.retf.com", "/tmp/s2.2.2-ccaas-mtls-probe", "--address", "s222-chaincode-nsw:7052", "--server-name", "s222-chaincode-nsw", "--root-ca", "/tmp/s222-ccaas-ca.pem"]
+START 2026-07-16T00:55:26.298739Z
+{"address":"s222-chaincode-nsw:7052","client_certificate_supplied":false,"detail":"remote error: tls: certificate required","handshake":"REJECT","schema_version":"saib-retf-s2.2.2-ccaas-mtls-probe/1","server_name":"s222-chaincode-nsw"}
+END 2026-07-16T00:55:26.423300Z
+EXIT_CODE 0
+COMMAND ["docker", "exec", "peer0.nsw.retf.com", "/tmp/s2.2.2-ccaas-mtls-probe", "--address", "s222-chaincode-nsw:7052", "--server-name", "s222-chaincode-nsw", "--root-ca", "/tmp/s222-ccaas-ca.pem", "--client-cert", "/tmp/s222-nsw-client-cert.pem", "--client-key", "/tmp/s222-nsw-client.key"]
+START 2026-07-16T00:55:26.424088Z
+{"address":"s222-chaincode-nsw:7052","client_certificate_supplied":true,"handshake":"ACCEPT","schema_version":"saib-retf-s2.2.2-ccaas-mtls-probe/1","server_application_bytes":15,"server_name":"s222-chaincode-nsw","tls_version":"TLS1.3"}
+END 2026-07-16T00:55:26.542789Z
+EXIT_CODE 0
+COMMAND ["docker", "exec", "peer0.nsw.retf.com", "rm", "/tmp/s222-nsw-client.key"]
+START 2026-07-16T00:55:26.543642Z
+END 2026-07-16T00:55:26.655651Z
+EXIT_CODE 0
+COMMAND ["docker", "cp", "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.2-live/public-config/ccaas-qld-client-cert.pem", "peer0.nsw.retf.com:/tmp/s222-qld-client-cert.pem"]
+START 2026-07-16T00:55:26.656538Z
+END 2026-07-16T00:55:26.730526Z
+EXIT_CODE 0
+COMMAND ["docker", "cp", "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.2-live/runtime-secrets/ccaas-tls/qld-client.key", "peer0.nsw.retf.com:/tmp/s222-qld-client.key"]
+START 2026-07-16T00:55:26.731537Z
+END 2026-07-16T00:55:26.812412Z
+EXIT_CODE 0
+COMMAND ["docker", "exec", "peer0.nsw.retf.com", "/tmp/s2.2.2-ccaas-mtls-probe", "--address", "s222-chaincode-qld:7052", "--server-name", "s222-chaincode-qld", "--root-ca", "/tmp/s222-ccaas-ca.pem"]
+START 2026-07-16T00:55:26.813486Z
+{"address":"s222-chaincode-qld:7052","client_certificate_supplied":false,"detail":"remote error: tls: certificate required","handshake":"REJECT","schema_version":"saib-retf-s2.2.2-ccaas-mtls-probe/1","server_name":"s222-chaincode-qld"}
+END 2026-07-16T00:55:26.929973Z
+EXIT_CODE 0
+COMMAND ["docker", "exec", "peer0.nsw.retf.com", "/tmp/s2.2.2-ccaas-mtls-probe", "--address", "s222-chaincode-qld:7052", "--server-name", "s222-chaincode-qld", "--root-ca", "/tmp/s222-ccaas-ca.pem", "--client-cert", "/tmp/s222-qld-client-cert.pem", "--client-key", "/tmp/s222-qld-client.key"]
+START 2026-07-16T00:55:26.930856Z
+{"address":"s222-chaincode-qld:7052","client_certificate_supplied":true,"handshake":"ACCEPT","schema_version":"saib-retf-s2.2.2-ccaas-mtls-probe/1","server_application_bytes":15,"server_name":"s222-chaincode-qld","tls_version":"TLS1.3"}
+END 2026-07-16T00:55:27.038344Z
+EXIT_CODE 0
+COMMAND ["docker", "exec", "peer0.nsw.retf.com", "rm", "/tmp/s222-qld-client.key"]
+START 2026-07-16T00:55:27.039084Z
+END 2026-07-16T00:55:27.134568Z
+EXIT_CODE 0
+COMMAND ["docker", "cp", "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.2-live/public-config/ccaas-sa-client-cert.pem", "peer0.nsw.retf.com:/tmp/s222-sa-client-cert.pem"]
+START 2026-07-16T00:55:27.135598Z
+END 2026-07-16T00:55:27.213132Z
+EXIT_CODE 0
+COMMAND ["docker", "cp", "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.2-live/runtime-secrets/ccaas-tls/sa-client.key", "peer0.nsw.retf.com:/tmp/s222-sa-client.key"]
+START 2026-07-16T00:55:27.214446Z
+END 2026-07-16T00:55:27.294129Z
+EXIT_CODE 0
+COMMAND ["docker", "exec", "peer0.nsw.retf.com", "/tmp/s2.2.2-ccaas-mtls-probe", "--address", "s222-chaincode-sa:7052", "--server-name", "s222-chaincode-sa", "--root-ca", "/tmp/s222-ccaas-ca.pem"]
+START 2026-07-16T00:55:27.295028Z
+{"address":"s222-chaincode-sa:7052","client_certificate_supplied":false,"detail":"remote error: tls: certificate required","handshake":"REJECT","schema_version":"saib-retf-s2.2.2-ccaas-mtls-probe/1","server_name":"s222-chaincode-sa"}
+END 2026-07-16T00:55:27.415577Z
+EXIT_CODE 0
+COMMAND ["docker", "exec", "peer0.nsw.retf.com", "/tmp/s2.2.2-ccaas-mtls-probe", "--address", "s222-chaincode-sa:7052", "--server-name", "s222-chaincode-sa", "--root-ca", "/tmp/s222-ccaas-ca.pem", "--client-cert", "/tmp/s222-sa-client-cert.pem", "--client-key", "/tmp/s222-sa-client.key"]
+START 2026-07-16T00:55:27.416424Z
+{"address":"s222-chaincode-sa:7052","client_certificate_supplied":true,"handshake":"ACCEPT","schema_version":"saib-retf-s2.2.2-ccaas-mtls-probe/1","server_application_bytes":15,"server_name":"s222-chaincode-sa","tls_version":"TLS1.3"}
+END 2026-07-16T00:55:27.514369Z
+EXIT_CODE 0
+COMMAND ["docker", "exec", "peer0.nsw.retf.com", "rm", "/tmp/s222-sa-client.key"]
+START 2026-07-16T00:55:27.515056Z
+END 2026-07-16T00:55:27.593743Z
+EXIT_CODE 0
+COMMAND ["/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.2-live/s2.2.1-block-scan", "--blocks", "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.2-live/fabric-blocks", "--relay-cert", "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.2-live/public-config/relay-certificate.pem", "--output", "/mnt/g/paperexper/retf/saib-retf/experiments/v2/raw/s2.2.2-live/s2.2.2-fabric-block-scan.jsonl", "--markers", "UserID,OwnerID,wallet,link_secret,issuer_state,BEGIN PRIVATE KEY,Admin@nsw.retf.com"]
+START 2026-07-16T00:55:27.597806Z
+END 2026-07-16T00:55:28.216122Z
+EXIT_CODE 0
+SUPPLEMENTAL_PASS 4/4
+END 2026-07-16T00:55:28.276868Z

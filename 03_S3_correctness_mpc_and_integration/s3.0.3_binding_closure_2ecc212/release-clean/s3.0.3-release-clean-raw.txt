@@ -1,0 +1,107 @@
+command=/mnt/g/paperexper/retf/saib-retf/experiments/v2/runners/run-s3.0.3-release-clean.sh /mnt/g/paperexper/retf/third_party/MP-SPDZ-s3.1.1-patched /mnt/g/paperexper/retf/benchmarks/results/expand/s3.0.3-binding-closure-evidence-final-2ecc212/release-clean
+started_at_utc=2026-07-22T15:23:15Z
+release_commit=2ecc21216f7e2b7b0877e90e47e683d6375394ca
+release_tag=s3.0.3-s3.2.1-binding-closure-audit
+old_tag_commit=a085a352e8404ed1140466fa201108a8f9f31cdb
+git_status_porcelain_count=0
+warning: use of deprecated associated function `elliptic_curve::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> vendor/credx-0.2.1-saib/src/presentation/verifiable_encryption_decryption.rs:164:46
+    |
+164 |         let key = aes_gcm::Key::<Aes128Gcm>::from_slice(&okm[..16]);
+    |                                              ^^^^^^^^^^
+    |
+    = note: `#[warn(deprecated)]` on by default
+
+warning: use of deprecated associated function `elliptic_curve::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> vendor/credx-0.2.1-saib/src/presentation/verifiable_encryption_decryption.rs:235:28
+    |
+235 |         let nonce = Nonce::from_slice(&self.ciphertext[..12]);
+    |                            ^^^^^^^^^^
+
+warning: use of deprecated associated function `elliptic_curve::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> vendor/credx-0.2.1-saib/src/presentation/verifiable_encryption_decryption.rs:243:46
+    |
+243 |         let key = aes_gcm::Key::<Aes128Gcm>::from_slice(&okm[..16]);
+    |                                              ^^^^^^^^^^
+
+warning: `credx` (lib) generated 3 warnings
+    Finished `release` profile [optimized] target(s) in 2.17s
+warning: use of deprecated associated function `elliptic_curve::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> vendor/credx-0.2.1-saib/src/presentation/verifiable_encryption_decryption.rs:164:46
+    |
+164 |         let key = aes_gcm::Key::<Aes128Gcm>::from_slice(&okm[..16]);
+    |                                              ^^^^^^^^^^
+    |
+    = note: `#[warn(deprecated)]` on by default
+
+warning: use of deprecated associated function `elliptic_curve::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> vendor/credx-0.2.1-saib/src/presentation/verifiable_encryption_decryption.rs:235:28
+    |
+235 |         let nonce = Nonce::from_slice(&self.ciphertext[..12]);
+    |                            ^^^^^^^^^^
+
+warning: use of deprecated associated function `elliptic_curve::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> vendor/credx-0.2.1-saib/src/presentation/verifiable_encryption_decryption.rs:243:46
+    |
+243 |         let key = aes_gcm::Key::<Aes128Gcm>::from_slice(&okm[..16]);
+    |                                              ^^^^^^^^^^
+
+warning: `credx` (lib) generated 3 warnings
+   Compiling saib-anoncred v0.1.0 (/mnt/g/paperexper/retf/saib-retf/prototype/anoncred-rust)
+    Finished `release` profile [optimized] target(s) in 39.05s
+2fff14c9203b1c24fada4f91183f8c353c3ed94ef24fba560b14fc70d019fa14  /mnt/g/paperexper/retf/saib-retf/prototype/anoncred-rust/target/release/s3_consistency_verifier
+=== RUN   TestRealRustProcessConsistencyVerifier
+--- PASS: TestRealRustProcessConsistencyVerifier (0.78s)
+PASS
+ok  	github.com/retf/source/v2/mpc/inputbinding	0.795s
+=== RUN   TestVerifierToBackendHandoffBitFlipIsRejected
+--- PASS: TestVerifierToBackendHandoffBitFlipIsRejected (0.00s)
+=== RUN   TestInnerOuterReceiptSubstitutionsAreRejected
+=== RUN   TestInnerOuterReceiptSubstitutionsAreRejected/pseudonym
+=== RUN   TestInnerOuterReceiptSubstitutionsAreRejected/credit
+=== RUN   TestInnerOuterReceiptSubstitutionsAreRejected/order
+=== RUN   TestInnerOuterReceiptSubstitutionsAreRejected/parameter
+=== RUN   TestInnerOuterReceiptSubstitutionsAreRejected/node
+=== RUN   TestInnerOuterReceiptSubstitutionsAreRejected/context
+--- PASS: TestInnerOuterReceiptSubstitutionsAreRejected (0.00s)
+    --- PASS: TestInnerOuterReceiptSubstitutionsAreRejected/pseudonym (0.00s)
+    --- PASS: TestInnerOuterReceiptSubstitutionsAreRejected/credit (0.00s)
+    --- PASS: TestInnerOuterReceiptSubstitutionsAreRejected/order (0.00s)
+    --- PASS: TestInnerOuterReceiptSubstitutionsAreRejected/parameter (0.00s)
+    --- PASS: TestInnerOuterReceiptSubstitutionsAreRejected/node (0.00s)
+    --- PASS: TestInnerOuterReceiptSubstitutionsAreRejected/context (0.00s)
+=== RUN   TestAttemptAwareReplayAllowsGovernedAttemptTwoButRejectsEachAttemptReplay
+--- PASS: TestAttemptAwareReplayAllowsGovernedAttemptTwoButRejectsEachAttemptReplay (0.00s)
+=== RUN   TestLauncherUsesOnlyVerifierReturnedBytes
+--- PASS: TestLauncherUsesOnlyVerifierReturnedBytes (0.00s)
+PASS
+ok  	github.com/retf/source/v2/mpc/inputbinding	0.020s
+=== RUN   TestAuthorizationCanCreateOnlyOneInputAcrossSessionHandleAndNonceChanges
+=== RUN   TestAuthorizationCanCreateOnlyOneInputAcrossSessionHandleAndNonceChanges/second_record
+    registry_test.go:164: attack=second record authorization=e838116b087382d4b201ad789f0a0813f08d6da2c42b7cade0dd660e91ffb856 candidate_session=session-2 candidate_handle=ef1e5814a8ca0b9d0463ecd5b25b01e3158b7794bc78a278aeacc70ca9710d44 result=REJECT reason="S2 authorization already has an S3 input record"
+=== RUN   TestAuthorizationCanCreateOnlyOneInputAcrossSessionHandleAndNonceChanges/changed_handle
+    registry_test.go:164: attack=changed handle authorization=e838116b087382d4b201ad789f0a0813f08d6da2c42b7cade0dd660e91ffb856 candidate_session=session-3 candidate_handle=dadc3d20e485a15be2638c3decda24004e4f0aed69fd136c77603c73ef8d6e36 result=REJECT reason="S2 authorization already has an S3 input record"
+--- PASS: TestAuthorizationCanCreateOnlyOneInputAcrossSessionHandleAndNonceChanges (0.00s)
+    --- PASS: TestAuthorizationCanCreateOnlyOneInputAcrossSessionHandleAndNonceChanges/second_record (0.00s)
+    --- PASS: TestAuthorizationCanCreateOnlyOneInputAcrossSessionHandleAndNonceChanges/changed_handle (0.00s)
+=== RUN   TestAbortRetryRequiresGovernedMonotonicRebind
+    registry_test.go:196: attack=unsigned_rebind attempt=2 result=REJECT reason="governance authorization signature is invalid"
+    registry_test.go:227: attack=governed_handle_substitution attempt=2 result=REJECT reason="governed rebind violates the monotonic authorization/order identity"
+    registry_test.go:232: transition=governed_rebind attempt=2 parent=e880a594fecffd28a8790d3fe84237875e8bf4935978925554aea0d04a38503a result=ACCEPT
+--- PASS: TestAbortRetryRequiresGovernedMonotonicRebind (0.00s)
+PASS
+ok  	github.com/retf/source/v2/fabric/mpcinputregistry	0.006s
+command=/mnt/g/paperexper/retf/saib-retf/experiments/v2/runners/run-s3.0.2-committed-input.sh /mnt/g/paperexper/retf/third_party/MP-SPDZ-s3.1.1-patched /mnt/g/paperexper/retf/benchmarks/results/expand/s3.0.3-binding-closure-evidence-final-2ecc212/release-clean/s3.0.3-committed-input-golden-vector.json /mnt/g/paperexper/retf/benchmarks/results/expand/s3.0.3-binding-closure-evidence-final-2ecc212/release-clean/three-process
+started_at_utc=2026-07-22T15:24:04Z
+backend_commit=8ec865f19ee3d114c3fa1410ef68acb257850094
+prime=52435875175126190479447740508185965837690552500527637822603658699938581184513
+security_model=malicious-three-party-prime-field-with-abort
+maximum_corruptions=1
+program_source_sha256=b1bc7cfa91d8726d4fffb662b6b1c60430dc2e9ed73ee1d81fdcc933ce71172e
+program_bytecode_sha256=be15f8d8ee4c710ea86ead8d1aeeb402a53fb66f447dc4871c34e15bfe462083
+program_schedule_sha256=ba4dc34db2282ea3c834f3d48b2a8836a708760b9023571a1dca5b263d4fd2e0
+backend_binary_sha256=097e3e6bcf301a9f0ee791ad1f1bb3c851c1dcf83df41d29a4a98df2fd54146b
+ended_at_utc=2026-07-22T15:24:22Z
+exit_code=0
+ended_at_utc=2026-07-22T15:24:22Z
+exit_code=0

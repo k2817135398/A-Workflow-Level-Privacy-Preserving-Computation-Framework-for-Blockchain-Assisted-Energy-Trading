@@ -1,0 +1,9 @@
+command=nm -D --defined-only malicious-rep-ring-party.x | c++filt
+backend=MP-SPDZ v0.4.3 mal-rep-ring
+backend_commit=26a605368e40fed3a7e9cee78c9a3f4390b85eb5
+backend_binary_sha256=bd749dc59c55a787f11d36fc44ba6e186a967dd58beb674fb4b8baf8c0d6f51b
+exported_symbol_count=331
+forbidden_pattern=(?i)mock|test|reconstruct|plaintext|fallback
+forbidden_exported_symbol_hits=0
+scope=dynamic exported symbols only; internal MPC opening code is not claimed absent
+result=PASS
